@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<DataSource Name="ProjProjectView">
+  <Sql Select="proj_id, 
+		client_id, 
+		description, 
+		effective_date, 
+		end_date, 
+		date_created, 
+		date_updated, 
+		user_id" From="proj_project" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ProjProjectTable" DBName="proj_project" Updateable="true"/>
+  <ColAttr Name="ProjId" DBName="proj_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="ProjProjectTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ClientId" DBName="client_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="ProjProjectTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ProjProjectTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EffectiveDate" DBName="effective_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="ProjProjectTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EndDate" DBName="end_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="ProjProjectTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="ProjProjectTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="ProjProjectTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ProjProjectTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

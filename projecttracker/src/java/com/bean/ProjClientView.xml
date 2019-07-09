@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSource Name="ProjClientView">
+   <Sql From="proj_client" GroupBy="" Having="" OrderBy="" Select="client_id, &#xA;&#x9;&#x9;business_id, &#xA;&#x9;&#x9;name, &#xA;&#x9;&#x9;bill_rate, &#xA;&#x9;&#x9;ot_bill_rate, &#xA;&#x9;&#x9;date_created, &#xA;&#x9;&#x9;date_updated, &#xA;&#x9;&#x9;user_id, &#xA;&#x9;&#x9;contact_firstname, &#xA;&#x9;&#x9;account_no, &#xA;&#x9;&#x9;contact_lastname, &#xA;&#x9;&#x9;contact_phone, &#xA;&#x9;&#x9;contact_ext, &#xA;&#x9;&#x9;contact_email" Where="" />
+   <TableUsage DBName="proj_client" Name="ProjClientTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="client_id" DataValue="" DisplayHeader="" IsNull="false" JavaType="int" Name="ClientId" PrimaryKey="true" SqlType="integer" TableName="ProjClientTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="business_id" DataValue="" DisplayHeader="" IsNull="true" JavaType="int" Name="BusinessId" PrimaryKey="false" SqlType="integer" TableName="ProjClientTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="name" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="Name" PrimaryKey="false" SqlType="varchar" TableName="ProjClientTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="bill_rate" DataValue="" DisplayHeader="" IsNull="true" JavaType="double" Name="BillRate" PrimaryKey="false" SqlType="numeric" TableName="ProjClientTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="ot_bill_rate" DataValue="" DisplayHeader="" IsNull="true" JavaType="double" Name="OtBillRate" PrimaryKey="false" SqlType="numeric" TableName="ProjClientTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="date_created" DataValue="" DisplayHeader="" IsNull="true" JavaType="java.util.Date" Name="DateCreated" PrimaryKey="false" SqlType="timestamp" TableName="ProjClientTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="date_updated" DataValue="" DisplayHeader="" IsNull="true" JavaType="java.util.Date" Name="DateUpdated" PrimaryKey="false" SqlType="timestamp" TableName="ProjClientTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="user_id" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="UserId" PrimaryKey="false" SqlType="varchar" TableName="ProjClientTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="contact_firstname" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="ContactFirstname" PrimaryKey="false" SqlType="varchar" TableName="ProjClientTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="account_no" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="AccountNo" PrimaryKey="false" SqlType="varchar" TableName="ProjClientTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="contact_lastname" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="ContactLastname" PrimaryKey="false" SqlType="varchar" TableName="ProjClientTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="contact_phone" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="ContactPhone" PrimaryKey="false" SqlType="varchar" TableName="ProjClientTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="contact_ext" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="ContactExt" PrimaryKey="false" SqlType="varchar" TableName="ProjClientTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="contact_email" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="ContactEmail" PrimaryKey="false" SqlType="varchar" TableName="ProjClientTable" Updateable="true" />
+</DataSource>
+

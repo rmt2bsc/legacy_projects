@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<DataSource Name="ProjEmployeeTypeView">
+  <Sql Select="emp_type_id, 
+		description" From="proj_employee_type" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ProjEmployeeTypeTable" DBName="proj_employee_type" Updateable="true"/>
+  <ColAttr Name="EmpTypeId" DBName="emp_type_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="ProjEmployeeTypeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ProjEmployeeTypeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DataSource Name="UserConnectXrefView">
+  <Sql Select="id, 
+		con_id, 
+		con_user_id, 
+		app_user_id" From="user_connect_xref" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="UserConnectXrefTable" DBName="user_connect_xref" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="UserConnectXrefTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ConId" DBName="con_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="UserConnectXrefTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ConUserId" DBName="con_user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="UserConnectXrefTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AppUserId" DBName="app_user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="UserConnectXrefTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

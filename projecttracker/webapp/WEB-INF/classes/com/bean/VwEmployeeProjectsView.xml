@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<DataSource Name="VwEmployeeProjectsView">
+  <Sql Select="emp_proj_id, 
+		emp_id, 
+		proj_id, 
+		projemp_effective_date, 
+		projemp_end_date, 
+		pay_rate, 
+		ot_pay_rate, 
+		flat_rate, 
+		comments, 
+		client_id, 
+		project_name, 
+		proj_effective_date, 
+		proj_end_date, 
+		client_name, 
+		account_no, 
+		business_id, 
+		client_bill_rate, 
+		client_ot_bill_rate" From="vw_employee_projects" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwEmployeeProjectsTable" DBName="vw_employee_projects" Updateable="true"/>
+  <ColAttr Name="EmpProjId" DBName="emp_proj_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwEmployeeProjectsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EmpId" DBName="emp_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwEmployeeProjectsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ProjId" DBName="proj_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwEmployeeProjectsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ProjempEffectiveDate" DBName="projemp_effective_date" SqlType="date" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwEmployeeProjectsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ProjempEndDate" DBName="projemp_end_date" SqlType="date" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwEmployeeProjectsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="PayRate" DBName="pay_rate" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwEmployeeProjectsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="OtPayRate" DBName="ot_pay_rate" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwEmployeeProjectsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="FlatRate" DBName="flat_rate" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwEmployeeProjectsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Comments" DBName="comments" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwEmployeeProjectsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ClientId" DBName="client_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwEmployeeProjectsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ProjectName" DBName="project_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwEmployeeProjectsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ProjEffectiveDate" DBName="proj_effective_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwEmployeeProjectsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ProjEndDate" DBName="proj_end_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwEmployeeProjectsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ClientName" DBName="client_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwEmployeeProjectsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AccountNo" DBName="account_no" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwEmployeeProjectsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessId" DBName="business_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwEmployeeProjectsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ClientBillRate" DBName="client_bill_rate" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwEmployeeProjectsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ClientOtBillRate" DBName="client_ot_bill_rate" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwEmployeeProjectsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

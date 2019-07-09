@@ -1,0 +1,103 @@
+
+<VwEmployeeProjectsView>
+	<vw_employee_projects>
+		<pay_rate>65.0</pay_rate>
+		<client_name>The Insource Group</client_name>
+		<flat_rate>0.0</flat_rate>
+		<client_ot_bill_rate>0.0</client_ot_bill_rate>
+		<business_id>1440</business_id>
+		<emp_proj_id>2</emp_proj_id>
+		<projemp_effective_date>Fri Aug 31 00:00:00 CDT 2007</projemp_effective_date>
+		<account_no/>
+		<projemp_end_date/>
+		<comments>Good project</comments>
+		<ot_pay_rate>65.0</ot_pay_rate>
+		<emp_id>2000</emp_id>
+		<proj_effective_date>Fri Aug 31 00:00:00 CDT 2007</proj_effective_date>
+		<client_bill_rate>0.0</client_bill_rate>
+		<proj_id>8</proj_id>
+		<client_id>11</client_id>
+		<proj_end_date/>
+		<project_name>Aviall</project_name>
+	</vw_employee_projects>
+	<vw_employee_projects>
+		<pay_rate>55.0</pay_rate>
+		<client_name>Clientele Solutions</client_name>
+		<flat_rate>0.0</flat_rate>
+		<client_ot_bill_rate>0.0</client_ot_bill_rate>
+		<business_id>1436</business_id>
+		<emp_proj_id>4</emp_proj_id>
+		<projemp_effective_date>Mon May 01 00:00:00 CDT 2006</projemp_effective_date>
+		<account_no/>
+		<projemp_end_date>Thu Jun 01 00:00:00 CDT 2006</projemp_end_date>
+		<comments>Senior Java Web Developer Role</comments>
+		<ot_pay_rate>55.0</ot_pay_rate>
+		<emp_id>2000</emp_id>
+		<proj_effective_date>Mon Apr 10 00:00:00 CDT 2006</proj_effective_date>
+		<client_bill_rate>0.0</client_bill_rate>
+		<proj_id>6</proj_id>
+		<client_id>7</client_id>
+		<proj_end_date>Fri Jun 16 00:00:00 CDT 2006</proj_end_date>
+		<project_name>Conoco-Phillips</project_name>
+	</vw_employee_projects>
+	<vw_employee_projects>
+		<pay_rate>58.0</pay_rate>
+		<client_name>The Insource Group</client_name>
+		<flat_rate>0.0</flat_rate>
+		<client_ot_bill_rate>0.0</client_ot_bill_rate>
+		<business_id>1440</business_id>
+		<emp_proj_id>5</emp_proj_id>
+		<projemp_effective_date>Wed Oct 18 00:00:00 CDT 2006</projemp_effective_date>
+		<account_no/>
+		<projemp_end_date>Fri Aug 17 00:00:00 CDT 2007</projemp_end_date>
+		<comments>Senior Java RCP Developer Role</comments>
+		<ot_pay_rate>58.0</ot_pay_rate>
+		<emp_id>2000</emp_id>
+		<proj_effective_date>Wed Oct 18 00:00:00 CDT 2006</proj_effective_date>
+		<client_bill_rate>0.0</client_bill_rate>
+		<proj_id>7</proj_id>
+		<client_id>11</client_id>
+		<proj_end_date>Fri Aug 17 00:00:00 CDT 2007</proj_end_date>
+		<project_name>Health Markets</project_name>
+	</vw_employee_projects>
+	<vw_employee_projects>
+		<pay_rate>52.0</pay_rate>
+		<client_name>Information Systems Resources</client_name>
+		<flat_rate>0.0</flat_rate>
+		<client_ot_bill_rate>0.0</client_ot_bill_rate>
+		<business_id>1434</business_id>
+		<emp_proj_id>3</emp_proj_id>
+		<projemp_effective_date>Mon Jun 06 00:00:00 CDT 2005</projemp_effective_date>
+		<account_no/>
+		<projemp_end_date>Thu Apr 06 00:00:00 CDT 2006</projemp_end_date>
+		<comments>Senior Java Swing Developer Role</comments>
+		<ot_pay_rate>52.0</ot_pay_rate>
+		<emp_id>2000</emp_id>
+		<proj_effective_date>Mon Jun 06 00:00:00 CDT 2005</proj_effective_date>
+		<client_bill_rate>0.0</client_bill_rate>
+		<proj_id>5</proj_id>
+		<client_id>5</client_id>
+		<proj_end_date>Thu Apr 06 00:00:00 CDT 2006</proj_end_date>
+		<project_name>Secure Info</project_name>
+	</vw_employee_projects>
+	<vw_employee_projects>
+		<pay_rate>50.0</pay_rate>
+		<client_name>Clientele Solutions</client_name>
+		<flat_rate>0.0</flat_rate>
+		<client_ot_bill_rate>0.0</client_ot_bill_rate>
+		<business_id>1436</business_id>
+		<emp_proj_id>1</emp_proj_id>
+		<projemp_effective_date>Sat Sep 05 00:00:00 CDT 2009</projemp_effective_date>
+		<account_no/>
+		<projemp_end_date/>
+		<comments>test</comments>
+		<ot_pay_rate>60.0</ot_pay_rate>
+		<emp_id>2000</emp_id>
+		<proj_effective_date>Sat Sep 05 00:00:00 CDT 2009</proj_effective_date>
+		<client_bill_rate>0.0</client_bill_rate>
+		<proj_id>16</proj_id>
+		<client_id>7</client_id>
+		<proj_end_date/>
+		<project_name>Test Project</project_name>
+	</vw_employee_projects>
+</VwEmployeeProjectsView>

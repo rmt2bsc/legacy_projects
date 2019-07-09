@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<DataSource Name="VwEmployeeExtView">
+  <Sql Select="employee_id, 
+		login_id, 
+		login_name, 
+		start_date, 
+		termination_date, 
+		title_id, 
+		type_id, 
+		manager_id, 
+		firstname, 
+		lastname, 
+		shortname, 
+		company_name, 
+		ssn, 
+		is_manager, 
+		email, 
+		employee_title, 
+		employee_type" From="vw_employee_ext" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwEmployeeExtTable" DBName="vw_employee_ext" Updateable="true"/>
+  <ColAttr Name="EmployeeId" DBName="employee_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwEmployeeExtTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LoginId" DBName="login_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwEmployeeExtTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LoginName" DBName="login_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwEmployeeExtTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StartDate" DBName="start_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwEmployeeExtTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TerminationDate" DBName="termination_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwEmployeeExtTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TitleId" DBName="title_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwEmployeeExtTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TypeId" DBName="type_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwEmployeeExtTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ManagerId" DBName="manager_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwEmployeeExtTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Firstname" DBName="firstname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwEmployeeExtTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Lastname" DBName="lastname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwEmployeeExtTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Shortname" DBName="shortname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwEmployeeExtTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CompanyName" DBName="company_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwEmployeeExtTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Ssn" DBName="ssn" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwEmployeeExtTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="IsManager" DBName="is_manager" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwEmployeeExtTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Email" DBName="email" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwEmployeeExtTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EmployeeTitle" DBName="employee_title" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwEmployeeExtTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EmployeeType" DBName="employee_type" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwEmployeeExtTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<DataSource Name="ProjEventView">
+  <Sql Select="event_id, 
+		project_task_id, 
+		event_date, 
+		hours, 
+		date_created, 
+		date_updated, 
+		user_id" From="proj_event" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ProjEventTable" DBName="proj_event" Updateable="true"/>
+  <ColAttr Name="EventId" DBName="event_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="ProjEventTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ProjectTaskId" DBName="project_task_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="ProjEventTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EventDate" DBName="event_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="ProjEventTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Hours" DBName="hours" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="ProjEventTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="ProjEventTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="ProjEventTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ProjEventTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<id>1</id>
+		<code>Draft</code>
+		<description>Time Sheet data has not been submitted for processing.</description>
+	</row>
+	<row>
+		<id>2</id>
+		<code>Submitted</code>
+		<description>Time Sheet data has been submitted for processing. Consultants required to obtain a client signature each week for time submitted, must now print the time sheet and fax it to 877-337-7286 with the required Consultant and Client Signatures. After the time</description>
+	</row>
+	<row>
+		<id>3</id>
+		<code>Received</code>
+		<description>Time Sheet data has been received and is being validated. If the Consultant is required to obtain a client signature each week for time submitted, the status will only change to Received after the time sheet with the required Consultant and Client Signatu</description>
+	</row>
+	<row>
+		<id>4</id>
+		<code>Approved</code>
+		<description>Time Sheet has been successfully received, is valid, and accepted by the manager.</description>
+	</row>
+	<row>
+		<id>5</id>
+		<code>Declined</code>
+		<description>Time Sheet has been declined by the manager.</description>
+	</row>
+	<row>
+		<id>6</id>
+		<code>Invoiced</code>
+		<description>A sales order is created and invoiced for the timesheet.</description>
+	</row>
+</table>

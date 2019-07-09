@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DataSource Name="ProjProjectTaskView">
+  <Sql Select="project_task_id, 
+		task_id, 
+		timesheet_id, 
+		proj_id" From="proj_project_task" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ProjProjectTaskTable" DBName="proj_project_task" Updateable="true"/>
+  <ColAttr Name="ProjectTaskId" DBName="project_task_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="ProjProjectTaskTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TaskId" DBName="task_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="ProjProjectTaskTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TimesheetId" DBName="timesheet_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="ProjProjectTaskTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ProjId" DBName="proj_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="ProjProjectTaskTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<DataSource Name="ProjTimesheetHistView">
+  <Sql Select="timesheet_hist_id, 
+		timesheet_id, 
+		timesheet_status_id, 
+		effective_date, 
+		end_date, 
+		user_id, 
+		ip_created, 
+		ip_updated" From="proj_timesheet_hist" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ProjTimesheetHistTable" DBName="proj_timesheet_hist" Updateable="true"/>
+  <ColAttr Name="TimesheetHistId" DBName="timesheet_hist_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="ProjTimesheetHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TimesheetId" DBName="timesheet_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="ProjTimesheetHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TimesheetStatusId" DBName="timesheet_status_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="ProjTimesheetHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EffectiveDate" DBName="effective_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="ProjTimesheetHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EndDate" DBName="end_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="ProjTimesheetHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ProjTimesheetHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="IpCreated" DBName="ip_created" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ProjTimesheetHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="IpUpdated" DBName="ip_updated" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ProjTimesheetHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

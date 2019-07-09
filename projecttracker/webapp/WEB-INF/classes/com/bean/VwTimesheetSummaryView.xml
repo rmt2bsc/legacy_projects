@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<DataSource Name="VwTimesheetSummaryView">
+  <Sql Select="timesheet_id, 
+		shortname, 
+		display_value, 
+		end_period, 
+		document_id, 
+		day1_hrs, 
+		day2_hrs, 
+		day3_hrs, 
+		day4_hrs, 
+		day5_hrs, 
+		day6_hrs, 
+		day7_hrs, 
+		total_hrs" From="vw_timesheet_summary" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwTimesheetSummaryTable" DBName="vw_timesheet_summary" Updateable="true"/>
+  <ColAttr Name="TimesheetId" DBName="timesheet_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwTimesheetSummaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Shortname" DBName="shortname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwTimesheetSummaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DisplayValue" DBName="display_value" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwTimesheetSummaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EndPeriod" DBName="end_period" SqlType="date" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwTimesheetSummaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DocumentId" DBName="document_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwTimesheetSummaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Day1Hrs" DBName="day1_hrs" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwTimesheetSummaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Day2Hrs" DBName="day2_hrs" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwTimesheetSummaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Day3Hrs" DBName="day3_hrs" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwTimesheetSummaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Day4Hrs" DBName="day4_hrs" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwTimesheetSummaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Day5Hrs" DBName="day5_hrs" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwTimesheetSummaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Day6Hrs" DBName="day6_hrs" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwTimesheetSummaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Day7Hrs" DBName="day7_hrs" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwTimesheetSummaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TotalHrs" DBName="total_hrs" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwTimesheetSummaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

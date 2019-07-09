@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DataSource Name="ProjTaskView">
+  <Sql Select="task_id, 
+		description, 
+		billable, 
+		date_created, 
+		date_updated, 
+		user_id" From="proj_task" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ProjTaskTable" DBName="proj_task" Updateable="true"/>
+  <ColAttr Name="TaskId" DBName="task_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="ProjTaskTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ProjTaskTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Billable" DBName="billable" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="ProjTaskTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="ProjTaskTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="ProjTaskTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ProjTaskTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

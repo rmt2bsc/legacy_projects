@@ -1,0 +1,6 @@
+1	Draft	Time Sheet data has not been submitted for processing.
+2	Submitted	Time Sheet data has been submitted for processing. Consultant’s required to obtain a client signature each week for time submitted, must now print the time sheet and fax it to 877-337-7286 with the required Consultant and Client Signatures. After the time
+3	Received	Time Sheet data has been received and is being validated. If the Consultant is required to obtain a client signature each week for time submitted, the status will only change to Received after the time sheet with the required Consultant and Client Signatu
+4	Approved	Time Sheet has been successfully received, is valid, and accepted by the manager.
+5	Declined	Time Sheet has been declined by the manager.
+6	Invoiced	A sales order is created and invoiced for the timesheet.

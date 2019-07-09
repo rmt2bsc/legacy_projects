@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<DataSource Name="ProjPrefView">
+  <Sql Select="end_period_day, 
+		event_submit_freq" From="proj_pref" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ProjPrefTable" DBName="proj_pref" Updateable="true"/>
+  <ColAttr Name="EndPeriodDay" DBName="end_period_day" SqlType="varchar" IsNull="false" JavaType="String" PrimaryKey="false" TableName="ProjPrefTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EventSubmitFreq" DBName="event_submit_freq" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ProjPrefTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

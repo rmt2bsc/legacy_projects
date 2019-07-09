@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<DataSource Name="VwProjectClientView">
+  <Sql Select="proj_id, 
+		description, 
+		effective_date, 
+		end_date, 
+		client_id, 
+		business_id, 
+		name, 
+		bill_rate, 
+		ot_bill_rate" From="vw_project_client" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwProjectClientTable" DBName="vw_project_client" Updateable="true"/>
+  <ColAttr Name="ProjId" DBName="proj_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwProjectClientTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwProjectClientTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EffectiveDate" DBName="effective_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwProjectClientTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EndDate" DBName="end_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwProjectClientTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ClientId" DBName="client_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwProjectClientTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessId" DBName="business_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwProjectClientTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Name" DBName="name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwProjectClientTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BillRate" DBName="bill_rate" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwProjectClientTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="OtBillRate" DBName="ot_bill_rate" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwProjectClientTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

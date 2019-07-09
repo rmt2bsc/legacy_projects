@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<DataSource Name="ProjEmployeeView">
+  <Sql Select="emp_id, 
+		emp_type_id, 
+		manager_id, 
+		emp_title_id, 
+		login_id, 
+		start_date, 
+		termination_date, 
+		date_created, 
+		date_updated, 
+		user_id, 
+		firstname, 
+		lastname, 
+		ssn, 
+		email, 
+		login_name, 
+		company_name, 
+		is_manager" From="proj_employee" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ProjEmployeeTable" DBName="proj_employee" Updateable="true"/>
+  <ColAttr Name="EmpId" DBName="emp_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EmpTypeId" DBName="emp_type_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ManagerId" DBName="manager_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EmpTitleId" DBName="emp_title_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LoginId" DBName="login_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StartDate" DBName="start_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TerminationDate" DBName="termination_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Firstname" DBName="firstname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Lastname" DBName="lastname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Ssn" DBName="ssn" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Email" DBName="email" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LoginName" DBName="login_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CompanyName" DBName="company_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="IsManager" DBName="is_manager" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

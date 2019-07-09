@@ -1,0 +1,80 @@
+
+<ProjClientView>
+	<proj_client>
+		<business_id>1436</business_id>
+		<date_updated>Wed Feb 25 20:50:30 CST 2009</date_updated>
+		<ot_bill_rate>0.0</ot_bill_rate>
+		<name>Clientele Solutions</name>
+		<account_no/>
+		<client_id>7</client_id>
+		<user_id>admin</user_id>
+		<bill_rate>0.0</bill_rate>
+		<date_created>Wed Feb 25 20:50:30 CST 2009</date_created>
+	</proj_client>
+	<proj_client>
+		<business_id>1433</business_id>
+		<date_updated>Fri Oct 16 13:05:09 CDT 2009</date_updated>
+		<ot_bill_rate>0.0</ot_bill_rate>
+		<name>E-Business Systems</name>
+		<account_no/>
+		<client_id>4</client_id>
+		<user_id>admin</user_id>
+		<bill_rate>0.0</bill_rate>
+		<date_created>Fri Oct 16 13:05:09 CDT 2009</date_created>
+	</proj_client>
+	<proj_client>
+		<business_id>1434</business_id>
+		<date_updated>Wed Feb 25 00:38:11 CST 2009</date_updated>
+		<ot_bill_rate>0.0</ot_bill_rate>
+		<name>Information Systems Resources</name>
+		<account_no/>
+		<client_id>5</client_id>
+		<user_id>admin</user_id>
+		<bill_rate>0.0</bill_rate>
+		<date_created>Wed Feb 25 00:38:11 CST 2009</date_created>
+	</proj_client>
+	<proj_client>
+		<business_id>1460</business_id>
+		<date_updated>Fri Oct 30 12:18:22 CDT 2009</date_updated>
+		<ot_bill_rate>0.0</ot_bill_rate>
+		<name>Matrixe Resources</name>
+		<account_no/>
+		<client_id>16</client_id>
+		<user_id>admin</user_id>
+		<bill_rate>0.0</bill_rate>
+		<date_created>Fri Oct 30 12:18:22 CDT 2009</date_created>
+	</proj_client>
+	<proj_client>
+		<business_id>1439</business_id>
+		<date_updated>Sun Feb 15 07:27:43 CST 2009</date_updated>
+		<ot_bill_rate>0.0</ot_bill_rate>
+		<name>Modis</name>
+		<account_no/>
+		<client_id>10</client_id>
+		<user_id>admin</user_id>
+		<bill_rate>0.0</bill_rate>
+		<date_created>Sun Feb 15 07:27:43 CST 2009</date_created>
+	</proj_client>
+	<proj_client>
+		<business_id>1454</business_id>
+		<date_updated>Wed Sep 02 12:06:37 CDT 2009</date_updated>
+		<ot_bill_rate>0.0</ot_bill_rate>
+		<name>Rome Madison</name>
+		<account_no/>
+		<client_id>14</client_id>
+		<user_id>admin</user_id>
+		<bill_rate>0.0</bill_rate>
+		<date_created>Wed Sep 02 12:06:37 CDT 2009</date_created>
+	</proj_client>
+	<proj_client>
+		<business_id>1440</business_id>
+		<date_updated>Wed Feb 25 21:08:56 CST 2009</date_updated>
+		<ot_bill_rate>0.0</ot_bill_rate>
+		<name>The Insource Group</name>
+		<account_no/>
+		<client_id>11</client_id>
+		<user_id>admin</user_id>
+		<bill_rate>0.0</bill_rate>
+		<date_created>Wed Feb 25 21:08:56 CST 2009</date_created>
+	</proj_client>
+</ProjClientView>

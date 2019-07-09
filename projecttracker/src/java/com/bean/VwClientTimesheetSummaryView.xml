@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<DataSource Name="VwClientTimesheetSummaryView">
+  <Sql Select="client_id, 
+		business_id, 
+		name, 
+		account_no, 
+		status_id, 
+		status_name, 
+		status_descr, 
+		timesheet_count" From="vw_client_timesheet_summary" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwClientTimesheetSummaryTable" DBName="vw_client_timesheet_summary" Updateable="true"/>
+  <ColAttr Name="ClientId" DBName="client_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwClientTimesheetSummaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessId" DBName="business_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwClientTimesheetSummaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Name" DBName="name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwClientTimesheetSummaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AccountNo" DBName="account_no" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwClientTimesheetSummaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StatusId" DBName="status_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwClientTimesheetSummaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StatusName" DBName="status_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwClientTimesheetSummaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StatusDescr" DBName="status_descr" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwClientTimesheetSummaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TimesheetCount" DBName="timesheet_count" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwClientTimesheetSummaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>
