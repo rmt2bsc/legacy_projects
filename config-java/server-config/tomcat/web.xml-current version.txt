@@ -1,0 +1,51 @@
+<env-entry>  	
+         <env-entry-name>ENVIRONMENT</env-entry-name>  	
+         <env-entry-value>PROD</env-entry-value>  	
+         <env-entry-type>java.lang.String</env-entry-type>  
+      </env-entry>
+      <env-entry>  	
+         <env-entry-name>CONFIG_LOCATION</env-entry-name>  	
+         <env-entry-value>SystemConfigParms</env-entry-value>  	
+         <env-entry-type>java.lang.String</env-entry-type>  
+      </env-entry>  
+      <env-entry>  	
+           <env-entry-name>APP_CONFIG_LOCATION</env-entry-name>  	
+           <env-entry-value>config.AppParms</env-entry-value>  	
+           <env-entry-type>java.lang.String</env-entry-type>  
+      </env-entry>    
+      <env-entry>  	
+         <env-entry-name>SERVER</env-entry-name>  	
+         <env-entry-value>http://rmtfmweb01</env-entry-value>  	
+         <env-entry-type>java.lang.String</env-entry-type>  
+      </env-entry>      
+      
+    <!-- 
+    ############################################################
+    #  dbms vendor
+    #   1 = Sybase Sql Anywhere, Adaptive Server Anywhere
+    #   2 = Sybase Adaptive Server Enterprise
+    #   3 = Oracle
+    #   4 = MS SQL Server
+    #   5 = DB2
+    ############################################################  
+     -->  
+      <env-entry>  	
+    	     <env-entry-name>DBMSVendor</env-entry-name>  	
+    	     <env-entry-value>1</env-entry-value>  	
+    	     <env-entry-type>java.lang.String</env-entry-type>  
+      </env-entry>
+      <env-entry>  	
+    	     <env-entry-name>webapps_drive</env-entry-name>  	
+    	     <env-entry-value>f:</env-entry-value>  	
+    	     <env-entry-type>java.lang.String</env-entry-type>  
+    	</env-entry>
+      <env-entry>  	
+    	     <env-entry-name>webapps_dir</env-entry-name>  	
+    	     <env-entry-value>\clients\websites\rmt2\webapps</env-entry-value>  	
+    	     <env-entry-type>java.lang.String</env-entry-type>  
+  </env-entry>      
+  <env-entry>  	
+  	   <env-entry-name>DEFAULT_APP_ROOT_DIR_NAME</env-entry-name>  	
+  	   <env-entry-value>ROOT</env-entry-value>  	
+  	   <env-entry-type>java.lang.String</env-entry-type>  
+  </env-entry>   
