@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<id>1</id>
+		<name>authremoteuser</name>
+		<resource_type_id>3</resource_type_id>
+		<resource_subtype_id>6</resource_subtype_id>
+		<url>authentication/unsecureRequestProcessor/AuthenticateRemoteUser</url>
+		<description>Default service for retrieving one or more user profiles from the database</description>
+		<date_created>2007-11-11 00:00:00.000</date_created>
+		<date_updated>2007-11-11 00:00:00.000</date_updated>
+		<user_id>NULL</user_id>
+	</row>
+	<row>
+		<id>2</id>
+		<name>login</name>
+		<resource_type_id>3</resource_type_id>
+		<resource_subtype_id>6</resource_subtype_id>
+		<url>authentication/loginProcessor</url>
+		<description>Functions to log user into system</description>
+		<date_created>2007-11-11 12:52:14.513</date_created>
+		<date_updated>2007-11-11 12:52:14.513</date_updated>
+		<user_id>NULL</user_id>
+	</row>
+	<row>
+		<id>3</id>
+		<name>logoff</name>
+		<resource_type_id>3</resource_type_id>
+		<resource_subtype_id>6</resource_subtype_id>
+		<url>authentication/loginProcessor</url>
+		<description>Logs user out of system</description>
+		<date_created>2007-11-11 12:52:50.687</date_created>
+		<date_updated>2007-11-11 12:52:50.687</date_updated>
+		<user_id>NULL</user_id>
+	</row>
+	<row>
+		<id>4</id>
+		<name>userprofile</name>
+		<resource_type_id>3</resource_type_id>
+		<resource_subtype_id>6</resource_subtype_id>
+		<url>authentication/unsecureRequestProcessor/UserProfile</url>
+		<description>Retrieves a user profile from the database</description>
+		<date_created>2007-11-11 12:53:29.250</date_created>
+		<date_updated>2007-11-11 12:53:29.250</date_updated>
+		<user_id>NULL</user_id>
+	</row>
+</table>

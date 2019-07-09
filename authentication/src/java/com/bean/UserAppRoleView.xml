@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DataSource Name="UserAppRoleView">
+  <Sql Select="user_app_role_id, 
+		app_role_id, 
+		login_id, 
+		date_created, 
+		date_updated, 
+		user_id" From="user_app_role" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="UserAppRoleTable" DBName="user_app_role" Updateable="true"/>
+  <ColAttr Name="UserAppRoleId" DBName="user_app_role_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="UserAppRoleTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AppRoleId" DBName="app_role_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="UserAppRoleTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LoginId" DBName="login_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="UserAppRoleTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="UserAppRoleTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="UserAppRoleTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="UserAppRoleTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<DataSource Name="VwUserView">
+  <Sql Select="login_id, 
+		grp_id, 
+		username, 
+		firstname, 
+		lastname, 
+		birth_date, 
+		ssn, 
+		start_date, 
+		termination_date, 
+		description, 
+		password, 
+		total_logons, 
+		email, 
+		active, 
+		date_created, 
+		date_updated, 
+		user_id, 
+		logged_in, 
+		short_name" From="vw_user" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwUserTable" DBName="vw_user" Updateable="true"/>
+  <ColAttr Name="LoginId" DBName="login_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwUserTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GrpId" DBName="grp_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwUserTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Username" DBName="username" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Firstname" DBName="firstname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Lastname" DBName="lastname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BirthDate" DBName="birth_date" SqlType="date" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwUserTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Ssn" DBName="ssn" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StartDate" DBName="start_date" SqlType="date" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwUserTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TerminationDate" DBName="termination_date" SqlType="date" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwUserTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Password" DBName="password" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TotalLogons" DBName="total_logons" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwUserTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Email" DBName="email" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Active" DBName="active" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwUserTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwUserTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwUserTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LoggedIn" DBName="logged_in" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwUserTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ShortName" DBName="short_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

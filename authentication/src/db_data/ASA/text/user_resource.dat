@@ -1,0 +1,4 @@
+1,authremoteuser,3,6,authentication/unsecureReqeustProcessor/AuthenticateRemoteUser,Default service for retrieving one or more user profiles from the database,'2007-11-11 00:00:00.000','2007-11-11 00:00:00.000',NULL
+2,login,3,6,authentication/loginProcessor,Functions to log user into system,'2007-11-11 12:52:14.513','2007-11-11 12:52:14.513',NULL
+3,logoff,3,6,authentication/loginProcessor,Logs user out of system,'2007-11-11 12:52:50.687','2007-11-11 12:52:50.687',NULL
+4,userprofile,3,6,authentication/unsecureReqeustProcessor/UserProfile,Retrieves a user profile from the database,'2007-11-11 12:53:29.250','2007-11-11 12:53:29.250',NULL

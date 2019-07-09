@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<DataSource Name="ApplicationView">
+  <Sql Select="app_id, 
+		name, 
+		description, 
+		active, 
+		date_created, 
+		date_updated, 
+		user_id" From="application" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ApplicationTable" DBName="application" Updateable="true"/>
+  <ColAttr Name="AppId" DBName="app_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="ApplicationTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Name" DBName="name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ApplicationTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ApplicationTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Active" DBName="active" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="ApplicationTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="ApplicationTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="ApplicationTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ApplicationTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

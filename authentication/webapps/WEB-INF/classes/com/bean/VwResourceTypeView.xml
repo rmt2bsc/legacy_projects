@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DataSource Name="VwResourceTypeView">
+  <Sql Select="resrc_type_id, 
+		resrc_type_name, 
+		resrc_subtype_id, 
+		resrc_subtype_name, 
+		resrc_subtype_desc" From="vw_resource_type" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwResourceTypeTable" DBName="vw_resource_type" Updateable="true"/>
+  <ColAttr Name="ResrcTypeId" DBName="resrc_type_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwResourceTypeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ResrcTypeName" DBName="resrc_type_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwResourceTypeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ResrcSubtypeId" DBName="resrc_subtype_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwResourceTypeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ResrcSubtypeName" DBName="resrc_subtype_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwResourceTypeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ResrcSubtypeDesc" DBName="resrc_subtype_desc" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwResourceTypeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

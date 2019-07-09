@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<DataSource Name="UserResourceAccessView">
+  <Sql Select="rsrc_access_id, 
+		grp_id, 
+		rsrc_id, 
+		login_id, 
+		date_updated, 
+		date_created, 
+		user_id" From="user_resource_access" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="UserResourceAccessTable" DBName="user_resource_access" Updateable="true"/>
+  <ColAttr Name="RsrcAccessId" DBName="rsrc_access_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="UserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GrpId" DBName="grp_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="UserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="RsrcId" DBName="rsrc_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="UserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LoginId" DBName="login_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="UserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="UserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="UserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="UserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

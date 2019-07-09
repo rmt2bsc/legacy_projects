@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<DataSource Name="VwAppRolesView">
+  <Sql Select="app_role_id, 
+		app_role_code, 
+		app_role_name, 
+		app_role_description, 
+		role_id, 
+		role_name, 
+		app_name, 
+		application_id" From="vw_app_roles" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwAppRolesTable" DBName="vw_app_roles" Updateable="true"/>
+  <ColAttr Name="AppRoleId" DBName="app_role_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AppRoleCode" DBName="app_role_code" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AppRoleName" DBName="app_role_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AppRoleDescription" DBName="app_role_description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="RoleId" DBName="role_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="RoleName" DBName="role_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AppName" DBName="app_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ApplicationId" DBName="application_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

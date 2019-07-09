@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<DataSource Name="TestView.xml">
+  <Sql Select="user_login.description as user_login_description, 
+		user_login.employee_id, 
+		user_login.id, 
+		user_login.login, 
+		user_login.password, 
+		user_login.total_logons,
+		user_login.active as user_login_active,
+		user_login.date_created,
+		user_login.date_updated,
+		user_login.user_id,
+		proj_employee.person_id,
+		proj_employee.start_date, 
+		proj_employee.termination_date, 
+		proj_employee.title_id, 
+		proj_employee.manager_id, 
+		proj_employee.type_id,
+		proj_employee.bill_rate,
+		proj_employee.ot_bill_rate,
+		person.firstname, 
+		person.midname, 
+		person.lastname,
+		person.shortname,
+		person.generation,
+		person.maidenname,
+		person.title,
+		person.email,
+		person.gender_id, 
+		person.marital_status, 
+		person.race_id, 
+		person.ssn,
+		person.birth_date,
+		proj_employee_title.description as pet_description,
+		proj_employee_type.description as pet2_description"
+
+		From="user_login, 
+		          proj_employee,
+		          person, 
+		          proj_employee_title, 
+		          proj_employee_type"
+		Where="user_login.employee_id = proj_employee.id and 
+		             proj_employee.person_id = person.id and 
+		             proj_employee.title_id = proj_employee_title.id and 
+		             proj_employee.type_id = proj_employee_type.id and
+		             user_login.active = 1"
+		GroupBy="" 
+		Having="" 
+		OrderBy=""/>
+  <TableUsage Name="UserLoginTable" DBName="user_login" Updateable="false"/>
+  <TableUsage Name="ProjEmployeeTable" DBName="proj_employee" Updateable="false"/>
+  <TableUsage Name="PersonTable" DBName="person" Updateable="false"/>
+  <TableUsage Name="ProjEmployeeTitleTable" DBName="proj_employee_title" Updateable="false"/>
+  <TableUsage Name="ProjEmployeeTypeTable" DBName="proj_employee_type" Updateable="false"/>
+  <ColAttr Name="Id" DBName="id" SqlType="numeric" IsNull="false" JavaType="java.sql.Types.DOUBLE" PrimaryKey="true" TableName="UserLoginTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Login" DBName="login" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="UserLoginTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="user_login_description" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="UserLoginTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Password" DBName="password" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="UserLoginTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TotalLogons" DBName="total_logons" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="UserLoginTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Active" DBName="active" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="UserLoginTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="UserLoginTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="UserLoginTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="UserLoginTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EmployeeId" DBName="employee_id" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="UserLoginTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ManagerId" DBName="manager_id" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BillRate" DBName="bill_rate" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.NUMERIC" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="OtBillRate" DBName="ot_bill_rate" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.NUMERIC" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StartDate" DBName="start_date" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TerminationDate" DBName="termination_date" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="PersonId" DBName="person_id" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>  
+  <ColAttr Name="Firstname" DBName="firstname" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Midname" DBName="midname" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Lastname" DBName="lastname" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Maidenname" DBName="maidenname" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Generation" DBName="generation" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Shortname" DBName="shortname" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Title" DBName="title" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GenderId" DBName="gender_id" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="MaritalStatus" DBName="marital_status" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BirthDate" DBName="birth_date" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="RaceId" DBName="race_id" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Ssn" DBName="ssn" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Email" DBName="email" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>  
+  <ColAttr Name="TitleId" DBName="title_id" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TitleDescription" DBName="pet_description" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="ProjEmployeeTitleTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TypeId" DBName="type_id" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>  
+  <ColAttr Name="TypeDescription" DBName="pet2_description" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="ProjEmployeeTypeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>
