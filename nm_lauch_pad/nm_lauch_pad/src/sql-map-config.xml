@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMapConfig PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+	    <settings
+	        useStatementNamespaces="true"
+	        lazyLoadingEnabled="false"
+	        enhancementEnabled="true"
+	        maxSessions="1"/>
+	 
+	    <transactionManager type="JDBC" commitRequired="false">
+	        <dataSource type="SIMPLE">
+	        		<property name="DefaultAutoCommit" value="false"/>
+	            <property name="SetAutoCommitAllowed" value="false"/>
+	            <property name="JDBC.Driver" value="${jdbc.driver}"/>
+	            <property name="JDBC.ConnectionURL" value="jdbc:informix-sqli://${dbServerName}:2301/${jdbc.url.databaseName}:INFORMIXSERVER="/>
+	            <property name="JDBC.Username" value="${jdbc.username}"/>
+	            <property name="JDBC.Password" value="${jdbc.password}"/>
+	        </dataSource>
+	    </transactionManager>
+	    <sqlMap resource="sqlmaps/General.xml"/>
+			<sqlMap resource="sqlmaps/UserAdmin.xml"/>
+			<sqlMap resource="sqlmaps/PriceChangeAdmin.xml"/>
+			<sqlMap resource="sqlmaps/SITransfersAdmin.xml"/>
+			<sqlMap resource="sqlmaps/BITransfersAdmin.xml"/>
+			<sqlMap resource="sqlmaps/BIRTVAdmin.xml"/>
+			<sqlMap resource="sqlmaps/SIRTVAdmin.xml"/>
+			<sqlMap resource="sqlmaps/CountsAdmin.xml"/>
+			<sqlMap resource="sqlmaps/IDT-Admin.xml"/>
+			<sqlMap resource="sqlmaps/ReportsAdmin.xml"/>
+			<sqlMap resource="sqlmaps/PriceAuditAdmin.xml"/>
+			
+</sqlMapConfig>
+

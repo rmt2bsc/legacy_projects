@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="IdtAdmin">
+	<typeAlias alias="SkuVO" type="modules.model.SkuItem" />
+	
+	<resultMap id="ReticketingMap" class="SkuVO">
+		<result property="dept" column="dept" />
+		<result property="clazz" column="class" />
+		<result property="vendor" column="vendor" />
+		<result property="style" column="style" />
+		<result property="color" column="color" />
+		<result property="size" column="size" />
+		<result property="qty" column="qty" />
+		<result property="price" column="price" />
+		<result property="statusDate" column="status_date" />
+	</resultMap>
+	
+	<resultMap id="FilteredSkuMap" class="SkuVO">
+		<result property="dept" column="dept" />
+		<result property="clazz" column="class" />
+		<result property="vendor" column="vendor" />
+		<result property="style" column="style" />
+		<result property="color" column="color" />
+		<result property="size" column="size" />
+	</resultMap>
+	
+	 <select id="FetchHeader" resultMap="ReticketingMap" parameterClass="SkuVO">
+			select
+						dept,
+						class,
+						vendor,
+						style,
+						color,
+						size,
+						qty,
+						price,
+						status_date	
+			  from 
+				    idt_retick
+			 where 
+			       status = 'A'
+				<isNotNull prepend="AND" property="dept">
+				     dept = #dept#
+				</isNotNull>     			       
+			  <isNotNull prepend="AND" property="clazz">
+				     class = #clazz#
+				</isNotNull>     
+				<isNotNull prepend="AND" property="vendor">
+				     vendor = #vendor#
+				</isNotNull>     
+				<isNotNull prepend="AND" property="style">
+				     style = #style#
+				</isNotNull>     
+				<isNotNull prepend="AND" property="color">
+				     color = #color#
+				</isNotNull>     
+				<isNotNull prepend="AND" property="size">
+				     size = #size#
+				</isNotNull>     
+			order by 
+			      dept, 
+			      class, 
+			      vendor, 
+			      style, 
+			      color, 
+			      size, 
+			      price
+	 </select>
+	 
+	 <select id="FetchSku" resultMap="FilteredSkuMap" parameterClass="SkuVO">
+			select
+						dept,
+						class,
+						vendor,
+						style,
+						color,
+						size
+				from 
+				    idt_sku
+			 where 
+			       sku = #sku#
+				 and status = 'A'
+				 and status_date = (select 
+				                            max(status_date) 
+				                       from 
+				                            idt_sku
+				                      where 
+				                            sku = #sku#
+				                        and status = 'A')
+	 </select>
+	 
+	 <select id="FetchShortSku" resultClass="Long" parameterClass="SkuVO">
+			select
+						min(sku) sku
+				from 
+				    idt_sku
+			 where 
+			       status = 'A'
+			   and dept = #dept#  
+			   and class = #clazz# 
+			   and vendor = #vendor# 
+			   and style = #style# 
+			   and color = #color# 
+			   and size = #size#
+	 </select>
+	 
+
+<update id="UpdateNewQuantity" parameterClass="SkuVO">
+   update idt_retick set
+			   qty = #qty#
+		where 
+  	      dept = #dept#  
+	    and class = #clazz# 
+	    and vendor = #vendor# 
+	    and style = #style# 
+	    and color = #color# 
+	    and size = #size#
+      and status_date = #statusDate#
+      and status = 'A'
+</update>
+
+<delete id="DeleteReticketItem" parameterClass="SkuVO">
+   delete from idt_retick
+		where 
+		      dept = #dept#  
+			and class = #clazz# 
+			and vendor = #vendor# 
+			and style = #style# 
+			and color = #color# 
+			and size = #size#
+		  and status_date = #statusDate#
+		  and status = 'A'
+</delete>
+
+<delete id="DeleteSkuItem" parameterClass="SkuVO">
+   delete from idt_sku
+		where 
+		      dept = #dept#  
+			and class = #clazz# 
+			and vendor = #vendor# 
+			and style = #style# 
+			and color = #color# 
+			and size = #size#
+		  and status_date = #statusDate#
+		  and status = 'A'
+</delete>
+
+</sqlMap>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="BIRTVAdmin">
+	<typeAlias alias="RtvVO" type="modules.model.RtvHeader" />
+	<typeAlias alias="RtvItemVO" type="modules.model.RtvItem" />
+	
+	<resultMap id="RtvHeaderQtySumMap" class="RtvVO">
+		<result property="rtvNo" column="rtv_number" />
+		<result property="qtySummed" column="dtl_sum" />
+	</resultMap>
+	
+	<resultMap id="RtvHeaderMap" class="RtvVO">
+		<result property="rtvNo" column="rtv_number" />
+		<result property="rtvType" column="rtv_type" />
+		<result property="dept" column="rtv_dept" />
+		<result property="vendor" column="rtv_vendor" />
+		<result property="dateEntered" column="rtv_date_entered" />
+		<result property="reasonCd" column="rtv_reason_code" />
+		<result property="storeNo" column="rtv_store_num" />
+		<result property="sendByDate" column="rtv_send_by_date" />
+		<result property="raNo" column="rtv_ra_number" />
+		<result property="retail" column="rtv_tot_retail" />
+		<result property="qty" column="rtv_tot_qty" />
+		<result property="status" column="rtv_status" />
+		<result property="statusDate" column="rtv_status_date" />
+		<result property="assoc" column="rtv_assoc" />
+		<result property="qtySummed" column="dtl_sum" />
+	</resultMap>
+
+	<resultMap id="RtvItemMap" class="RtvItemVO">
+	  <result property="rtvNo" column="rtv_number" />
+	  <result property="sSku" column="ssku" />
+		<result property="overFlowSku" column="rtv_sku_overflow" />
+		<result property="sku" column="rtv_sku" />
+		<result property="skuType" column="rtv_sku_type" />
+		<result property="dept" column="rtv_dept" />
+		<result property="clazz" column="rtv_class" />
+		<result property="vendor" column="rtv_vendor" />
+		<result property="style" column="rtv_style" />
+		<result property="color" column="rtv_color" />
+		<result property="size" column="rtv_size" />
+		<result property="ticketRetail" column="rtv_ticket_retail" />
+		<result property="origRetail" column="rtv_orig_retail" />
+		<result property="qty" column="rtv_qty" />
+		<result property="expectedQty" column="rtv_expected_qty" />
+		<result property="pcFlag" column="rtv_pc_flag" />
+		<result property="pcNo" column="rtv_pc_number" />
+		<result property="reasonCd" column="rtv_reason_code" />
+	</resultMap>
+	
+  <select id="FetchHeader" resultMap="RtvHeaderMap">
+			select
+					h.rtv_number,
+			    h.rtv_type,
+			    h.rtv_dept,
+			    h.rtv_vendor,
+			    h.rtv_date_entered,
+			    h.rtv_reason_code,
+			    h.rtv_store_num,
+			    h.rtv_send_by_date,
+			    h.rtv_ra_number,
+			    h.rtv_tot_retail,
+			    h.rtv_tot_qty,
+			    h.rtv_status,
+			    h.rtv_status_date,
+			    h.rtv_assoc,
+					sum(i.rtv_qty) dtl_sum
+			from 
+			      rtv_header h, rtv_item i
+			where h.rtv_number = i.rtv_number
+			  and h.rtv_status in ('C', 'I', 'S', 'Z', 'O')
+			  and rtv_type = 'B'
+			group by 
+			      h.rtv_number,
+				    h.rtv_type,
+				    h.rtv_dept,
+				    h.rtv_vendor,
+				    h.rtv_date_entered,
+				    h.rtv_reason_code,
+				    h.rtv_store_num,
+				    h.rtv_send_by_date,
+				    h.rtv_ra_number,
+				    h.rtv_tot_retail,
+				    h.rtv_tot_qty,
+				    h.rtv_status,
+				    h.rtv_status_date,
+				    h.rtv_assoc
+			order by 
+			      rtv_date_entered, 
+			      rtv_number
+	 </select>
+	 
+	 <select id="FetchRtvNoSUmmedQty" resultMap="RtvHeaderQtySumMap" parameterClass="RtvVO">
+	 		select
+					h.rtv_number,
+					sum(i.rtv_qty) dtl_sum
+			from 
+			      rtv_header h, rtv_item i
+			where h.rtv_number = i.rtv_number
+			  and h.rtv_status in ('C', 'I', 'S', 'Z', 'O')
+			  and rtv_type = 'B'
+			  and h.rtv_number = #rtvNo#
+			group by 
+			      h.rtv_number
+
+	 </select>
+	 
+	<select id="FetchDetail" resultMap="RtvItemMap" parameterClass="RtvVO">
+		select
+				(rtv_sku_overflow * 100000000) + rtv_sku	ssku,
+				rtv_number,
+		    rtv_sku_overflow,
+		    rtv_sku,
+		    rtv_sku_type,
+		    rtv_dept,
+		    rtv_class,
+		    rtv_vendor,
+		    rtv_style,
+		    rtv_color,
+		    rtv_size,
+		    rtv_orig_retail,
+		    rtv_ticket_retail,
+		    rtv_qty,
+		    rtv_expected_qty,
+		    rtv_pc_flag,
+		    rtv_pc_number,
+		    rtv_reason_code
+		from 
+		      rtv_item
+		where 
+		      rtv_number = #rtvNo#
+		order by 
+		      rtv_dept, 
+		      rtv_class, 
+		      rtv_vendor, 
+		      rtv_style, 
+		      rtv_color, 
+		      rtv_size, 
+		      ssku,
+		      rtv_orig_retail
+ </select>
+
+<update id="UpdateHeaderStatus" parameterClass="RtvVO">
+   update rtv_header set
+		  rtv_status  = #status#,
+		  rtv_status_date = #currDate#
+		where rtv_number = #rtvNo#
+</update>
+
+<update id="UpdateSkuItem" parameterClass="RtvItemVO">
+   update rtv_item set
+		   rtv_qty = #qty#
+		where rtv_number = #rtvNo#
+		  and rtv_dept = #dept#
+		  and rtv_class = #clazz#
+		  and rtv_vendor = #vendor#
+		  and rtv_style = #style#
+		  and rtv_color = #color#
+		  and rtv_size = #size#
+		  and rtv_orig_retail = #origRetail#
+</update>
+
+</sqlMap>

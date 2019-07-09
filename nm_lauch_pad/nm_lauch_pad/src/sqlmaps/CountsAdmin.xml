@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="CountsAdmin">
+	<typeAlias alias="CountVO" type="modules.model.Count" />
+	<typeAlias alias="CountDetailVO" type="modules.model.CountDetail" />
+	
+	<resultMap id="CountHeaderMap" class="CountVO">
+		<result property="hdrId" column="hdrid" />
+		<result property="division" column="division" />
+		<result property="inventoryDate" column="inventory_date" />
+		<result property="startDate" column="count_start_date" />
+		<result property="status" column="status" />
+		<result property="statusDate" column="status_date" />
+		<result property="lastModifiedBy" column="last_modified_by" />
+		<result property="transmitDate" column="transmit_date" />
+	</resultMap>
+	
+	<resultMap id="CountDetailMap" class="CountDetailVO">
+		<result property="assocNo" column="assoc_no" />
+	  <result property="division" column="division" />
+		<result property="inventoryDate" column="inventory_date" />
+		<result property="hdrStatus" column="hdr_status" />
+		<result property="dtlStatus" column="dtl_status" />
+		<result property="qtySum" column="qtySum" />
+	</resultMap>
+	
+	
+  <select id="FetchHeader" resultMap="CountHeaderMap">
+			select
+			    hdrid,
+			    division,
+			    inventory_date,
+			    count_start_date,
+			    status,
+			    status_date,
+			    last_modified_by,
+			    transmit_date
+			from 
+			     cnt_hdr
+			where 
+			     status in ('A', 'S')
+			order by 
+			     inventory_date desc, 
+			     division, 
+			     status
+	</select>
+	 
+	<select id="FetchHeaderTransmitted" resultMap="CountHeaderMap" parameterClass="CountVO">
+			select
+			    hdrid,
+			    division,
+			    inventory_date,
+			    count_start_date,
+			    status,
+			    status_date,
+			    last_modified_by,
+			    transmit_date
+			from 
+			      cnt_hdr
+			where 
+			      status = 'X'
+			  and inventory_date >= #inventoryDate# 
+			order by 
+			     division, 
+			     inventory_date, 
+			     status
+	</select>
+	
+	<select id="FetchDetail" resultMap="CountDetailMap" parameterClass="CountVO">
+		select 
+				  d.assoc_no, 
+				  h.division,
+				  h.inventory_date,
+				  h.status		hdr_status,			
+				  d.status		dtl_status,
+				  sum(d.qty) qtySum
+			from 
+			      cnt_hdr h, 
+			      cnt_dtl d
+			where 
+			      h.hdrid = d.hdrid 
+			  and h.hdrid = #hdrId#
+			group by 
+			      d.assoc_no, 
+			      h.division, 
+			      h.inventory_date, 
+			      h.status, 
+			      d.status 
+			order by 
+			      d.assoc_no, 
+			      h.division, 
+			      h.inventory_date, 
+			      h.status, 
+			      d.status
+ </select>
+
+ <select id="FetchDetailCount" resultClass="int" parameterClass="CountDetailVO">
+	 		select 
+	 		        count(*) count
+				from 
+				      cnt_dtl
+				where 
+				       hdrid = #hdrId#
+				<isNotNull prepend="AND" property="status">
+				       status != #status#
+				</isNotNull>     
+ </select>
+	 
+ <select id="FetchMinimumHeaderByInvDateAndDivision" resultClass="long" parameterClass="CountVO">
+	 		select 
+				      min(hdrid)	new_hdrid
+				from 
+				      cnt_hdr
+				where 
+				      inventory_date = #inventoryDate#
+				  and division = #division#
+				  and status = 'A';
+ </select>
+ 
+ 
+ <insert id="InsertHeader" parameterClass="CountVO">
+ 			insert into cnt_hdr (
+				  division,
+				  inventory_date,
+				  count_start_date,
+				  count_start_time,
+				  status,
+				  status_date,
+				  last_modified_by,
+				  transmit_date)
+		 values (
+				  #division#,
+				  #inventoryDate#,
+				  #startDate#,
+				  #startTime#,
+				  'A',
+				  #currDate#,
+				  #currentUserId#,
+				  NULL)
+  	<selectKey resultClass="int" >
+			select dbinfo('sqlca.sqlerrd1') from systables where tabname='cnt_hdr'
+    </selectKey>
+ </insert>
+ 
+ <update id="UpdateHeaderStatus" parameterClass="CountVO">
+ 		 update cnt_hdr set
+					  status = #newStatus#,
+					  status_date = #currDate#
+					where status = #status#
+					  and hdrid = #hdrId#
+ </update>
+ 
+ <update id="UpdateDetailStatus" parameterClass="CountDetailVO">
+ 		 update cnt_dtl set
+					  status = #newStatus#,
+					  status_date = #currDate#
+					where status = #status#
+					  and hdrid = #hdrId#
+ </update>
+ 
+ <update id="UpdateDetail" parameterClass="CountDetailVO">
+ 		 update cnt_dtl set
+					  hdrid = #newHdrId#
+					where hdrid = #hdrId#
+					  and assoc_no = #assocNo#
+					  and status = 'F'
+ </update>
+ 
+ <delete id="DeleteHeader" parameterClass="CountVO">
+ 		delete from cnt_hdr
+			where hdrid = #hdrId#
+ </delete>
+ 
+ <delete id="DeleteDetail" parameterClass="CountDetailVO">
+ 		delete from cnt_dtl
+			where hdrid = #hdrId#
+			  and assoc_no = #assocNo#
+			  and status   = 'F'
+ </delete>
+ 
+</sqlMap>

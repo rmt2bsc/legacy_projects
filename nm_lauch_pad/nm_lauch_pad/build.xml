@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<project name="NM Launch Pad Build" basedir="." default="compile">
+	<property file="build.properties" />
+
+	<path id="build.classpath">
+		<pathelement path="${lib.classpath}" />
+	</path>
+
+	<target name="echoJavaBuiltInProperties" description="Display Ant's built-in properties">
+		<ant antfile="ant-java-property-help.xml" target="echoJavaSystemProperties" />
+	</target>
+
+	<target name="clean" description="Deletes the work directories which includes the build directory (bin) and the launch pad distribution sub directory">
+		<echo message="Cleaning scratch directories..." />
+		<delete dir="${buildRoot}" />
+		<delete dir="${appDistDir}" />
+	</target>
+
+	<target name="compile" depends="clean" description="Compiles the Launch Pad Application">
+		<echo message="OS Architecture ${os.arch}" />
+		<echo message="OS Name ${os.name}" />
+		<echo message="OS Version ${os.version}" />
+		<echo message="Classpath: ${lib.classpath}" />
+
+		<mkdir dir="${buildRoot}" />
+		<echo message="Compliling application..." />
+		<javac srcdir="${javaSrcDir}" destdir="${buildRoot}">
+			<classpath refid="build.classpath" />
+		</javac>
+	</target>
+
+	<target name="build" depends="compile" description="Compile and assemble dependencies for Launch Pad Application">
+		<echo message="Building application..." />
+		<mkdir dir="${buildRoot}/lib" />
+		<copy todir="${buildRoot}/lib">
+			<fileset dir="${libDir}">
+				<include name="**" />
+			</fileset>
+		</copy>
+		<copy todir="${buildRoot}">
+			<fileset dir="${sourceRoot}">
+				<include name="images/*" />
+				<include name="META-INF/*" />
+				<include name="sqlmaps/*" />
+				<include name="*.properties" />
+				<include name="*.xml" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="deploy" depends="build" description="Prepares the application for distribution which includes creating the directory structure, copying the application files to the respective directories, and creating the runnable jar">
+		<echo message="Deploying application..." />
+		<mkdir dir="${dist}" />
+		<mkdir dir="${appDistDir}" />
+		<mkdir dir="${appDistDir}/config" />
+		<mkdir dir="${appDistDir}/dist" />
+		<mkdir dir="${appDistDir}/dist/jre" />
+		<mkdir dir="${appDistDir}/logs" />
+		<mkdir dir="${appDistDir}/lib" />
+
+		<copy todir="${jreDir}" description="Copy Runtime to deployment area">
+			<fileset dir="${java.home}">
+				<include name="**" />
+			</fileset>
+		</copy>
+		<copy todir="${appDistDir}" description="Copy startup batch file to the root of deployment directory">
+			<fileset dir="${basedir}/runtime">
+				<include name="*.bat" />
+			</fileset>
+		</copy>
+		<copy todir="${appDistDir}" description="Copy rocket icon to the root of deployment directory">
+			<fileset dir="${basedir}/src/images">
+				<include name="rocket.ico" />
+			</fileset>
+		</copy>
+		<copy todir="${appDistDir}/lib" description="Copy external libraries to the lib subdirectory of the root of deployment directory">
+			<fileset dir="${buildRoot}/lib">
+				<include name="*.jar" />
+			</fileset>
+		</copy>
+		<echo message="Creating runnable jar..." />
+		<jar destfile="${appDistDir}/${mainJar}" basedir="${buildRoot}">
+			<manifest>
+				<attribute name="Main-Class" value="modules.LaunchPad" />
+				<attribute name="Class-Path" value="./ lib/ibatis-2.3.0.677.jar lib/ibatis-common-2.jar lib/ifxjdbc.jar lib/junit-4.8.1.jar lib/log4j-1.2.9.jar lib/miglayout15-swing.jar" />
+			</manifest>
+		</jar>
+		<echo message="Deployment completed" />
+	</target>
+
+	<target name="deploy-no-jre" depends="build" description="Prepares the application for distribution without including JRE">
+		<echo message="Deploying application without JRE..." />
+		<mkdir dir="${dist}" />
+		<mkdir dir="${appDistDir}" />
+		<mkdir dir="${appDistDir}/config" />
+		<mkdir dir="${appDistDir}/logs" />
+		<mkdir dir="${appDistDir}/lib" />
+
+		<copy todir="${appDistDir}" description="Copy startup batch file to the root of deployment directory">
+			<fileset dir="${basedir}/runtime">
+				<include name="*.bat" />
+			</fileset>
+		</copy>
+		<copy todir="${appDistDir}/lib" description="Copy external libraries to the lib subdirectory of the root of deployment directory">
+			<fileset dir="${buildRoot}/lib">
+				<include name="*.jar" />
+			</fileset>
+		</copy>
+		<echo message="Creating runnable jar..." />
+		<jar destfile="${appDistDir}/${mainJar}" basedir="${buildRoot}">
+			<manifest>
+				<attribute name="Main-Class" value="modules.LaunchPad" />
+				<attribute name="Class-Path" value="./ lib/ibatis-2.3.0.677.jar lib/ibatis-common-2.jar lib/ifxjdbc.jar lib/junit-4.8.1.jar lib/log4j-1.2.9.jar lib/miglayout15-swing.jar" />
+			</manifest>
+		</jar>
+		<echo message="Deployment completed" />
+	</target>
+
+	<target name="package" description="Zips the Launch Pad distribution">
+		<echo message="Preparing to zip Launch Pad Build" />
+		<zip destfile="${dist}/${zipFileName}" basedir="${appDistDir}">
+		</zip>
+	</target>
+
+	<target name="zip-with-jre" depends="deploy">
+		<echo message="Preparing compile, build, deploy, and zip the Launch Pad application" />
+		<property name="zipFileName" value="${zipFileName_JRE}" />
+		<antcall target="package" />
+	</target>
+
+	<target name="zip-without-jre" depends="deploy-no-jre">
+		<echo message="Preparing compile, build, deploy, and zip the Launch Pad application withou including a copy of the JRE" />
+		<property name="zipFileName" value="${zipFileName_NO_JRE}" />
+		<antcall target="package" />
+	</target>
+
+	<target name="zip-both">
+		<echo message="Create a .zip with the JRE and a .zip without the JRE" />
+		<antcall target="zip-with-jre" />
+		<antcall target="zip-without-jre" />
+	</target>
+
+	<target name="javadocs" description="Generates javadocs for the Launch Pad Application">
+		<echo message="Building javadocs for directory: ${javaSrcDir}" />
+		<javadoc destdir="${javaDocDir}" doctitle="${jdocTitle}" windowtitle="${jdocWinTitle}" classpath="${lib.classpath}">
+			<fileset dir="${javaSrcDir}">
+				<exclude name="images/**" />
+				<exclude name="META-INF/**" />
+				<exclude name="sqlmaps/**" />
+				<exclude name="com/**/*.html" />
+				<exclude name="modules/**/*.html" />
+				<include name="com/**" />
+				<include name="modules/**" />
+			</fileset>
+		</javadoc>
+		<echo message="Generalte javadocs to location: ${javaDocDir}" />
+	</target>
+</project>

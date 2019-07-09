@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="PriceChgAdmin">
+	<typeAlias alias="PriceChangeModelVO" type="modules.model.PriceChange" />
+	<typeAlias alias="PriceChangeItemModelVO" type="modules.model.PriceChangeSkuItem" />
+	
+	<resultMap id="PriceChgMap" class="PriceChangeModelVO">
+		<result property="id" column="pc_no" />
+		<result property="dept" column="pc_dept" />
+		<result property="effDate" column="pc_effective_date" />
+		<result property="reasonCd" column="pc_reason_cd" />
+		<result property="status" column="pc_status" />
+		<result property="message" column="pc_message" />
+	</resultMap>
+
+	<resultMap id="PriceChgItemDetailsMap" class="PriceChangeItemModelVO">
+	  <result property="pcNo" column="pc_no" />
+	  <result property="sSku" column="sSku" />
+		<result property="overFlowSku" column="pc_sku_overflow" />
+		<result property="sku" column="pc_sku" />
+		<result property="dept" column="pc_dept" />
+		<result property="clazz" column="pc_class" />
+		<result property="vendor" column="pc_vendor" />
+		<result property="style" column="pc_style" />
+		<result property="color" column="pc_color" />
+		<result property="size" column="pc_size" />
+		<result property="status" column="pc_status" />
+		<result property="oldRetail" column="pc_old_rtl" />
+		<result property="newRetail" column="pc_new_rtl" />
+		<result property="markQty" column="pc_mrkd_qty" />
+	</resultMap>
+	
+  <select id="FetchActive" resultMap="PriceChgMap">
+		select
+			    pc_no,
+			    pc_dept,
+			    pc_effective_date,
+			    pc_reason_cd,
+			    pc_status,
+			    pc_message
+			from pc_change
+			where pc_status in ('A', 'C', 'O')
+			order by pc_no
+	 </select>
+	 
+	<select id="FetchActiveBySku" resultMap="PriceChgMap" parameterClass="PriceChangeModelVO">
+		select
+			    pc_no,
+			    pc_dept,
+			    pc_effective_date,
+			    pc_reason_cd,
+			    pc_status,
+			    pc_message
+			from pc_change
+			where pc_status in ('A', 'C', 'O')
+			  and pc_no in (select i.pc_no from pc_item i
+			                where pc_sku_overflow = #skuUpper#
+			                  and pc_sku  = #skuLower#	)
+			order by pc_no
+	 </select>
+
+	<select id="FetchItemDetails" resultMap="PriceChgItemDetailsMap" parameterClass="PriceChangeModelVO">
+		select
+			    (pc_sku_overflow * 100000000) + pc_sku	ssku,
+			    pc_no, 
+			    pc_dept,
+			    pc_class,
+			    pc_vendor,
+			    pc_style,
+			    pc_color,
+			    pc_size,
+			    pc_status,
+			    pc_old_rtl,
+			    pc_new_rtl,
+			    pc_mrkd_qty,
+			    pc_sku_overflow,
+			    pc_sku
+			from pc_item
+			where pc_no = #id#
+			order by pc_dept, pc_class, pc_vendor, pc_style, pc_color, pc_size, ssku
+	 </select>
+
+   <update id="UpdateStatusHeader" parameterClass="PriceChangeModelVO">
+   		update pc_change set
+		    pc_status      = #status#,
+		    pc_status_date = #currDate#
+			where pc_no = #id#
+   		
+   </update>
+   
+   <update id="UpdateStatusDetails" parameterClass="PriceChangeModelVO">
+   		update pc_item set
+		    pc_status      = #status#,
+		    pc_status_date = #currDate#
+			where pc_no = #id#
+   		
+   </update>
+   
+   <update id="UpdateItemQty" parameterClass="PriceChangeItemModelVO">
+   		update pc_item set
+				    pc_mrkd_qty = #markQty#
+				where pc_no = #pcNo#
+				  and pc_sku_overflow = #overFlowSku#
+				  and pc_sku = #sku#
+   </update>
+   
+   <update id="UpdateStatusDetailsBySku" parameterClass="PriceChangeModelVO">
+   		update pc_item set
+			    pc_status      = #status#,
+			    pc_status_date = #currDate#
+				where pc_no = #id#
+				<iterate prepend="AND" property="items" open="(" close=")" conjunction="OR">
+						(pc_sku_overflow = #items[].overFlowSku# and pc_sku = #items[].sku#)
+				</iterate>
+   </update>
+   
+</sqlMap>

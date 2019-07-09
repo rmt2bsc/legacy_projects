@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="PriceAuditAdmin">
+	<typeAlias alias="PriceAuditModelVO" type="modules.model.PriceAuditSkuItem" />
+
+	<resultMap id="PriceAuditItemDetailsMap" class="PriceAuditModelVO">
+	  <result property="sSku" column="sSku" />
+		<result property="overFlowSku" column="sku_overflow" />
+		<result property="sku" column="sku" />
+		<result property="dept" column="dept" />
+		<result property="clazz" column="class" />
+		<result property="vendor" column="vendor" />
+		<result property="style" column="style" />
+		<result property="color" column="color" />
+		<result property="size" column="size" />
+		<result property="oldRetail" column="old_rtl" />
+		<result property="newRetail" column="new_rtl" />
+		<result property="markQty" column="mrkd_qty" />
+	</resultMap>
+	
+
+	<select id="FetchActive" resultMap="PriceAuditItemDetailsMap" parameterClass="PriceAuditModelVO">
+		select
+			    (sku_overflow * 100000000) + sku	ssku,
+			    dept,
+			    class,
+			    vendor,
+			    style,
+			    color,
+			    size,
+			    old_rtl,
+			    new_rtl,
+			    mrkd_qty,
+			    sku_overflow,
+			    sku
+		 from  item_audit
+	  where  status = 'A'
+		order by 
+		       dept, 
+		       class, 
+		       vendor, 
+		       style, 
+		       color, 
+		       size, 
+		       ssku
+	 </select>
+   
+   <update id="UpdateItem" parameterClass="PriceAuditModelVO">
+   		update item_audit
+				set mrkd_qty = #markQty#
+		  where sku_overflow = #overFlowSku#
+					 and sku  = #sku#
+					 and dept = #dept#
+					 and class = #clazz#
+					 and vendor = #vendor#
+					 and style = #style#
+					 and color = #color#
+					 and size = #size#
+					 and old_rtl = #oldRetail#
+					 and new_rtl = #newRetail#
+   </update>
+   
+   <delete id="DeleteItem" parameterClass="PriceAuditModelVO">
+   			delete from item_audit
+				 where sku_overflow = #overFlowSku#
+					 and sku  = #sku#
+					 and dept = #dept#
+					 and class = #clazz#
+					 and vendor = #vendor#
+					 and style = #style#
+					 and color = #color#
+					 and size = #size#
+					 and old_rtl = #oldRetail#
+					 and new_rtl = #newRetail#
+   </delete>
+   
+</sqlMap>

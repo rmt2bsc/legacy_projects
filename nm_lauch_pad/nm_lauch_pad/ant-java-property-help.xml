@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<project name="ANT and Java Property Help Build">
+	 <target name="echoAntBuiltInProperties" description="Display Ant's built-in properties">  
+	   <echo message="------------- ANT PROPERTIES ---------------" />  
+	   <echo message="ant.file                  = ${ant.file}" />  
+	   <echo message="ant.home                  = ${ant.home}" />  
+	   <echo message="ant.java.version          = ${ant.java.version}" />  
+	   <echo message="ant.project.name          = ${ant.project.name}" />  
+	   <echo message="ant.version               = ${ant.version}" />  
+	   <echo message="basedir                   = ${basedir}" />  
+	 </target>  
+	
+	<target name="echoJavaSystemProperties" description="Display Java properties">  
+	   <echo message="------------- (SELECT SAMPLE OF) JAVA PROPERTIES ---------------" />  
+	   <echo message="java.class.path              = ${java.class.path}" />  
+	   <echo message="java.class.version           = ${java.class.version}" />  
+	   <echo message="java.home                    = ${java.home}" />  
+	   <echo message="java.library.path            = ${java.library.path}" />  
+	   <echo message="java.runtime.name            = ${java.runtime.name}" />  
+	   <echo message="java.runtime.version         = ${java.runtime.version}" />  
+	   <echo message="java.vendor.url              = ${java.vendor.url}" />  
+	   <echo message="java.vendor.url.bug          = ${java.vendor.url.bug}" />  
+	   <echo message="java.version                 = ${java.version}" />  
+	   <echo message="java.vm.info                 = ${java.vm.info}" />  
+	   <echo message="java.vm.name                 = ${java.vm.name}" />  
+	   <echo message="java.vm.specification.vendor = ${java.vm.specification.vendor}" />  
+	   <echo message="java.vm.vendor               = ${java.vm.vendor}" />  
+	   <echo message="java.vm.version              = ${java.vm.version}" />  
+	   <echo message="os.arch                      = ${os.arch}" />  
+	   <echo message="os.name                      = ${os.name}" />  
+	   <echo message="os.version                   = ${os.version}" />  
+	   <echo message="user.country                 = ${user.country}" />  
+	   <echo message="user.home                    = ${user.home}" />  
+	   <echo message="user.language                = ${user.language}" />  
+	   <echo message="user.name                    = ${user.name}" />  
+	   <echo message="user.timezone                = ${user.timezone}" />  
+	 </target>  
+	
+	 <!-- Display Ant's peek at select Sun-specific properties. -->  
+	 <target name="echoSunSpecificProperties" if="sun.management.compiler">  
+	   <echo message="--------------- (SELECT) SUN-SPECIFIC PROPERTIES ---------------" />  
+	   <echo message="sun.boot.library.path        = ${sun.boot.library.path}" />  
+	   <echo message="sun.cpu.isalist              = ${sun.cpu.isalist}" />  
+	   <echo message="sun.java.launcher            = ${sun.java.launcher}" />  
+	   <echo message="sun.management.compiler      = ${sun.management.compiler}" />  
+	 </target>  
+	  
+</project>

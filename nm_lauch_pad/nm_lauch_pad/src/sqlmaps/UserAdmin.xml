@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="UserAdmin">
+	<typeAlias alias="AssocVO" type="modules.model.Assoc" />
+
+	<resultMap id="userCountMap" class="java.lang.Integer">
+	   <result property="total" column="total" />
+	</resultMap>
+	
+	<resultMap id="verifyUserMap" class="java.lang.Integer">
+	   <result property="securityLevel" column="assoc_security_lvl" />
+	</resultMap>
+	
+	<resultMap id="AssocMap" class="AssocVO">
+		<result property="id" column="assoc_id" />
+		<result property="lastName" column="assoc_last_name" />
+		<result property="firstName" column="assoc_first_name" />
+		<result property="midInit" column="assoc_middle_init" />
+		<result property="password" column="assoc_passwd" />
+		<result property="securityLevel" column="assoc_security_lvl" />
+		<result property="lastLogin" column="assoc_last_login" />
+		<result property="lastChange" column="assoc_last_change" />
+		<result property="assocType" column="assoc_type" />
+	</resultMap>
+
+  <select id="userCount" resultMap="userCountMap">
+		select count(*) total
+			from assoc
+	 </select>
+	 
+	<select id="authenticate" resultMap="verifyUserMap" parameterClass="AssocVO">
+		select assoc_security_lvl
+			from assoc
+			where assoc_id = #id#
+  			and assoc_passwd = #password#
+	 </select>
+
+	<select id="fetch" resultMap="AssocMap">
+		select
+			    assoc_id,
+			    assoc_last_name,
+			    assoc_first_name,
+			    assoc_security_lvl,
+			    assoc_middle_init,
+			    assoc_passwd,
+			    assoc_type,
+			    assoc_last_login,
+			    assoc_last_change
+			from assoc
+			where assoc_id = #id#
+	 </select>
+	 
+	<select id="list" resultMap="AssocMap">
+		select
+			    assoc_id,
+			    assoc_last_name,
+			    assoc_first_name,
+			    assoc_security_lvl,
+			    assoc_middle_init,
+			    assoc_passwd,
+			    assoc_type,
+			    assoc_last_login,
+			    assoc_last_change
+			from assoc
+			order by assoc_id
+	 </select>
+	 
+	 <insert id="add" parameterClass="AssocVO">
+			insert into assoc 
+			(   assoc_id,
+			    assoc_first_name,
+			    assoc_middle_init,
+			    assoc_last_name,
+			    assoc_security_lvl,
+			    assoc_passwd,
+			    assoc_last_login,
+			    assoc_last_change				)
+			values (
+			    #newId#,
+			    #firstName#,
+			    #midInit#,
+			    #lastName#,
+			    #securityLevel#,
+			    #password#,
+			    #lastLogin#,
+			    #lastChange#)	
+	 </insert>
+	 
+	 <update id="update" parameterClass="AssocVO">
+			update assoc set 
+			    assoc_id = #newId#,
+			    assoc_first_name = #firstName#,
+			    assoc_middle_init = #midInit#,
+			    assoc_last_name = #lastName#,
+			    assoc_security_lvl = #securityLevel#,
+			    assoc_passwd = #password#,
+			    assoc_last_change = #lastChange#
+			where assoc_id = #id#	
+	 </update>
+	 
+	  <delete id="delete" parameterClass="AssocVO">
+	  	delete from assoc where assoc_id = #id#
+	  </delete>
+</sqlMap>

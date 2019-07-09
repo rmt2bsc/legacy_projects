@@ -1,0 +1,6 @@
+Manifest-Version: 1.0 
+Ant-Version: Apache Ant 1.6.5 
+Created-By: 10.0-b23 (Sun Microsystems Inc.) 
+Main-Class: modules.LaunchPad
+Class-Path: ibatis-2.3.0.677.jar ibatis-common-2.jar ifxjdbc.jar log4j-1.2.9.jar miglayout15-swing.jar config
+

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="SITransferAdmin">
+	<typeAlias alias="TransferVO" type="modules.model.Transfer" />
+	<typeAlias alias="TransferItemVO" type="modules.model.TransferSkuItem" />
+	
+	<resultMap id="TransferHeaderMap" class="TransferVO">
+		<result property="tranferId" column="tranfr_no" />
+		<result property="transferDate" column="tranfr_date" />
+		<result property="master" column="tranfr_master" />
+		<result property="dept" column="tranfr_dept" />
+		<result property="fromStore" column="tranfr_from_store" />
+		<result property="toStore" column="tranfr_to_store" />
+		<result property="reasonCd" column="tranfr_reason_cd" />
+		<result property="status" column="tranfr_status" />
+		<result property="message" column="tranfr_message" />
+		<result property="manifestNo" column="tranfr_manifest_no" />
+		<result property="proBill" column="tranfr_pro_bill" />
+		<result property="carrierId" column="tranfr_carrier_id" />
+		<result property="shipDate" column="tranfr_ship_date" />
+		<result property="noPkg" column="tranfr_no_pkg" />
+		<result property="pkgType" column="tranfr_pkg_type" />
+		<result property="sendByDate" column="tranfr_snd_by_date" />
+	</resultMap>
+
+	<resultMap id="TransferItemMap" class="TransferItemVO">
+	  <result property="tranferId" column="tranfr_no" />
+	  <result property="sSku" column="ssku" />
+		<result property="overFlowSku" column="tranfr_sku_overflw" />
+		<result property="sku" column="tranfr_sku" />
+		<result property="dept" column="tranfr_dept" />
+		<result property="clazz" column="tranfr_class" />
+		<result property="vendor" column="tranfr_vendor" />
+		<result property="style" column="tranfr_style" />
+		<result property="color" column="tranfr_color" />
+		<result property="size" column="tranfr_size" />
+		<result property="status" column="tranfr_status" />
+		<result property="retail" column="tranfr_retail" />
+		<result property="qtyRecv" column="tranfr_qty_rec" />
+		<result property="qtySent" column="tranfr_qty_snt" />
+	</resultMap>
+	
+  <select id="FetchHeader" resultMap="TransferHeaderMap">
+		select
+		    tranfr_no,
+		    tranfr_manifest_no,
+				tranfr_date,
+				tranfr_master,
+				tranfr_no,
+				tranfr_dept,
+				tranfr_from_store,
+				tranfr_to_store,
+				tranfr_reason_cd,
+				tranfr_status,
+				tranfr_pro_bill,
+				tranfr_carrier_id,
+				tranfr_ship_date,
+				tranfr_snd_by_date,
+				tranfr_no_pkg,
+				tranfr_pkg_type,
+				tranfr_message
+		from transfer
+		where tranfr_status in ('B', 'C', 'F', 'R')
+		  and tranfr_no &lt;= 999999999
+		order by tranfr_no
+	 </select>
+	 
+	<select id="FetchDetail" resultMap="TransferItemMap" parameterClass="TransferVO">
+		select
+		    tranfr_no,
+				(tranfr_sku_overflw * 100000000) + tranfr_sku	ssku,
+				tranfr_sku,
+				tranfr_sku_overflw,
+				tranfr_dept,
+				tranfr_class,
+				tranfr_vendor,
+				tranfr_style,
+				tranfr_color,
+				tranfr_size,
+				tranfr_retail,
+				tranfr_status,
+				tranfr_qty_rec,
+				tranfr_qty_snt
+		from tranfr_item
+		where tranfr_no = #tranferId#
+		order by tranfr_sku
+ </select>
+
+<update id="UpdateHeaderStatus" parameterClass="TransferVO">
+   update transfer set
+		  tranfr_status  = #status#,
+		  tranfr_status_date = #currDate#
+		where tranfr_no = #tranferId#
+</update>
+
+<update id="UpdateDetailStatus" parameterClass="TransferVO">
+  update tranfr_item set
+		  tranfr_status = #status#,
+		  tranfr_status_date = #currDate#
+		where tranfr_no = #tranferId#;
+</update>
+
+<update id="UpdateHeader" parameterClass="TransferVO">
+   update transfer set
+		  tranfr_manifest_no = #manifestNo#,
+		  tranfr_pro_bill    = #proBill#,
+		  tranfr_carrier_id  = #carrierId#,
+		  tranfr_ship_date   = #shipDate#,
+		  tranfr_pkg_type    = #pkgType#,
+		  tranfr_to_store    = #toStore#
+		where tranfr_no = #tranferId#
+</update>
+
+<update id="UpdateTransferItem" parameterClass="TransferItemVO">
+   update tranfr_item set
+      <isEqual property="transferStatus" compareValue="B">
+        tranfr_qty_rec = #qty#
+      </isEqual>
+		  <isNotEqual property="transferStatus" compareValue="B">
+		    tranfr_qty_snt = #qty#
+		  </isNotEqual> 
+		where tranfr_no = #tranferId#
+		  and tranfr_sku_overflw = #overFlowSku#
+		  and tranfr_sku = #sku#
+</update>
+
+<update id="UpdateMasterHeaderStatus" parameterClass="TransferVO">
+   update transfer set
+		  tranfr_status  = #status#,
+		  tranfr_status_date = #currDate#
+		where tranfr_master = #master#
+</update>
+
+<update id="UpdateMasterDetailStatus" parameterClass="TransferVO">
+  update tranfr_item set
+		  	 tranfr_status = #status#,
+		     tranfr_status_date = #currDate#
+		where tranfr_no in (select b.tranfr_no 
+                          from transfer b 
+                         where b.tranfr_master = #master#)
+
+
+</update>
+
+<update id="UpdateMasterHeader" parameterClass="TransferVO">
+   update transfer set
+		  tranfr_manifest_no = #manifestNo#,
+		  tranfr_pro_bill    = #proBill#,
+		  tranfr_carrier_id  = #carrierId#,
+		  tranfr_ship_date   = #shipDate#,
+		  tranfr_pkg_type    = #pkgType#,
+		  tranfr_to_store    = #toStore#
+		where tranfr_master = #master#
+</update>
+
+</sqlMap>

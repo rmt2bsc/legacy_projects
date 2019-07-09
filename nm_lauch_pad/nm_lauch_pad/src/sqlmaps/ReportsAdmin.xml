@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="ReportsAdmin">
+	<typeAlias alias="RptHeaderVO" type="modules.model.ReportHeader" />
+	<typeAlias alias="RptDetailVO" type="modules.model.ReportDetail" />
+	<typeAlias alias="RptParamVO" type="modules.model.ReportParam" />
+	
+	<resultMap id="RptHeadMap" class="RptHeaderVO">
+		<result property="catgTag" column="cat_tag" />
+		<result property="catgDesc" column="cat_desc" />
+	</resultMap>
+	
+	<resultMap id="RptDetailMap" class="RptDetailVO">
+		<result property="catgTag" column="cat_tag" />
+		<result property="rptTag" column="rpt_tag" />
+		<result property="rptDesc" column="rpt_desc" />
+		<result property="rptProg" column="rpt_prog" />
+		<result property="rptOrientation" column="rpt_orient" />
+	</resultMap>
+	
+	<resultMap id="RptParamMap" class="RptParamVO">
+		<result property="rptTag" column="rpt_tag" />
+		<result property="argSeqNo" column="arg_no" />
+		<result property="argType" column="arg_type" />
+	</resultMap>
+	
+	 <select id="FetchHeader" resultMap="RptHeadMap">
+				select
+							cat_tag,
+	            cat_desc
+					from 
+					    report_hdr
+			order by 
+			        cat_desc
+	 </select>
+	 
+	 <select id="FetchDetails" resultMap="RptDetailMap" parameterClass="RptDetailVO">
+				select
+				        cat_tag,
+							  rpt_tag,
+	  					  rpt_desc,
+	  					  rpt_prog,
+	  					  rpt_orient
+					from 
+					      report_dtl
+					where 
+					      cat_tag = #catgTag#
+			 order by 
+					      rpt_desc
+	 </select>
+	 
+	 <select id="FetchParams" resultMap="RptParamMap" parameterClass="RptParamVO">
+				select
+				      rpt_tag,
+							arg_no,
+	            arg_type
+	        from 
+	            report_param
+	       where 
+	            rpt_tag = #rptTag#
+	    order by 
+	            arg_no
+   </select>
+</sqlMap>

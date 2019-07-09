@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="General">
+	<typeAlias alias="StoreVO" type="modules.model.Store" />
+
+	<resultMap id="StoreMap" class="StoreVO">
+		<result property="id" column="store_no" />
+		<result property="homeStore" column="homestore" />
+		<result property="addr1" column="address1" />
+		<result property="addr2" column="address2" />
+		<result property="city" column="city" />
+		<result property="state" column="state" />
+		<result property="zip" column="zip" />
+	</resultMap>
+	 
+	<select id="FetchStore" resultMap="StoreMap" parameterClass="StoreVO">
+			select 
+					  store_no,
+					  homestore,
+					  address1,
+					  address2,
+					  city,
+					  state,
+					  zip
+			from store
+			where store_no = #id#
+	 </select>
+
+   <select id="FetchIdtFlag" resultClass="Integer" parameterClass="String">
+			select 1
+			from tran_ctr
+			where trantype = #value#
+	 </select>
+</sqlMap>

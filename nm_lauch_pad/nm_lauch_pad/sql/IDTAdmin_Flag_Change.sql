@@ -1,0 +1,1 @@
+update tran_ctr set curr_ctr = 1 where trantype = 'Display_IDT'
