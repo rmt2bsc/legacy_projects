@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<DataSource Name="PersonView">
+  <Sql Select="person_id, 
+		firstname, 
+		midname, 
+		lastname, 
+		maidenname, 
+		generation, 
+		shortname, 
+		title, 
+		gender_id, 
+		marital_status_id, 
+		birth_date, 
+		race_id, 
+		ssn, 
+		email, 
+		date_created, 
+		date_updated, 
+		user_id, 
+		category_id" From="person" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="PersonTable" DBName="person" Updateable="true"/>
+  <ColAttr Name="PersonId" DBName="person_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Firstname" DBName="firstname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Midname" DBName="midname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Lastname" DBName="lastname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Maidenname" DBName="maidenname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Generation" DBName="generation" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Shortname" DBName="shortname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Title" DBName="title" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GenderId" DBName="gender_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="MaritalStatusId" DBName="marital_status_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BirthDate" DBName="birth_date" SqlType="date" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="RaceId" DBName="race_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Ssn" DBName="ssn" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Email" DBName="email" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CategoryId" DBName="category_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

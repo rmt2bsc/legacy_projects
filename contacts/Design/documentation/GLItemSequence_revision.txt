@@ -1,0 +1,30 @@
+This document describes the accounting table primary key revisions.
+
+ Parent Table:     gl_item_sequence
+
+ Dependent Tables: asset_master
+                   liability_master
+                   expense_master
+                   revenue_master
+                   audio_video_detail
+                   audio_video_tracks
+                   gl_transaction_detail
+
+
+1)  Make the primary key for gl_item_sequence table as "item_id".   Its data type should something
+    resembling an integer.
+2)  Remove the column, item_sequence, from the gl_item_sequence table.
+3)  The following steps will apply to all tables dependent of gl_item_sequence.
+    a)  Add "id" as the first column of each table.  This column will serve as the primary key.
+        This applies for all dependent tables except gl_transaction_detail.
+    b)  Add "item_id" as the next column.  This will serve as a foreign key to gl_item_sequence.
+        This applies to all dependent tables except audio_video_detail and audio_video_tracks.
+    c)  Remove the following columns from all dependent tables: acct_type, acct_category, acct_item,
+        and item_sequence.
+    d)  Add column named audio_video_detail_id to the table audio_video_tracks.  This will be a 
+        foreign key to the table audio_video_detail.
+    e)  Add column named asset_master_id to the table audio_video_detail.   This will be a foreign key
+        to the table asset_master.
+
+4)  Remove all references to the following columns in primary key, foreign key and index statements:
+    acct_type, acct_category, acct_item, and item_sequence.

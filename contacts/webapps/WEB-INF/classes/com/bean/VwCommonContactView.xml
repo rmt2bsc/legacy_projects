@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<DataSource Name="VwCommonContactView">
+  <Sql Select="contact_id, 
+		contact_name, 
+		contact_type, 
+		email, 
+		addr_id, 
+		addr_phone_cell, 
+		addr_phone_ext, 
+		addr_phone_fax, 
+		addr_phone_home, 
+		addr_phone_main, 
+		addr_phone_pager, 
+		addr_phone_work, 
+		addr_zip, 
+		addr_zipext, 
+		addr1, 
+		addr2, 
+		addr3, 
+		addr4, 
+		zip_city, 
+		zip_state" From="vw_common_contact" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwCommonContactTable" DBName="vw_common_contact" Updateable="true"/>
+  <ColAttr Name="ContactId" DBName="contact_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwCommonContactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ContactName" DBName="contact_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCommonContactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ContactType" DBName="contact_type" SqlType="varchar" IsNull="false" JavaType="String" PrimaryKey="false" TableName="VwCommonContactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Email" DBName="email" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCommonContactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AddrId" DBName="addr_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwCommonContactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AddrPhoneCell" DBName="addr_phone_cell" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCommonContactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AddrPhoneExt" DBName="addr_phone_ext" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCommonContactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AddrPhoneFax" DBName="addr_phone_fax" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCommonContactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AddrPhoneHome" DBName="addr_phone_home" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCommonContactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AddrPhoneMain" DBName="addr_phone_main" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCommonContactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AddrPhonePager" DBName="addr_phone_pager" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCommonContactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AddrPhoneWork" DBName="addr_phone_work" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCommonContactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AddrZip" DBName="addr_zip" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwCommonContactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AddrZipext" DBName="addr_zipext" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwCommonContactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Addr1" DBName="addr1" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCommonContactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Addr2" DBName="addr2" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCommonContactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Addr3" DBName="addr3" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCommonContactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Addr4" DBName="addr4" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCommonContactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ZipCity" DBName="zip_city" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCommonContactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ZipState" DBName="zip_state" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCommonContactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

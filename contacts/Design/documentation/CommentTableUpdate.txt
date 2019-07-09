@@ -1,0 +1,123 @@
+CREATE TABLE COMMENTS
+    (COMMENT_ID                  INTEGER          NOT NULL,
+     COMMENT_TEXT                LONG VARCHAR or Text (for sql server),
+     DATE_CREATED                TIMESTAMP        NOT NULL DEFAULT CURRENT TIMESTAMP ,
+     DATE_CHANGED                TIMESTAMP        NOT NULL DEFAULT CURRENT TIMESTAMP ,
+     CHANGE_REASON               VARCHAR(300),
+     AREACODE_CREATED            CHAR(3)          NOT NULL DEFAULT '972',
+     CITY_CREATED                INTEGER          NOT NULL DEFAULT 1 ,
+     USER_ID                     CHAR(8)          NOT NULL DEFAULT 'DBA')  ;
+
+/***************************************/
+/*  New phonenumber table definition   */
+/***************************************/
+CREATE TABLE PHONENUMBER
+    (PHONE_ID          VARCHAR(7)       NOT NULL,
+     PHONETYPE_ID      INTEGER          NOT NULL,
+     PERSONAL_ID       VARCHAR(7),
+     BUSINESS_ID       VARCHAR(7),
+     ADDRESS_ID        VARCHAR(7),
+     AREA_CODE         VARCHAR(3),
+     AREA_CODE_SEQ     INTEGER,
+     PHONE_PREFIX      VARCHAR(3),
+     PHONE_SUFFIX      VARCHAR(4),
+     PHONE_EXT         VARCHAR(15),
+     PREV_CALL_TIMESTAMP   DATE,
+     TOTAL_CALLS       INTEGER,
+     ACTIVE_IND        CHAR,
+     DATE_CREATED      TIMESTAMP            NOT NULL DEFAULT CURRENT TIMESTAMP ,
+     DATE_CHANGED      TIMESTAMP            NOT NULL DEFAULT CURRENT TIMESTAMP ,
+     CHANGE_REASON     VARCHAR(300),
+     AREACODE_CREATED  CHAR(3)          NOT NULL DEFAULT '972',
+     CITY_CREATED      INTEGER          NOT NULL DEFAULT 1 ,
+     USER_ID           CHAR(8)          NOT NULL DEFAULT 'DBA',
+     COMMENT_ID        INTEGER);
+
+
+
+ALTER TABLE COMMENTS
+    ADD PRIMARY KEY (COMMENT_ID);
+
+/*  Add comment_id column to each applicable table */
+/*  drop Comments column from each applicable table */
+
+ALTER TABLE PERSONAL
+  ADD FOREIGN KEY ( COMMENT_ID ) 
+      REFERENCES COMMENTS(COMMENT_ID);
+
+ALTER TABLE BUSINESS
+  ADD FOREIGN KEY ( COMMENT_ID ) 
+      REFERENCES COMMENTS(COMMENT_ID);
+
+ALTER TABLE ADDRESS
+  ADD FOREIGN KEY ( COMMENT_ID ) 
+      REFERENCES COMMENTS(COMMENT_ID);
+
+ALTER TABLE PHONENUMBER
+  ADD FOREIGN KEY ( COMMENT_ID ) 
+      REFERENCES COMMENTS(COMMENT_ID);
+
+ALTER TABLE ASSET_MASTER
+  ADD FOREIGN KEY ( COMMENT_ID ) 
+      REFERENCES COMMENTS(COMMENT_ID);
+
+ALTER TABLE LIABILITY_MASTER
+  ADD FOREIGN KEY ( COMMENT_ID ) 
+      REFERENCES COMMENTS(COMMENT_ID);
+
+ALTER TABLE REVENUE_MASTER
+  ADD FOREIGN KEY ( COMMENT_ID ) 
+      REFERENCES COMMENTS(COMMENT_ID);
+
+ALTER TABLE EXPENSE_MASTER
+  ADD FOREIGN KEY ( COMMENT_ID ) 
+      REFERENCES COMMENTS(COMMENT_ID);
+
+ALTER TABLE GL_TRANSACTION
+  ADD FOREIGN KEY ( COMMENT_ID ) 
+      REFERENCES COMMENTS(COMMENT_ID);
+
+ALTER TABLE GL_TRANSACTION_DETAIL
+  ADD FOREIGN KEY ( COMMENT_ID ) 
+      REFERENCES COMMENTS(COMMENT_ID);
+
+ALTER TABLE AUDIO_VIDEO_DETAIL
+  ADD FOREIGN KEY ( COMMENT_ID ) 
+      REFERENCES COMMENTS(COMMENT_ID);
+
+ALTER TABLE AUDIO_VIDEO_TRACKS
+  ADD FOREIGN KEY ( COMMENT_ID ) 
+      REFERENCES COMMENTS(COMMENT_ID);
+
+ALTER TABLE TAXES_AND_DEDUCTIONS
+  ADD FOREIGN KEY ( OTHER_DED_COMMENTS_ID ) 
+      REFERENCES COMMENTS(COMMENT_ID);
+
+ALTER TABLE TAXES_AND_DEDUCTIONS
+  ADD FOREIGN KEY ( OTHER_TAX_COMMENTS_ID ) 
+      REFERENCES COMMENTS(COMMENT_ID);
+
+
+
+
+
+
+***NOTE***
+Replace the COMMENTS column definition in the following tables below with  "COMMENT_ID  INTEGER NULL".   The new 
+column, COMMENT_ID, will be a foreign key to the COMMENTS table.
+  1.  personal
+  2.  business
+  3.  address 
+  4.  phonenumber
+  5.  asset_master
+  6.  liability_master
+  7.  revenue_master
+  8.  expense_master
+  9.  gl_transaction
+  10. gl_transaction_detail
+  11. taxes_and_deductions (change columns other_ded_comment and other_tax_comment to other_ded_comment_id
+                            and other_tax_comment_id, respectively)
+  12. audio_video_detail
+  14. audio_video_tracks
+
+
