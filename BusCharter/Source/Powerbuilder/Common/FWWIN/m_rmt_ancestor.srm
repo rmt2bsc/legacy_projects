@@ -1,0 +1,804 @@
+$PBExportHeader$m_rmt_ancestor.srm
+$PBExportComments$Ancestor Menu Object
+forward
+global type m_rmt_ancestor from menu
+end type
+type m_file from menu within m_rmt_ancestor
+end type
+type m_login from menu within m_file
+end type
+type m_logout from menu within m_file
+end type
+type m_changepassword from menu within m_file
+end type
+type m_-5 from menu within m_file
+end type
+type m_open from menu within m_file
+end type
+type m_new from menu within m_file
+end type
+type m_close from menu within m_file
+end type
+type m_save from menu within m_file
+end type
+type m_-n from menu within m_file
+end type
+type m_printsetup from menu within m_file
+end type
+type m_print from menu within m_file
+end type
+type m_- from menu within m_file
+end type
+type m_exit from menu within m_file
+end type
+type m_file from menu within m_rmt_ancestor
+m_login m_login
+m_logout m_logout
+m_changepassword m_changepassword
+m_-5 m_-5
+m_open m_open
+m_new m_new
+m_close m_close
+m_save m_save
+m_-n m_-n
+m_printsetup m_printsetup
+m_print m_print
+m_- m_-
+m_exit m_exit
+end type
+type m_edit from menu within m_rmt_ancestor
+end type
+type m_search from menu within m_edit
+end type
+type m_reset from menu within m_edit
+end type
+type m_add from menu within m_edit
+end type
+type m_delete from menu within m_edit
+end type
+type m_details from menu within m_edit
+end type
+type m_x4 from menu within m_edit
+end type
+type m_generalcodegroups from menu within m_edit
+end type
+type m_codetables from menu within m_edit
+end type
+type m_states from menu within m_edit
+end type
+type m_city from menu within m_edit
+end type
+type m_users from menu within m_edit
+end type
+type m_-1 from menu within m_edit
+end type
+type m_edit from menu within m_rmt_ancestor
+m_search m_search
+m_reset m_reset
+m_add m_add
+m_delete m_delete
+m_details m_details
+m_x4 m_x4
+m_generalcodegroups m_generalcodegroups
+m_codetables m_codetables
+m_states m_states
+m_city m_city
+m_users m_users
+m_-1 m_-1
+end type
+type m_database from menu within m_rmt_ancestor
+end type
+type m_backup from menu within m_database
+end type
+type m_recover from menu within m_database
+end type
+type m_database from menu within m_rmt_ancestor
+m_backup m_backup
+m_recover m_recover
+end type
+type m_window from menu within m_rmt_ancestor
+end type
+type m_cascade from menu within m_window
+end type
+type m_layer from menu within m_window
+end type
+type m_tile from menu within m_window
+end type
+type m_tilehorizontal from menu within m_window
+end type
+type m_iconize from menu within m_window
+end type
+type m_window from menu within m_rmt_ancestor
+m_cascade m_cascade
+m_layer m_layer
+m_tile m_tile
+m_tilehorizontal m_tilehorizontal
+m_iconize m_iconize
+end type
+type m_help from menu within m_rmt_ancestor
+end type
+type m_about from menu within m_help
+end type
+type m_help from menu within m_rmt_ancestor
+m_about m_about
+end type
+end forward
+
+global type m_rmt_ancestor from menu
+m_file m_file
+m_edit m_edit
+m_database m_database
+m_window m_window
+m_help m_help
+end type
+global m_rmt_ancestor m_rmt_ancestor
+
+forward prototypes
+public function integer of_sendmessage (string as_message)
+end prototypes
+
+public function integer of_sendmessage (string as_message);//////////////////////////////////////////////////////////////////////////////
+//
+//	Function:  of_SendMessage
+//
+//	Access:  public
+//
+//	Arguments:		
+//	as_message  message (event notification) to be sent
+//
+//	Returns:  integer
+//	 1 = Message successfully sent
+//	-1 = message could not be sent (use debug object for more info)
+//
+//	Description:
+//	Sends a specified message (event notification) to a receiving window 
+//	through the pfc_messagerouter event.
+//
+//	Sequence:
+//	If application is MDI:
+//	1) Active MDI sheet pfc_messagerouter event.
+//	2) MDI Frame Window pfc_messagerouter event.
+//
+//	Application is SDI:
+//	1) ParentWindow pfc_messagerouter event.
+//
+//////////////////////////////////////////////////////////////////////////////
+//
+//	Revision History
+//
+//	Version
+//	5.0	Initial version
+//	6.0	Function now calls of_sendMessage on n_cst_menu to consolidate code
+//
+//////////////////////////////////////////////////////////////////////////////
+
+
+n_rmt_menu		lnv_menu
+
+return lnv_menu.of_sendMessage (this, as_message)
+end function
+
+on m_rmt_ancestor.create
+m_rmt_ancestor=this
+this.m_file=create m_file
+this.m_edit=create m_edit
+this.m_database=create m_database
+this.m_window=create m_window
+this.m_help=create m_help
+this.Item[]={this.m_file, &
+this.m_edit, &
+this.m_database, &
+this.m_window, &
+this.m_help}
+end on
+
+on m_rmt_ancestor.destroy
+destroy(this.m_file)
+destroy(this.m_edit)
+destroy(this.m_database)
+destroy(this.m_window)
+destroy(this.m_help)
+end on
+
+type m_file from menu within m_rmt_ancestor
+m_login m_login
+m_logout m_logout
+m_changepassword m_changepassword
+m_-5 m_-5
+m_open m_open
+m_new m_new
+m_close m_close
+m_save m_save
+m_-n m_-n
+m_printsetup m_printsetup
+m_print m_print
+m_- m_-
+m_exit m_exit
+end type
+
+on m_file.create
+this.Text="&File"
+this.m_login=create m_login
+this.m_logout=create m_logout
+this.m_changepassword=create m_changepassword
+this.m_-5=create m_-5
+this.m_open=create m_open
+this.m_new=create m_new
+this.m_close=create m_close
+this.m_save=create m_save
+this.m_-n=create m_-n
+this.m_printsetup=create m_printsetup
+this.m_print=create m_print
+this.m_-=create m_-
+this.m_exit=create m_exit
+this.Item[]={this.m_login, &
+this.m_logout, &
+this.m_changepassword, &
+this.m_-5, &
+this.m_open, &
+this.m_new, &
+this.m_close, &
+this.m_save, &
+this.m_-n, &
+this.m_printsetup, &
+this.m_print, &
+this.m_-, &
+this.m_exit}
+end on
+
+on m_file.destroy
+destroy(this.m_login)
+destroy(this.m_logout)
+destroy(this.m_changepassword)
+destroy(this.m_-5)
+destroy(this.m_open)
+destroy(this.m_new)
+destroy(this.m_close)
+destroy(this.m_save)
+destroy(this.m_-n)
+destroy(this.m_printsetup)
+destroy(this.m_print)
+destroy(this.m_-)
+destroy(this.m_exit)
+end on
+
+type m_login from menu within m_file
+end type
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_login")
+end event
+
+on m_login.create
+this.Text="Login"
+this.Microhelp="Log in user"
+this.ToolBarItemText="Login"
+end on
+
+type m_logout from menu within m_file
+end type
+
+on m_logout.create
+this.Text="Logout"
+this.Microhelp="Log out user"
+this.ToolBarItemText="Logout"
+end on
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_logout")
+end event
+
+type m_changepassword from menu within m_file
+end type
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_changepassword")
+end event
+
+on m_changepassword.create
+this.Text="Change Password"
+end on
+
+type m_-5 from menu within m_file
+end type
+
+on m_-5.create
+this.Text="-"
+end on
+
+type m_open from menu within m_file
+end type
+
+on m_open.create
+this.Text="Open"
+this.ToolBarItemName="Icon0003.bmp"
+this.ToolBarItemOrder=1
+end on
+
+on m_open.destroy
+end on
+
+type m_new from menu within m_file
+end type
+
+on m_new.create
+this.Text="New"
+this.ToolBarItemName="Script1.bmp"
+this.ToolBarItemOrder=2
+end on
+
+on m_new.destroy
+end on
+
+type m_close from menu within m_file
+end type
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_closeActiveSheet")
+end event
+
+on m_close.create
+this.Text="&Close"
+this.Microhelp="Close current Window"
+this.ToolBarItemText="Close"
+this.ToolBarItemVisible=false
+this.ToolBarItemOrder=20
+end on
+
+type m_save from menu within m_file
+end type
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_save")
+end event
+
+on m_save.create
+this.Text="&Save"
+this.Microhelp="Save the contents of the current window"
+this.ToolBarItemName="Save!"
+this.ToolBarItemText="Save"
+this.ToolBarItemOrder=3
+end on
+
+type m_-n from menu within m_file
+end type
+
+on m_-n.create
+this.Text="-"
+end on
+
+type m_printsetup from menu within m_file
+end type
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_printsetup")
+end event
+
+on m_printsetup.create
+this.Text="Print Setup..."
+end on
+
+type m_print from menu within m_file
+end type
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_print")
+end event
+
+on m_print.create
+this.Text="&Print..."
+this.Microhelp="Print the contents of the current window"
+this.ToolBarItemName="Print!"
+this.ToolBarItemText="Print Current Window"
+this.ToolBarItemOrder=4
+this.Enabled=false
+end on
+
+type m_- from menu within m_file
+end type
+
+on m_-.create
+this.Text="-"
+end on
+
+type m_exit from menu within m_file
+end type
+
+on m_exit.create
+this.Text="E&xit"
+this.Microhelp="Exit Application"
+this.ToolBarItemName="Icon0011.bmp"
+this.ToolBarItemText="Exit"
+this.ToolBarItemOrder=20
+this.ToolBarItemSpace=3
+end on
+
+event clicked;gnv_app.event ue_exit()
+end event
+
+type m_edit from menu within m_rmt_ancestor
+m_search m_search
+m_reset m_reset
+m_add m_add
+m_delete m_delete
+m_details m_details
+m_x4 m_x4
+m_generalcodegroups m_generalcodegroups
+m_codetables m_codetables
+m_states m_states
+m_city m_city
+m_users m_users
+m_-1 m_-1
+end type
+
+on m_edit.create
+this.Text="&Edit"
+this.m_search=create m_search
+this.m_reset=create m_reset
+this.m_add=create m_add
+this.m_delete=create m_delete
+this.m_details=create m_details
+this.m_x4=create m_x4
+this.m_generalcodegroups=create m_generalcodegroups
+this.m_codetables=create m_codetables
+this.m_states=create m_states
+this.m_city=create m_city
+this.m_users=create m_users
+this.m_-1=create m_-1
+this.Item[]={this.m_search, &
+this.m_reset, &
+this.m_add, &
+this.m_delete, &
+this.m_details, &
+this.m_x4, &
+this.m_generalcodegroups, &
+this.m_codetables, &
+this.m_states, &
+this.m_city, &
+this.m_users, &
+this.m_-1}
+end on
+
+on m_edit.destroy
+destroy(this.m_search)
+destroy(this.m_reset)
+destroy(this.m_add)
+destroy(this.m_delete)
+destroy(this.m_details)
+destroy(this.m_x4)
+destroy(this.m_generalcodegroups)
+destroy(this.m_codetables)
+destroy(this.m_states)
+destroy(this.m_city)
+destroy(this.m_users)
+destroy(this.m_-1)
+end on
+
+type m_search from menu within m_edit
+end type
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_search")
+end event
+
+on m_search.create
+this.Text="&Search"
+this.Microhelp="Search for an item"
+this.ToolBarItemName="Icon0006.bmp"
+this.ToolBarItemText="Search"
+this.ToolBarItemVisible=false
+this.ToolBarItemOrder=5
+this.ToolBarItemSpace=2
+end on
+
+type m_reset from menu within m_edit
+end type
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_reset")
+end event
+
+on m_reset.create
+this.Text="&Reset"
+this.Microhelp="Reset the current window"
+this.ToolBarItemName="Uncomment!"
+this.ToolBarItemText="Reset"
+this.ToolBarItemVisible=false
+this.ToolBarItemOrder=6
+end on
+
+type m_add from menu within m_edit
+end type
+
+on m_add.create
+this.Text="&Add"
+this.Microhelp="Add an item"
+this.ToolBarItemName="Insert5!"
+this.ToolBarItemText="Add"
+this.ToolBarItemVisible=false
+this.ToolBarItemOrder=7
+end on
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_additem")
+end event
+
+type m_delete from menu within m_edit
+end type
+
+on m_delete.create
+this.Text="&Delete"
+this.Microhelp="Delete an item"
+this.ToolBarItemName="Icon0007.bmp"
+this.ToolBarItemText="Delete"
+this.ToolBarItemVisible=false
+this.ToolBarItemOrder=8
+end on
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_deleteitem")
+end event
+
+type m_details from menu within m_edit
+end type
+
+on m_details.create
+this.Text="De&tails"
+this.Microhelp="View and/or update details"
+this.ToolBarItemName="DosEdit5!"
+this.ToolBarItemText="Details"
+this.ToolBarItemVisible=false
+this.ToolBarItemOrder=10
+end on
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_retrieveitem")
+end event
+
+type m_x4 from menu within m_edit
+end type
+
+on m_x4.create
+this.Text="-"
+end on
+
+type m_generalcodegroups from menu within m_edit
+end type
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_general_groups")
+end event
+
+on m_generalcodegroups.create
+this.Text="General Code &Groups"
+this.Microhelp="Perform General Code Groups Maintenance"
+this.ToolBarItemText="General Code Groups"
+this.ShiftToRight=true
+end on
+
+type m_codetables from menu within m_edit
+end type
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_codetables")
+end event
+
+on m_codetables.create
+this.Text="General &Codes"
+this.Microhelp="Perform General Code Maintenance"
+this.ToolBarItemText="General Code"
+this.ShiftToRight=true
+end on
+
+type m_states from menu within m_edit
+end type
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_states")
+end event
+
+on m_states.create
+this.Text="Stat&es"
+this.Microhelp="Perform States Maintenance"
+this.ToolBarItemText="States"
+this.ShiftToRight=true
+end on
+
+type m_city from menu within m_edit
+end type
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_city")
+end event
+
+on m_city.create
+this.Text="C&ity"
+this.Microhelp="Perform City Maintenance"
+this.ToolBarItemText="City"
+this.ShiftToRight=true
+end on
+
+type m_users from menu within m_edit
+end type
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_user_maint")
+end event
+
+on m_users.create
+this.Text="&Users"
+this.Microhelp="Perform User Maintenance"
+this.ToolBarItemText="Users"
+this.ShiftToRight=true
+end on
+
+type m_-1 from menu within m_edit
+end type
+
+on m_-1.create
+this.Text="-"
+this.ShiftToRight=true
+end on
+
+type m_database from menu within m_rmt_ancestor
+m_backup m_backup
+m_recover m_recover
+end type
+
+on m_database.create
+this.Text="&Database"
+this.m_backup=create m_backup
+this.m_recover=create m_recover
+this.Item[]={this.m_backup, &
+this.m_recover}
+end on
+
+on m_database.destroy
+destroy(this.m_backup)
+destroy(this.m_recover)
+end on
+
+type m_backup from menu within m_database
+end type
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_dbbackup")
+end event
+
+on m_backup.create
+this.Text="&Backup"
+end on
+
+type m_recover from menu within m_database
+end type
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_dbrecover")
+end event
+
+on m_recover.create
+this.Text="&Recover..."
+end on
+
+type m_window from menu within m_rmt_ancestor
+m_cascade m_cascade
+m_layer m_layer
+m_tile m_tile
+m_tilehorizontal m_tilehorizontal
+m_iconize m_iconize
+end type
+
+on m_window.create
+this.Text="&Window"
+this.m_cascade=create m_cascade
+this.m_layer=create m_layer
+this.m_tile=create m_tile
+this.m_tilehorizontal=create m_tilehorizontal
+this.m_iconize=create m_iconize
+this.Item[]={this.m_cascade, &
+this.m_layer, &
+this.m_tile, &
+this.m_tilehorizontal, &
+this.m_iconize}
+end on
+
+on m_window.destroy
+destroy(this.m_cascade)
+destroy(this.m_layer)
+destroy(this.m_tile)
+destroy(this.m_tilehorizontal)
+destroy(this.m_iconize)
+end on
+
+type m_cascade from menu within m_window
+end type
+
+on m_cascade.create
+this.Text="&Cascade"
+this.Microhelp="Cascade Windows"
+this.ToolBarItemText="Cascade"
+end on
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_cascade")
+end event
+
+type m_layer from menu within m_window
+end type
+
+on m_layer.create
+this.Text="&Layer"
+this.Microhelp="Layer Windows"
+this.ToolBarItemText="Layer"
+end on
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_layer")
+end event
+
+type m_tile from menu within m_window
+end type
+
+on m_tile.create
+this.Text="&Tile"
+this.Microhelp="Tile Windows"
+this.ToolBarItemText="Tile"
+end on
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_tile")
+end event
+
+type m_tilehorizontal from menu within m_window
+end type
+
+on m_tilehorizontal.create
+this.Text="Tile &Horizontal"
+this.ToolBarItemText="Tile Horizontal"
+end on
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_tilehorizontal")
+end event
+
+type m_iconize from menu within m_window
+end type
+
+on m_iconize.create
+this.Text="&Iconize"
+this.Microhelp="Iconize Windows"
+this.ToolBarItemText="Iconize"
+this.Visible=false
+end on
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_iconize")
+end event
+
+type m_help from menu within m_rmt_ancestor
+m_about m_about
+end type
+
+on m_help.create
+this.Text="&Help"
+this.m_about=create m_about
+this.Item[]={this.m_about}
+end on
+
+on m_help.destroy
+destroy(this.m_about)
+end on
+
+type m_about from menu within m_help
+end type
+
+on m_about.create
+this.Text="&About"
+this.Microhelp="View About Information"
+this.ToolBarItemText="About"
+end on
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_about")
+end event
+

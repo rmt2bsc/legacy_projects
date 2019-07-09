@@ -1,0 +1,89 @@
+$PBExportHeader$d_client_maint_criteria.srd
+release 6;
+datawindow(units=0 timer_interval=0 color=79741120 processing=0 print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 96 print.margin.bottom = 96 print.paper.source = 0 print.paper.size = 0 print.prompt=no print.buttons=no print.preview.buttons=no )
+summary(height=0 color="536870912" )
+footer(height=0 color="536870912" )
+detail(height=344 color="536870912" )
+table(column=(type=long updatewhereclause=yes identity=yes name=id dbname="client.id" )
+ column=(type=char(25) updatewhereclause=yes name=contact_fname dbname="client.contact_fname" )
+ column=(type=char(25) updatewhereclause=yes name=contact_lname dbname="client.contact_lname" )
+ column=(type=long updatewhereclause=yes name=contact_company dbname="client.contact_company" )
+ column=(type=char(25) updatewhereclause=yes name=contact_address1 dbname="client.contact_address1" )
+ column=(type=char(25) updatewhereclause=yes name=contact_address2 dbname="client.contact_address2" )
+ column=(type=char(25) updatewhereclause=yes name=contact_address3 dbname="client.contact_address3" )
+ column=(type=long updatewhereclause=yes name=contact_city dbname="client.contact_city" )
+ column=(type=long updatewhereclause=yes name=contact_state_id dbname="client.contact_state_id" )
+ column=(type=char(10) updatewhereclause=yes name=contact_zip dbname="client.contact_zip" )
+ column=(type=char(10) updatewhereclause=yes name=contact_phone dbname="client.contact_phone" )
+ column=(type=char(25) updatewhereclause=yes name=billing_fname dbname="client.billing_fname" )
+ column=(type=char(25) updatewhereclause=yes name=billing_lname dbname="client.billing_lname" )
+ column=(type=long updatewhereclause=yes name=billing_company dbname="client.billing_company" )
+ column=(type=char(25) updatewhereclause=yes name=billing_address1 dbname="client.billing_address1" )
+ column=(type=char(25) updatewhereclause=yes name=billing_address2 dbname="client.billing_address2" )
+ column=(type=char(25) updatewhereclause=yes name=billing_address3 dbname="client.billing_address3" )
+ column=(type=long updatewhereclause=yes name=billing_city dbname="client.billing_city" )
+ column=(type=long updatewhereclause=yes name=billing_state_id dbname="client.billing_state_id" )
+ column=(type=char(10) updatewhereclause=yes name=billing_zip dbname="client.billing_zip" )
+ column=(type=char(10) updatewhereclause=yes name=billing_phone dbname="client.billing_phone" )
+ column=(type=char(50) updatewhereclause=yes name=email dbname="client.email" )
+ column=(type=char(100) updatewhereclause=yes name=website dbname="client.website" )
+ column=(type=long updatewhereclause=yes name=comment_id dbname="client.comment_id" )
+ column=(type=datetime updatewhereclause=yes name=date_created dbname="client.date_created" )
+ column=(type=datetime updatewhereclause=yes name=date_updated dbname="client.date_updated" )
+ column=(type=char(10) updatewhereclause=yes name=user_id dbname="client.user_id" )
+ column=(type=char(300) updatewhereclause=yes name=comments_comment_text dbname="comments.comment_text" )
+ column=(type=char(10) updatewhereclause=yes name=client_contact_fax dbname="client.contact_fax" )
+ column=(type=char(10) updatewhereclause=yes name=client_billing_fax dbname="client.billing_fax" )
+ column=(type=char(3) updatewhereclause=yes name=client_isbillingexact dbname="client.isbillingexact" )
+ retrieve="  SELECT client.id,   
+         client.contact_fname,   
+         client.contact_lname,   
+         client.contact_company,   
+         client.contact_address1,   
+         client.contact_address2,   
+         client.contact_address3,   
+         client.contact_city,   
+         client.contact_state_id,   
+         client.contact_zip,   
+         client.contact_phone,   
+         client.billing_fname,   
+         client.billing_lname,
+         client.billing_company,      
+         client.billing_address1,   
+         client.billing_address2,   
+         client.billing_address3,   
+         client.billing_city,
+         client.billing_state_id,   
+         client.billing_zip,   
+         client.billing_phone,   
+         client.email,   
+         client.website,   
+         client.comment_id,   
+         client.date_created,   
+         client.date_updated,   
+         client.user_id,   
+         comments.comment_text,
+         client.contact_fax,
+         client.billing_fax,
+         client.isbillingexact
+    FROM client,   
+         comments  
+   WHERE ( comments.comment_id = client.comment_id )    
+" )
+text(band=detail alignment="1" text="Client ID:"border="0" color="0" x="18" y="28" height="64" width="270"  name=id_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=1 alignment="1" tabsequence=10 border="5" color="0" x="306" y="32" height="60" width="425" format="[general]"  name=id edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=9 alignment="1" tabsequence=50 border="5" color="0" x="302" y="128" height="60" width="590" format="[general]"  name=contact_state_id dddw.name=dddw_states dddw.displaycolumn=longname dddw.datacolumn=state_id dddw.percentwidth=100 dddw.lines=10 dddw.limit=0 dddw.allowedit=no dddw.useasborder=yes dddw.case=any dddw.vscrollbar=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="State:"border="0" color="0" x="114" y="124" height="64" width="169"  name=contact_state_id_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=detail alignment="1" text="First Name:"border="0" color="0" x="809" y="28" height="64" width="343"  name=contact_fname_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=2 alignment="0" tabsequence=20 border="5" color="0" x="1170" y="32" height="60" width="544" format="[general]"  name=contact_fname edit.limit=25 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Last Name:"border="0" color="0" x="1792" y="28" height="64" width="338"  name=contact_lname_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=3 alignment="0" tabsequence=30 border="5" color="0" x="2144" y="32" height="60" width="530" format="[general]"  name=contact_lname edit.limit=25 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="0" text="Company:"border="0" color="0" x="2715" y="32" height="60" width="265"  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="80269524" )
+column(band=detail id=4 alignment="0" tabsequence=40 border="5" color="0" x="2999" y="32" height="60" width="823" format="[general]"  name=contact_company dddw.name=dddw_business_clients dddw.displaycolumn=longname dddw.datacolumn=id dddw.percentwidth=100 dddw.lines=4 dddw.limit=0 dddw.allowedit=no dddw.useasborder=yes dddw.case=any dddw.vscrollbar=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="City:"border="0" color="0" x="1015" y="128" height="64" width="133"  name=contact_city_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=8 alignment="0" tabsequence=60 border="5" color="0" x="1166" y="132" height="60" width="576" format="[general]"  name=contact_city dddw.name=dddw_city dddw.displaycolumn=longname dddw.datacolumn=city_id dddw.percentwidth=100 dddw.lines=8 dddw.limit=0 dddw.allowedit=no dddw.useasborder=yes dddw.case=any dddw.vscrollbar=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Zip:"border="0" color="0" x="2011" y="128" height="64" width="114"  name=contact_zip_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=10 alignment="0" tabsequence=70 border="5" color="0" x="2144" y="132" height="60" width="526" format="[general]"  name=contact_zip edit.limit=10 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Phone:"border="0" color="0" x="2775" y="128" height="64" width="206"  name=contact_phone_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=11 alignment="0" tabsequence=80 border="5" color="0" x="3003" y="132" height="60" width="571" format="[general]"  name=contact_phone editmask.mask="(000) 000 - 0000" editmask.focusrectangle=no  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+htmltable(border="1" cellpadding="0" cellspacing="0" generatecss="no" nowrap="yes")  

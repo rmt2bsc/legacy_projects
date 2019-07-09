@@ -1,0 +1,570 @@
+$PBExportHeader$m_greens_base.srm
+forward
+global type m_greens_base from m_rmt_ancestor
+end type
+type m_company from menu within m_file
+end type
+type m_client from menu within m_file
+end type
+type m_reconcilecharterorders from menu within m_file
+end type
+type m_file from m_rmt_ancestor`m_file within m_greens_base
+m_company m_company
+m_client m_client
+m_reconcilecharterorders m_reconcilecharterorders
+end type
+type m_expensemaintenance from menu within m_edit
+end type
+type m_edit from m_rmt_ancestor`m_edit within m_greens_base
+m_expensemaintenance m_expensemaintenance
+end type
+end forward
+
+global type m_greens_base from m_rmt_ancestor
+end type
+global m_greens_base m_greens_base
+
+on m_greens_base.create
+m_greens_base=this
+call super::create
+end on
+
+on m_greens_base.destroy
+call super::destroy
+end on
+
+type m_file from m_rmt_ancestor`m_file within m_greens_base
+m_company m_company
+m_client m_client
+m_reconcilecharterorders m_reconcilecharterorders
+end type
+
+on m_file.create
+call super::create
+this.m_company=create m_company
+this.m_client=create m_client
+this.m_reconcilecharterorders=create m_reconcilecharterorders
+this.Item[UpperBound(this.Item)+1]=this.m_company
+this.Item[UpperBound(this.Item)+1]=this.m_client
+this.Item[UpperBound(this.Item)+1]=this.m_reconcilecharterorders
+end on
+
+on m_file.destroy
+call super::destroy
+destroy(this.m_company)
+destroy(this.m_client)
+destroy(this.m_reconcilecharterorders)
+end on
+
+type m_login from m_rmt_ancestor`m_login within m_file
+end type
+
+on m_login.create
+call super::create
+end on
+
+on m_login.destroy
+call super::destroy
+end on
+
+type m_logout from m_rmt_ancestor`m_logout within m_file
+end type
+
+on m_logout.create
+call super::create
+end on
+
+on m_logout.destroy
+call super::destroy
+end on
+
+type m_changepassword from m_rmt_ancestor`m_changepassword within m_file
+end type
+
+on m_changepassword.create
+call super::create
+end on
+
+on m_changepassword.destroy
+call super::destroy
+end on
+
+type m_-5 from m_rmt_ancestor`m_-5 within m_file
+end type
+
+on m_-5.create
+call super::create
+end on
+
+on m_-5.destroy
+call super::destroy
+end on
+
+type m_open from m_rmt_ancestor`m_open within m_file
+end type
+
+on m_open.create
+call super::create
+this.text = "&Open Charter Order"
+this.microhelp = "Open an existing charter order"
+this.toolbaritemname = "images\Icon0003.bmp"
+this.toolbaritemtext = "Open Charter Order"
+this.shifttoright = true
+end on
+
+event m_open::clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_opensearch")
+end event
+
+on m_open.destroy
+call super::destroy
+end on
+
+type m_new from m_rmt_ancestor`m_new within m_file
+end type
+
+on m_new.create
+call super::create
+this.text = "&New Charter Order"
+this.microhelp = "Create a new charter order"
+this.toolbaritemname = "images\Script1.bmp"
+this.toolbaritemtext = "New Charter Order"
+this.shifttoright = true
+end on
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_neworder")
+end event
+
+on m_new.destroy
+call super::destroy
+end on
+
+type m_close from m_rmt_ancestor`m_close within m_file
+end type
+
+on m_close.create
+call super::create
+this.shifttoright = true
+end on
+
+on m_close.destroy
+call super::destroy
+end on
+
+type m_save from m_rmt_ancestor`m_save within m_file
+end type
+
+on m_save.create
+call super::create
+this.shifttoright = true
+end on
+
+on m_save.destroy
+call super::destroy
+end on
+
+type m_-n from m_rmt_ancestor`m_-n within m_file
+end type
+
+on m_-n.create
+call super::create
+this.shifttoright = true
+end on
+
+on m_-n.destroy
+call super::destroy
+end on
+
+type m_printsetup from m_rmt_ancestor`m_printsetup within m_file
+end type
+
+on m_printsetup.create
+call super::create
+this.shifttoright = true
+end on
+
+on m_printsetup.destroy
+call super::destroy
+end on
+
+type m_print from m_rmt_ancestor`m_print within m_file
+end type
+
+on m_print.create
+call super::create
+this.shifttoright = true
+end on
+
+on m_print.destroy
+call super::destroy
+end on
+
+type m_- from m_rmt_ancestor`m_- within m_file
+end type
+
+on m_-.create
+call super::create
+this.shifttoright = true
+end on
+
+on m_-.destroy
+call super::destroy
+end on
+
+type m_exit from m_rmt_ancestor`m_exit within m_file
+end type
+
+on m_exit.create
+call super::create
+this.toolbaritemname = "images\Icon0011.bmp"
+this.shifttoright = true
+end on
+
+on m_exit.destroy
+call super::destroy
+end on
+
+type m_edit from m_rmt_ancestor`m_edit within m_greens_base
+m_expensemaintenance m_expensemaintenance
+end type
+
+on m_edit.create
+call super::create
+this.m_expensemaintenance=create m_expensemaintenance
+this.Item[UpperBound(this.Item)+1]=this.m_expensemaintenance
+end on
+
+on m_edit.destroy
+call super::destroy
+destroy(this.m_expensemaintenance)
+end on
+
+type m_search from m_rmt_ancestor`m_search within m_edit
+end type
+
+on m_search.create
+call super::create
+this.toolbaritemname = "images\Icon0006.bmp"
+end on
+
+on m_search.destroy
+call super::destroy
+end on
+
+type m_reset from m_rmt_ancestor`m_reset within m_edit
+end type
+
+on m_reset.create
+call super::create
+end on
+
+on m_reset.destroy
+call super::destroy
+end on
+
+type m_add from m_rmt_ancestor`m_add within m_edit
+end type
+
+on m_add.create
+call super::create
+end on
+
+on m_add.destroy
+call super::destroy
+end on
+
+type m_delete from m_rmt_ancestor`m_delete within m_edit
+end type
+
+on m_delete.create
+call super::create
+this.toolbaritemname = "images\Icon0007.bmp"
+end on
+
+on m_delete.destroy
+call super::destroy
+end on
+
+type m_details from m_rmt_ancestor`m_details within m_edit
+end type
+
+on m_details.create
+call super::create
+end on
+
+on m_details.destroy
+call super::destroy
+end on
+
+type m_x4 from m_rmt_ancestor`m_x4 within m_edit
+end type
+
+on m_x4.create
+call super::create
+end on
+
+on m_x4.destroy
+call super::destroy
+end on
+
+type m_generalcodegroups from m_rmt_ancestor`m_generalcodegroups within m_edit
+end type
+
+on m_generalcodegroups.create
+call super::create
+end on
+
+on m_generalcodegroups.destroy
+call super::destroy
+end on
+
+type m_codetables from m_rmt_ancestor`m_codetables within m_edit
+end type
+
+on m_codetables.create
+call super::create
+end on
+
+on m_codetables.destroy
+call super::destroy
+end on
+
+type m_states from m_rmt_ancestor`m_states within m_edit
+end type
+
+on m_states.create
+call super::create
+end on
+
+on m_states.destroy
+call super::destroy
+end on
+
+type m_city from m_rmt_ancestor`m_city within m_edit
+end type
+
+on m_city.create
+call super::create
+end on
+
+on m_city.destroy
+call super::destroy
+end on
+
+type m_users from m_rmt_ancestor`m_users within m_edit
+end type
+
+on m_users.create
+call super::create
+end on
+
+on m_users.destroy
+call super::destroy
+end on
+
+type m_-1 from m_rmt_ancestor`m_-1 within m_edit
+end type
+
+on m_-1.create
+call super::create
+this.visible = false
+end on
+
+on m_-1.destroy
+call super::destroy
+end on
+
+type m_database from m_rmt_ancestor`m_database within m_greens_base
+end type
+
+on m_database.create
+call super::create
+this.visible = false
+end on
+
+on m_database.destroy
+call super::destroy
+end on
+
+type m_backup from m_rmt_ancestor`m_backup within m_database
+end type
+
+on m_backup.create
+call super::create
+end on
+
+on m_backup.destroy
+call super::destroy
+end on
+
+type m_recover from m_rmt_ancestor`m_recover within m_database
+end type
+
+on m_recover.create
+call super::create
+end on
+
+on m_recover.destroy
+call super::destroy
+end on
+
+type m_window from m_rmt_ancestor`m_window within m_greens_base
+end type
+
+on m_window.create
+call super::create
+end on
+
+on m_window.destroy
+call super::destroy
+end on
+
+type m_cascade from m_rmt_ancestor`m_cascade within m_window
+end type
+
+on m_cascade.create
+call super::create
+end on
+
+on m_cascade.destroy
+call super::destroy
+end on
+
+type m_layer from m_rmt_ancestor`m_layer within m_window
+end type
+
+on m_layer.create
+call super::create
+end on
+
+on m_layer.destroy
+call super::destroy
+end on
+
+type m_tile from m_rmt_ancestor`m_tile within m_window
+end type
+
+on m_tile.create
+call super::create
+end on
+
+on m_tile.destroy
+call super::destroy
+end on
+
+type m_tilehorizontal from m_rmt_ancestor`m_tilehorizontal within m_window
+end type
+
+on m_tilehorizontal.create
+call super::create
+end on
+
+on m_tilehorizontal.destroy
+call super::destroy
+end on
+
+type m_iconize from m_rmt_ancestor`m_iconize within m_window
+end type
+
+on m_iconize.create
+call super::create
+end on
+
+on m_iconize.destroy
+call super::destroy
+end on
+
+type m_help from m_rmt_ancestor`m_help within m_greens_base
+end type
+
+on m_help.create
+call super::create
+end on
+
+on m_help.destroy
+call super::destroy
+end on
+
+type m_about from m_rmt_ancestor`m_about within m_help
+end type
+
+on m_about.create
+call super::create
+end on
+
+on m_about.destroy
+call super::destroy
+end on
+
+type m_company from menu within m_file
+end type
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_business_maint")
+end event
+
+on m_company.create
+call super::create
+this.text = "Company"
+this.toolbaritemname = "images\Icon0027.bmp"
+this.toolbaritemtext = "Company Maintenance"
+this.toolbaritemorder = 6
+this.toolbaritemspace = 2
+end on
+
+on m_company.destroy
+call super::destroy
+end on
+
+type m_client from menu within m_file
+end type
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_client_maint")
+end event
+
+on m_client.create
+call super::create
+this.text = "Client"
+this.toolbaritemname = "images\Icon0130.bmp"
+this.toolbaritemtext = "Client Maintenacne"
+this.toolbaritemorder = 7
+end on
+
+on m_client.destroy
+call super::destroy
+end on
+
+type m_reconcilecharterorders from menu within m_file
+end type
+
+on m_reconcilecharterorders.create
+call super::create
+this.text = "Reconcile Charter Orders"
+end on
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_reconcileorders")
+end event
+
+on m_reconcilecharterorders.destroy
+call super::destroy
+end on
+
+type m_expensemaintenance from menu within m_edit
+end type
+
+event clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_expense_maint")
+end event
+on m_expensemaintenance.create
+call super::create
+this.text = "Expense Maintenance"
+this.shifttoright = true
+end on
+
+on m_expensemaintenance.destroy
+call super::destroy
+end on
+

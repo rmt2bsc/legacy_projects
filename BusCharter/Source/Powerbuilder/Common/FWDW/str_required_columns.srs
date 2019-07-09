@@ -1,0 +1,7 @@
+$PBExportHeader$str_required_columns.srs
+$PBExportComments$Maintains a list of columns that are required for a datawindow
+global type str_required_columns from structure
+	string		col
+	string		message
+end type
+

@@ -1,0 +1,99 @@
+$PBExportHeader$d_charter_order_order_print.srd
+release 7;
+datawindow(units=0 timer_interval=0 color=16777215 processing=0 HTMLDW=no print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 96 print.margin.bottom = 96 print.paper.source = 0 print.paper.size = 0 print.prompt=no print.buttons=no print.preview.buttons=no )
+header(height=8 color="536870912" )
+summary(height=0 color="536870912" )
+footer(height=0 color="536870912" )
+detail(height=3360 color="536870912" )
+table(column=(type=long update=yes updatewhereclause=yes identity=yes name=id dbname="orders.id" )
+ column=(type=long update=yes updatewhereclause=yes name=quote_id dbname="orders.quote_id" )
+ column=(type=long updatewhereclause=yes name=quote_status dbname="quote.status" )
+ column=(type=decimal(2) update=yes updatewhereclause=yes name=flat_rate dbname="orders.flat_rate" )
+ column=(type=decimal(2) update=yes updatewhereclause=yes name=milage_rate dbname="orders.milage_rate" )
+ column=(type=decimal(2) update=yes updatewhereclause=yes name=hourly_rate dbname="orders.hourly_rate" )
+ column=(type=decimal(2) update=yes updatewhereclause=yes name=hourly_rate2 dbname="orders.hourly_rate2" )
+ column=(type=long update=yes updatewhereclause=yes name=total_hours dbname="orders.total_hours" )
+ column=(type=long update=yes updatewhereclause=yes name=live_miles dbname="orders.live_miles" )
+ column=(type=long update=yes updatewhereclause=yes name=deadhead_miles dbname="orders.deadhead_miles" )
+ column=(type=char(3) update=yes updatewhereclause=yes name=dropoff_collect dbname="orders.dropoff_collect" values="Drop Off Collection:	Y/Drop Off Collection:	N" )
+ column=(type=long update=yes updatewhereclause=yes name=dropoff_collect_tender dbname="orders.dropoff_collect_tender" )
+ column=(type=date update=yes updatewhereclause=yes name=date_created dbname="orders.date_created" )
+ column=(type=date update=yes updatewhereclause=yes name=date_updated dbname="orders.date_updated" )
+ column=(type=char(10) update=yes updatewhereclause=yes name=user_id dbname="orders.user_id" )
+ column=(type=decimal(2) update=yes updatewhereclause=yes name=buscost dbname="orders.buscost" )
+ column=(type=char(1) updatewhereclause=yes name=overridestatus dbname="overridestatus" values="Override Order Status	Y/Override Order Status	N" )
+ column=(type=char(20) update=yes updatewhereclause=yes name=client_order_id dbname="orders.client_order_id" )
+ column=(type=decimal(2) updatewhereclause=yes name=deadhead_milage_rate dbname="orders.deadhead_milage_rate" )
+ column=(type=long updatewhereclause=yes name=buscount dbname="quote.bus_count" )
+ retrieve="  SELECT orders.id,   
+         orders.quote_id,   
+         quote.status,   
+         orders.flat_rate,   
+         orders.milage_rate,   
+         orders.hourly_rate,   
+         orders.hourly_rate2,   
+         orders.total_hours,   
+         orders.live_miles,   
+         orders.deadhead_miles,   
+         orders.dropoff_collect,   
+         orders.dropoff_collect_tender,   
+         orders.date_created,   
+         orders.date_updated,   
+         orders.user_id,
+         orders.buscost,
+         'N' ~"overridestatus~",
+         orders.client_order_id,
+         orders.deadhead_milage_rate,
+         quote.bus_count
+    FROM orders, quote
+   WHERE orders.id = :order_id    
+     AND quote.id = orders.quote_id
+" arguments=(("order_id", number)) )
+groupbox(band=detail text="Financial Details"border="6" color="16711680" x="489" y="1328" height="1044" width="2560"  name=gb_1  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+groupbox(band=detail text="Per Bus Mileage Cost"border="5" color="0" x="590" y="1584" height="596" width="1115"  name=gb_2  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+groupbox(band=detail text="Per Bus Hourly Cost"border="5" color="0" x="1746" y="1588" height="596" width="1207"  name=gb_3  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+text(band=detail alignment="1" text="Flat Rate (5hr min):" border="0" color="0" x="1801" y="1708" height="60" width="571"  name=hourly_rate_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=detail alignment="1" text="Extended Hourly Rate:" border="0" color="0" x="1806" y="1796" height="60" width="571"  name=hourly_rate2_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=detail alignment="1" text="Total Hours:" border="0" color="0" x="2021" y="1880" height="60" width="361"  name=total_hours_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=detail alignment="1" text="Trip Total for all Buses:" border="0" color="0" x="512" y="2244" height="60" width="608"  name=t_2  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+compute(band=detail alignment="1" expression="( ( if ( isnull ( flat_rate ), 0, flat_rate ) +  if ( isnull ( c_mileagetotal ), 0,  c_mileagetotal )  +  if ( isnull ( c_hourlytotal ), 0,  c_hourlytotal ) ) * buscount )   +  if ( isnull ( buscost ), 0, buscost ) "border="0" color="255" x="1134" y="2244" height="60" width="457" format="$#,##0.00;[RED]($#,##0.00)"  name=c_trip_total  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=6 alignment="1" tabsequence=32766 border="0" color="0" x="2400" y="1708" height="60" width="517" format="[general]"  name=hourly_rate editmask.mask="###.00" editmask.focusrectangle=no  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=7 alignment="1" tabsequence=32766 border="0" color="0" x="2400" y="1796" height="60" width="517" format="[general]"  name=hourly_rate2 editmask.mask="###.00" editmask.focusrectangle=no  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=8 alignment="1" tabsequence=32766 border="0" color="0" x="2400" y="1880" height="60" width="517" format="[general]"  name=total_hours editmask.mask="####" editmask.focusrectangle=no  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Milage Rate:" border="0" color="0" x="773" y="1708" height="60" width="375"  name=milage_rate_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=detail alignment="1" text="Dead Head Miles:" border="0" color="0" x="690" y="1948" height="60" width="457"  name=deadhead_miles_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=10 alignment="1" tabsequence=32766 border="0" color="0" x="1166" y="1948" height="60" width="462" format="[general]"  name=deadhead_miles editmask.mask="####" editmask.focusrectangle=no  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=5 alignment="1" tabsequence=32766 border="0" color="0" x="1166" y="1708" height="60" width="462" format="[general]"  name=milage_rate editmask.mask="###,###.00" editmask.focusrectangle=no  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Dead Head Rate:" border="0" color="0" x="645" y="1788" height="60" width="503"  name=t_3  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=19 alignment="1" tabsequence=32766 border="0" color="0" x="1166" y="1788" height="60" width="462" format="[general]"  name=deadhead_milage_rate edit.limit=0 edit.case=any edit.autoselect=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="1090519039" )
+text(band=detail alignment="1" text="Live Miles:" border="0" color="0" x="818" y="1868" height="60" width="329"  name=live_miles_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=9 alignment="1" tabsequence=32766 border="0" color="0" x="1166" y="1868" height="60" width="462" format="[general]"  name=live_miles editmask.mask="####" editmask.focusrectangle=no  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Milage Sub Total:" border="0" color="0" x="658" y="2080" height="60" width="494"  name=t_4  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+compute(band=detail alignment="1" expression="( if ( isnull ( live_miles ), 0,  live_miles )  *  if ( isnull( milage_rate ), 0 ,  milage_rate ) ) +    ( if ( isnull ( deadhead_miles ), 0,  deadhead_miles )  *  if ( isnull (  deadhead_milage_rate ), 0 ,  deadhead_milage_rate ) )"border="0" color="16711680" x="1166" y="2080" height="60" width="462" format="$#,##0.00;[RED]($#,##0.00)"  name=c_mileagetotal  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Hourly Sub Total:" border="0" color="0" x="1870" y="2076" height="60" width="512"  name=t_5  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+compute(band=detail alignment="1" expression="if ( isnull ( hourly_rate ), 0,  hourly_rate )  +  ( if ( isnull ( hourly_rate2 ), 0,  hourly_rate2 )  *  ( if (   total_hours > 5,  total_hours - 5, 0 ) ) )"border="0" color="16711680" x="2395" y="2076" height="60" width="517" format="$#,##0.00;[RED]($#,##0.00)"  name=c_hourlytotal  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=4 alignment="1" tabsequence=32766 border="0" color="16711680" x="1138" y="1456" height="60" width="448" format="$#,##0.00;[RED]($#,##0.00)"  name=flat_rate editmask.mask="###,###.00" editmask.focusrectangle=no  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Base Cost per Bus:" border="0" color="0" x="539" y="1456" height="60" width="576"  name=flat_rate_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=detail alignment="1" text="Additional Bus Charges:" border="0" color="0" x="1728" y="1456" height="60" width="713"  name=t_6  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=16 alignment="2" tabsequence=32766 border="0" color="16711680" x="2459" y="1456" height="60" width="457" format="$#,##0.00;[RED]($#,##0.00)"  name=buscost editmask.mask="###,###.00" editmask.focusrectangle=no  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=12 alignment="1" tabsequence=32766 border="0" color="0" x="1970" y="1108" height="60" width="823" format="[general]"  name=dropoff_collect_tender dddw.name=dddw_general_codes dddw.displaycolumn=longdesc dddw.datacolumn=code_id dddw.percentwidth=100 dddw.lines=3 dddw.limit=0 dddw.allowedit=no dddw.useasborder=no dddw.case=any dddw.vscrollbar=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Order ID:" border="0" color="0" x="448" y="1012" height="60" width="265"  name=id_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=detail alignment="1" text="Trip Id:" border="0" color="0" x="1134" y="1012" height="60" width="206"  name=quote_id_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=detail alignment="1" text="Status:" border="0" color="0" x="1746" y="1012" height="60" width="206"  name=status_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=detail alignment="1" text="Drop Off Collection Tender:" border="0" color="0" x="1243" y="1108" height="60" width="709"  name=dropoff_collect_tender_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=detail alignment="0" text="Client Order Number:" border="0" color="0" x="498" y="1208" height="60" width="553"  name=t_1  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=1 alignment="0" tabsequence=32766 border="0" color="0" x="727" y="1012" height="60" width="329" format="[general]"  name=id edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=2 alignment="0" tabsequence=32766 border="0" color="0" x="1353" y="1012" height="60" width="329" format="[general]"  name=quote_id edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=11 alignment="0" tabsequence=32766 border="0" color="0" x="485" y="1108" height="60" width="581" format="[general]"  name=dropoff_collect checkbox.text="Drop Off Collection:" checkbox.on="Y" checkbox.off="N" checkbox.lefttext=yes checkbox.scale=yes checkbox.threed=yes  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=18 alignment="0" tabsequence=32766 border="0" color="0" x="1065" y="1208" height="60" width="677" format="[general]"  name=client_order_id edit.limit=20 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.nilisnull=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="0" text="Charter Order:" border="0" color="0" x="485" y="704" height="80" width="521"  name=t_13  font.face="Arial" font.height="-12" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="1090519039" )
+column(band=detail id=1 alignment="0" tabsequence=32766 border="0" color="0" x="1019" y="712" height="64" width="416" format="[general]"  name=order_id edit.limit=0 edit.case=any edit.autoselect=yes  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="1090519039" )
+text(band=detail alignment="2" text="Financial Information" border="0" color="0" x="439" y="588" height="120" width="1207"  name=t_12  font.face="Arial" font.height="-18" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=detail alignment="0" text="TOUR USA" border="0" color="0" x="457" y="200" height="116" width="1650"  name=t_company_name  font.face="Bookman Old Style" font.height="-18" font.weight="700"  font.family="1" font.pitch="2" font.charset="0" font.italic="1" background.mode="1" background.color="536870912" )
+text(band=detail alignment="0" text="PHONE:  (214) 683-0342" border="0" color="0" x="471" y="444" height="60" width="713"  name=t_phone  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=detail alignment="0" text="FAX: (972) 412-5031" border="0" color="0" x="1221" y="444" height="60" width="590"  name=t_fax  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=detail alignment="0" text="P.O. Box 170021
+Dallas, Tx 75217" border="0" color="0" x="471" y="320" height="120" width="869"  name=t_address  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+htmltable(border="1" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" )
+  

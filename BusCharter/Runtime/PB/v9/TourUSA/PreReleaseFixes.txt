@@ -1,0 +1,19 @@
+y	Correct get client error when adding a client during order creation.   The new Client is not returned to the client tab.	
+y	Include on disk 1) the intructions for sql anywhere and greens software 2) a copy of winzip, and 3) the instructions on how to ack up database.	
+y	On the financials tab, do not calculate the 5 hr minimu as an hourly rate.   Instead accept whatever the user enters as the total for the 5hr minimum.	
+y	Order details (financials) are not printing	
+y	Driver Manifest did not print all of the expected docs.   Appears to be printing on the ones that are oddly numbered.   (As of 03/18/02 the manifests are printing on my systes).	
+y	Scroll bar does not appeara s expected on the invoice summary of the charter order tab.	
+y	Get a database error when adding an entry in the City Maintenance Window.	
+y	Get a database error when adding an entry in the User Maintenance Window.	
+y	Order Reconciliation is rendering an error.	
+y	When adding a bus to an order via Bus Details window, the new row is not automatically selected and the bus descriptions are not displayed in the list section.	
+y	Display the company in the Contact and Billing sections of the printable invoice.	
+y	When creating a client directly from the new order screen, the new client is not passed back to the client page of the charter order tab.	
+y	The balance does not appear (in the upper right hand corner of the charter order tab) after saving an order.	
+y	When copy a client's contact information to the billing section of the client maintenance screen, the company is not captured.	
+n		
+y	When changing the transaction type on the Transsaction tab, the amount is not porperly recognized as positive or negative.  This seems to only occur when the row is new.	
+y	Show the departure date on the invoice inplace of REP and FOB.	
+y	Buses listed on the invoice are not in order.	
+y	Print the Driver's Manifest in bus number order	

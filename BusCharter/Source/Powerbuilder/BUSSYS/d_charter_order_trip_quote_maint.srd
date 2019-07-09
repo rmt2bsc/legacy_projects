@@ -1,0 +1,132 @@
+$PBExportHeader$d_charter_order_trip_quote_maint.srd
+release 7;
+datawindow(units=0 timer_interval=0 color=80269524 processing=0 HTMLDW=no print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 96 print.margin.bottom = 96 print.paper.source = 0 print.paper.size = 0 print.prompt=no print.buttons=no print.preview.buttons=no )
+summary(height=0 color="536870912" )
+footer(height=0 color="536870912" )
+detail(height=1740 color="536870912" )
+table(column=(type=long update=yes updatewhereclause=yes key=yes name=quote_id dbname="quote.id" )
+ column=(type=long update=yes updatewhereclause=yes name=quote_company_id dbname="quote.company_id" )
+ column=(type=long update=yes updatewhereclause=yes name=quote_client_id dbname="quote.client_id" )
+ column=(type=char(30) update=yes updatewhereclause=yes name=quote_charter_party dbname="quote.charter_party" )
+ column=(type=char(25) update=yes updatewhereclause=yes name=quote_signage dbname="quote.signage" )
+ column=(type=long update=yes updatewhereclause=yes name=quote_bus_count dbname="quote.bus_count" initial="1" )
+ column=(type=long update=yes updatewhereclause=yes name=quote_head_count dbname="quote.head_count" )
+ column=(type=decimal(2) update=yes updatewhereclause=yes name=quote_quote_price dbname="quote.quote_price" )
+ column=(type=date update=yes updatewhereclause=yes name=quote_depart_date dbname="quote.depart_date" )
+ column=(type=time update=yes updatewhereclause=yes name=quote_depart_spottime dbname="quote.depart_spottime" )
+ column=(type=time update=yes updatewhereclause=yes name=quote_depart_droptime dbname="quote.depart_droptime" )
+ column=(type=date update=yes updatewhereclause=yes name=quote_return_date dbname="quote.return_date" )
+ column=(type=time update=yes updatewhereclause=yes name=quote_return_spottime dbname="quote.return_spottime" )
+ column=(type=time update=yes updatewhereclause=yes name=quote_return_droptime dbname="quote.return_droptime" )
+ column=(type=date update=yes updatewhereclause=yes name=quote_garage_date dbname="quote.garage_date" )
+ column=(type=time update=yes updatewhereclause=yes name=quote_garage_time dbname="quote.garage_time" )
+ column=(type=char(150) update=yes updatewhereclause=yes name=quote_pickup_location dbname="quote.pickup_location" )
+ column=(type=char(150) update=yes updatewhereclause=yes name=quote_destination dbname="quote.destination" )
+ column=(type=long update=yes updatewhereclause=yes name=quote_special_instructions dbname="quote.special_instructions" )
+ column=(type=date update=yes updatewhereclause=yes name=quote_date_created dbname="quote.date_created" )
+ column=(type=date update=yes updatewhereclause=yes name=quote_date_updated dbname="quote.date_updated" )
+ column=(type=char(10) update=yes updatewhereclause=yes name=quote_user_id dbname="quote.user_id" )
+ column=(type=char(300) updatewhereclause=yes name=comments_comment_text dbname="comments.comment_text" )
+ column=(type=long updatewhereclause=yes identity=yes name=comments_comment_id dbname="comments.comment_id" )
+ column=(type=char(8) updatewhereclause=yes name=comments_user_id dbname="comments.user_id" )
+ column=(type=date updatewhereclause=yes name=comments_date_created dbname="comments.date_created" )
+ column=(type=date updatewhereclause=yes name=comments_date_updated dbname="comments.date_updated" )
+ column=(type=long update=yes updatewhereclause=yes name=status dbname="quote.status" )
+ column=(type=char(1) updatewhereclause=yes name=overridestatus dbname="overridestatus" values="Override Order Status	Y/Override Order Status	N" )
+ retrieve="  SELECT quote.id,   
+         quote.company_id,   
+         quote.client_id,   
+         quote.charter_party,   
+         quote.signage,   
+         quote.bus_count,   
+         quote.head_count,   
+         quote.quote_price,   
+         quote.depart_date,   
+         quote.depart_spottime,   
+         quote.depart_droptime,   
+         quote.return_date,   
+         quote.return_spottime,   
+         quote.return_droptime,   
+         quote.garage_date,   
+         quote.garage_time,   
+         quote.pickup_location,   
+         quote.destination,   
+         quote.special_instructions,   
+         quote.date_created,   
+         quote.date_updated,   
+         quote.user_id,   
+         comments.comment_text,   
+         comments.comment_id,   
+         comments.user_id,   
+         comments.date_created,   
+         comments.date_updated,
+         quote.status,
+         'N' ~"overridestatus~"  
+    FROM comments,   
+         quote  
+   WHERE ( quote.special_instructions *= comments.comment_id ) and  
+         ( ( quote.id = :quote_id ) ) AND  
+         quote.client_id = :client_id    
+" update="quote" updatewhere=0 updatekeyinplace=no arguments=(("client_id", number),("quote_id", number)) )
+column(band=detail id=21 alignment="0" tabsequence=32766 border="5" color="0" x="3497" y="896" height="76" width="709" format="[shortdate] [time]"  name=quote_date_updated edit.limit=0 edit.case=any edit.autoselect=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=20 alignment="0" tabsequence=32766 border="5" color="0" x="3511" y="1004" height="76" width="722" format="[shortdate] [time]"  name=quote_date_created edit.limit=0 edit.case=any edit.autoselect=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=22 alignment="0" tabsequence=32766 border="5" color="0" x="3520" y="1092" height="76" width="681" format="[general]"  name=quote_user_id edit.limit=0 edit.case=any edit.autoselect=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=19 alignment="0" tabsequence=32766 border="5" color="0" x="3529" y="1296" height="60" width="777" format="[general]"  name=quote_special_instructions edit.limit=0 edit.case=any edit.autoselect=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=24 alignment="0" tabsequence=32766 border="5" color="0" x="3483" y="596" height="76" width="823" format="[general]"  name=comments_comment_id edit.limit=0 edit.case=any edit.autoselect=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=26 alignment="0" tabsequence=32766 border="5" color="0" x="3497" y="696" height="76" width="987" format="[general]"  name=comments_date_created edit.limit=0 edit.case=any edit.autoselect=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=27 alignment="0" tabsequence=32766 border="5" color="0" x="3479" y="792" height="76" width="882" format="[general]"  name=comments_date_updated edit.limit=0 edit.case=any edit.autoselect=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+groupbox(band=detail text="Departure Specifics"border="5" color="16711680" x="110" y="416" height="212" width="2478"  name=gb_1  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+groupbox(band=detail text="Return Specifics"border="5" color="16711680" x="110" y="664" height="212" width="2478"  name=gb_2  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+button(band=detail text="Generate Charter Order"filename=""action="0" border="0" color="0" x="965" y="1564" height="84" width="686" vtextalign="0" htextalign="0"  name=cb_createorder  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="79741120" )
+column(band=detail id=29 alignment="0" tabsequence=20 border="0" color="0" x="1225" y="124" height="60" width="718" format="[general]"  name=overridestatus checkbox.text="Override Order Status" checkbox.on="Y" checkbox.off="N" checkbox.lefttext=yes checkbox.scale=no checkbox.threed=yes  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="80269524" )
+text(band=detail alignment="0" text="Order Status:" border="0" color="0" x="55" y="124" height="60" width="347"  name=t_1  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="80269524" )
+text(band=detail alignment="1" text="Trip ID:" border="0" color="0" x="183" y="24" height="60" width="215"  name=quote_id_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=detail alignment="1" text="Client ID:" border="0" color="0" x="791" y="24" height="60" width="270"  name=t_2  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=detail alignment="1" text="Bus Count:" border="0" color="0" x="1586" y="20" height="60" width="325"  name=quote_bus_count_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=6 alignment="0" tabsequence=32766 border="0" color="16711680" x="1952" y="20" height="64" width="329" format="[general]"  name=quote_bus_count edit.limit=0 edit.case=any edit.autoselect=yes edit.nilisnull=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="80269524" )
+column(band=detail id=28 alignment="0" tabsequence=10 border="0" color="255" x="416" y="124" height="60" width="727" format="[general]" protect="0~t1"  name=status dddw.name=dddw_order_status dddw.displaycolumn=longdesc dddw.datacolumn=code_id dddw.percentwidth=100 dddw.lines=0 dddw.limit=0 dddw.allowedit=no dddw.useasborder=yes dddw.case=any dddw.nilisnull=yes  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="80269524" )
+column(band=detail id=1 alignment="0" tabsequence=32766 border="0" color="16711680" x="416" y="20" height="64" width="329" format="[general]"  name=quote_id edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+column(band=detail id=3 alignment="0" tabsequence=32766 border="0" color="16711680" x="1097" y="20" height="64" width="384" format="[general]"  name=quote_client_id edit.limit=0 edit.case=any edit.autoselect=yes  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="79741120" )
+text(band=detail alignment="2" text="*" border="0" color="255" x="73" y="1580" height="56" width="41"  name=t_3  font.face="Arial" font.height="-14" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+text(band=detail alignment="2" text="Data Entry Required" border="0" color="0" x="119" y="1580" height="56" width="599"  name=t_4  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+text(band=detail alignment="2" text="*" border="0" color="255" x="91" y="248" height="56" width="41"  name=t_5  font.face="Arial" font.height="-14" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+text(band=detail alignment="1" text="Charter Party:" border="0" color="0" x="27" y="332" height="60" width="370"  name=quote_charter_party_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=4 alignment="0" tabsequence=40 border="5" color="0" x="411" y="336" height="56" width="786" format="[general]"  name=quote_charter_party edit.limit=30 edit.case=any edit.autoselect=yes edit.nilisnull=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Signage:" border="0" color="0" x="1271" y="332" height="60" width="238"  name=quote_signage_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=5 alignment="0" tabsequence=50 border="5" color="0" x="1527" y="328" height="64" width="635" format="[general]"  name=quote_signage edit.limit=25 edit.case=any edit.autoselect=yes edit.nilisnull=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Capacity:" border="0" color="0" x="2217" y="332" height="60" width="274"  name=quote_head_count_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=7 alignment="1" tabsequence=60 border="5" color="0" x="2510" y="328" height="64" width="329" format="[general]"  name=quote_head_count edit.limit=0 edit.case=any edit.autoselect=yes edit.nilisnull=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Transport Company:" border="0" color="0" x="137" y="244" height="60" width="530"  name=t_6  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="79741120" )
+column(band=detail id=2 alignment="0" tabsequence=30 border="5" color="0" x="686" y="240" height="64" width="1458" format="[general]"  name=quote_company_id dddw.name=dddw_business_parent_partner dddw.displaycolumn=c_business_and_title dddw.datacolumn=id dddw.percentwidth=100 dddw.lines=5 dddw.limit=0 dddw.allowedit=no dddw.useasborder=yes dddw.case=any dddw.nilisnull=yes dddw.vscrollbar=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Date:" border="0" color="0" x="192" y="520" height="60" width="155"  name=quote_depart_date_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=9 alignment="0" tabsequence=70 border="5" color="0" x="366" y="516" height="64" width="379" format="[general]"  name=quote_depart_date editmask.mask="mm/dd/yyyy"  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Spot Time:" border="0" color="0" x="864" y="520" height="60" width="279"  name=quote_depart_spottime_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=10 alignment="0" tabsequence=80 border="5" color="0" x="1157" y="516" height="64" width="434" format="[time]"  name=quote_depart_spottime editmask.spin=yes editmask.mask="hh:mm am/pm" editmask.spinrange="~~" editmask.spinincr=1  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Drop Time:" border="0" color="0" x="1723" y="520" height="60" width="325"  name=quote_depart_droptime_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=11 alignment="0" tabsequence=90 border="5" color="0" x="2062" y="516" height="64" width="434" format="[time]"  name=quote_depart_droptime editmask.spin=yes editmask.mask="hh:mm am/pm" editmask.spinrange="~~" editmask.spinincr=1  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Date:" border="0" color="0" x="192" y="752" height="60" width="155"  name=quote_return_date_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=12 alignment="0" tabsequence=100 border="5" color="0" x="361" y="748" height="64" width="379" format="[general]"  name=quote_return_date editmask.mask="mm/dd/yyyy"  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Spot Time:" border="0" color="0" x="869" y="752" height="60" width="279"  name=quote_return_spottime_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=13 alignment="0" tabsequence=110 border="5" color="0" x="1161" y="748" height="64" width="434" format="[time]"  name=quote_return_spottime editmask.spin=yes editmask.mask="hh:mm am/pm" editmask.spinrange="~~" editmask.spinincr=1  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Drop Time:" border="0" color="0" x="1765" y="752" height="60" width="288"  name=quote_return_droptime_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=14 alignment="0" tabsequence=120 border="5" color="0" x="2066" y="748" height="64" width="434" format="[time]"  name=quote_return_droptime editmask.spin=yes editmask.mask="hh:mm am/pm" editmask.spinrange="~~" editmask.spinincr=1  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="2" text="*" border="0" color="255" x="146" y="524" height="56" width="41"  name=t_7  font.face="Arial" font.height="-14" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+text(band=detail alignment="2" text="*" border="0" color="255" x="818" y="520" height="56" width="41"  name=t_8  font.face="Arial" font.height="-14" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+text(band=detail alignment="2" text="*" border="0" color="255" x="146" y="756" height="56" width="41"  name=t_9  font.face="Arial" font.height="-14" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+text(band=detail alignment="2" text="*" border="0" color="255" x="1719" y="752" height="56" width="41"  name=t_10  font.face="Arial" font.height="-14" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+text(band=detail alignment="1" text="Garage Date:" border="0" color="0" x="229" y="928" height="60" width="389"  name=quote_garage_date_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=15 alignment="0" tabsequence=130 border="5" color="0" x="635" y="928" height="64" width="379" format="[general]"  name=quote_garage_date editmask.mask="mm/dd/yyyy"  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Garage Time:" border="0" color="0" x="1093" y="932" height="60" width="398"  name=quote_garage_time_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=16 alignment="0" tabsequence=140 border="5" color="0" x="1509" y="932" height="64" width="434" format="[time]"  name=quote_garage_time editmask.spin=yes editmask.mask="hh:mm am/pm" editmask.spinrange="~~" editmask.spinincr=1  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Pickup Location:" border="0" color="0" x="174" y="1032" height="60" width="448"  name=quote_pickup_location_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=17 alignment="0" tabsequence=150 border="5" color="0" x="640" y="1032" height="116" width="2007" format="[general]"  name=quote_pickup_location edit.limit=150 edit.case=any edit.autoselect=yes edit.nilisnull=yes edit.autovscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Destination:" border="0" color="0" x="297" y="1176" height="60" width="325"  name=quote_destination_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=18 alignment="0" tabsequence=160 border="5" color="0" x="640" y="1176" height="116" width="2007" format="[general]"  name=quote_destination edit.limit=150 edit.case=any edit.autoselect=yes edit.nilisnull=yes edit.autovscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Special Instructions:" border="0" color="0" x="87" y="1320" height="60" width="539"  name=quote_special_instructions_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=23 alignment="0" tabsequence=170 border="5" color="0" x="645" y="1324" height="188" width="2007" format="[general]"  name=comments_comment_text edit.limit=300 edit.case=any edit.autoselect=yes edit.nilisnull=yes edit.autovscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="2" text="*" border="0" color="255" x="128" y="1032" height="56" width="41"  name=t_11  font.face="Arial" font.height="-14" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+text(band=detail alignment="2" text="*" border="0" color="255" x="251" y="1176" height="56" width="41"  name=t_12  font.face="Arial" font.height="-14" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+text(band=detail alignment="2" text="*" border="0" color="255" x="41" y="1320" height="56" width="41"  name=t_13  font.face="Arial" font.height="-14" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+htmltable(border="1" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" )
+  

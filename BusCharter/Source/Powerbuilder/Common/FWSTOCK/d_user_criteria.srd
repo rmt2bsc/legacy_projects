@@ -1,0 +1,62 @@
+$PBExportHeader$d_user_criteria.srd
+$PBExportComments$Criteria for user maintenance screen
+release 7;
+datawindow(units=0 timer_interval=0 color=80269524 processing=0 HTMLDW=no print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 96 print.margin.bottom = 96 print.paper.source = 0 print.paper.size = 0 print.prompt=no print.buttons=no print.preview.buttons=no )
+summary(height=0 color="536870912" )
+footer(height=0 color="536870912" )
+detail(height=508 color="536870912" )
+table(column=(type=long updatewhereclause=yes name=id dbname="user_location.id" )
+ column=(type=char(8) updatewhereclause=yes name=login_id dbname="user_location.login_id" )
+ column=(type=char(8) updatewhereclause=yes name=user_id dbname="user_location.user_id" )
+ column=(type=char(30) updatewhereclause=yes name=user_name dbname="user_location.user_name" )
+ column=(type=char(25) updatewhereclause=yes name=firstname dbname="user_location.firstname" )
+ column=(type=char(25) updatewhereclause=yes name=lastname dbname="user_location.lastname" )
+ column=(type=char(35) updatewhereclause=yes name=title dbname="user_location.title" )
+ column=(type=date updatewhereclause=yes name=start_date dbname="user_location.start_date" )
+ column=(type=date updatewhereclause=yes name=termination_date dbname="user_location.termination_date" )
+ column=(type=long updatewhereclause=yes name=access_level dbname="user_location.access_level" )
+ column=(type=char(30) updatewhereclause=yes name=password dbname="user_location.password" )
+ column=(type=long updatewhereclause=yes name=total_logons dbname="user_location.total_logons" )
+ column=(type=char(30) updatewhereclause=yes name=logon_city dbname="user_location.logon_city" )
+ column=(type=char(3) updatewhereclause=yes name=logon_areacode dbname="user_location.logon_areacode" )
+ column=(type=char(3) updatewhereclause=yes name=logon_phone_prefix dbname="user_location.logon_phone_prefix" )
+ column=(type=date updatewhereclause=yes name=date_created dbname="user_location.date_created" )
+ column=(type=date updatewhereclause=yes name=date_updated dbname="user_location.date_updated" )
+ retrieve="  SELECT user_location.id,   
+         user_location.login_id,   
+         user_location.user_id,   
+         user_location.user_name,   
+         user_location.firstname,   
+         user_location.lastname,   
+         user_location.title,   
+         user_location.start_date,   
+         user_location.termination_date,   
+         user_location.access_level,   
+         user_location.password,   
+         user_location.total_logons,   
+         user_location.logon_city,   
+         user_location.logon_areacode,   
+         user_location.logon_phone_prefix,   
+         user_location.date_created,   
+         user_location.date_updated  
+    FROM user_location   
+" )
+text(band=detail alignment="1" text="User ID:" border="0" color="0" x="389" y="28" height="60" width="242"  name=t_1  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=detail alignment="1" text="Title:" border="0" color="0" x="1925" y="28" height="60" width="146"  name=title_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=7 alignment="0" tabsequence=50 border="5" color="0" x="2089" y="28" height="60" width="850" format="[general]"  name=title edit.limit=35 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Alternate User Name:" border="0" color="0" x="0" y="116" height="60" width="631"  name=user_name_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=4 alignment="0" tabsequence=20 border="5" color="0" x="649" y="116" height="60" width="850" format="[general]"  name=user_name edit.limit=30 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Start Date:" border="0" color="0" x="1760" y="116" height="60" width="311"  name=start_date_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=8 alignment="0" tabsequence=60 border="5" color="0" x="2089" y="116" height="60" width="850" format="[general]"  name=start_date edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=5 alignment="0" tabsequence=30 border="5" color="0" x="649" y="204" height="60" width="850" format="[general]"  name=firstname edit.limit=25 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Termination Date:" border="0" color="0" x="1545" y="204" height="60" width="526"  name=termination_date_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=9 alignment="0" tabsequence=70 border="5" color="0" x="2089" y="204" height="60" width="850" format="[general]"  name=termination_date edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="First Name:" border="0" color="0" x="288" y="204" height="60" width="343"  name=firstname_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=detail alignment="1" text="Last Name:" border="0" color="0" x="293" y="292" height="60" width="338"  name=lastname_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=6 alignment="0" tabsequence=40 border="5" color="0" x="649" y="292" height="60" width="850" format="[general]"  name=lastname edit.limit=25 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Access Level:" border="0" color="0" x="1659" y="292" height="60" width="411"  name=access_level_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=10 alignment="1" tabsequence=80 border="5" color="0" x="2089" y="292" height="60" width="850" format="[general]"  name=access_level dddw.name=dddw_user_access_levels dddw.displaycolumn=longdesc dddw.datacolumn=code_id dddw.percentwidth=0 dddw.lines=3 dddw.limit=0 dddw.allowedit=no dddw.useasborder=yes dddw.case=any dddw.vscrollbar=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=2 alignment="0" tabsequence=10 border="5" color="0" x="649" y="32" height="60" width="393" format="[general]"  name=login_id edit.limit=0 edit.case=any edit.autoselect=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+htmltable(border="1" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" )
+  

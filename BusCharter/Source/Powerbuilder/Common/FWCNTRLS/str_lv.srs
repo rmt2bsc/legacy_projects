@@ -1,0 +1,6 @@
+$PBExportHeader$str_lv.srs
+global type str_lv from structure
+	str_lvdata		level
+	string		selectedkey[]
+end type
+

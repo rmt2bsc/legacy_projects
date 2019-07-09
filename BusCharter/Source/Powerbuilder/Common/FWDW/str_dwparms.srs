@@ -1,0 +1,10 @@
+$PBExportHeader$str_dwparms.srs
+$PBExportComments$Object for passing data from one window to another
+global type str_dwparms from structure
+	long		handle
+	boolean		usewhereclause
+	string		winname
+	string		dw_whereclause
+	any		parm[]
+end type
+

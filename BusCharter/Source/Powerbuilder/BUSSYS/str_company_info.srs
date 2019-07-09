@@ -1,0 +1,16 @@
+$PBExportHeader$str_company_info.srs
+$PBExportComments$Shoulod contain only the active company data
+global type str_company_info from structure
+	string		name
+	string		addr1
+	string		addr2
+	string		city
+	string		state
+	string		zip
+	string		phone
+	string		fax
+	string		cell
+	string		email
+	string		website
+	string		owner_name
+end type

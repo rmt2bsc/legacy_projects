@@ -1,0 +1,7 @@
+$PBExportHeader$str_dwargs.srs
+global type str_dwargs from structure
+	string		pbcol
+	string		value
+	string		operator
+end type
+

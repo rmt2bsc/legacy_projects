@@ -1,0 +1,156 @@
+$PBExportHeader$m_lv_popup.srm
+forward
+global type m_lv_popup from menu
+end type
+type m_lvmenu from menu within m_lv_popup
+end type
+type m_view from menu within m_lvmenu
+end type
+type m_largeicons from menu within m_view
+end type
+type m_smallicons from menu within m_view
+end type
+type m_list from menu within m_view
+end type
+type m_report from menu within m_view
+end type
+type m_view from menu within m_lvmenu
+m_largeicons m_largeicons
+m_smallicons m_smallicons
+m_list m_list
+m_report m_report
+end type
+type m_lvmenu from menu within m_lv_popup
+m_view m_view
+end type
+end forward
+
+global type m_lv_popup from menu
+m_lvmenu m_lvmenu
+end type
+global m_lv_popup m_lv_popup
+
+type variables
+listview  ilv
+n_rmt_utility inv_utility
+end variables
+
+forward prototypes
+public function integer of_uncheckitems (menu am_menu)
+end prototypes
+
+public function integer of_uncheckitems (menu am_menu);int  li_total
+int  li_ndx
+
+
+
+if not isvalid(am_menu) then
+	return -1
+end if
+
+li_total = upperbound(am_menu.item)
+for li_ndx = 1 to li_total
+	am_menu.item[li_Ndx].checked = false
+next
+
+return li_total
+end function
+
+on m_lv_popup.create
+m_lv_popup=this
+this.m_lvmenu=create m_lvmenu
+this.Item[]={this.m_lvmenu}
+end on
+
+on m_lv_popup.destroy
+destroy(this.m_lvmenu)
+end on
+
+type m_lvmenu from menu within m_lv_popup
+m_view m_view
+end type
+
+on m_lvmenu.create
+this.Text="LVMenu"
+this.m_view=create m_view
+this.Item[]={this.m_view}
+end on
+
+on m_lvmenu.destroy
+destroy(this.m_view)
+end on
+
+type m_view from menu within m_lvmenu
+m_largeicons m_largeicons
+m_smallicons m_smallicons
+m_list m_list
+m_report m_report
+end type
+
+on m_view.create
+this.Text="&View"
+this.m_largeicons=create m_largeicons
+this.m_smallicons=create m_smallicons
+this.m_list=create m_list
+this.m_report=create m_report
+this.Item[]={this.m_largeicons, &
+this.m_smallicons, &
+this.m_list, &
+this.m_report}
+end on
+
+on m_view.destroy
+destroy(this.m_largeicons)
+destroy(this.m_smallicons)
+destroy(this.m_list)
+destroy(this.m_report)
+end on
+
+type m_largeicons from menu within m_view
+end type
+
+event clicked;ilv.View = ListViewLargeIcon! 
+of_uncheckitems(m_lvmenu.m_view)
+this.checked = true
+end event
+
+on m_largeicons.create
+this.Text="Large Icons"
+end on
+
+type m_smallicons from menu within m_view
+end type
+
+event clicked;ilv.View = ListViewSmallIcon! 
+of_uncheckitems(m_lvmenu.m_view)
+this.checked = true
+end event
+
+on m_smallicons.create
+this.Text="Small Icons"
+end on
+
+type m_list from menu within m_view
+end type
+
+event clicked;ilv.View = ListViewList! 
+of_uncheckitems(m_lvmenu.m_view)
+this.checked = true
+end event
+
+on m_list.create
+this.Text="List"
+end on
+
+type m_report from menu within m_view
+end type
+
+event clicked;ilv.View = ListViewReport! 
+of_uncheckitems(m_lvmenu.m_view)
+this.checked = true
+end event
+
+on m_report.create
+this.Text="Report"
+end on
+

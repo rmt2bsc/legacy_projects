@@ -1,0 +1,31 @@
+$PBExportHeader$f_getorderpayments.srf
+global type f_getorderpayments from function_object
+end type
+
+forward prototypes
+global function decimal f_getorderpayments (integer ai_order_id)
+end prototypes
+
+global function decimal f_getorderpayments (integer ai_order_id);dec {2}  ldec_payments  
+
+    
+select getPayments(:ai_order_id)
+   into :ldec_payments
+   from transaction;
+
+  
+//  select sum(amount)
+//    into :ldec_payments
+//    from transaction
+//    where transaction.order_id = :ai_order_id
+//      and trans_type_id not in (210, 211);
+//		
+if isnull(ldec_payments) then
+	ldec_payments = 0
+end if
+
+return ldec_payments
+  
+
+end function
+

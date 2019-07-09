@@ -1,0 +1,9 @@
+$PBExportHeader$str_retrieveparms.srs
+global type str_retrieveparms from structure
+	powerobject		object
+	string		sqlfile
+	string		criteria
+	integer		updateable
+	string		sql
+end type
+

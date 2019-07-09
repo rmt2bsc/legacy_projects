@@ -1,0 +1,6 @@
+$PBExportHeader$str_paperattrib.srs
+global type str_paperattrib from structure
+	integer		i_val
+	string		s_type
+end type
+

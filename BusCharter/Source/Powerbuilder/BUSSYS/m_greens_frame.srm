@@ -1,0 +1,141 @@
+$PBExportHeader$m_greens_frame.srm
+forward
+global type m_greens_frame from m_greens_base
+end type
+end forward
+
+global type m_greens_frame from m_greens_base
+end type
+global m_greens_frame m_greens_frame
+
+on m_greens_frame.create
+m_greens_frame=this
+call super::create
+end on
+
+on m_greens_frame.destroy
+call super::destroy
+end on
+
+on m_login.create
+call super::create
+this.Microhelp="Perform User Login "
+this.ToolBarItemText="Login User"
+end on
+
+on m_logout.create
+call super::create
+this.Microhelp="Log out current user"
+this.ToolBarItemText="Logout User"
+end on
+
+event m_open::clicked;SetPointer (hourglass!)
+of_SendMessage ("ue_ordersearch")
+end event
+
+on m_open.create
+call super::create
+this.Microhelp="Fetch a Charter Order"
+end on
+
+on m_new.create
+call super::create
+this.Microhelp="Create a Charter Order"
+this.ToolBarItemText="Create Charter Order"
+end on
+
+on m_close.create
+call super::create
+this.Microhelp="Close the current window"
+this.ToolBarItemText="Close curent window"
+end on
+
+on m_save.create
+call super::create
+this.Microhelp="Save changes in the current window"
+end on
+
+on m_exit.create
+call super::create
+this.Microhelp="Exit the application"
+end on
+
+on m_company.create
+call super::create
+this.ToolBarItemOrder=5
+end on
+
+on m_client.create
+call super::create
+this.ToolBarItemText="Client Maintenance"
+this.ToolBarItemOrder=6
+end on
+
+on m_search.create
+call super::create
+this.Visible=false
+end on
+
+on m_reset.create
+call super::create
+this.Microhelp="Reset the window"
+this.Visible=false
+end on
+
+on m_add.create
+call super::create
+this.Visible=false
+end on
+
+on m_delete.create
+call super::create
+this.Visible=false
+end on
+
+on m_details.create
+call super::create
+this.Microhelp="View and/or update detail information"
+this.ToolBarItemText=""
+this.Visible=false
+end on
+
+on m_x4.create
+call super::create
+this.Visible=false
+end on
+
+on m_generalcodegroups.create
+call super::create
+this.ToolBarItemText=""
+this.ShiftToRight=false
+end on
+
+on m_codetables.create
+call super::create
+this.ToolBarItemText="General Codes Maintenance"
+this.ShiftToRight=false
+end on
+
+on m_states.create
+call super::create
+this.ToolBarItemText="States Maintenance"
+this.ShiftToRight=false
+end on
+
+on m_city.create
+call super::create
+this.ToolBarItemText="City  Maintenance"
+this.ShiftToRight=false
+end on
+
+on m_users.create
+call super::create
+this.ToolBarItemText="User  Maintenance"
+this.ShiftToRight=false
+end on
+
+on m_-1.create
+call super::create
+this.ShiftToRight=false
+end on
+

@@ -1,0 +1,30 @@
+$PBExportHeader$f_getorderdeposits.srf
+global type f_getorderdeposits from function_object
+end type
+
+forward prototypes
+global function decimal f_getorderdeposits (integer ai_order_id)
+end prototypes
+
+global function decimal f_getorderdeposits (integer ai_order_id);
+dec {2}  ldec_deposits
+
+
+select getDeposits(:ai_order_Id)
+    into :ldec_deposits
+    from transaction;
+
+
+//select sum(amount)
+//    into :ldec_deposits
+//    from transaction
+//    where transaction.order_id = :ai_order_id
+//      and trans_type_id in (211);
+		
+if isnull(ldec_deposits) then
+	ldec_deposits = 0
+end if
+
+return ldec_deposits
+end function
+

@@ -1,0 +1,94 @@
+$PBExportHeader$d_charter_order_search_details.srd
+release 7;
+datawindow(units=0 timer_interval=0 color=80269524 processing=1 HTMLDW=no print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 96 print.margin.bottom = 96 print.paper.source = 0 print.paper.size = 0 print.prompt=no print.buttons=no print.preview.buttons=no grid.lines=0 )
+header(height=84 color="536870912" )
+summary(height=64 color="536870912" )
+footer(height=0 color="536870912" )
+detail(height=68 color="536870912" )
+table(column=(type=long updatewhereclause=yes name=client_id dbname="client.id" )
+ column=(type=char(25) updatewhereclause=yes name=client_contact_fname dbname="client.contact_fname" )
+ column=(type=char(25) updatewhereclause=yes name=client_contact_lname dbname="client.contact_lname" )
+ column=(type=long updatewhereclause=yes name=client_contact_company dbname="client.contact_company" )
+ column=(type=long updatewhereclause=yes name=quote_id dbname="quote.id" )
+ column=(type=long updatewhereclause=yes name=quote_company_id dbname="quote.company_id" )
+ column=(type=char(25) updatewhereclause=yes name=quote_signage dbname="quote.signage" )
+ column=(type=char(30) updatewhereclause=yes name=quote_charter_party dbname="quote.charter_party" )
+ column=(type=date updatewhereclause=yes name=quote_depart_date dbname="quote.depart_date" )
+ column=(type=date updatewhereclause=yes name=quote_return_date dbname="quote.return_date" )
+ column=(type=long updatewhereclause=yes name=orders_id dbname="orders.id" )
+ column=(type=long updatewhereclause=yes name=orders_status dbname="quote.status" )
+ column=(type=char(150) updatewhereclause=yes name=quote_destination dbname="quote.destination" )
+ column=(type=char(20) updatewhereclause=yes name=orders_client_order_id dbname="orders.client_order_id" )
+ column=(type=decimal(2) updatewhereclause=yes name=balance_due dbname="compute_0015" )
+ column=(type=decimal(2) updatewhereclause=yes name=order_total dbname="compute_0016" )
+ column=(type=decimal(2) updatewhereclause=yes name=c_ord_exp dbname="compute_0017" )
+ retrieve="   SELECT client.id,   
+         client.contact_fname,   
+         client.contact_lname,   
+         client.contact_company,   
+         quote.id,   
+         quote.company_id,
+         quote.signage,   
+         quote.charter_party,   
+         quote.depart_date,   
+         quote.return_date,   
+         orders.id,   
+         quote.status,   
+         quote.destination,
+         orders.client_order_id,
+         getOrderBalance(orders.id),
+         getOrderTotal(orders.id),
+         sumExpenses(orders.id)
+    FROM client,   
+         orders,   
+         quote
+   WHERE ( quote.id *= orders.quote_id ) and  
+         ( quote.client_id = client.id )
+   GROUP BY  client.id,   
+             client.contact_fname,   
+             client.contact_lname,   
+             client.contact_company,   
+             quote.id,   
+             quote.company_id,
+             quote.signage,   
+             quote.charter_party,   
+             quote.depart_date,   
+             quote.return_date,   
+             orders.id,   
+             quote.status,   
+             quote.destination,
+             orders.client_order_id
+" )
+text(band=header alignment="2" text="Order ID" border="6" color="0" x="9" y="12" height="64" width="366"  name=orders_id_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="79741120" )
+text(band=header alignment="2" text="Balance Due" border="6" color="0" x="928" y="12" height="64" width="594"  name=balance_due_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="80269524" )
+text(band=header alignment="2" text="Transport Company" border="6" color="0" x="2080" y="12" height="64" width="1198"  name=quote_company_id_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="79741120" )
+text(band=header alignment="2" text="Client Name" border="6" color="0" x="3689" y="12" height="64" width="709"  name=c_client_name_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="80269524" )
+text(band=header alignment="2" text="Client Company" border="6" color="0" x="4407" y="12" height="64" width="1143"  name=client_contact_company_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="79741120" )
+text(band=header alignment="2" text="Charter Party" border="6" color="0" x="5559" y="12" height="64" width="887"  name=quote_charter_party_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="80269524" )
+text(band=header alignment="2" text="Client Order ID" border="6" color="0" x="6455" y="12" height="64" width="631"  name=orders_client_order_id_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="79741120" )
+text(band=header alignment="2" text="Depart Date" border="6" color="0" x="7095" y="12" height="64" width="475"  name=quote_depart_date_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="80269524" )
+text(band=header alignment="2" text="Return Date" border="6" color="0" x="7579" y="12" height="64" width="475"  name=quote_return_date_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="80269524" )
+text(band=header alignment="2" text="Order Total" border="6" color="0" x="384" y="12" height="64" width="535"  name=order_total_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="80269524" )
+text(band=header alignment="2" text="Order Status" border="6" color="0" x="3287" y="12" height="64" width="393"  name=orders_status_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="80269524" )
+text(band=header alignment="2" text="Destination" border="6" color="0" x="8064" y="12" height="64" width="1417"  name=quote_destination_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="80269524" )
+text(band=header alignment="2" text="Expneses" border="6" color="0" x="1531" y="12" height="64" width="539"  name=obj_682945954  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="80269524" )
+column(band=detail id=11 alignment="2" tabsequence=32766 border="0" color="0" x="9" y="8" height="56" width="366" format="[general]"  name=orders_id edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=6 alignment="0" tabsequence=32766 border="0" color="0" x="2080" y="8" height="56" width="1198" format="[general]"  name=quote_company_id dddw.name=dddw_business dddw.displaycolumn=longname dddw.datacolumn=id dddw.percentwidth=100 dddw.lines=0 dddw.limit=0 dddw.allowedit=no dddw.useasborder=no dddw.case=any  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+compute(band=detail alignment="0" expression=" client_contact_lname + ~", ~" +  client_contact_fname "border="0" color="0" x="3689" y="8" height="56" width="709" format="[general]"  name=c_client_name  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=4 alignment="0" tabsequence=32766 border="0" color="0" x="4407" y="8" height="56" width="1143" format="[general]"  name=client_contact_company dddw.name=dddw_business_clients dddw.displaycolumn=longname dddw.datacolumn=id dddw.percentwidth=100 dddw.lines=0 dddw.limit=0 dddw.allowedit=no dddw.useasborder=no dddw.case=any  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=8 alignment="0" tabsequence=32766 border="0" color="0" x="5559" y="8" height="56" width="887" format="[general]"  name=quote_charter_party edit.limit=30 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=9 alignment="2" tabsequence=32766 border="0" color="0" x="7095" y="8" height="56" width="475" format="mm/dd/yyyy"  name=quote_depart_date edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=10 alignment="2" tabsequence=32766 border="0" color="0" x="7579" y="8" height="56" width="475" format="mm/dd/yyyy"  name=quote_return_date edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=14 alignment="0" tabsequence=32766 border="0" color="0" x="6455" y="8" height="56" width="631" format="[general]"  name=orders_client_order_id edit.limit=0 edit.case=any edit.autoselect=yes  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=15 alignment="1" tabsequence=32766 border="0" color="0" x="928" y="8" height="56" width="594" format="$#,##0.00;[RED]($#,##0.00)"  name=balance_due edit.limit=0 edit.case=any edit.autoselect=yes  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=16 alignment="1" tabsequence=32766 border="0" color="0" x="384" y="8" height="56" width="535" format="$#,##0.00;[RED]($#,##0.00)"  name=order_total edit.limit=0 edit.case=any edit.autoselect=yes  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=13 alignment="0" tabsequence=32766 border="0" color="0" x="8064" y="8" height="56" width="1417" format="[general]"  name=quote_destination edit.limit=150 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=12 alignment="2" tabsequence=32766 border="0" color="255" x="3287" y="8" height="56" width="393" format="[general]"  name=orders_status dddw.name=dddw_order_status dddw.displaycolumn=longdesc dddw.datacolumn=code_id dddw.percentwidth=100 dddw.lines=0 dddw.limit=0 dddw.allowedit=no dddw.useasborder=no dddw.case=any  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=17 alignment="1" tabsequence=32766 border="0" color="0" x="1531" y="0" height="64" width="539" format="$#,##0.00;[RED]($#,##0.00)"  name=c_ord_exp edit.limit=0 edit.case=any edit.autoselect=yes  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=summary alignment="0" text="Totals:" border="0" color="0" x="9" y="8" height="56" width="366"  name=t_2  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="80269524" )
+compute(band=summary alignment="1" expression="sum (order_total)"border="0" color="16711680" x="384" y="4" height="56" width="535" format="$#,##0.00;[RED]($#,##0.00)"  name=compute_2  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="80269524" )
+compute(band=summary alignment="1" expression="sum(balance_due)"border="0" color="16711680" x="928" y="4" height="56" width="594" format="$#,##0.00;[RED]($#,##0.00)"  name=compute_1  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="80269524" )
+compute(band=summary alignment="1" expression="sum(c_ord_exp)"border="0" color="16711680" x="1531" y="0" height="64" width="539" format="$#,##0.00;[RED]($#,##0.00)"  name=compute_3  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="80269524" )
+htmltable(border="1" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" )
+  

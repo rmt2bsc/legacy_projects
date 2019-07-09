@@ -1,0 +1,13 @@
+$PBExportHeader$str_tvdata.srs
+global type str_tvdata from structure
+	string		colname[]
+	any		colvalue[]
+	string		displaycolname
+	string		picture
+	integer		colsize[]
+	boolean		duplicates
+	n_rmt_ds		ds
+	string		dataobject
+	string		sqlargs[]
+end type
+

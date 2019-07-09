@@ -1,0 +1,154 @@
+$PBExportHeader$d_charter_order_invoice_main_print.srd
+release 7;
+datawindow(units=0 timer_interval=0 color=16777215 processing=0 HTMLDW=no print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 96 print.margin.bottom = 96 print.paper.source = 0 print.paper.size = 0 print.prompt=no print.buttons=no print.preview.buttons=no )
+header(height=1192 color="536870912" )
+summary(height=0 color="536870912" )
+footer(height=324 color="536870912" )
+detail(height=592 color="536870912"  height.autosize=yes)
+table(column=(type=char(25) updatewhereclause=yes name=client_contact_fname dbname="client.contact_fname" )
+ column=(type=char(25) updatewhereclause=yes name=client_contact_lname dbname="client.contact_lname" )
+ column=(type=char(40) updatewhereclause=yes name=business_longname dbname="business.longname" values=" 	 / 	 " )
+ column=(type=long updatewhereclause=yes name=client_contact_company dbname="client.contact_company" )
+ column=(type=char(25) updatewhereclause=yes name=client_contact_address1 dbname="client.contact_address1" )
+ column=(type=char(25) updatewhereclause=yes name=client_contact_address2 dbname="client.contact_address2" )
+ column=(type=char(25) updatewhereclause=yes name=client_contact_address3 dbname="client.contact_address3" )
+ column=(type=long updatewhereclause=yes name=client_contact_city dbname="client.contact_city" )
+ column=(type=long updatewhereclause=yes name=client_contact_state_id dbname="client.contact_state_id" )
+ column=(type=char(10) updatewhereclause=yes name=client_contact_zip dbname="client.contact_zip" )
+ column=(type=char(10) updatewhereclause=yes name=client_contact_phone dbname="client.contact_phone" )
+ column=(type=char(10) updatewhereclause=yes name=client_contact_fax dbname="client.contact_fax" )
+ column=(type=char(25) updatewhereclause=yes name=client_billing_fname dbname="client.billing_fname" )
+ column=(type=char(25) updatewhereclause=yes name=client_billing_lname dbname="client.billing_lname" )
+ column=(type=long updatewhereclause=yes name=client_billing_company dbname="client.billing_company" )
+ column=(type=char(25) updatewhereclause=yes name=client_billing_address1 dbname="client.billing_address1" )
+ column=(type=char(25) updatewhereclause=yes name=client_billing_address2 dbname="client.billing_address2" )
+ column=(type=char(25) updatewhereclause=yes name=client_billing_address3 dbname="client.billing_address3" )
+ column=(type=long updatewhereclause=yes name=client_billing_city dbname="client.billing_city" )
+ column=(type=long updatewhereclause=yes name=client_billing_state_id dbname="client.billing_state_id" )
+ column=(type=char(10) updatewhereclause=yes name=client_billing_zip dbname="client.billing_zip" )
+ column=(type=char(10) updatewhereclause=yes name=client_billing_phone dbname="client.billing_phone" )
+ column=(type=char(10) updatewhereclause=yes name=client_billing_fax dbname="client.billing_fax" )
+ column=(type=long updatewhereclause=yes identity=yes name=client_id dbname="client.id" )
+ column=(type=char(3) updatewhereclause=yes name=client_isbillingexact dbname="client.isbillingexact" )
+ column=(type=long updatewhereclause=yes identity=yes name=orders_id dbname="orders.id" )
+ column=(type=char(20) updatewhereclause=yes name=orders_client_order_id dbname="orders.client_order_id" )
+ column=(type=date updatewhereclause=yes name=quote_depart_date dbname="quote.depart_date" )
+ retrieve="  SELECT client.contact_fname,   
+         client.contact_lname,
+         business.longname,   
+         client.contact_company,   
+         client.contact_address1,   
+         client.contact_address2,   
+         client.contact_address3,   
+         client.contact_city,   
+         client.contact_state_id,   
+         client.contact_zip,   
+         client.contact_phone,   
+         client.contact_fax,   
+         client.billing_fname,   
+         client.billing_lname,   
+         client.billing_company,   
+         client.billing_address1,   
+         client.billing_address2,   
+         client.billing_address3,   
+         client.billing_city,   
+         client.billing_state_id,   
+         client.billing_zip,   
+         client.billing_phone,   
+         client.billing_fax,   
+         client.id,   
+         client.isbillingexact,
+         orders.id,   
+         orders.client_order_id,
+         quote.depart_date  
+    FROM client,
+         business,   
+         orders,   
+         quote  
+   WHERE ( quote.id = orders.quote_id ) and  
+         ( quote.client_id = client.id ) and  
+         ( client.contact_company = business.id ) and
+         ( ( orders.id = :order_id ) )    
+" arguments=(("order_id", number)) )
+roundrectangle(band=header ellipseheight="36" ellipsewidth="41"x="155" y="592" height="424" width="1522"  name=rr_1 brush.hatch="6" brush.color="16777215" pen.style="0" pen.width="5" pen.color="0"  background.mode="2" background.color="0" )
+line(band=header x1="91" y1="1136" x2="2249" y2="1136"  name=l_1 pen.style="0" pen.width="23" pen.color="0"  background.mode="1" background.color="553648127" )
+text(band=header alignment="2" text="Charter Invoice" border="0" color="0" x="2290" y="1056" height="116" width="741"  name=t_14  font.face="Times New Roman" font.height="-18" font.weight="700"  font.family="1" font.pitch="2" font.charset="0" font.italic="1" background.mode="1" background.color="553648127" )
+line(band=header x1="3063" y1="1132" x2="3387" y2="1132"  name=l_2 pen.style="0" pen.width="23" pen.color="0"  background.mode="1" background.color="553648127" )
+line(band=header x1="3054" y1="1152" x2="3392" y2="1152"  name=l_3 pen.style="0" pen.width="9" pen.color="0"  background.mode="1" background.color="553648127" )
+line(band=header x1="82" y1="1156" x2="2249" y2="1156"  name=l_4 pen.style="0" pen.width="9" pen.color="0"  background.mode="1" background.color="553648127" )
+text(band=header alignment="0" text="TOUR USA" border="0" color="0" x="96" y="120" height="96" width="1486"  name=t_company_name  font.face="Bookman Old Style" font.height="-16" font.weight="700"  font.family="1" font.pitch="2" font.charset="0" font.italic="1" background.mode="1" background.color="536870912" )
+compute(band=header alignment="2" expression="~"Page ~"  + Page() + ~" of ~" + pageCount()"border="0" color="0" x="2889" y="88" height="60" width="475" format="[general]"  name=compute_1  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+roundrectangle(band=header ellipseheight="36" ellipsewidth="41"x="1755" y="64" height="468" width="1042"  name=rr_3 brush.hatch="6" brush.color="16777215" pen.style="0" pen.width="5" pen.color="0"  background.mode="2" background.color="0" )
+text(band=header alignment="0" text="Date:" border="0" color="0" x="1801" y="92" height="56" width="133"  name=t_16  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+compute(band=header alignment="0" expression="string(today(), ~"mmm dd, yyyy~")"border="0" color="0" x="2240" y="92" height="56" width="494" format="[general]"  name=c_date  font.face="Arial" font.height="-8" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="0" text="Client ID:" border="0" color="0" x="1801" y="168" height="56" width="224"  name=t_17  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=header id=24 alignment="0" tabsequence=32766 border="0" color="0" x="2240" y="168" height="56" width="329" format="[general]"  name=client_id edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="0" text="Order Number:" border="0" color="0" x="1801" y="236" height="56" width="384"  name=t_18  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=header id=26 alignment="0" tabsequence=32766 border="0" color="0" x="2240" y="236" height="56" width="329" format="[general]"  name=orders_id edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="0" text="Client Order No:" border="0" color="0" x="1801" y="308" height="56" width="407"  name=t_19  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=header id=27 alignment="0" tabsequence=32766 border="0" color="0" x="2240" y="308" height="56" width="507" format="[general]"  name=orders_client_order_id edit.limit=20 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="2" text="Contact" border="0" color="0" x="242" y="568" height="60" width="219"  name=t_6  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+roundrectangle(band=header ellipseheight="36" ellipsewidth="41"x="1765" y="592" height="424" width="1522"  name=rr_2 brush.hatch="6" brush.color="16777215" pen.style="0" pen.width="5" pen.color="0"  background.mode="2" background.color="0" )
+text(band=header alignment="2" text="Billing" border="0" color="0" x="1861" y="572" height="60" width="192"  name=t_15  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+compute(band=header alignment="0" expression=" client_billing_fname + space(1) +   client_billing_lname "border="0" color="0" x="2021" y="660" height="56" width="1216" format="[general]"  name=c_billing_name  font.face="Arial" font.height="-8" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+compute(band=header alignment="0" expression="client_contact_fname  + space(1) +  client_contact_lname "border="0" color="0" x="411" y="656" height="56" width="1198" format="[general]"  name=c_contact_name  font.face="Arial" font.height="-8" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=header id=4 alignment="0" tabsequence=32766 border="0" color="0" x="480" y="716" height="56" width="1129" format="[general]"  name=client_contact_company dddw.name=dddw_business dddw.displaycolumn=longname dddw.datacolumn=id dddw.percentwidth=0 dddw.lines=0 dddw.limit=0 dddw.allowedit=no dddw.useasborder=no dddw.case=any  font.face="Arial" font.height="-8" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+compute(band=header alignment="0" expression="if (  isnull ( client_contact_address1  ), space(1),  client_contact_address1 ) + space(1) + if (  isnull ( client_contact_address2  ), space(1),  client_contact_address2 ) + space(1) + if (  isnull ( client_contact_address3  ), space(1),  client_contact_address3 )"border="0" color="0" x="485" y="780" height="56" width="1125" format="[general]"  name=c_contact_address  font.face="Arial" font.height="-8" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=header id=8 alignment="0" tabsequence=32766 border="0" color="0" x="343" y="848" height="56" width="352" format="[general]"  name=client_contact_city dddw.name=dddw_city dddw.displaycolumn=longname dddw.datacolumn=city_id dddw.percentwidth=100 dddw.lines=0 dddw.limit=0 dddw.allowedit=no dddw.useasborder=no dddw.case=any  font.face="Arial" font.height="-8" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="0" text="State:" border="0" color="0" x="741" y="848" height="56" width="169"  name=t_11  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=header id=9 alignment="0" tabsequence=32766 border="0" color="0" x="914" y="848" height="56" width="73" format="[general]"  name=client_contact_state_id dddw.name=dddw_states dddw.displaycolumn=shortname dddw.datacolumn=state_id dddw.percentwidth=100 dddw.lines=0 dddw.limit=0 dddw.allowedit=no dddw.useasborder=no dddw.case=any  font.face="Arial" font.height="-8" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="0" text="Zip:" border="0" color="0" x="1120" y="848" height="56" width="114"  name=t_13  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=header id=10 alignment="0" tabsequence=32766 border="0" color="0" x="1239" y="848" height="56" width="302" format="00000-0000"  name=client_contact_zip edit.limit=10 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-8" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=header id=12 alignment="0" tabsequence=32766 border="0" color="0" x="1038" y="916" height="56" width="389" format=""  name=client_contact_fax editmask.mask="(000) 000-0000" editmask.focusrectangle=no  font.face="Arial" font.height="-8" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="0" text="Fax:" border="0" color="0" x="923" y="916" height="56" width="110"  name=t_8  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=header id=11 alignment="0" tabsequence=32766 border="0" color="0" x="411" y="916" height="56" width="389" format=""  name=client_contact_phone editmask.mask="(000) 000-0000" editmask.focusrectangle=no  font.face="Arial" font.height="-8" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="0" text="Name:" border="0" color="0" x="215" y="656" height="56" width="192"  name=t_7  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="0" text="Comapny:" border="0" color="0" x="215" y="716" height="56" width="251"  name=t_36  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="0" text="Address:" border="0" color="0" x="215" y="780" height="56" width="261"  name=t_9  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="0" text="City:" border="0" color="0" x="215" y="848" height="56" width="114"  name=t_12  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="0" text="Phone:" border="0" color="0" x="215" y="916" height="56" width="187"  name=t_10  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=header id=15 alignment="0" tabsequence=32766 border="0" color="0" x="2080" y="724" height="56" width="1157" format="[general]"  name=client_billing_company dddw.name=dddw_business dddw.displaycolumn=longname dddw.datacolumn=id dddw.percentwidth=0 dddw.lines=0 dddw.limit=0 dddw.allowedit=no dddw.useasborder=no dddw.case=any  font.face="Arial" font.height="-8" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=header alignment="0" text="Comapny:" border="0" color="0" x="1819" y="724" height="56" width="251"  name=t_37  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="0" text="Name:" border="0" color="0" x="1819" y="660" height="56" width="192"  name=client_contact_fname_t  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="0" text="Address:" border="0" color="0" x="1819" y="788" height="56" width="261"  name=client_contact_address1_t  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+compute(band=header alignment="0" expression="if (  isnull (  client_billing_address1 ), space(1),   client_billing_address1 ) + space(1) +  if (  isnull (  client_billing_address2 ), space(1),   client_billing_address2 ) + space(1) +if (  isnull (  client_billing_address3 ), space(1),   client_billing_address3 )"border="0" color="0" x="2089" y="788" height="56" width="1147" format="[general]"  name=c_billing_address  font.face="Arial" font.height="-8" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=header alignment="0" text="City:" border="0" color="0" x="1819" y="856" height="56" width="114"  name=client_contact_city_t  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=header id=19 alignment="0" tabsequence=32766 border="0" color="0" x="1947" y="856" height="56" width="366" format="[general]"  name=client_billing_city dddw.name=dddw_city dddw.displaycolumn=longname dddw.datacolumn=city_id dddw.percentwidth=100 dddw.lines=0 dddw.limit=0 dddw.allowedit=no dddw.useasborder=no dddw.case=any  font.face="Arial" font.height="-8" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+text(band=header alignment="0" text="State:" border="0" color="0" x="2345" y="856" height="56" width="169"  name=client_contact_state_id_t  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=header id=20 alignment="1" tabsequence=32766 border="0" color="0" x="2519" y="856" height="56" width="69" format="[general]"  name=client_billing_state_id dddw.name=dddw_states dddw.displaycolumn=shortname dddw.datacolumn=state_id dddw.percentwidth=100 dddw.lines=0 dddw.limit=0 dddw.allowedit=no dddw.useasborder=no dddw.case=any  font.face="Arial" font.height="-8" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="0" text="Zip:" border="0" color="0" x="2725" y="856" height="56" width="114"  name=client_contact_zip_t  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=header id=21 alignment="0" tabsequence=32766 border="0" color="0" x="2843" y="856" height="56" width="302" format="00000-0000"  name=client_billing_zip edit.limit=10 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-8" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=header id=23 alignment="0" tabsequence=32766 border="0" color="0" x="2642" y="924" height="56" width="489" format=""  name=client_billing_fax editmask.mask="(000) 000-0000" editmask.focusrectangle=no  font.face="Arial" font.height="-8" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="0" text="Fax:" border="0" color="0" x="2528" y="924" height="56" width="110"  name=client_contact_fax_t  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=header id=22 alignment="0" tabsequence=32766 border="0" color="0" x="2016" y="924" height="56" width="453" format=""  name=client_billing_phone editmask.mask="(000) 000-0000" editmask.focusrectangle=no  font.face="Arial" font.height="-8" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="0" text="Phone:" border="0" color="0" x="1819" y="924" height="56" width="187"  name=client_contact_phone_t  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=header id=28 alignment="0" tabsequence=32766 border="0" color="0" x="2240" y="388" height="60" width="507" format="mmm dd, yyyy"  name=quote_depart_date edit.limit=0 edit.case=any edit.autoselect=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="0" text="Departure Date:" border="0" color="0" x="1806" y="388" height="56" width="411"  name=t_20  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="0" text="PHONE:  (214) 683-0342" border="0" color="0" x="96" y="352" height="60" width="713"  name=t_phone  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="0" text="FAX: (972) 412-5031" border="0" color="0" x="846" y="352" height="60" width="590"  name=t_fax  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="0" text="www.gotourusa.com" border="0" color="0" x="96" y="448" height="60" width="832"  name=t_website  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=header alignment="0" text="P.O. Box 170021
+Dallas, Tx 75217" border="0" color="0" x="96" y="220" height="120" width="887"  name=t_address  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+rectangle(band=detail x="2226" y="72" height="308" width="695"  name=r_1 brush.hatch="6" brush.color="16777215" pen.style="0" pen.width="5" pen.color="0"  background.mode="2" background.color="0" )
+report(band=detail dataobject="d_charter_order_invoice_detail_print" x="55" y="420" height="136" width="3383" border="0"  height.autosize=yes criteria="" nest_arguments=(("order_id")) trail_footer = yes  name=dw_1  slideup=directlyabove )
+roundrectangle(band=detail ellipseheight="36" ellipsewidth="41"x="402" y="28" height="344" width="1669"  name=rr_4 brush.hatch="6" brush.color="16777215" pen.style="0" pen.width="5" pen.color="0"  background.mode="2" background.color="0" )
+text(band=detail alignment="2" text="Payment Details" border="0" color="0" x="503" y="16" height="56" width="489"  name=t_24  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=3 alignment="0" tabsequence=32766 border="0" color="0" x="480" y="100" height="56" width="59" format="[general]"  name=business_longname checkbox.text=" " checkbox.on=" " checkbox.off=" " checkbox.scale=no checkbox.threed=no  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="0" text="Cash" border="0" color="0" x="553" y="100" height="56" width="151"  name=t_25  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=3 alignment="0" tabsequence=32766 border="0" color="0" x="768" y="100" height="56" width="59" format="[general]"  name=business_longname_1 checkbox.text=" " checkbox.on=" " checkbox.off=" " checkbox.scale=no checkbox.threed=no  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="0" text="Check" border="0" color="0" x="841" y="100" height="56" width="178"  name=t_26  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=3 alignment="0" tabsequence=32766 border="0" color="0" x="1088" y="96" height="56" width="59" format="[general]"  name=business_longname_2 checkbox.text=" " checkbox.on=" " checkbox.off=" " checkbox.scale=no checkbox.threed=no  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="0" text="Money Order" border="0" color="0" x="1161" y="100" height="56" width="384"  name=t_27  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+column(band=detail id=3 alignment="0" tabsequence=32766 border="0" color="0" x="1586" y="100" height="56" width="59" format="[general]"  name=business_longname_3 checkbox.text=" " checkbox.on=" " checkbox.off=" " checkbox.scale=no checkbox.threed=no  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="0" text="Credit Card" border="0" color="0" x="1664" y="100" height="56" width="329"  name=t_28  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Office Use Only" border="0" color="0" x="2240" y="76" height="56" width="398"  name=t_29  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="0" text="Name _______________________________________" border="0" color="0" x="494" y="204" height="56" width="1243"  name=t_30  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="0" text="CC # ________________________" border="0" color="0" x="494" y="280" height="56" width="850"  name=t_31  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="0" text="Expires __________________" border="0" color="0" x="1358" y="276" height="56" width="690"  name=t_32  font.face="Arial" font.height="-8" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=footer alignment="2" text="All quotes are final!  Payments must be made seven (14) days prior to departure." border="0" color="0" x="466" y="48" height="68" width="2350"  name=t_33  font.face="Times New Roman" font.height="-10" font.weight="700"  font.family="1" font.pitch="2" font.charset="0" font.italic="1" background.mode="1" background.color="536870912" )
+line(band=footer x1="87" y1="152" x2="3415" y2="152"  name=l_5 pen.style="0" pen.width="23" pen.color="0"  background.mode="1" background.color="553648127" )
+line(band=footer x1="78" y1="172" x2="3415" y2="172"  name=l_6 pen.style="0" pen.width="9" pen.color="0"  background.mode="1" background.color="553648127" )
+text(band=footer alignment="2" text="~"It's Not Just The Bus, It's Us....~"" border="0" color="0" x="1129" y="208" height="80" width="974"  name=t_34  font.face="Times New Roman" font.height="-12" font.weight="700"  font.family="1" font.pitch="2" font.charset="0" font.italic="1" background.mode="1" background.color="536870912" )
+htmltable(border="1" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" )
+  

@@ -1,0 +1,62 @@
+$PBExportHeader$d_business_maint_detail.srd
+release 7;
+datawindow(units=0 timer_interval=0 color=12639424 processing=0 HTMLDW=no print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 96 print.margin.bottom = 96 print.paper.source = 0 print.paper.size = 0 print.prompt=no print.buttons=no print.preview.buttons=no )
+summary(height=0 color="536870912" )
+footer(height=8 color="536870912" )
+detail(height=716 color="536870912" )
+table(column=(type=long update=yes updatewhereclause=yes key=yes identity=yes name=id dbname="business.id" )
+ column=(type=long update=yes updatewhereclause=yes name=business_type dbname="business.business_type" )
+ column=(type=char(40) update=yes updatewhereclause=yes name=longname dbname="business.longname" )
+ column=(type=char(15) update=yes updatewhereclause=yes name=shortname dbname="business.shortname" )
+ column=(type=date update=yes updatewhereclause=yes name=date_created dbname="business.date_created" )
+ column=(type=date update=yes updatewhereclause=yes name=date_updated dbname="business.date_updated" )
+ column=(type=char(3) update=yes updatewhereclause=yes name=areacode_created dbname="business.areacode_created" )
+ column=(type=long update=yes updatewhereclause=yes name=city_created dbname="business.city_created" )
+ column=(type=char(8) update=yes updatewhereclause=yes name=user_id dbname="business.user_id" )
+ column=(type=long update=yes updatewhereclause=yes name=comment_id dbname="business.comment_id" )
+ column=(type=long update=yes updatewhereclause=yes name=status dbname="business.status" )
+ column=(type=date update=yes updatewhereclause=yes name=termination_date dbname="business.termination_date" )
+ column=(type=date update=yes updatewhereclause=yes name=suspension_date dbname="business.suspension_date" )
+ column=(type=date update=yes updatewhereclause=yes name=suspension_removed_date dbname="business.suspension_removed_date" )
+ column=(type=date update=yes updatewhereclause=yes name=active_date dbname="business.active_date" )
+ retrieve="SELECT business.id,   
+         business.business_type,   
+         business.longname,   
+         business.shortname,   
+         business.date_created,   
+         business.date_updated,   
+         business.areacode_created,   
+         business.city_created,   
+         business.user_id,   
+         business.comment_id,   
+         business.status,   
+         business.termination_date,   
+         business.suspension_date,   
+         business.suspension_removed_date,   
+         business.active_date  
+    FROM business   " update="business" updatewhere=0 updatekeyinplace=no )
+text(band=detail alignment="1" text="Name:" border="0" color="0" x="329" y="176" height="60" width="192"  name=longname_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=3 alignment="0" tabsequence=10 border="5" color="0" x="549" y="176" height="60" width="1125" format="[general]"  name=longname edit.limit=40 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Active Date:" border="0" color="0" x="1961" y="176" height="60" width="352"  name=active_date_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=15 alignment="0" tabsequence=50 border="5" color="0" x="2341" y="176" height="60" width="402" format="[shortdate] [time]"  name=active_date editmask.mask="mm/dd/yyyy" editmask.focusrectangle=no  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Alternate Name:" border="0" color="0" x="50" y="264" height="60" width="471"  name=shortname_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=4 alignment="0" tabsequence=20 border="5" color="0" x="549" y="264" height="60" width="923" format="[general]"  name=shortname edit.limit=15 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Termination Date:" border="0" color="0" x="1787" y="264" height="60" width="526"  name=termination_date_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=12 alignment="0" tabsequence=60 border="5" color="0" x="2341" y="264" height="60" width="402" format="[shortdate] [time]"  name=termination_date editmask.mask="mm/dd/yyyy" editmask.focusrectangle=no  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Business Type:" border="0" color="0" x="119" y="348" height="60" width="402"  name=business_type_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=2 alignment="1" tabsequence=30 border="5" color="0" x="549" y="348" height="60" width="923" format="[general]"  name=business_type dddw.name=dddw_general_codes dddw.displaycolumn=longdesc dddw.datacolumn=code_id dddw.percentwidth=100 dddw.lines=3 dddw.limit=0 dddw.allowedit=no dddw.useasborder=yes dddw.case=any dddw.vscrollbar=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Suspension Date:" border="0" color="0" x="1787" y="348" height="60" width="526"  name=suspension_date_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=13 alignment="0" tabsequence=70 border="5" color="0" x="2341" y="348" height="60" width="402" format="[shortdate] [time]"  name=suspension_date editmask.mask="mm/dd/yyyy" editmask.focusrectangle=no  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Status:" border="0" color="0" x="315" y="432" height="60" width="206"  name=status_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=11 alignment="1" tabsequence=40 border="5" color="0" x="549" y="432" height="60" width="923" format="[general]"  name=status dddw.name=dddw_general_codes dddw.displaycolumn=longdesc dddw.datacolumn=code_id dddw.percentwidth=100 dddw.lines=3 dddw.limit=0 dddw.allowedit=no dddw.useasborder=yes dddw.case=any dddw.vscrollbar=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Suspension Removed Date:" border="0" color="0" x="1586" y="432" height="60" width="727"  name=suspension_removed_date_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=14 alignment="0" tabsequence=80 border="5" color="0" x="2341" y="432" height="60" width="402" format="[shortdate] [time]"  name=suspension_removed_date editmask.mask="mm/dd/yyyy" editmask.focusrectangle=no  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="16777215" )
+text(band=detail alignment="1" text="Company ID:" border="0" color="0" x="146" y="48" height="60" width="379"  name=id_t  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=1 alignment="0" tabsequence=32766 border="0" color="16711680" x="553" y="48" height="60" width="329" format="[general]"  name=id edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+text(band=detail alignment="2" text="*" border="0" color="255" x="283" y="176" height="56" width="41"  name=t_1  font.face="Arial" font.height="-14" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+text(band=detail alignment="2" text="*" border="0" color="255" x="73" y="352" height="56" width="41"  name=t_2  font.face="Arial" font.height="-14" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+text(band=detail alignment="2" text="*" border="0" color="255" x="32" y="528" height="56" width="41"  name=t_3  font.face="Arial" font.height="-14" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+text(band=detail alignment="2" text="Data Entry Required" border="0" color="0" x="78" y="528" height="56" width="599"  name=t_4  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+htmltable(border="1" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" )
+  

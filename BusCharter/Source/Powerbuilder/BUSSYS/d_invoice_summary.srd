@@ -1,0 +1,117 @@
+$PBExportHeader$d_invoice_summary.srd
+release 7;
+datawindow(units=0 timer_interval=0 color=16777215 processing=0 HTMLDW=no print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 96 print.margin.bottom = 96 print.paper.source = 0 print.paper.size = 0 print.prompt=no print.buttons=no print.preview.buttons=no )
+header(height=340 color="536870912" )
+summary(height=456 color="536870912" )
+footer(height=4 color="536870912" )
+detail(height=88 color="553648127"  height.autosize=yes)
+table(column=(type=decimal(2) updatewhereclause=yes name=unit_cost dbname="trip_cost" )
+ column=(type=char(655) updatewhereclause=yes name=description dbname="compute_0002" )
+ column=(type=char(20) updatewhereclause=yes name=orders_client_order_id dbname="orders.client_order_id" )
+ column=(type=char(24) updatewhereclause=yes name=c_category dbname="compute_0004" )
+ column=(type=decimal(6) updatewhereclause=yes name=quote_bus_count dbname="quote.bus_count" )
+ column=(type=long updatewhereclause=yes name=orders_seq dbname="orders.seq" )
+ retrieve="select ifnull(flat_rate, 0, flat_rate) +
+       (ifnull(live_miles, 0, live_miles) * ifnull(milage_rate, 0, milage_rate)) + (ifnull(deadhead_milage_rate, 0, deadhead_milage_rate) * ifnull(deadhead_miles, 0, deadhead_miles) ) +
+       getOrderHourlyRate(:order_id, 1) + getOrderHourlyRate(:order_id, 2) ~"trip_cost~",
+       'Pickup Location: ' || quote.pickup_location || char(13)||char(10) || 'Destination: ' || quote.destination|| 'Special Instructions:  ' ||comments.comment_text,
+       orders.client_order_id,
+       'Base Trip',
+       quote.bus_count,
+       1 ~"seq~"
+ from orders, quote, comments
+where orders.quote_id = quote.id
+  and quote.special_instructions = comments.comment_id
+  and orders.id = :order_id
+
+union
+
+select ifnull(flat_rate, 0, flat_rate) +
+       (ifnull(live_miles, 0, live_miles) * ifnull(milage_rate, 0, milage_rate)) + (ifnull(deadhead_milage_rate, 0, deadhead_milage_rate) * ifnull(deadhead_miles, 0, deadhead_miles) ) +
+       getBusHourlyRate(:order_id, bus_detail.id, 1) + getBusHourlyRate(:order_id, bus_detail.id, 2) ~"trip_cost~",
+       comments.comment_text,
+       '' ~"client_order_id~",
+       'Charter Bus #' || number(*),
+       '0' ~"bus_count~",
+       2 ~"seq~"
+ from bus_detail, comments
+where bus_detail.special_instructions = comments.comment_id
+  and bus_detail.orders_id = :order_id
+
+union
+
+  select sum(amount),
+         '' ~"comment_text~",
+         '' ~"client_order_id~",
+         'Adjustments',
+         '0' ~"bus_count~",
+         3 ~"seq~"
+    from transaction
+    where transaction.order_id = :order_id
+           and trans_type_id not in (207, 210, 211, 208)
+
+union
+  
+  select sum(amount),
+         '' ~"comment_text~",
+         '' ~"client_order_id~",
+         'Deposits',
+         '0' ~"bus_count~",
+         4 ~"seq~"
+    from transaction
+    where transaction.order_id = :order_id
+      and trans_type_id in (211)
+
+union
+
+select sum(amount),
+         '' ~"comment_text~",
+         '' ~"client_order_id~",
+         'Discount',
+         '0' ~"bus_count~",
+         5 ~"seq~"
+    from transaction
+    where transaction.order_id = :order_id
+      and trans_type_id in (208)
+
+union
+
+  select sum(amount),
+         '' ~"comment_text~",
+         '' ~"client_order_id~",
+         'Payments',
+         '0' ~"bus_count~",
+         6 ~"seq~"
+    from transaction
+    where transaction.order_id = :order_id
+      and trans_type_id in (207)
+
+
+order by 6, 4
+
+
+
+" arguments=(("order_id", number)) )
+text(band=header alignment="2" text="Invoice Summary" border="0" color="0" x="197" y="44" height="80" width="736"  name=t_7  font.face="Arial" font.height="-12" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+compute(band=header alignment="2" expression="~"As of ~" + string(today(), ~"mm-dd-yyyy~")"border="0" color="0" x="1687" y="64" height="60" width="430" format="[general]"  name=compute_1  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+compute(band=header alignment="1" expression="~"Page ~"  + Page() + ~" of ~" + pageCount()"border="0" color="0" x="2871" y="56" height="60" width="475" format="[general]"  name=compute_2  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="553648127" )
+compute(band=header alignment="2" expression="~"For Order Number: ~" + string (  order_id  )"border="0" color="0" x="937" y="60" height="60" width="736" format="[general]"  name=compute_3  font.face="Arial" font.height="-9" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="2" text="Category" border="0" color="0" x="18" y="244" height="64" width="265"  name=compute_0004_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="2" text="Bus Count" border="0" color="0" x="768" y="244" height="64" width="306"  name=quote_bus_count_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="2" text="Description" border="0" color="0" x="1367" y="244" height="64" width="338"  name=description_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="2" text="Unit Cost" border="0" color="0" x="2697" y="244" height="64" width="270"  name=trip_cost_t  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="2" text="Total Cost" border="0" color="0" x="3163" y="244" height="64" width="297"  name=t_1  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+line(band=header x1="5" y1="336" x2="3479" y2="336"  name=l_1 pen.style="0" pen.width="9" pen.color="0"  background.mode="1" background.color="553648127" )
+column(band=detail id=4 alignment="0" tabsequence=32766 border="0" color="16711680" x="14" y="12" height="64" width="686" format="[general]"  name=c_category edit.limit=24 edit.case=any edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+compute(band=detail alignment="1" expression=" if ( isnull ( quote_bus_count ) or  quote_bus_count = 0,   unit_cost ,   unit_cost *  quote_bus_count ) "border="0" color="0" x="3067" y="12" height="64" width="398" format="$#,##0.00;[RED]($#,##0.00)"  name=c_total_cost  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=1 alignment="1" tabsequence=32766 border="0" color="0" x="2592" y="12" height="64" width="402" format="$#,##0.00;[RED]($#,##0.00)"  name=unit_cost edit.limit=0 edit.case=any edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=5 alignment="2" tabsequence=32766 border="0" color="0" x="754" y="12" height="64" width="329" format="###0"  name=quote_bus_count edit.limit=0 edit.case=any edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=2 alignment="0" tabsequence=32766 border="0" color="16711680" x="1225" y="16" height="60" width="1312" format="[general]"  name=description height.autosize=yes edit.limit=0 edit.case=any edit.autoselect=yes  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=summary alignment="2" text="Total Due" border="0" color="0" x="1979" y="64" height="80" width="453"  name=t_8  font.face="Arial" font.height="-12" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+line(band=summary x1="1915" y1="16" x2="3488" y2="16"  name=l_2 pen.style="0" pen.width="9" pen.color="0"  background.mode="1" background.color="553648127" )
+line(band=summary x1="1915" y1="32" x2="3488" y2="32"  name=l_3 pen.style="0" pen.width="9" pen.color="0"  background.mode="1" background.color="553648127" )
+compute(band=summary alignment="1" expression="sum(  c_total_cost  )"border="0" color="0" x="3049" y="72" height="64" width="416" format="$#,##0.00;[RED]($#,##0.00)"  name=compute_4  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+compute(band=summary alignment="1" expression="sum(  unit_cost ) "border="0" color="0" x="2533" y="72" height="64" width="462" format="$#,##0.00;[RED]($#,##0.00)"  name=compute_5  font.face="Arial" font.height="-9" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+htmltable(border="1" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" )
+  

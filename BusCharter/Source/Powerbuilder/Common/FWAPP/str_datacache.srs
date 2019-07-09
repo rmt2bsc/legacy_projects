@@ -1,0 +1,8 @@
+$PBExportHeader$str_datacache.srs
+$PBExportComments$Data Cache Structure Data
+global type str_datacache from structure
+	n_rmt_ds		ds
+	string		dataobject
+	string		sql
+end type
+
