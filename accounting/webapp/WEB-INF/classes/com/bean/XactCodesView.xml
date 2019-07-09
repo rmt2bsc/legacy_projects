@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DataSource Name="XactCodesView">
+  <Sql Select="xact_code_id, 
+		xact_code_grp_id, 
+		description, 
+		date_created, 
+		date_updated, 
+		user_id" From="xact_codes" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="XactCodesTable" DBName="xact_codes" Updateable="true"/>
+  <ColAttr Name="XactCodeId" DBName="xact_code_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="XactCodesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactCodeGrpId" DBName="xact_code_grp_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="XactCodesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="XactCodesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="XactCodesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="XactCodesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="XactCodesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

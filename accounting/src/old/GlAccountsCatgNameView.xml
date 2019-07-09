@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<DataSource Name="GlAccountsCatgNameView">
+  <Sql Select="gla.acct_cat_id, 
+		gla.acct_no, 
+		gla.acct_seq, 
+		gla.acct_type_id, 
+		gla.balance_type_id, 
+		gla.date_created, 
+		gla.date_updated, 
+		gla.description, 
+		gla.id, 
+		gla.name, 
+		gla.user_id,
+		glac.description" From="gl_accounts gla, gl_account_category glac" Where="gla.acct_cat_id = glac.id" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="GlAccountsTable" DBName="gl_accounts" Updateable="true"/>
+  <TableUsage Name="GlAccountCategoryTable" DBName="gl_account_category" Updateable="true"/>
+  <ColAttr Name="Id" DBName="gla.id" SqlType="numeric" IsNull="false" JavaType="java.sql.Types.DOUBLE" PrimaryKey="true" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AcctTypeId" DBName="gla.acct_type_id" SqlType="numeric" IsNull="false" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AcctCatId" DBName="gla.acct_cat_id" SqlType="numeric" IsNull="false" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AcctSeq" DBName="gla.acct_seq" SqlType="tinyint" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AcctNo" DBName="gla.acct_no" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Name" DBName="gla.name" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BalanceTypeId" DBName="gla.balance_type_id" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="gla.description" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="gla.date_created" SqlType="datetime" IsNull="false" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="gla.date_updated" SqlType="datetime" IsNull="false" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="gla.user_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CatgName" DBName="glac.description" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="GlAccountCategoryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

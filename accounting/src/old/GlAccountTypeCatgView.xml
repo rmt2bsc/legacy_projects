@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<DataSource Name="GlAccountTypeCatgView">
+  <Sql Select="	gl_accounts.id as id, 
+    gl_accounts.acct_type_id as acct_type_id, 
+    gl_accounts.acct_cat_id as acct_cat_id, 
+    gl_accounts.acct_seq as acct_seq, 
+    gl_accounts.acct_no as acct_no, 
+		gl_accounts.name as name, 
+		gl_accounts.description,
+		gl_accounts.balance_type_id,
+		gl_accounts.date_created, 
+		gl_accounts.date_updated, 
+		gl_accounts.user_id,
+    gl_account_types.Description as acctTypeDescr, 
+		gl_account_category.Description as acctCatgDescr" 
+		From="gl_accounts, 
+		      gl_account_types, 
+		      gl_account_category" 
+		Where="gl_accounts.acct_type_id = gl_account_types.id and
+		       gl_accounts.acct_cat_id = gl_account_category.id" 
+		GroupBy="" 
+		Having="" 
+		OrderBy=""/>
+	<TableUsage Name="GlAccountsTable" DBName="gl_accounts" Updateable="true"/>
+  <TableUsage Name="GlAccountTypesTable" DBName="gl_account_types" Updateable="true"/>
+  <TableUsage Name="GlAccountCategoryTable" DBName="gl_account_category" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AcctTypeId" DBName="acct_type_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AcctCatId" DBName="acct_cat_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AcctSeq" DBName="acct_seq" SqlType="tinyint" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AcctNo" DBName="acct_no" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Name" DBName="name" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BalanceTypeId" DBName="balance_type_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="datetime" IsNull="false" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="datetime" IsNull="false" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>  
+  <ColAttr Name="AcctTypeDescr" DBName="acctTypeDescr" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="GlAccountTypesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AcctCatgDescr" DBName="acctCatgDescr" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="GlAccountCategoryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<id>1</id>
+		<group_id>1</group_id>
+		<description>Sale on Account</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>9/9/1999 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>2</id>
+		<group_id>1</group_id>
+		<description>Credit Purchase</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>9/9/1999 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>3</id>
+		<group_id>1</group_id>
+		<description>Cash Payment</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>9/9/1999 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>4</id>
+		<group_id>1</group_id>
+		<description>Cash Receipt</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>9/9/1999 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>5</id>
+		<group_id>1</group_id>
+		<description>Sales Returns</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>9/9/1999 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>6</id>
+		<group_id>1</group_id>
+		<description>Sales Credit</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>9/9/1999 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>7</id>
+		<group_id>1</group_id>
+		<description>Purchases Returns</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>9/9/1999 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>8</id>
+		<group_id>1</group_id>
+		<description>Cash Withdrawal</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>9/9/1999 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>9</id>
+		<group_id>1</group_id>
+		<description>Account Transfer</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>9/9/1999 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>10</id>
+		<group_id>1</group_id>
+		<description>Acount Posting</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>9/9/1999 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>11</id>
+		<group_id>2</group_id>
+		<description>Cash</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>9/9/1999 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>12</id>
+		<group_id>2</group_id>
+		<description>Check</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>9/9/1999 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>13</id>
+		<group_id>2</group_id>
+		<description>Bank Credit Card</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>9/9/1999 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>14</id>
+		<group_id>2</group_id>
+		<description>Money Order</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>9/9/1999 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>15</id>
+		<group_id>2</group_id>
+		<description>Finance Company Credit</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>9/9/1999 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>16</id>
+		<group_id>2</group_id>
+		<description>Debit Card</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>9/9/1999 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>17</id>
+		<group_id>2</group_id>
+		<description>Insurance</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>9/9/1999 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>18</id>
+		<group_id>2</group_id>
+		<description>Other</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>9/9/1999 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+</table>

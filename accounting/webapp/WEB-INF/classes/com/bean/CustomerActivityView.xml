@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<DataSource Name="CustomerActivityView">
+  <Sql Select="customer_actv_id, 
+		customer_id, 
+		xact_id, 
+		amount, 
+		date_created, 
+		date_updated, 
+		user_id, 
+		ip_created, 
+		ip_updated" From="customer_activity" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="CustomerActivityTable" DBName="customer_activity" Updateable="true"/>
+  <ColAttr Name="CustomerActvId" DBName="customer_actv_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="CustomerActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CustomerId" DBName="customer_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="CustomerActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactId" DBName="xact_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="CustomerActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Amount" DBName="amount" SqlType="decimal" IsNull="false" JavaType="double" PrimaryKey="false" TableName="CustomerActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="CustomerActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="CustomerActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="String" PrimaryKey="false" TableName="CustomerActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="IpCreated" DBName="ip_created" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="CustomerActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="IpUpdated" DBName="ip_updated" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="CustomerActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

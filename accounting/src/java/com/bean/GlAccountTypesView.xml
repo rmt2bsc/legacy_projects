@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DataSource Name="GlAccountTypesView">
+  <Sql Select="acct_type_id, 
+		description, 
+		acct_baltype_id, 
+		date_created, 
+		date_updated, 
+		user_id" From="gl_account_types" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="GlAccountTypesTable" DBName="gl_account_types" Updateable="true"/>
+  <ColAttr Name="AcctTypeId" DBName="acct_type_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="GlAccountTypesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="false" JavaType="String" PrimaryKey="false" TableName="GlAccountTypesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AcctBaltypeId" DBName="acct_baltype_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="GlAccountTypesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="GlAccountTypesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="GlAccountTypesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="String" PrimaryKey="false" TableName="GlAccountTypesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<DataSource Name="PurchaseOrderView">
+  <Sql Select="po_id, 
+		xact_id, 
+		creditor_id, 
+		ref_no, 
+		total, 
+		date_created, 
+		date_updated, 
+		user_id" From="purchase_order" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="PurchaseOrderTable" DBName="purchase_order" Updateable="true"/>
+  <ColAttr Name="PoId" DBName="po_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="PurchaseOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactId" DBName="xact_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="PurchaseOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditorId" DBName="creditor_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="PurchaseOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="RefNo" DBName="ref_no" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="PurchaseOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Total" DBName="total" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="PurchaseOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="PurchaseOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="PurchaseOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="PurchaseOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

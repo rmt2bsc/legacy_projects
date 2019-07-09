@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<DataSource Name="VwCreditorXactHistView">
+  <Sql Select="xact_id, 
+		creditor_id, 
+		account_number, 
+		creditor_type_id, 
+		active, 
+		apr, 
+		credit_limit, 
+		creditor_type_description, 
+		xact_amount, 
+		xact_date, 
+		xact_type_id, 
+		reason, 
+		xact_type_name, 
+		date_created, 
+		user_id, 
+		posted_date, 
+		confirm_no, 
+		neg_instr_no, 
+		tender_id, 
+		document_id, 
+		creditor_activity_id, 
+		creditor_activity_amount" From="vw_creditor_xact_hist" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwCreditorXactHistTable" DBName="vw_creditor_xact_hist" Updateable="true"/>
+  <ColAttr Name="XactId" DBName="xact_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwCreditorXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditorId" DBName="creditor_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwCreditorXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AccountNumber" DBName="account_number" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCreditorXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditorTypeId" DBName="creditor_type_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwCreditorXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Active" DBName="active" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwCreditorXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Apr" DBName="apr" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwCreditorXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditLimit" DBName="credit_limit" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwCreditorXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditorTypeDescription" DBName="creditor_type_description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCreditorXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactAmount" DBName="xact_amount" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwCreditorXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactDate" DBName="xact_date" SqlType="date" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwCreditorXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeId" DBName="xact_type_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwCreditorXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Reason" DBName="reason" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCreditorXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeName" DBName="xact_type_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCreditorXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwCreditorXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCreditorXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="PostedDate" DBName="posted_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwCreditorXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ConfirmNo" DBName="confirm_no" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCreditorXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="NegInstrNo" DBName="neg_instr_no" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCreditorXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TenderId" DBName="tender_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwCreditorXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DocumentId" DBName="document_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwCreditorXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditorActivityId" DBName="creditor_activity_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwCreditorXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditorActivityAmount" DBName="creditor_activity_amount" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwCreditorXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

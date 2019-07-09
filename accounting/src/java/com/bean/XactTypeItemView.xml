@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DataSource Name="XactTypeItemView">
+  <Sql Select="xact_item_id, 
+		xact_type_id, 
+		name, 
+		date_created, 
+		date_updated, 
+		user_id" From="xact_type_item" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="XactTypeItemTable" DBName="xact_type_item" Updateable="true"/>
+  <ColAttr Name="XactItemId" DBName="xact_item_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="XactTypeItemTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeId" DBName="xact_type_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="XactTypeItemTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Name" DBName="name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="XactTypeItemTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="XactTypeItemTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="XactTypeItemTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="String" PrimaryKey="false" TableName="XactTypeItemTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

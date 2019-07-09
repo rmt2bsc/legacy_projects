@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<DataSource Name="VwXactTypeItemActivityView">
+  <Sql Select="id, 
+		xact_type_item_id, 
+		xact_id, 
+		item_amount, 
+		item_name, 
+		xact_date, 
+		xact_amount, 
+		reason, 
+		confirm_no, 
+		xact_type_id, 
+		xact_type_item_name, 
+		xact_type_xact_code, 
+		xact_type_description, 
+		xact_category_id, 
+		xact_category_description, 
+		xact_category_code" From="vw_xact_type_item_activity" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwXactTypeItemActivityTable" DBName="vw_xact_type_item_activity" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwXactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeItemId" DBName="xact_type_item_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwXactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactId" DBName="xact_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwXactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemAmount" DBName="item_amount" SqlType="decimal" IsNull="false" JavaType="double" PrimaryKey="false" TableName="VwXactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemName" DBName="item_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwXactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactDate" DBName="xact_date" SqlType="date" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="VwXactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactAmount" DBName="xact_amount" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwXactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Reason" DBName="reason" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwXactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ConfirmNo" DBName="confirm_no" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwXactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeId" DBName="xact_type_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwXactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeItemName" DBName="xact_type_item_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwXactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeXactCode" DBName="xact_type_xact_code" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwXactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeDescription" DBName="xact_type_description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwXactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactCategoryId" DBName="xact_category_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwXactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactCategoryDescription" DBName="xact_category_description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwXactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactCategoryCode" DBName="xact_category_code" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwXactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

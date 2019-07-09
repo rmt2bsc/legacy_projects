@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<id>1</id>
+		<long_description>Debit</long_description>
+		<short_description>DB</short_description>
+	</row>
+	<row>
+		<id>2</id>
+		<long_description>Credit</long_description>
+		<short_description>CR</short_description>
+	</row>
+</table>

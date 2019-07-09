@@ -1,0 +1,85 @@
+<dataitem>
+	<company>
+		<name>RMT2 Business Systems Corp.</name>
+		<contact>Roy M. Terrell, II</contact>
+		<address1>2300 Dana Dr</address1>
+		<city>Flower Mound</city>
+		<state>Tx</state>
+		<zip>75028</zip>
+		<phone>(214) 498-395</phone>
+		<fax>(972) 355-7125</fax>
+		<email>rmt2bsc2@verizon.net</email>
+		<website>www.rmt2.net</website>
+	</company>
+	<VwBusinessAddressView>
+		<vw_business_address>
+			<addr4/>
+			<addr3/>
+			<bus_longname>The Insource Group</bus_longname>
+			<addr2/>
+			<addr1/>
+			<addr_phone_work/>
+			<addr_business_id>1440</addr_business_id>
+			<bus_contact_phone/>
+			<business_id>1440</business_id>
+			<bus_serv_type_id>-110</bus_serv_type_id>
+			<bus_contact_lastname>Black</bus_contact_lastname>
+			<addr_phone_home/>
+			<bus_entity_type_id>-100</bus_entity_type_id>
+			<addr_zip>0</addr_zip>
+			<addr_phone_fax/>
+			<addr_person_id>0</addr_person_id>
+			<zip_state/>
+			<addr_phone_cell/>
+			<bus_contact_firstname>Reggie</bus_contact_firstname>
+			<addr_phone_pager/>
+			<zip_city/>
+			<addr_id>2347</addr_id>
+			<addr_phone_ext/>
+			<bus_shortname/>
+			<addr_phone_main/>
+			<bus_contact_ext/>
+			<bus_tax_id/>
+			<bus_website/>
+			<addr_zipext>0</addr_zipext>
+			<contact_email>rmt2bsc2@verizon.net</contact_email>
+		</vw_business_address>
+	</VwBusinessAddressView>
+	<sales_invoice>
+		<sales_order_id>338</sales_order_id>
+		<customer_id>11</customer_id>
+		<invoiced>1</invoiced>
+		<order_status_id>2</order_status_id>
+		<order_status_descr>Invoiced</order_status_descr>
+		<sales_order_date>2009-09-05 16:34:43.000</sales_order_date>
+		<xact_id>11033</xact_id>
+		<invoice_no>338-20090805</invoice_no>
+		<invoice_date>2009-09-05 00:00:00.000</invoice_date>
+		<order_total>2600.00</order_total>
+		<acct_id>10</acct_id>
+		<account_no>U1440-20090531</account_no>
+		<credit_limit>0.00</credit_limit>
+		<description>Consulted through them at Health Markets and Aviall.</description>
+	</sales_invoice>
+	<xact>
+		<xact_id>11033</xact_id>
+		<xact_type_id>10</xact_type_id>
+		<xact_date>2009-09-05</xact_date>
+		<xact_amount>2600.00</xact_amount>
+		<reason>Invoiced Time Sheet(s): 000000000182</reason>
+		<date_created>2009-09-05 16:34:43.000</date_created>
+		<date_updated>2009-09-05 16:34:43.000</date_updated>
+		<user_id>timemgr</user_id>
+	</xact>
+	<salesorder_items>
+		<sales_order_item_id>356</sales_order_item_id>
+		<item_id>157</item_id>
+		<item_type_id>1</item_type_id>
+		<item_name>Consulting Services4</item_name>
+		<item_name_override>Terrell, Roy for 40.0 hours</item_name_override>
+		<retail_price>2600.0000</retail_price>
+		<invoice_amount>2600.000000</invoice_amount>
+		<order_qty>1.00</order_qty>
+		<back_order_qty>0.00</back_order_qty>
+	</salesorder_items>
+</dataitem>

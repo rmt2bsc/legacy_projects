@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DataSource Name="VwItemAssociationsView">
+  <Sql Select="assoc_id, 
+		assoc_item_id, 
+		item_id, 
+		item_cost, 
+		order_qty, 
+		assoc_type" From="vw_item_associations" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwItemAssociationsTable" DBName="vw_item_associations" Updateable="true"/>
+  <ColAttr Name="AssocId" DBName="assoc_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwItemAssociationsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AssocItemId" DBName="assoc_item_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwItemAssociationsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemId" DBName="item_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwItemAssociationsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemCost" DBName="item_cost" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwItemAssociationsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="OrderQty" DBName="order_qty" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwItemAssociationsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AssocType" DBName="assoc_type" SqlType="char" IsNull="false" JavaType="char" PrimaryKey="false" TableName="VwItemAssociationsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<id>101</id>
+		<account_type_id>1</account_type_id>
+		<description>Current Assets</description>
+		<date_created>7/1/2004 15:57:12:766</date_created>
+		<date_updated>7/1/2004 15:57:12:766</date_updated>
+		<user_id>dbo</user_id>
+	</row>
+	<row>
+		<id>102</id>
+		<account_type_id>1</account_type_id>
+		<description>Long Term Assets</description>
+		<date_created>7/1/2004 15:57:12:766</date_created>
+		<date_updated>7/1/2004 15:57:12:766</date_updated>
+		<user_id>dbo</user_id>
+	</row>
+	<row>
+		<id>103</id>
+		<account_type_id>1</account_type_id>
+		<description>Other Assets</description>
+		<date_created>7/1/2004 00:00:00</date_created>
+		<date_updated>7/1/2004 00:00:00</date_updated>
+		<user_id>dbo</user_id>
+	</row>
+	<row>
+		<id>201</id>
+		<account_type_id>2</account_type_id>
+		<description>Current Liabilities</description>
+		<date_created>7/1/2004 00:00:00</date_created>
+		<date_updated>7/1/2004 00:00:00</date_updated>
+		<user_id>dbo</user_id>
+	</row>
+	<row>
+		<id>202</id>
+		<account_type_id>2</account_type_id>
+		<description>Long Term Liabilities</description>
+		<date_created>7/1/2004 15:57:12:766</date_created>
+		<date_updated>7/1/2004 15:57:12:766</date_updated>
+		<user_id>dbo</user_id>
+	</row>
+	<row>
+		<id>203</id>
+		<account_type_id>2</account_type_id>
+		<description>Other Assets</description>
+		<date_created>7/1/2004 00:00:00</date_created>
+		<date_updated>7/1/2004 00:00:00</date_updated>
+		<user_id>dbo</user_id>
+	</row>
+	<row>
+		<id>301</id>
+		<account_type_id>3</account_type_id>
+		<description>Capital</description>
+		<date_created>7/1/2004 15:57:12:766</date_created>
+		<date_updated>7/1/2004 15:57:12:766</date_updated>
+		<user_id>dbo</user_id>
+	</row>
+	<row>
+		<id>401</id>
+		<account_type_id>4</account_type_id>
+		<description>Service Revenue</description>
+		<date_created>7/1/2004 15:57:12:766</date_created>
+		<date_updated>7/1/2004 15:57:12:766</date_updated>
+		<user_id>dbo</user_id>
+	</row>
+	<row>
+		<id>402</id>
+		<account_type_id>4</account_type_id>
+		<description>Merchandise Revenue</description>
+		<date_created>7/14/2004 22:15:57:186</date_created>
+		<date_updated>7/14/2004 22:15:57:186</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>403</id>
+		<account_type_id>4</account_type_id>
+		<description>Sales Revenue</description>
+		<date_created>7/1/2004 00:00:00</date_created>
+		<date_updated>7/1/2004 00:00:00</date_updated>
+		<user_id>dbo</user_id>
+	</row>
+	<row>
+		<id>404</id>
+		<account_type_id>4</account_type_id>
+		<description>Interest Revenue</description>
+		<date_created>7/1/2004 00:00:00</date_created>
+		<date_updated>7/1/2004 00:00:00</date_updated>
+		<user_id>dbo</user_id>
+	</row>
+	<row>
+		<id>405</id>
+		<account_type_id>4</account_type_id>
+		<description>Other Revenue</description>
+		<date_created>7/1/2004 00:00:00</date_created>
+		<date_updated>7/1/2004 00:00:00</date_updated>
+		<user_id>dbo</user_id>
+	</row>
+	<row>
+		<id>501</id>
+		<account_type_id>5</account_type_id>
+		<description>Operating Expenses</description>
+		<date_created>7/1/2004 00:00:00</date_created>
+		<date_updated>7/1/2004 00:00:00</date_updated>
+		<user_id>dbo</user_id>
+	</row>
+	<row>
+		<id>502</id>
+		<account_type_id>5</account_type_id>
+		<description>Other Expenses</description>
+		<date_created>7/1/2004 00:00:00</date_created>
+		<date_updated>7/1/2004 00:00:00</date_updated>
+		<user_id>dbo</user_id>
+	</row>
+	<row>
+		<id>601</id>
+		<account_type_id>6</account_type_id>
+		<description>Sales Contra Account</description>
+		<date_created>7/1/2004 00:00:00</date_created>
+		<date_updated>7/1/2004 00:00:00</date_updated>
+		<user_id>dbo</user_id>
+	</row>
+	<row>
+		<id>701</id>
+		<account_type_id>7</account_type_id>
+		<description>Purchases Contra Account</description>
+		<date_created>7/1/2004 00:00:00</date_created>
+		<date_updated>7/1/2004 00:00:00</date_updated>
+		<user_id>dbo</user_id>
+	</row>
+</table>
