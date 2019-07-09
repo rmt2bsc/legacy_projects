@@ -1,0 +1,4 @@
+1	Invoiced	Invoice has been created and sent to the client for payment
+2	Paid	Client has paid invoice.
+3	Cancelled	Invoice has been cancelled.   Cancellation can only be applied to those invoices that have not been paid.
+4	Refunded	Paid invoice is refunded to the client

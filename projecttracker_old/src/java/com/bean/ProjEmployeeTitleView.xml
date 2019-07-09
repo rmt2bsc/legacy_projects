@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<DataSource Name="ProjEmployeeTitleView">
+  <Sql Select="emp_title_id, 
+		description" From="proj_employee_title" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ProjEmployeeTitleTable" DBName="proj_employee_title" Updateable="true"/>
+  <ColAttr Name="EmpTitleId" DBName="emp_title_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="ProjEmployeeTitleTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ProjEmployeeTitleTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

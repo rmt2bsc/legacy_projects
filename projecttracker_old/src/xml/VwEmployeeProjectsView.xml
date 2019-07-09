@@ -1,0 +1,23 @@
+
+<VwEmployeeProjectsView>
+	<vw_employee_projects>
+		<pay_rate>50.0</pay_rate>
+		<client_name>Clientele Solutions</client_name>
+		<flat_rate>0.0</flat_rate>
+		<client_ot_bill_rate>0.0</client_ot_bill_rate>
+		<business_id>1436</business_id>
+		<emp_proj_id>1</emp_proj_id>
+		<projemp_effective_date>Sat Sep 05 00:00:00 CDT 2009</projemp_effective_date>
+		<account_no/>
+		<projemp_end_date/>
+		<comments>test</comments>
+		<ot_pay_rate>60.0</ot_pay_rate>
+		<emp_id>2000</emp_id>
+		<proj_effective_date>Sat Sep 05 00:00:00 CDT 2009</proj_effective_date>
+		<client_bill_rate>0.0</client_bill_rate>
+		<proj_id>16</proj_id>
+		<client_id>7</client_id>
+		<proj_end_date/>
+		<project_name>Test Project</project_name>
+	</vw_employee_projects>
+</VwEmployeeProjectsView>

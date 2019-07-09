@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<DataSource Name="VwTimesheetListView">
+  <Sql Select="timesheet_id, 
+		client_id, 
+		emp_id, 
+		display_value, 
+		begin_period, 
+		end_period, 
+		invoice_ref_no, 
+		ext_ref, 
+		proj_id, 
+		comments, 
+		document_id, 
+		timesheet_status_id, 
+		status_effective_date, 
+		status_end_date, 
+		proj_timesheet_hist_id, 
+		status_name, 
+		status_description, 
+		type_id, 
+		firstname, 
+		lastname, 
+		manager_id, 
+		hourly_over_rate, 
+		hourly_rate, 
+		last_first_name, 
+		client_name, 
+		account_no, 
+		bill_hrs, 
+		non_bill_hrs" From="vw_timesheet_list" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwTimesheetListTable" DBName="vw_timesheet_list" Updateable="true"/>
+  <ColAttr Name="TimesheetId" DBName="timesheet_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ClientId" DBName="client_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EmpId" DBName="emp_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DisplayValue" DBName="display_value" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BeginPeriod" DBName="begin_period" SqlType="date" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EndPeriod" DBName="end_period" SqlType="date" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="InvoiceRefNo" DBName="invoice_ref_no" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ExtRef" DBName="ext_ref" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ProjId" DBName="proj_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Comments" DBName="comments" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DocumentId" DBName="document_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TimesheetStatusId" DBName="timesheet_status_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StatusEffectiveDate" DBName="status_effective_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StatusEndDate" DBName="status_end_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ProjTimesheetHistId" DBName="proj_timesheet_hist_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StatusName" DBName="status_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StatusDescription" DBName="status_description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TypeId" DBName="type_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Firstname" DBName="firstname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Lastname" DBName="lastname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ManagerId" DBName="manager_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="HourlyOverRate" DBName="hourly_over_rate" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="HourlyRate" DBName="hourly_rate" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LastFirstName" DBName="last_first_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ClientName" DBName="client_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AccountNo" DBName="account_no" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BillHrs" DBName="bill_hrs" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="NonBillHrs" DBName="non_bill_hrs" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwTimesheetListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

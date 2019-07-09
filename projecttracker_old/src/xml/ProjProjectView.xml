@@ -1,0 +1,23 @@
+
+<ProjProjectView>
+	<proj_project>
+		<date_updated>Wed Feb 25 21:08:56 CST 2009</date_updated>
+		<effective_date>Wed Oct 18 00:00:00 CDT 2006</effective_date>
+		<client_id>11</client_id>
+		<user_id>admin</user_id>
+		<proj_id>7</proj_id>
+		<end_date>Fri Aug 17 00:00:00 CDT 2007</end_date>
+		<date_created>Wed Feb 25 21:08:56 CST 2009</date_created>
+		<description>Health Markets</description>
+	</proj_project>
+	<proj_project>
+		<date_updated>Wed Feb 25 22:09:58 CST 2009</date_updated>
+		<effective_date>Fri Aug 31 00:00:00 CDT 2007</effective_date>
+		<client_id>11</client_id>
+		<user_id>admin</user_id>
+		<proj_id>8</proj_id>
+		<end_date/>
+		<date_created>Wed Feb 25 22:09:58 CST 2009</date_created>
+		<description>Aviall</description>
+	</proj_project>
+</ProjProjectView>

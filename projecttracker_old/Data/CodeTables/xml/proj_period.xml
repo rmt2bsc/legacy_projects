@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<id>1</id>
+		<description>Annual</description>
+		<value>2080</value>
+	</row>
+	<row>
+		<id>2</id>
+		<description>Semi-Annual</description>
+		<value>1040</value>
+	</row>
+	<row>
+		<id>3</id>
+		<description>Quarterly</description>
+		<value>693</value>
+	</row>
+	<row>
+		<id>4</id>
+		<description>Monthly</description>
+		<value>160</value>
+	</row>
+	<row>
+		<id>5</id>
+		<description>Bi-Weekly</description>
+		<value>80</value>
+	</row>
+	<row>
+		<id>6</id>
+		<description>Weekly</description>
+		<value>40</value>
+	</row>
+	<row>
+		<id>7</id>
+		<description>Daily</description>
+		<value>8</value>
+	</row>
+</table>

@@ -1,0 +1,15 @@
+<!-- 
+   This file is used for example only.   
+   Copy this file to $CATALINA_BASE/conf/[enginename]/[hostname] directory as "multimedia.xml" 
+-->
+<Context path='/projecttracker' docBase='projecttracker' debug='0'>
+    <!-- JDBC Datasource resources -->
+	<Resource name="jdbc/projecttracker"
+	          auth="Container"
+					  type="javax.sql.DataSource"
+					  driverClassName="com.sybase.jdbc3.jdbc.SybDriver"
+					  url="jdbc:sybase:Tds:rmtdaldev04:2638?ServiceName=projecttracker"   
+					  username="project_user"
+					  password="hoover"
+					  maxActive="100" maxIdle="30" maxWait="10000"/>		
+</Context>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<DataSource Name="VwTimesheetProjectTaskView">
+  <Sql Select="project_task_id, 
+		timesheet_id, 
+		project_id, 
+		task_id, 
+		client_id, 
+		project_name, 
+		effective_date, 
+		end_date, 
+		task_name, 
+		billable" From="vw_timesheet_project_task" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwTimesheetProjectTaskTable" DBName="vw_timesheet_project_task" Updateable="true"/>
+  <ColAttr Name="ProjectTaskId" DBName="project_task_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwTimesheetProjectTaskTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TimesheetId" DBName="timesheet_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwTimesheetProjectTaskTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ProjectId" DBName="project_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwTimesheetProjectTaskTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TaskId" DBName="task_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwTimesheetProjectTaskTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ClientId" DBName="client_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwTimesheetProjectTaskTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ProjectName" DBName="project_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwTimesheetProjectTaskTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EffectiveDate" DBName="effective_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwTimesheetProjectTaskTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EndDate" DBName="end_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwTimesheetProjectTaskTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TaskName" DBName="task_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwTimesheetProjectTaskTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Billable" DBName="billable" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwTimesheetProjectTaskTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>
