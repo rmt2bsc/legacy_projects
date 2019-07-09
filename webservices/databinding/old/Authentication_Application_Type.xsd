@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" >
+	<xsd:complexType name="application_type">
+		<xsd:annotation>
+			<xsd:documentation>This is the document that manages application data.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="app_id" type="xsd:integer" default="1" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The id of the application.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="app_code" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The code name of the application.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="description" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The description of the application.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="active" type="xsd:boolean" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Status of the application.  Active equals true and Inactive equals false.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

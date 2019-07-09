@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:include schemaLocation="RMT2_Message_Header_Type.xsd"/>
+	<xsd:include schemaLocation="RMT2_Message_Reply_Status_Type.xsd"/>
+	<xsd:include schemaLocation="accounting/Accounting_Type.xsd"/>
+	<xsd:element name="RS_genreic_transaction_search">
+		<xsd:complexType>
+		  <xsd:sequence>
+					<xsd:element name="header" type="header_type" minOccurs="1" nillable="false">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">Known as the Web Service Header.  This element is to be used as part of the request data.  Contains the data needed to identify and route message to its property service implementation.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+
+					<xsd:element name="reply_status" type="reply_status_type" minOccurs="0" maxOccurs="1" nillable="false" >
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">The status of the generic transaction search web service request.  The return code will be greater than or equal to zero indicating the total number of records retrieved.   Otherwise, a value less than zero is present when an error occurs.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+
+					<xsd:element name="appRoot" type="xsd:string" minOccurs="1" nillable="false">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">Application Root context name.   This is for backward compatibility.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+
+					<xsd:element name="pageTitle" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="false" >
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">The page title.   This is for backward compatibility.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+
+				    <xsd:element name="search_criteria" type="generic_xact_criteria_type" minOccurs="1" maxOccurs="1" nillable="false">
+				    	<xsd:annotation>
+				    		<xsd:documentation>The search criteria used to yield one or more transaction results.   This is for backward compatibility.</xsd:documentation>
+				    	</xsd:annotation>
+				    </xsd:element>
+			
+					<xsd:element name="transaction_types">
+				        <xsd:complexType>
+				            <xsd:sequence>
+				                <xsd:element name="item" type="xacttype_type" minOccurs="0" maxOccurs="unbounded" nillable="false">
+							    	<xsd:annotation>
+							    		<xsd:documentation>List of transaction type records.   These records are commonly used for drop-down UI controls.</xsd:documentation>
+							    	</xsd:annotation>
+							    </xsd:element>
+				            </xsd:sequence>
+				        </xsd:complexType>
+				    </xsd:element>
+
+					<xsd:element name="transaction_sub_types">
+				        <xsd:complexType>
+				            <xsd:sequence>
+				                <xsd:element name="item" type="xacttype_type" minOccurs="0" maxOccurs="unbounded" nillable="false">
+							    	<xsd:annotation>
+							    		<xsd:documentation>List of transaction sub type records.   These records are commonly used for drop-down UI controls.</xsd:documentation>
+							    	</xsd:annotation>
+							    </xsd:element>
+				            </xsd:sequence>
+				        </xsd:complexType>
+				    </xsd:element>
+
+					<xsd:element name="transactions">
+				        <xsd:complexType>
+				            <xsd:sequence>
+				                <xsd:element name="transaction" type="xact_type" minOccurs="0" maxOccurs="unbounded" nillable="false">
+				                    <xsd:annotation>
+							    		<xsd:documentation>List of transactions as a result of the selection criteria.</xsd:documentation>
+							    	</xsd:annotation>
+				                </xsd:element>
+				            </xsd:sequence>
+				        </xsd:complexType>
+				    </xsd:element>
+
+					<xsd:element name="transaction_count" type="xsd:integer" minOccurs="1" maxOccurs="1" nillable="false">
+				    	<xsd:annotation>
+				    		<xsd:documentation>A count of transaction items.</xsd:documentation>
+				    	</xsd:annotation>
+				    </xsd:element>
+
+					<xsd:element name="transaction_total" type="xsd:decimal" minOccurs="1" maxOccurs="1" nillable="false">
+				    	<xsd:annotation>
+				    		<xsd:documentation>The total dollar amount of transaction which should equal the sum of all transaction item dollar amounts.</xsd:documentation>
+				    	</xsd:annotation>
+				    </xsd:element>
+
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>

@@ -1,0 +1,319 @@
+
+<project type="cont" name="webservices_project" expanded="yes" catalog="no" pluginOwner="-1">
+	<project type="cont" name="types" expanded="no" catalog="no" pluginOwner="-1">
+		<file plugId="3" URL="xml\schemas\RMT2_Message_Reply_Status_Type.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RMT2_Message_Header_Type.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\codes\Contacts_General_Codes_Type.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\mime\Mime_Content_Type.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\postal\Contacts_Postal_Codes_Type.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\mime\Mime_Types_Type.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\projecttracker\project_tracker_types.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\misc\Misc_Types_Type.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\contacts\Contacts_Common_Type.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\accounting\Accounting_Type.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\authentication\Authentication_Type.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+	</project>
+	<project type="cont" name="templates" expanded="no" catalog="no" pluginOwner="-1">
+		<file plugId="3" URL="xml\templates\RMT2_Message_Payload_Request.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\templates\RMT2_Message_Payload_Response.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+	</project>
+	<project type="cont" name="messages" expanded="yes" catalog="no" pluginOwner="-1">
+		<file plugId="3" URL="xml\schemas\RQ_Code_Lookup.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RS_Code_Lookup.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RS_Authentication_Login.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RQ_Authentication_Login.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RQ_Business_Contact_Search.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RQ_Code_Detail_Search.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RQ_Content_Search.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RS_Business_Contact_Search.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RS_Code_Detail_Search.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RS_Content_Search.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RQ_Business_Contact_Update.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RS_Business_Contact_Update.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RQ_Business_Contact_Delete.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RS_Business_Contact_Delete.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RQ_Customer_Search.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RS_Customer_Search.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RQ_Authentication_Logout.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RS_Authentication_Logout.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RQ_Authentication_User_Authenticated_Check.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RS_Authentication_User_Authenticated_Check.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RQ_Authentication_User_App_Roles.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RS_Authentication_User_App_Roles.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RQ_Authentication_Resource_Subtype.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RS_Authentication_Resource_Subtype.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RQ_Authentication_User_Resource_Access_Query.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RS_Authentication_User_Resource_Access_Query.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RQ_Authentication_Resource.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RS_Authentication_Resource.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RQ_Authentication_User_Profile.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RS_Authentication_User_Profile.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RQ_ProjectTracker_Client_Projects.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RS_ProjectTracker_Client_Projects.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RQ_Accounting_Invoice_Sales_Order.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RS_Accounting_Invoice_Sales_Order.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RQ_US_States_Search.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RS_US_States_Search.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RQ_Personal_Contact_Search.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RS_Personal_Contact_Search.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RQ_Postal_Search.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RS_Postal_Search.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RS_Common_Reply.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RQ_Generic_Transaction_Search.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\schemas\RS_Generic_Transaction_Search.xsd" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+	</project>
+	<project type="cont" name="wsdl" expanded="no" catalog="no" pluginOwner="-1">
+		<file plugId="3" URL="xml\wsdl\Code_Lookup.wsdl" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\wsdl\Accounting_Invoice_Sales_Order.wsdl" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\wsdl\Authentication_Login.wsdl" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\wsdl\Authentication_Logout.wsdl" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\wsdl\Authentication_Resource.wsdl" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\wsdl\Authentication_Resource_Subtype.wsdl" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\wsdl\Authentication_User_App_Check.wsdl" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\wsdl\Authentication_User_App_Roles.wsdl" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\wsdl\Authentication_User_Profile.wsdl" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\wsdl\Authentication_User_Resource_Access_Query.wsdl" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\wsdl\Business_Contact_Delete.wsdl" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\wsdl\Business_Contact_Search.wsdl" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\wsdl\Business_Contact_Update.wsdl" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\wsdl\Code_Detail_Search.wsdl" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\wsdl\Common_Contact_Search.wsdl" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\wsdl\Content_Search.wsdl" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\wsdl\Customer_Search.wsdl" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\wsdl\Personal_Contact_Search.wsdl" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\wsdl\Postal_Search.wsdl" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\wsdl\Projecttracker_Client_Projects.wsdl" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+		<file plugId="3" URL="xml\wsdl\Us_States_Search.wsdl" catalog="no">
+			<queries/>
+			<namespaces/>
+		</file>
+	</project>
+</project>

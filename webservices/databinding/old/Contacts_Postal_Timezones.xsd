@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" >
+	<xsd:include schemaLocation="../postal/Contacts_Postal_Codes_Type.xsd"/>
+	
+	<xsd:element name="timezone_list">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="timezone" type="timezone_type" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>

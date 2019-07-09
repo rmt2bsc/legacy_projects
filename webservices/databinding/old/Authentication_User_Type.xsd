@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="user_type">
+		<xsd:annotation>
+			<xsd:documentation>The profile of a user</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="login_id" type="xsd:integer" minOccurs="1" maxOccurs="1" nillable="true">
+				<xsd:annotation>
+					<xsd:documentation>User's Primary Key value</xsd:documentation> 
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="user_name" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="true">
+				<xsd:annotation>
+					<xsd:documentation>User's login id</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="first_name" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="true">
+				<xsd:annotation>
+					<xsd:documentation>User's first name</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="last_name" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="true">
+				<xsd:annotation>
+					<xsd:documentation>User's last name</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="email" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="true">
+				<xsd:annotation>
+					<xsd:documentation>User's email address</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="logged_in" type="xsd:boolean" minOccurs="1" maxOccurs="1" nillable="true">
+				<xsd:annotation>
+					<xsd:documentation>Indicates whether user is currently logged into the system.  A value of true equals user is logged in.   Otherwise, the indicator will equal false.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="dob" type="xsd:date" minOccurs="1" maxOccurs="1" nillable="true">
+				<xsd:annotation>
+					<xsd:documentation>Date of birth of the user.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="total_logons" type="xsd:integer" minOccurs="1" maxOccurs="1" nillable="true">
+				<xsd:annotation>
+					<xsd:documentation>The total number of times the user has successfully logged into the system.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ssn" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="true">
+				<xsd:annotation>
+					<xsd:documentation>The user's social security number.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="start_date" type="xsd:dateTime" minOccurs="1" maxOccurs="1" nillable="true">
+				<xsd:annotation>
+					<xsd:documentation>The date and time user's security profile was created.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="term_date" type="xsd:dateTime" minOccurs="1" maxOccurs="1" nillable="true">
+				<xsd:annotation>
+					<xsd:documentation>The date and time the user's security profile was terminated.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="active" type="xsd:boolean" minOccurs="1" maxOccurs="1" nillable="true">
+				<xsd:annotation>
+					<xsd:documentation>Indicates whether user's security profile is currently active.  A value of true equals user is active.   An inactive user status will equal false.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="description" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="true">
+				<xsd:annotation>
+					<xsd:documentation>A description of the user's profile.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

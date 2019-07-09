@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" >
+	<xsd:include schemaLocation="Contacts_General_Codes_Type.xsd"/>
+	<xsd:element name="lookup_set">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="grp" type="code_group_type" minOccurs="1" maxOccurs="1" nillable="true"/>
+				<xsd:element name="grp_codes" type="code_detail_type" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="lookup_group">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="grp" type="code_group_type" minOccurs="1" maxOccurs="1" nillable="true"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="lookup_group_code">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="grp_code" type="code_detail_type" minOccurs="1" maxOccurs="1" nillable="true"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

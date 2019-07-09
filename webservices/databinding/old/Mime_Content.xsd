@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:include schemaLocation="Mime_Content_Type.xsd"/>
+	<xsd:element name="mime_content">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="content_rec" type="mime_content_type"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

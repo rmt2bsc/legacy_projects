@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="MyProject" resourceRoot="" soapui-version="3.5.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testSuite name="TestSuite 1"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="httprequest" name="HTTP Test Request"><con:settings/><con:config method="POST" xsi:type="con:HttpRequest" name="HTTP Test Request" postQueryString="false" mediaType="text/xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@remove_empty_content">false</con:setting></con:settings><con:endpoint>http://localhost:8080/ServiceDispatch/soapRouter</con:endpoint><con:request><![CDATA[<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+<SOAP-ENV:Header>
+<rmt2-hns:serviceId xmlns:rmt2-hns="http://www.rmt2.net/soapheader" SOAP-ENV:actor="" SOAP-ENV:mustUnderstand="1">RQ_business_contact_search</rmt2-hns:serviceId>
+</SOAP-ENV:Header>
+<SOAP-ENV:Body>
+<RQ_business_contact_search>
+    <header>
+        <message_id>RQ_business_contact_search</message_id>
+        <delivery_mode>SYNC</delivery_mode>
+        <message_mode>REQUEST</message_mode>
+        <delivery_date>08/12/2010 21:56:42</delivery_date>
+        <user_id>admin</user_id>
+    </header>
+    <criteria_data>
+        <business_id>1458</business_id>
+        <business_id>1468</business_id>
+    </criteria_data>
+</RQ_business_contact_search>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>]]></con:request><con:attachment><con:name>me.jpg</con:name><con:contentType>image/jpeg</con:contentType><con:size>176148</con:size><con:contentId>me_image</con:contentId><con:part xsi:nil="true"/><con:url>C:/data/images/me.jpg</con:url></con:attachment><con:attachment><con:name>me.jpg</con:name><con:contentType>image/jpeg</con:contentType><con:size>176148</con:size><con:url>C:/data/images/me.jpg</con:url></con:attachment><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:config></con:testStep><con:testStep type="properties" name="Properties_001"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>endpoint</con:name><con:value>http://localhost:8080/ServiceDispatch/soapRouter</con:value></con:property></con:properties></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:reporting><con:reportTemplates/><con:xmlTemplates/><con:parameters/></con:reporting></con:soapui-project>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.rmt2.net/webservices/schemas" elementFormDefault="qualified" version="1.0">
+	<xsd:complexType name="RMT2_Msg_Detail_Type" mixed="false" abstract="false">
+		<xsd:sequence>
+			<xsd:element name="DeliveryDate" type="xsd:string" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">The date and time this message was sent</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MessageData" type="xsd:string" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">The specific XML data that is to be processed by the recipient</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.rmt2.net/webservices/schemas" xmlns:tns="http://www.rmt2.net/webservices/schemas">
+	<xsd:include schemaLocation="RMT2_Message_Header_Type.xsd"/>
+	<xsd:include schemaLocation="RMT2_Message_Reply_Status_Type.xsd"/>
+	<xsd:complexType name="response_message_type">
+		<xsd:sequence>
+		    <xsd:element name="reply_status" type="tns:reply_status_type" minOccurs="0" nillable="true">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Data specific to the web service response.  Provides data pertaining to the status of the reply and is used as part of the response.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="payload" type="xsd:string" minOccurs="0" nillable="true">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Known as the Web Service Data.  Optionally contains the data specific for the server or client to process on behalf of the request or reply, respectively.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:element name="response_message" type="tns:response_message_type"/>
+	
+</xsd:schema>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:include schemaLocation="Authentication_Application_Type.xsd"/>
+	<xsd:include schemaLocation="Authentication_App_Role_Type.xsd"/>
+	<xsd:include schemaLocation="Authentication_User_Type.xsd"/>
+	
+	<xsd:complexType name="user_app_roles_type">
+		<xsd:sequence>
+			<xsd:element name="user_info" type="user_type" minOccurs="1" maxOccurs="1" nillable="true">
+				<xsd:annotation>
+					<xsd:documentation>User Type Information</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="app_info" type="application_type" minOccurs="1" maxOccurs="1" nillable="true">
+				<xsd:annotation>
+					<xsd:documentation>Application Type Information</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="role_info" type="user_app_roles_type" minOccurs="0" maxOccurs="unbounded" nillable="true">
+				<xsd:annotation>
+					<xsd:documentation>One or more application roles</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+</xsd:schema>
