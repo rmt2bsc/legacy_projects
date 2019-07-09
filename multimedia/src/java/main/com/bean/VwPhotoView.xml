@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSource Name="VwPhotoView">
+   <Sql From="vw_photo" GroupBy="" Having="" OrderBy="" Select="album_id, &#xA;&#x9;&#x9;album_name, &#xA;&#x9;&#x9;album_date, &#xA;&#x9;&#x9;event_id, &#xA;&#x9;&#x9;event_name, &#xA;&#x9;&#x9;image_id, &#xA;&#x9;&#x9;dir_path, &#xA;&#x9;&#x9;file_name, &#xA;&#x9;&#x9;file_size, &#xA;&#x9;&#x9;file_ext, &#xA;&#x9;&#x9;mime_type_id, &#xA;&#x9;&#x9;mime_type_file_ext, &#xA;&#x9;&#x9;media_type" Where="" />
+   <TableUsage DBName="vw_photo" Name="VwPhotoTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="album_id" DataValue="" DisplayHeader="" IsNull="false" JavaType="int" Name="AlbumId" PrimaryKey="false" SqlType="integer" TableName="VwPhotoTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="album_name" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="AlbumName" PrimaryKey="false" SqlType="varchar" TableName="VwPhotoTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="album_date" DataValue="" DisplayHeader="" IsNull="true" JavaType="java.util.Date" Name="AlbumDate" PrimaryKey="false" SqlType="date" TableName="VwPhotoTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="event_id" DataValue="" DisplayHeader="" IsNull="false" JavaType="int" Name="EventId" PrimaryKey="false" SqlType="integer" TableName="VwPhotoTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="event_name" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="EventName" PrimaryKey="false" SqlType="varchar" TableName="VwPhotoTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="image_id" DataValue="" DisplayHeader="" IsNull="false" JavaType="int" Name="ImageId" PrimaryKey="false" SqlType="integer" TableName="VwPhotoTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="dir_path" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="DirPath" PrimaryKey="false" SqlType="varchar" TableName="VwPhotoTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="file_name" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="FileName" PrimaryKey="false" SqlType="varchar" TableName="VwPhotoTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="file_size" DataValue="" DisplayHeader="" IsNull="true" JavaType="int" Name="FileSize" PrimaryKey="false" SqlType="integer" TableName="VwPhotoTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="file_ext" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="FileExt" PrimaryKey="false" SqlType="varchar" TableName="VwPhotoTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="mime_type_id" DataValue="" DisplayHeader="" IsNull="false" JavaType="int" Name="MimeTypeId" PrimaryKey="false" SqlType="integer" TableName="VwPhotoTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="mime_type_file_ext" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="MimeTypeFileExt" PrimaryKey="false" SqlType="varchar" TableName="VwPhotoTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="media_type" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="MediaType" PrimaryKey="false" SqlType="varchar" TableName="VwPhotoTable" Updateable="true" />
+</DataSource>
+

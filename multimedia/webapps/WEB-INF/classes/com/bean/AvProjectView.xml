@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<DataSource Name="AvProjectView">
+  <Sql Select="project_id, 
+		artist_id, 
+		project_type_id, 
+		genre_id, 
+		media_type_id, 
+		title, 
+		year, 
+		master_dup_id, 
+		ripped, 
+		cost, 
+		date_created, 
+		date_updated, 
+		user_id" From="av_project" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="AvProjectTable" DBName="av_project" Updateable="true"/>
+  <ColAttr Name="ProjectId" DBName="project_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="AvProjectTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ArtistId" DBName="artist_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="AvProjectTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ProjectTypeId" DBName="project_type_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="AvProjectTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GenreId" DBName="genre_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="AvProjectTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="MediaTypeId" DBName="media_type_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="AvProjectTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Title" DBName="title" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="AvProjectTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Year" DBName="year" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="AvProjectTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="MasterDupId" DBName="master_dup_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="AvProjectTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Ripped" DBName="ripped" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="AvProjectTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Cost" DBName="cost" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="AvProjectTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="AvProjectTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="AvProjectTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="String" PrimaryKey="false" TableName="AvProjectTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

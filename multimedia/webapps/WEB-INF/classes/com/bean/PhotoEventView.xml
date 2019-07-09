@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSource Name="PhotoEventView">
+   <Sql From="photo_event" GroupBy="" Having="" OrderBy="" Select="event_id, &#xA;&#x9;&#x9;album_id, &#xA;&#x9;&#x9;event_name, &#xA;&#x9;&#x9;location, &#xA;&#x9;&#x9;date_created, &#xA;&#x9;&#x9;date_updated, &#xA;&#x9;&#x9;user_id" Where="" />
+   <TableUsage DBName="photo_event" Name="PhotoEventTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="event_id" DataValue="" DisplayHeader="" IsNull="false" JavaType="int" Name="EventId" PrimaryKey="true" SqlType="integer" TableName="PhotoEventTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="album_id" DataValue="" DisplayHeader="" IsNull="false" JavaType="int" Name="AlbumId" PrimaryKey="false" SqlType="integer" TableName="PhotoEventTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="event_name" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="EventName" PrimaryKey="false" SqlType="varchar" TableName="PhotoEventTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="location" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="Location" PrimaryKey="false" SqlType="varchar" TableName="PhotoEventTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="date_created" DataValue="" DisplayHeader="" IsNull="true" JavaType="java.util.Date" Name="DateCreated" PrimaryKey="false" SqlType="timestamp" TableName="PhotoEventTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="date_updated" DataValue="" DisplayHeader="" IsNull="true" JavaType="java.util.Date" Name="DateUpdated" PrimaryKey="false" SqlType="timestamp" TableName="PhotoEventTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="user_id" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="UserId" PrimaryKey="false" SqlType="varchar" TableName="PhotoEventTable" Updateable="true" />
+</DataSource>
+

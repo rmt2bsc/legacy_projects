@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<DataSource Name="AvTracksView">
+  <Sql Select="track_id, 
+		project_id, 
+		track_number, 
+		track_title, 
+		track_hours, 
+		track_minutes, 
+		track_seconds, 
+		track_disc, 
+		track_producer, 
+		track_composer, 
+		track_lyricist, 
+		loc_servername, 
+		loc_sharename, 
+		loc_root_path, 
+		loc_path, 
+		loc_filename, 
+		comments, 
+		date_created, 
+		date_updated, 
+		user_id" From="av_tracks" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="AvTracksTable" DBName="av_tracks" Updateable="true"/>
+  <ColAttr Name="TrackId" DBName="track_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="AvTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ProjectId" DBName="project_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="AvTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TrackNumber" DBName="track_number" SqlType="smallint" IsNull="false" JavaType="int" PrimaryKey="false" TableName="AvTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TrackTitle" DBName="track_title" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="AvTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TrackHours" DBName="track_hours" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="AvTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TrackMinutes" DBName="track_minutes" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="AvTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TrackSeconds" DBName="track_seconds" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="AvTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TrackDisc" DBName="track_disc" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="AvTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TrackProducer" DBName="track_producer" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="AvTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TrackComposer" DBName="track_composer" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="AvTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TrackLyricist" DBName="track_lyricist" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="AvTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LocServername" DBName="loc_servername" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="AvTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LocSharename" DBName="loc_sharename" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="AvTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LocRootPath" DBName="loc_root_path" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="AvTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LocPath" DBName="loc_path" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="AvTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LocFilename" DBName="loc_filename" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="AvTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Comments" DBName="comments" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="AvTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="AvTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="AvTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="String" PrimaryKey="false" TableName="AvTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>
