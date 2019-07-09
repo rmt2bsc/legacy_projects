@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<DataSource Name="VwResourceView">
+  <Sql Select="rsrc_id, 
+		name, 
+		url, 
+		description, 
+		secured, 
+		rsrc_type_id, 
+		type_descr, 
+		rsrc_subtype_id, 
+		subtype_name, 
+		subtype_desc" From="vw_resource" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwResourceTable" DBName="vw_resource" Updateable="true"/>
+  <ColAttr Name="RsrcId" DBName="rsrc_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwResourceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Name" DBName="name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwResourceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Url" DBName="url" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwResourceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwResourceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Secured" DBName="secured" SqlType="smallint" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwResourceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="RsrcTypeId" DBName="rsrc_type_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwResourceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TypeDescr" DBName="type_descr" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwResourceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="RsrcSubtypeId" DBName="rsrc_subtype_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwResourceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="SubtypeName" DBName="subtype_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwResourceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="SubtypeDesc" DBName="subtype_desc" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwResourceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

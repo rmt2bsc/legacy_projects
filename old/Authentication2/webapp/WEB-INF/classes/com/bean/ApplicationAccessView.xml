@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DataSource Name="ApplicationAccessView">
+  <Sql Select="app_access_id, 
+		app_id, 
+		login_id, 
+		login_date, 
+		last_login_date, 
+		session_id" From="application_access" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ApplicationAccessTable" DBName="application_access" Updateable="true"/>
+  <ColAttr Name="AppAccessId" DBName="app_access_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="ApplicationAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AppId" DBName="app_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="ApplicationAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LoginId" DBName="login_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="ApplicationAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LoginDate" DBName="login_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="ApplicationAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LastLoginDate" DBName="last_login_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="ApplicationAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="SessionId" DBName="session_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ApplicationAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

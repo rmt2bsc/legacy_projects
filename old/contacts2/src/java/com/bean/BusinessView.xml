@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<DataSource Name="BusinessView">
+  <Sql Select="business_id, 
+		entity_type_id, 
+		serv_type_id, 
+		longname, 
+		shortname, 
+		contact_firstname, 
+		contact_lastname, 
+		contact_phone, 
+		contact_ext, 
+		contact_email, 
+		tax_id, 
+		website, 
+		date_created, 
+		date_updated, 
+		user_id, 
+		category_id" From="business" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="BusinessTable" DBName="business" Updateable="true"/>
+  <ColAttr Name="BusinessId" DBName="business_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EntityTypeId" DBName="entity_type_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ServTypeId" DBName="serv_type_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Longname" DBName="longname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Shortname" DBName="shortname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ContactFirstname" DBName="contact_firstname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ContactLastname" DBName="contact_lastname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ContactPhone" DBName="contact_phone" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ContactExt" DBName="contact_ext" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ContactEmail" DBName="contact_email" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TaxId" DBName="tax_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Website" DBName="website" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CategoryId" DBName="category_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

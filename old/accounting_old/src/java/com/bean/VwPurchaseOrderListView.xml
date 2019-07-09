@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<DataSource Name="VwPurchaseOrderListView">
+  <Sql Select="account_number, 
+		credit_limit, 
+		credit_type_id, 
+		creditor_type_descr, 
+		id, 
+		vendor_id, 
+		status_id, 
+		ref_no, 
+		total, 
+		status_description, 
+		status_hist_id, 
+		effective_date, 
+		end_date, 
+		user_id, 
+		creditor_id, 
+		business_id" From="vw_purchase_order_list" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwPurchaseOrderListTable" DBName="vw_purchase_order_list" Updateable="true"/>
+  <ColAttr Name="AccountNumber" DBName="account_number" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditLimit" DBName="credit_limit" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditTypeId" DBName="credit_type_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditorTypeDescr" DBName="creditor_type_descr" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Id" DBName="id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="VendorId" DBName="vendor_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StatusId" DBName="status_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="RefNo" DBName="ref_no" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Total" DBName="total" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StatusDescription" DBName="status_description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StatusHistId" DBName="status_hist_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EffectiveDate" DBName="effective_date" SqlType="date" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EndDate" DBName="end_date" SqlType="date" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditorId" DBName="creditor_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessId" DBName="business_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

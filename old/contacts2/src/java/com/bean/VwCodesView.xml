@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DataSource Name="VwCodesView">
+  <Sql Select="group_id, 
+		group_desc, 
+		code_id, 
+		code_shortdesc, 
+		code_longdesc" From="vw_codes" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwCodesTable" DBName="vw_codes" Updateable="true"/>
+  <ColAttr Name="GroupId" DBName="group_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwCodesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GroupDesc" DBName="group_desc" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCodesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CodeId" DBName="code_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwCodesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CodeShortdesc" DBName="code_shortdesc" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCodesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CodeLongdesc" DBName="code_longdesc" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCodesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

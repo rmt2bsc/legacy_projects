@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>Service Dispatcher</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+  <env-entry>  	
+     <env-entry-name>APP_NAME</env-entry-name>  	
+     <env-entry-value>ServiceDispatch</env-entry-value>  	
+     <env-entry-type>java.lang.String</env-entry-type>  
+  </env-entry>
+  <env-entry>  	
+	   <env-entry-name>APP_ROOT_DIR_NAME</env-entry-name>  	
+	   <env-entry-value>ServiceDispatch</env-entry-value>  	
+	   <env-entry-type>java.lang.String</env-entry-type>  
+  </env-entry>       	
+  <servlet>
+    <servlet-name>sysconfig</servlet-name>
+    <servlet-class>com.controller.stateless.SystemConfigurator</servlet-class>
+    <load-on-startup>5</load-on-startup>
+  </servlet>  
+  <servlet>
+    <servlet-name>remoteservices</servlet-name>
+    <servlet-class>com.api.messaging.webservice.http.engine.HttpServiceController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>soapRouter</servlet-name>
+    <servlet-class>com.dispatch.SoapMessagingController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>sysconfig</servlet-name>
+    <url-pattern>/sysconfig</url-pattern>
+  </servlet-mapping>  
+  <servlet-mapping>
+    <servlet-name>remoteservices</servlet-name>
+    <url-pattern>/remoteservices</url-pattern>
+  </servlet-mapping>  
+  <servlet-mapping>
+    <servlet-name>soapRouter</servlet-name>
+    <url-pattern>/soapRouter</url-pattern>
+  </servlet-mapping>
+</web-app>

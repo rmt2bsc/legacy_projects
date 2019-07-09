@@ -1,0 +1,27 @@
+<!-- 
+   This file is used for example only.   
+   Copy this file to $CATALINA_BASE/conf/[enginename]/[hostname] directory as "multimedia.xml" 
+-->
+<Context path='/authentication' docBase='authentication' debug='0'>
+    <!-- JDBC Datasource resources -->
+	<Resource name="jdbc/authentication"
+	          auth="Container"
+		  type="javax.sql.DataSource"
+		  driverClassName="com.sybase.jdbc3.jdbc.SybDriver"
+		  url="jdbc:sybase:Tds:rmtdaldev04:2638?ServiceName=authentication"   
+		  username="authentication_user"
+		  password="hoover"
+		  maxActive="10"
+			maxIdle="8"
+			testOnBorrow="true"
+			testWhileIdle="true"
+			testOnReturn="true"
+			timeBetweenEvictionRunsMillis="300000"
+			numTestsPerEvictionRun="6"
+			minEvictableIdleTimeMillis="1800000"
+			removeAbandoned="true"
+			removeAbandonedTimeout="30"
+			logAbandoned="false"
+			validationQuery="select 1"
+			maxWait="30000"/>		
+</Context>

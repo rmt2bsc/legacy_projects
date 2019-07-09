@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<DataSource Name="AvArtistView">
+  <Sql Select="artist_id, 
+		name" From="av_artist" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="AvArtistTable" DBName="av_artist" Updateable="true"/>
+  <ColAttr Name="ArtistId" DBName="artist_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="AvArtistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Name" DBName="name" SqlType="varchar" IsNull="false" JavaType="String" PrimaryKey="false" TableName="AvArtistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

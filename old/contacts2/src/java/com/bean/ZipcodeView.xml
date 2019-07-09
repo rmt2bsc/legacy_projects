@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<DataSource Name="ZipcodeView">
+  <Sql Select="zip_id, 
+		zip, 
+		city, 
+		state, 
+		area_code, 
+		city_alias_name, 
+		city_alias_abbr, 
+		city_type_id, 
+		county_name, 
+		county_fips, 
+		time_zone_id, 
+		day_light_saving, 
+		latitude, 
+		longitude, 
+		elevation, 
+		msa, 
+		pmsa, 
+		cbsa, 
+		cbsa_div, 
+		persons_per_household, 
+		zipcode_population, 
+		counties_area, 
+		households_per_zipcode, 
+		white_population, 
+		black_population, 
+		hispanic_population, 
+		income_per_household, 
+		average_house_value" From="zipcode" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ZipcodeTable" DBName="zipcode" Updateable="true"/>
+  <ColAttr Name="ZipId" DBName="zip_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Zip" DBName="zip" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="City" DBName="city" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="State" DBName="state" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AreaCode" DBName="area_code" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CityAliasName" DBName="city_alias_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CityAliasAbbr" DBName="city_alias_abbr" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CityTypeId" DBName="city_type_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CountyName" DBName="county_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CountyFips" DBName="county_fips" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TimeZoneId" DBName="time_zone_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DayLightSaving" DBName="day_light_saving" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Latitude" DBName="latitude" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Longitude" DBName="longitude" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Elevation" DBName="elevation" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Msa" DBName="msa" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Pmsa" DBName="pmsa" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Cbsa" DBName="cbsa" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CbsaDiv" DBName="cbsa_div" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="PersonsPerHousehold" DBName="persons_per_household" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ZipcodePopulation" DBName="zipcode_population" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CountiesArea" DBName="counties_area" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="HouseholdsPerZipcode" DBName="households_per_zipcode" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="WhitePopulation" DBName="white_population" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BlackPopulation" DBName="black_population" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="HispanicPopulation" DBName="hispanic_population" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="IncomePerHousehold" DBName="income_per_household" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AverageHouseValue" DBName="average_house_value" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

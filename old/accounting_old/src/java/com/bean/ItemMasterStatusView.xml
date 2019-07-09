@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DataSource Name="ItemMasterStatusView">
+  <Sql Select="item_status_id, 
+		description, 
+		date_created, 
+		date_updated, 
+		user_id" From="item_master_status" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ItemMasterStatusTable" DBName="item_master_status" Updateable="true"/>
+  <ColAttr Name="ItemStatusId" DBName="item_status_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="ItemMasterStatusTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ItemMasterStatusTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="ItemMasterStatusTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="ItemMasterStatusTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ItemMasterStatusTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<DataSource Name="QuoteView">
+  <Sql Select="quote_id, 
+		quote_status_id, 
+		contact_name, 
+		company_name, 
+		email, 
+		addr1, 
+		addr2, 
+		city, 
+		state, 
+		zip, 
+		solution_type, 
+		contact_pref, 
+		website, 
+		time_frame, 
+		become_member, 
+		comments, 
+		date_created, 
+		date_updated, 
+		user_id, 
+		phone" From="quote" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="QuoteTable" DBName="quote" Updateable="true"/>
+  <ColAttr Name="QuoteId" DBName="quote_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="QuoteTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="QuoteStatusId" DBName="quote_status_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="QuoteTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ContactName" DBName="contact_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="QuoteTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CompanyName" DBName="company_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="QuoteTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Email" DBName="email" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="QuoteTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Addr1" DBName="addr1" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="QuoteTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Addr2" DBName="addr2" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="QuoteTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="City" DBName="city" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="QuoteTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="State" DBName="state" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="QuoteTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Zip" DBName="zip" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="QuoteTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="SolutionType" DBName="solution_type" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="QuoteTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ContactPref" DBName="contact_pref" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="QuoteTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Website" DBName="website" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="QuoteTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TimeFrame" DBName="time_frame" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="QuoteTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BecomeMember" DBName="become_member" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="QuoteTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Comments" DBName="comments" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="QuoteTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="QuoteTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="QuoteTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="QuoteTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Phone" DBName="phone" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="QuoteTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

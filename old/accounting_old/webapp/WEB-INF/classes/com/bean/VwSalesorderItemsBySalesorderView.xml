@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<DataSource Name="VwSalesorderItemsBySalesorderView">
+  <Sql Select="sales_order_item_id, 
+		so_id, 
+		item_id, 
+		creditor_id, 
+		item_type_id, 
+		item_name, 
+		vendor_item_no, 
+		item_serial_no, 
+		qty_on_hand, 
+		unit_cost, 
+		markup, 
+		retail_price, 
+		item_type_descr, 
+		item_name_override, 
+		order_qty, 
+		back_order_qty, 
+		init_unit_cost, 
+		init_markup, 
+		customer_id, 
+		invoiced, 
+		person_id, 
+		business_id" From="vw_salesorder_items_by_salesorder" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwSalesorderItemsBySalesorderTable" DBName="vw_salesorder_items_by_salesorder" Updateable="true"/>
+  <ColAttr Name="SalesOrderItemId" DBName="sales_order_item_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="SoId" DBName="so_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemId" DBName="item_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditorId" DBName="creditor_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemTypeId" DBName="item_type_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemName" DBName="item_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="VendorItemNo" DBName="vendor_item_no" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemSerialNo" DBName="item_serial_no" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="QtyOnHand" DBName="qty_on_hand" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UnitCost" DBName="unit_cost" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Markup" DBName="markup" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="RetailPrice" DBName="retail_price" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemTypeDescr" DBName="item_type_descr" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemNameOverride" DBName="item_name_override" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="OrderQty" DBName="order_qty" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BackOrderQty" DBName="back_order_qty" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="InitUnitCost" DBName="init_unit_cost" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="InitMarkup" DBName="init_markup" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CustomerId" DBName="customer_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Invoiced" DBName="invoiced" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="PersonId" DBName="person_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessId" DBName="business_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

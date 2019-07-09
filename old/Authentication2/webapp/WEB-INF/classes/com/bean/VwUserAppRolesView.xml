@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<DataSource Name="VwUserAppRolesView">
+  <Sql Select="email, 
+		active, 
+		group_id, 
+		group_description, 
+		app_role_id, 
+		app_role_code, 
+		app_role_name, 
+		app_role_description, 
+		role_id, 
+		role_name, 
+		app_name, 
+		application_id, 
+		login_uid, 
+		username, 
+		firstname, 
+		lastname, 
+		birth_date, 
+		ssn, 
+		user_description, 
+		start_date, 
+		termination_date" From="vw_user_app_roles" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwUserAppRolesTable" DBName="vw_user_app_roles" Updateable="true"/>
+  <ColAttr Name="Email" DBName="email" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Active" DBName="active" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwUserAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GroupId" DBName="group_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwUserAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GroupDescription" DBName="group_description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AppRoleId" DBName="app_role_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwUserAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AppRoleCode" DBName="app_role_code" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AppRoleName" DBName="app_role_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AppRoleDescription" DBName="app_role_description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="RoleId" DBName="role_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwUserAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="RoleName" DBName="role_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AppName" DBName="app_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ApplicationId" DBName="application_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwUserAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LoginUid" DBName="login_uid" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwUserAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Username" DBName="username" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Firstname" DBName="firstname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Lastname" DBName="lastname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BirthDate" DBName="birth_date" SqlType="date" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwUserAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Ssn" DBName="ssn" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserDescription" DBName="user_description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StartDate" DBName="start_date" SqlType="date" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwUserAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TerminationDate" DBName="termination_date" SqlType="date" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwUserAppRolesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

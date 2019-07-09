@@ -1,0 +1,16 @@
+101,1,Current Assets,'2004-07-01','2004-07-01',dbo
+102,1,Long Term Assets,'2004-07-01','2004-07-01',dbo
+103,1,Other Assets,'2004-07-01','2004-07-01',dbo
+201,2,Current Liabilities,'2004-07-01','2004-07-01',dbo
+202,2,Long Term Liabilities,'2004-07-01','2004-07-01',dbo
+203,2,Other Assets,'2004-07-01','2004-07-01',dbo
+301,3,Capital,'2004-07-01','2004-07-01',dbo
+401,4,Service Revenue,'2004-07-01','2004-07-01',dbo
+402,4,Merchandise Revenue,'2004-07-01','2004-07-01',DBA
+403,4,Sales Revenue,'2004-07-01','2004-07-01',dbo
+404,4,Interest Revenue,'2004-07-01','2004-07-01',dbo
+405,4,Other Revenue,'2004-07-01','2004-07-01',dbo
+501,5,Operating Expenses,'2004-07-01','2004-07-01',dbo
+502,5,Other Expenses,'2004-07-01','2004-07-01',dbo
+601,6,Sales Contra Account,'2004-07-01','2004-07-01',dbo
+701,7,Purchases Contra Account,'2004-07-01','2004-07-01',dbo

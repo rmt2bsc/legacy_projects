@@ -1,0 +1,91 @@
+
+<RSPayload>
+	<appRoot>/accounting</appRoot>
+	<pageTitle>Customer Payment Confirmation</pageTitle>
+	<CustomerExt>
+		<beanClassName>com.gl.customer.CustomerExt</beanClassName>
+		<accountNo>U1440-20090531</accountNo>
+		<active>0</active>
+		<balance>1970.0</balance>
+		<busType>26</busType>
+		<businessId>1440</businessId>
+		<className></className>
+		<contactEmail>rmt2bsc2@verizon.net</contactEmail>
+		<contactExt></contactExt>
+		<contactFirstname></contactFirstname>
+		<contactLastname></contactLastname>
+		<contactPhone></contactPhone>
+		<creditLimit>0.0</creditLimit>
+		<customerId>11</customerId>
+		<dateCreated>Thu Aug 27 16:43:51 CDT 2009</dateCreated>
+		<dateUpdated>Thu Aug 27 16:43:51 CDT 2009</dateUpdated>
+		<description></description>
+		<fileName></fileName>
+		<glAccountId>10</glAccountId>
+		<jspOrigin></jspOrigin>
+		<methodName></methodName>
+		<name>The Insource Group</name>
+		<serialPath></serialPath>
+		<servType>61</servType>
+		<shortname></shortname>
+		<taxId>85438484</taxId>
+		<userId>admin</userId>
+		<website>www.insourcegroup.com</website>
+	</CustomerExt>
+	<SalesOrder>
+		<beanClassName>com.bean.SalesOrder</beanClassName>
+		<className></className>
+		<criteriaAvailable>false</criteriaAvailable>
+		<customCriteriaAvailable>false</customCriteriaAvailable>
+		<customerId>0</customerId>
+		<dataSourceClassName>com.bean.SalesOrder</dataSourceClassName>
+		<dataSourceName>SalesOrderView</dataSourceName>
+		<dataSourceRoot>SalesOrder</dataSourceRoot>
+		<dateCreated></dateCreated>
+		<dateUpdated></dateUpdated>
+		<fileName></fileName>
+		<inClauseAvailable>false</inClauseAvailable>
+		<invoiced>0</invoiced>
+		<jspOrigin></jspOrigin>
+		<methodName></methodName>
+		<orderByAvailable>false</orderByAvailable>
+		<orderTotal>1970.0</orderTotal>
+		<resultsetType>0</resultsetType>
+		<serialPath></serialPath>
+		<serializeXml>false</serializeXml>
+		<soId>0</soId>
+		<userId></userId>
+	</SalesOrder>
+	<Xact>
+		<beanClassName>com.bean.Xact</beanClassName>
+		<bankTransInd></bankTransInd>
+		<className></className>
+		<confirmNo>1251409475197</confirmNo>
+		<criteriaAvailable>false</criteriaAvailable>
+		<customCriteriaAvailable>false</customCriteriaAvailable>
+		<dataSourceClassName>com.bean.Xact</dataSourceClassName>
+		<dataSourceName>XactView</dataSourceName>
+		<dataSourceRoot>Xact</dataSourceRoot>
+		<dateCreated>Thu Aug 27 16:44:35 CDT 2009</dateCreated>
+		<dateUpdated>Thu Aug 27 16:44:35 CDT 2009</dateUpdated>
+		<entityRefNo></entityRefNo>
+		<fileName></fileName>
+		<inClauseAvailable>false</inClauseAvailable>
+		<jspOrigin></jspOrigin>
+		<methodName></methodName>
+		<negInstrNo></negInstrNo>
+		<orderByAvailable>false</orderByAvailable>
+		<postedDate></postedDate>
+		<reason>Cash Receipt: test availibility of email</reason>
+		<resultsetType>0</resultsetType>
+		<serialPath></serialPath>
+		<serializeXml>false</serializeXml>
+		<tenderId>0</tenderId>
+		<userId>admin</userId>
+		<xactAmount>20.0</xactAmount>
+		<xactDate>Thu Aug 27 00:00:00 CDT 2009</xactDate>
+		<xactId>10672</xactId>
+		<xactSubtypeId>0</xactSubtypeId>
+		<xactTypeId>2</xactTypeId>
+	</Xact>
+</RSPayload>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DataSource Name="XactUploadView">
+  <Sql Select="code, 
+		date, 
+		descr, 
+		amt" From="xact_upload" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="XactUploadTable" DBName="xact_upload" Updateable="true"/>
+  <ColAttr Name="Code" DBName="code" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="XactUploadTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Date" DBName="date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="XactUploadTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Descr" DBName="descr" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="XactUploadTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Amt" DBName="amt" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="XactUploadTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

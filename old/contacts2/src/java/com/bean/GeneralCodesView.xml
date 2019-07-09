@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<DataSource Name="GeneralCodesView">
+  <Sql Select="code_id, 
+		code_grp_id, 
+		shortdesc, 
+		longdesc, 
+		gen_ind_value, 
+		date_created, 
+		date_updated, 
+		user_id, 
+		permcol" From="general_codes" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="GeneralCodesTable" DBName="general_codes" Updateable="true"/>
+  <ColAttr Name="CodeId" DBName="code_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="GeneralCodesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CodeGrpId" DBName="code_grp_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="GeneralCodesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Shortdesc" DBName="shortdesc" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="GeneralCodesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Longdesc" DBName="longdesc" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="GeneralCodesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GenIndValue" DBName="gen_ind_value" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="GeneralCodesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="GeneralCodesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="GeneralCodesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="GeneralCodesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Permcol" DBName="permcol" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="GeneralCodesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

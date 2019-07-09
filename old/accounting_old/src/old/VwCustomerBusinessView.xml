@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<DataSource Name="VwCustomerBusinessView">
+  <Sql Select="customer_id, 
+		account_no, 
+		gl_account_id, 
+		credit_limit, 
+		active, 
+		date_created, 
+		date_updated, 
+		user_id, 
+		business_id, 
+		name, 
+		shortname, 
+		serv_type, 
+		bus_type, 
+		contact_firstname, 
+		contact_lastname, 
+		contact_phone, 
+		contact_ext, 
+		tax_id, 
+		website, 
+		balance" From="vw_customer_business" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwCustomerBusinessTable" DBName="vw_customer_business" Updateable="true"/>
+  <ColAttr Name="CustomerId" DBName="customer_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwCustomerBusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AccountNo" DBName="account_no" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCustomerBusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GlAccountId" DBName="gl_account_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwCustomerBusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditLimit" DBName="credit_limit" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwCustomerBusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Active" DBName="active" SqlType="bit" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwCustomerBusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="VwCustomerBusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="VwCustomerBusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="String" PrimaryKey="false" TableName="VwCustomerBusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessId" DBName="business_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwCustomerBusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Name" DBName="name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCustomerBusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Shortname" DBName="shortname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCustomerBusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ServType" DBName="serv_type" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwCustomerBusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusType" DBName="bus_type" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwCustomerBusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ContactFirstname" DBName="contact_firstname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCustomerBusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ContactLastname" DBName="contact_lastname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCustomerBusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ContactPhone" DBName="contact_phone" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCustomerBusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ContactExt" DBName="contact_ext" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCustomerBusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TaxId" DBName="tax_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCustomerBusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Website" DBName="website" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCustomerBusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Balance" DBName="balance" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwCustomerBusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

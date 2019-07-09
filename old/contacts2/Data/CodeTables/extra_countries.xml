@@ -1,0 +1,1444 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ROWDATA>
+
+<ROW>
+  <CODE>AFG</CODE>
+  <NAME>Afghanistan</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>ALB</CODE>
+  <NAME>Albania</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>DZA</CODE>
+  <NAME>Algeria</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>ASM</CODE>
+  <NAME>American Samoa</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>AND</CODE>
+  <NAME>Andorra</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>AGO</CODE>
+  <NAME>Angola</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>AIA</CODE>
+  <NAME>Anguilla</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>ATA</CODE>
+  <NAME>Antarctica</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>ATG</CODE>
+  <NAME>Antigua And Barbuda</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>ARG</CODE>
+  <NAME>Argentina</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>ARM</CODE>
+  <NAME>Armenia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>ABW</CODE>
+  <NAME>Aruba</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>AUS</CODE>
+  <NAME>Australia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>AUT</CODE>
+  <NAME>Austria</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>AZE</CODE>
+  <NAME>Azerbaijan</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>BHS</CODE>
+  <NAME>Bahamas</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>BHR</CODE>
+  <NAME>Bahrain</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>BGD</CODE>
+  <NAME>Bangladesh</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>BRB</CODE>
+  <NAME>Barbados</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>BLR</CODE>
+  <NAME>Belarus</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>BEL</CODE>
+  <NAME>Belgium</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>BLZ</CODE>
+  <NAME>Belize</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>BEN</CODE>
+  <NAME>Benin</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>BMU</CODE>
+  <NAME>Bermuda</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>BTN</CODE>
+  <NAME>Bhutan</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>BOL</CODE>
+  <NAME>Bolivia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>BIH</CODE>
+  <NAME>Bosnia And Herzegowina</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>BWA</CODE>
+  <NAME>Botswana</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>BVT</CODE>
+  <NAME>Bouvet Island</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>BRA</CODE>
+  <NAME>Brazil</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>IOT</CODE>
+  <NAME>British Indian Ocean Territory</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>BRN</CODE>
+  <NAME>Brunei Darussalam</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>BGR</CODE>
+  <NAME>Bulgaria</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>BFA</CODE>
+  <NAME>Burkina Faso</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>BDI</CODE>
+  <NAME>Burundi</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>KHM</CODE>
+  <NAME>Cambodia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>CMR</CODE>
+  <NAME>Cameroon</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>CAN</CODE>
+  <NAME>Canada</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>CPV</CODE>
+  <NAME>Cape Verde</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>CYM</CODE>
+  <NAME>Cayman Islands</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>CAF</CODE>
+  <NAME>Central African Republic</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>TCD</CODE>
+  <NAME>Chad</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>CHL</CODE>
+  <NAME>Chile</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>CHN</CODE>
+  <NAME>China</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>CXR</CODE>
+  <NAME>Christmas Island</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>CCK</CODE>
+  <NAME>Cocos  Keeling  Islands</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>COL</CODE>
+  <NAME>Colombia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>COM</CODE>
+  <NAME>Comoros</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>COG</CODE>
+  <NAME>Congo</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>COD</CODE>
+  <NAME>Congo, The Democratic Republic Of The</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>COK</CODE>
+  <NAME>Cook Islands</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>CRI</CODE>
+  <NAME>Costa Rica</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>CIV</CODE>
+  <NAME>Cote D'Ivoire</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>HRV</CODE>
+  <NAME>Croatia  Local Name: Hrvatska</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>CUB</CODE>
+  <NAME>Cuba</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>CYP</CODE>
+  <NAME>Cyprus</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>CZE</CODE>
+  <NAME>Czech Republic</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>DNK</CODE>
+  <NAME>Denmark</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>DJI</CODE>
+  <NAME>Djibouti</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>DMA</CODE>
+  <NAME>Dominica</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>DOM</CODE>
+  <NAME>Dominican Republic</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>TMP</CODE>
+  <NAME>East Timor</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>ECU</CODE>
+  <NAME>Ecuador</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>EGY</CODE>
+  <NAME>Egypt</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>SLV</CODE>
+  <NAME>El Salvador</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>GNQ</CODE>
+  <NAME>Equatorial Guinea</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>ERI</CODE>
+  <NAME>Eritrea</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>EST</CODE>
+  <NAME>Estonia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>ETH</CODE>
+  <NAME>Ethiopia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>FLK</CODE>
+  <NAME>Falkland Islands  Malvinas</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>FRO</CODE>
+  <NAME>Faroe Islands</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>FJI</CODE>
+  <NAME>Fiji</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>FIN</CODE>
+  <NAME>Finland</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>FRA</CODE>
+  <NAME>France</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>FXX</CODE>
+  <NAME>France Metropolitan</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>GUF</CODE>
+  <NAME>French Guiana</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>PYF</CODE>
+  <NAME>French Polynesia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>ATF</CODE>
+  <NAME>French Southern Territories</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>GAB</CODE>
+  <NAME>Gabon</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>GMB</CODE>
+  <NAME>Gambia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>GEO</CODE>
+  <NAME>Georgia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>DEU</CODE>
+  <NAME>Germany</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>GHA</CODE>
+  <NAME>Ghana</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>GIB</CODE>
+  <NAME>Gibraltar</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>GRC</CODE>
+  <NAME>Greece</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>GRL</CODE>
+  <NAME>Greenland</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>GRD</CODE>
+  <NAME>Grenada</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>GLP</CODE>
+  <NAME>Guadeloupe</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>GUM</CODE>
+  <NAME>Guam</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>GTM</CODE>
+  <NAME>Guatemala</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>GIN</CODE>
+  <NAME>Guinea</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>GNB</CODE>
+  <NAME>Guinea-Bissau</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>GUY</CODE>
+  <NAME>Guyana</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>HTI</CODE>
+  <NAME>Haiti</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>HMD</CODE>
+  <NAME>Heard And Mc Donald Islands</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>VAT</CODE>
+  <NAME>Holy See  Vatican City State</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>HND</CODE>
+  <NAME>Honduras</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>HKG</CODE>
+  <NAME>Hong Kong</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>HUN</CODE>
+  <NAME>Hungary</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>ISL</CODE>
+  <NAME>Iceland</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>IND</CODE>
+  <NAME>India</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>IDN</CODE>
+  <NAME>Indonesia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>IRN</CODE>
+  <NAME>Iran  Islamic Republic Of</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>IRQ</CODE>
+  <NAME>Iraq</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>IRL</CODE>
+  <NAME>Ireland</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>ISR</CODE>
+  <NAME>Israel</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>ITA</CODE>
+  <NAME>Italy</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>JAM</CODE>
+  <NAME>Jamaica</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>JPN</CODE>
+  <NAME>Japan</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>JOR</CODE>
+  <NAME>Jordan</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>KAZ</CODE>
+  <NAME>Kazakhstan</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>KEN</CODE>
+  <NAME>Kenya</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>KIR</CODE>
+  <NAME>Kiribati</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>PRK</CODE>
+  <NAME>Korea Democratic People'S Republic Of</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>KOR</CODE>
+  <NAME>Korea Republic Of</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>KWT</CODE>
+  <NAME>Kuwait</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>KGZ</CODE>
+  <NAME>Kyrgyzstan</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>LAO</CODE>
+  <NAME>Lao People'S Democratic Republic</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>LVA</CODE>
+  <NAME>Latvia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>LBN</CODE>
+  <NAME>Lebanon</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>LSO</CODE>
+  <NAME>Lesotho</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>LBR</CODE>
+  <NAME>Liberia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>LBY</CODE>
+  <NAME>Libyan Arab Jamahiriya</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>LIE</CODE>
+  <NAME>Liechtenstein</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>LTU</CODE>
+  <NAME>Lithuania</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>LUX</CODE>
+  <NAME>Luxembourg</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>MAC</CODE>
+  <NAME>Macau</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>MKD</CODE>
+  <NAME>Macedonia, The Former Yugoslav Republic Of</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>MDG</CODE>
+  <NAME>Madagascar</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>MWI</CODE>
+  <NAME>Malawi</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>MYS</CODE>
+  <NAME>Malaysia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>MDV</CODE>
+  <NAME>Maldives</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>MLI</CODE>
+  <NAME>Mali</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>MLT</CODE>
+  <NAME>Malta</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>MHL</CODE>
+  <NAME>Marshall Islands</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>MTQ</CODE>
+  <NAME>Martinique</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>MRT</CODE>
+  <NAME>Mauritania</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>MUS</CODE>
+  <NAME>Mauritius</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>MYT</CODE>
+  <NAME>Mayotte</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>MEX</CODE>
+  <NAME>Mexico</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>FSM</CODE>
+  <NAME>Micronesia, Federated States Of</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>MDA</CODE>
+  <NAME>Moldova, Republic Of</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>MCO</CODE>
+  <NAME>Monaco</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>MNG</CODE>
+  <NAME>Mongolia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>MSR</CODE>
+  <NAME>Montserrat</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>MAR</CODE>
+  <NAME>Morocco</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>MOZ</CODE>
+  <NAME>Mozambique</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>MMR</CODE>
+  <NAME>Myanmar</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>NAM</CODE>
+  <NAME>Namibia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>NRU</CODE>
+  <NAME>Nauru</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>NPL</CODE>
+  <NAME>Nepal</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>NLD</CODE>
+  <NAME>Netherlands</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>ANT</CODE>
+  <NAME>Netherlands Antilles</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>NCL</CODE>
+  <NAME>New Caledonia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>NZL</CODE>
+  <NAME>New Zealand</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>NIC</CODE>
+  <NAME>Nicaragua</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>NER</CODE>
+  <NAME>Niger</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>NGA</CODE>
+  <NAME>Nigeria</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>NIU</CODE>
+  <NAME>Niue</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>NFK</CODE>
+  <NAME>Norfolk Island</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>MNP</CODE>
+  <NAME>Northern Mariana Islands</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>NOR</CODE>
+  <NAME>Norway</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>OMN</CODE>
+  <NAME>Oman</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>PAK</CODE>
+  <NAME>Pakistan</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>PLW</CODE>
+  <NAME>Palau</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>PAN</CODE>
+  <NAME>Panama</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>PNG</CODE>
+  <NAME>Papua New Guinea</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>PRY</CODE>
+  <NAME>Paraguay</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>PER</CODE>
+  <NAME>Peru</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>PHL</CODE>
+  <NAME>Philippines</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>PCN</CODE>
+  <NAME>Pitcairn</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>POL</CODE>
+  <NAME>Poland</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>PRT</CODE>
+  <NAME>Portugal</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>PRI</CODE>
+  <NAME>Puerto Rico</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>QAT</CODE>
+  <NAME>Qatar</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>REU</CODE>
+  <NAME>Reunion</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>ROM</CODE>
+  <NAME>Romania</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>RUS</CODE>
+  <NAME>Russian Federation</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>RWA</CODE>
+  <NAME>Rwanda</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>BLM</CODE>
+  <NAME>Saint Barthelemy</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>KNA</CODE>
+  <NAME>Saint Kitts And Nevis</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>LCA</CODE>
+  <NAME>Saint Lucia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>VCT</CODE>
+  <NAME>Saint Vincent And The Grenadines</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>WSM</CODE>
+  <NAME>Samoa</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>SMR</CODE>
+  <NAME>San Marino</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>STP</CODE>
+  <NAME>Sao Tome And Principe</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>SAU</CODE>
+  <NAME>Saudi Arabia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>SEN</CODE>
+  <NAME>Senegal</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>SYC</CODE>
+  <NAME>Seychelles</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>SLE</CODE>
+  <NAME>Sierra Leone</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>SGP</CODE>
+  <NAME>Singapore</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>SVK</CODE>
+  <NAME>Slovakia  Slovak Republic</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>SVN</CODE>
+  <NAME>Slovenia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>SLB</CODE>
+  <NAME>Solomon Islands</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>SOM</CODE>
+  <NAME>Somalia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>ZAF</CODE>
+  <NAME>South Africa</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>SGS</CODE>
+  <NAME>South Georgia And The South Sandwich Islands</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>ESP</CODE>
+  <NAME>Spain</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>LKA</CODE>
+  <NAME>Sri Lanka</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>SHN</CODE>
+  <NAME>St. Helena</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>SPM</CODE>
+  <NAME>St. Pierre And Miquelon</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>SDN</CODE>
+  <NAME>Sudan</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>SUR</CODE>
+  <NAME>Suriname</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>SJM</CODE>
+  <NAME>Svalbard And Jan Mayen Islands</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>SWZ</CODE>
+  <NAME>Swaziland</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>SWE</CODE>
+  <NAME>Sweden</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>CHE</CODE>
+  <NAME>Switzerland</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>SYR</CODE>
+  <NAME>Syrian Arab Republic</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>TWN</CODE>
+  <NAME>Taiwan, Province Of China</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>TJK</CODE>
+  <NAME>Tajikistan</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>TZA</CODE>
+  <NAME>Tanzania, United Republic Of</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>THA</CODE>
+  <NAME>Thailand</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>TGO</CODE>
+  <NAME>Togo</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>TKL</CODE>
+  <NAME>Tokelau</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>TON</CODE>
+  <NAME>Tonga</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>TTO</CODE>
+  <NAME>Trinidad And Tobago</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>TUN</CODE>
+  <NAME>Tunisia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>TUR</CODE>
+  <NAME>Turkey</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>TKM</CODE>
+  <NAME>Turkmenistan</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>TCA</CODE>
+  <NAME>Turks And Caicos Islands</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>TUV</CODE>
+  <NAME>Tuvalu</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>UGA</CODE>
+  <NAME>Uganda</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>UKR</CODE>
+  <NAME>Ukraine</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>ARE</CODE>
+  <NAME>United Arab Emirates</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>GBR</CODE>
+  <NAME>United Kingdom</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>USA</CODE>
+  <NAME>United States</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>UMI</CODE>
+  <NAME>United States Minor Outlying Islands</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>URY</CODE>
+  <NAME>Uruguay</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>UZB</CODE>
+  <NAME>Uzbekistan</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>VUT</CODE>
+  <NAME>Vanuatu</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>VEN</CODE>
+  <NAME>Venezuela</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>VNM</CODE>
+  <NAME>Viet Nam</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>VGB</CODE>
+  <NAME>Virgin Islands  British</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>VIR</CODE>
+  <NAME>Virgin Islands  U.S.</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>WLF</CODE>
+  <NAME>Wallis And Futuna Islands</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>ESH</CODE>
+  <NAME>Western Sahara</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>YEM</CODE>
+  <NAME>Yemen</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>YUG</CODE>
+  <NAME>Yugoslavia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>ZMB</CODE>
+  <NAME>Zambia</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+<ROW>
+  <CODE>ZWE</CODE>
+  <NAME>Zimbabwe</NAME>
+  <CNTRY_VOID_IND>n</CNTRY_VOID_IND>
+</ROW>
+
+</ROWDATA>

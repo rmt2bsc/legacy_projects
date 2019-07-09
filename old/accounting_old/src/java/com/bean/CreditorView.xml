@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSource Name="CreditorView">
+   <Sql From="creditor" GroupBy="" Having="" OrderBy="" Select="creditor_id, &#xA;&#x9;&#x9;acct_id, &#xA;&#x9;&#x9;creditor_type_id, &#xA;&#x9;&#x9;business_id, &#xA;&#x9;&#x9;account_number, &#xA;&#x9;&#x9;credit_limit, &#xA;&#x9;&#x9;apr, &#xA;&#x9;&#x9;active, &#xA;&#x9;&#x9;date_created, &#xA;&#x9;&#x9;date_updated, &#xA;&#x9;&#x9;user_id, &#xA;&#x9;&#x9;ext_account_number, &#xA;&#x9;&#x9;ip_created, &#xA;&#x9;&#x9;ip_updated" Where="" />
+   <TableUsage DBName="creditor" Name="CreditorTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="creditor_id" DataValue="" DisplayHeader="" IsNull="false" JavaType="int" Name="CreditorId" PrimaryKey="true" SqlType="integer" TableName="CreditorTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="acct_id" DataValue="" DisplayHeader="" IsNull="true" JavaType="int" Name="AcctId" PrimaryKey="false" SqlType="integer" TableName="CreditorTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="creditor_type_id" DataValue="" DisplayHeader="" IsNull="false" JavaType="int" Name="CreditorTypeId" PrimaryKey="false" SqlType="integer" TableName="CreditorTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="business_id" DataValue="" DisplayHeader="" IsNull="true" JavaType="int" Name="BusinessId" PrimaryKey="false" SqlType="integer" TableName="CreditorTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="account_number" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="AccountNumber" PrimaryKey="false" SqlType="varchar" TableName="CreditorTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="credit_limit" DataValue="" DisplayHeader="" IsNull="true" JavaType="double" Name="CreditLimit" PrimaryKey="false" SqlType="decimal" TableName="CreditorTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="apr" DataValue="" DisplayHeader="" IsNull="true" JavaType="double" Name="Apr" PrimaryKey="false" SqlType="decimal" TableName="CreditorTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="active" DataValue="" DisplayHeader="" IsNull="true" JavaType="int" Name="Active" PrimaryKey="false" SqlType="smallint" TableName="CreditorTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="date_created" DataValue="" DisplayHeader="" IsNull="true" JavaType="java.util.Date" Name="DateCreated" PrimaryKey="false" SqlType="timestamp" TableName="CreditorTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="date_updated" DataValue="" DisplayHeader="" IsNull="true" JavaType="java.util.Date" Name="DateUpdated" PrimaryKey="false" SqlType="timestamp" TableName="CreditorTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="user_id" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="UserId" PrimaryKey="false" SqlType="varchar" TableName="CreditorTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="ext_account_number" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="ExtAccountNumber" PrimaryKey="false" SqlType="varchar" TableName="CreditorTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="ip_created" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="IpCreated" PrimaryKey="false" SqlType="varchar" TableName="CreditorTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="ip_updated" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="IpUpdated" PrimaryKey="false" SqlType="varchar" TableName="CreditorTable" Updateable="true" />
+</DataSource>
+

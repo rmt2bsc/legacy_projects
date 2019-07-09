@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSource Name="PhotoImageView">
+   <Sql From="photo_image" GroupBy="" Having="" OrderBy="" Select="image_id, &#xA;&#x9;&#x9;event_id, &#xA;&#x9;&#x9;mime_type_id, &#xA;&#x9;&#x9;dir_path, &#xA;&#x9;&#x9;file_name, &#xA;&#x9;&#x9;file_size, &#xA;&#x9;&#x9;file_ext, &#xA;&#x9;&#x9;date_created, &#xA;&#x9;&#x9;date_updated, &#xA;&#x9;&#x9;user_id" Where="" />
+   <TableUsage DBName="photo_image" Name="PhotoImageTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="image_id" DataValue="" DisplayHeader="" IsNull="false" JavaType="int" Name="ImageId" PrimaryKey="true" SqlType="integer" TableName="PhotoImageTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="event_id" DataValue="" DisplayHeader="" IsNull="false" JavaType="int" Name="EventId" PrimaryKey="false" SqlType="integer" TableName="PhotoImageTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="mime_type_id" DataValue="" DisplayHeader="" IsNull="false" JavaType="int" Name="MimeTypeId" PrimaryKey="false" SqlType="integer" TableName="PhotoImageTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="dir_path" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="DirPath" PrimaryKey="false" SqlType="varchar" TableName="PhotoImageTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="file_name" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="FileName" PrimaryKey="false" SqlType="varchar" TableName="PhotoImageTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="file_size" DataValue="" DisplayHeader="" IsNull="true" JavaType="int" Name="FileSize" PrimaryKey="false" SqlType="integer" TableName="PhotoImageTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="file_ext" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="FileExt" PrimaryKey="false" SqlType="varchar" TableName="PhotoImageTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="date_created" DataValue="" DisplayHeader="" IsNull="true" JavaType="java.util.Date" Name="DateCreated" PrimaryKey="false" SqlType="timestamp" TableName="PhotoImageTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="date_updated" DataValue="" DisplayHeader="" IsNull="true" JavaType="java.util.Date" Name="DateUpdated" PrimaryKey="false" SqlType="timestamp" TableName="PhotoImageTable" Updateable="true" />
+   <ColAttr Computed="false" DBName="user_id" DataValue="" DisplayHeader="" IsNull="true" JavaType="String" Name="UserId" PrimaryKey="false" SqlType="varchar" TableName="PhotoImageTable" Updateable="true" />
+</DataSource>
+

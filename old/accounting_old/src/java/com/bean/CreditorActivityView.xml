@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<DataSource Name="CreditorActivityView">
+  <Sql Select="creditor_actv_id, 
+		creditor_id, 
+		xact_id, 
+		amount, 
+		date_created, 
+		date_updated, 
+		user_id, 
+		ip_created, 
+		ip_updated" From="creditor_activity" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="CreditorActivityTable" DBName="creditor_activity" Updateable="true"/>
+  <ColAttr Name="CreditorActvId" DBName="creditor_actv_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="CreditorActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditorId" DBName="creditor_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="CreditorActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactId" DBName="xact_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="CreditorActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Amount" DBName="amount" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="CreditorActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="CreditorActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="CreditorActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="CreditorActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="IpCreated" DBName="ip_created" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="CreditorActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="IpUpdated" DBName="ip_updated" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="CreditorActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

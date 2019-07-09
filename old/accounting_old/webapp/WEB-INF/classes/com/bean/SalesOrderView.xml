@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<DataSource Name="SalesOrderView">
+  <Sql Select="so_id, 
+		customer_id, 
+		invoiced, 
+		order_total, 
+		date_created, 
+		date_updated, 
+		user_id, 
+		ip_created, 
+		ip_updated" From="sales_order" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="SalesOrderTable" DBName="sales_order" Updateable="true"/>
+  <ColAttr Name="SoId" DBName="so_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="SalesOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CustomerId" DBName="customer_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="SalesOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Invoiced" DBName="invoiced" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="SalesOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="OrderTotal" DBName="order_total" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="SalesOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="SalesOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="SalesOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="SalesOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="IpCreated" DBName="ip_created" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="SalesOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="IpUpdated" DBName="ip_updated" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="SalesOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

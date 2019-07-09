@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DataSource Name="XactCommentsView">
+  <Sql Select="xact_comment_id, 
+		xact_id, 
+		note, 
+		date_created, 
+		date_updated, 
+		user_id" From="xact_comments" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="XactCommentsTable" DBName="xact_comments" Updateable="true"/>
+  <ColAttr Name="XactCommentId" DBName="xact_comment_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="XactCommentsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactId" DBName="xact_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="XactCommentsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Note" DBName="note" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="XactCommentsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="XactCommentsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="XactCommentsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="XactCommentsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

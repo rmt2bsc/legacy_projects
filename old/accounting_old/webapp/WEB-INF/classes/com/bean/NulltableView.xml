@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<DataSource Name="NulltableView">
+  <Sql Select="nullcol" From="nulltable" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="NulltableTable" DBName="nulltable" Updateable="true"/>
+  <ColAttr Name="Nullcol" DBName="nullcol" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="NulltableTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

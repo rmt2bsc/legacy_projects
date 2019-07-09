@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DataSource Name="GeneralCodesGroupView">
+  <Sql Select="code_grp_id, 
+		description, 
+		date_created, 
+		date_updated, 
+		user_id, 
+		permcol" From="general_codes_group" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="GeneralCodesGroupTable" DBName="general_codes_group" Updateable="true"/>
+  <ColAttr Name="CodeGrpId" DBName="code_grp_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="GeneralCodesGroupTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="GeneralCodesGroupTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="GeneralCodesGroupTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="GeneralCodesGroupTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="GeneralCodesGroupTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Permcol" DBName="permcol" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="GeneralCodesGroupTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

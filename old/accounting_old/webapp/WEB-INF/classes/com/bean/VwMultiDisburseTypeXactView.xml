@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<DataSource Name="VwMultiDisburseTypeXactView">
+  <Sql Select="xact_id, 
+		xact_amount, 
+		posted_date, 
+		confirm_no, 
+		neg_instr_no, 
+		tender_id, 
+		tender_description, 
+		xact_type_id, 
+		xact_type_name, 
+		reason, 
+		xact_date, 
+		create_date, 
+		user_id, 
+		xact_catg_id, 
+		xact_type_item_xact_type_id, 
+		creditor_id, 
+		account_number, 
+		creditor_type_id, 
+		credit_limit" From="vw_multi_disburse_type_xact" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwMultiDisburseTypeXactTable" DBName="vw_multi_disburse_type_xact" Updateable="true"/>
+  <ColAttr Name="XactId" DBName="xact_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwMultiDisburseTypeXactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactAmount" DBName="xact_amount" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwMultiDisburseTypeXactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="PostedDate" DBName="posted_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwMultiDisburseTypeXactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ConfirmNo" DBName="confirm_no" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwMultiDisburseTypeXactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="NegInstrNo" DBName="neg_instr_no" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwMultiDisburseTypeXactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TenderId" DBName="tender_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwMultiDisburseTypeXactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TenderDescription" DBName="tender_description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwMultiDisburseTypeXactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeId" DBName="xact_type_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwMultiDisburseTypeXactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeName" DBName="xact_type_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwMultiDisburseTypeXactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Reason" DBName="reason" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwMultiDisburseTypeXactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactDate" DBName="xact_date" SqlType="date" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="VwMultiDisburseTypeXactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreateDate" DBName="create_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwMultiDisburseTypeXactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwMultiDisburseTypeXactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactCatgId" DBName="xact_catg_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwMultiDisburseTypeXactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeItemXactTypeId" DBName="xact_type_item_xact_type_id" SqlType="smallint" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwMultiDisburseTypeXactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditorId" DBName="creditor_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwMultiDisburseTypeXactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AccountNumber" DBName="account_number" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwMultiDisburseTypeXactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditorTypeId" DBName="creditor_type_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwMultiDisburseTypeXactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditLimit" DBName="credit_limit" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwMultiDisburseTypeXactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

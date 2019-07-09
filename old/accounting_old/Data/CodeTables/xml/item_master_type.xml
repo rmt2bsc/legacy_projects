@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<id>1</id>
+		<description>Service</description>
+		<date_created>2006-01-01 00:00:00.000</date_created>
+		<date_updated>2006-01-01 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>2</id>
+		<description>Merchandise</description>
+		<date_created>2006-01-01 00:00:00.000</date_created>
+		<date_updated>2006-01-01 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+</table>

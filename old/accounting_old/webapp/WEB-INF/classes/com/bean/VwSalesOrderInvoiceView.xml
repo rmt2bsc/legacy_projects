@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<DataSource Name="VwSalesOrderInvoiceView">
+  <Sql Select="sales_order_id, 
+		customer_id, 
+		invoiced, 
+		order_status_id, 
+		order_status_descr, 
+		sales_order_date, 
+		invoice_id, 
+		xact_id, 
+		invoice_no, 
+		invoice_date, 
+		order_total, 
+		acct_id, 
+		account_no, 
+		credit_limit, 
+		description" From="vw_sales_order_invoice" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwSalesOrderInvoiceTable" DBName="vw_sales_order_invoice" Updateable="true"/>
+  <ColAttr Name="SalesOrderId" DBName="sales_order_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwSalesOrderInvoiceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CustomerId" DBName="customer_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwSalesOrderInvoiceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Invoiced" DBName="invoiced" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwSalesOrderInvoiceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="OrderStatusId" DBName="order_status_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwSalesOrderInvoiceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="OrderStatusDescr" DBName="order_status_descr" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwSalesOrderInvoiceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="SalesOrderDate" DBName="sales_order_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwSalesOrderInvoiceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="InvoiceId" DBName="invoice_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwSalesOrderInvoiceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactId" DBName="xact_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwSalesOrderInvoiceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="InvoiceNo" DBName="invoice_no" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwSalesOrderInvoiceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="InvoiceDate" DBName="invoice_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwSalesOrderInvoiceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="OrderTotal" DBName="order_total" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwSalesOrderInvoiceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AcctId" DBName="acct_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwSalesOrderInvoiceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AccountNo" DBName="account_no" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwSalesOrderInvoiceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditLimit" DBName="credit_limit" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwSalesOrderInvoiceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwSalesOrderInvoiceTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

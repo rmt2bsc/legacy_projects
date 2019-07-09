@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<id>26</id>
+		<description>Available</description>
+		<date_created>2004-01-01 00:00:00.000</date_created>
+		<date_updated>2004-01-01 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>27</id>
+		<description>In Service</description>
+		<date_created>2004-01-01 00:00:00.000</date_created>
+		<date_updated>2004-01-01 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>28</id>
+		<description>Out of Service</description>
+		<date_created>2004-01-01 00:00:00.000</date_created>
+		<date_updated>2004-01-01 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>29</id>
+		<description>Replaced</description>
+		<date_created>2004-01-01 00:00:00.000</date_created>
+		<date_updated>2004-01-01 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>30</id>
+		<description>Cancelled</description>
+		<date_created>2004-01-01 00:00:00.000</date_created>
+		<date_updated>2004-01-01 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>31</id>
+		<description>Out of Stock</description>
+		<date_created>2004-01-01 00:00:00.000</date_created>
+		<date_updated>2004-01-01 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>32</id>
+		<description>Reordered</description>
+		<date_created>2004-01-01 00:00:00.000</date_created>
+		<date_updated>2004-01-01 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>33</id>
+		<description>Replenished</description>
+		<date_created>2004-01-01 00:00:00.000</date_created>
+		<date_updated>2004-01-01 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>34</id>
+		<description>Override Active</description>
+		<date_created>2004-01-01 00:00:00.000</date_created>
+		<date_updated>2004-01-01 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>35</id>
+		<description>Override Inactive</description>
+		<date_created>2004-01-01 00:00:00.000</date_created>
+		<date_updated>2004-01-01 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+</table>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DataSource Name="VwStateCountryView">
+  <Sql Select="state_id, 
+		state_code, 
+		country_id, 
+		state_name, 
+		stt_void_ind, 
+		country_name" From="vw_state_country" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwStateCountryTable" DBName="vw_state_country" Updateable="true"/>
+  <ColAttr Name="StateId" DBName="state_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwStateCountryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StateCode" DBName="state_code" SqlType="varchar" IsNull="false" JavaType="String" PrimaryKey="false" TableName="VwStateCountryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CountryId" DBName="country_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwStateCountryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StateName" DBName="state_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwStateCountryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="SttVoidInd" DBName="stt_void_ind" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwStateCountryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CountryName" DBName="country_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwStateCountryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

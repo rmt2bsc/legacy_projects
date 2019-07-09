@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<DataSource Name="ContentView">
+  <Sql Select="content_id, 
+		mime_type_id, 
+		image_data, 
+		text_data, 
+		app_code, 
+		module_code, 
+		filepath, 
+		filename, 
+		size, 
+		date_created, 
+		user_id" From="content" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ContentTable" DBName="content" Updateable="true"/>
+  <ColAttr Name="ContentId" DBName="content_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="ContentTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="MimeTypeId" DBName="mime_type_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="ContentTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ImageData" DBName="image_data" SqlType="long binary" IsNull="true" JavaType="Object" PrimaryKey="false" TableName="ContentTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TextData" DBName="text_data" SqlType="long varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ContentTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AppCode" DBName="app_code" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ContentTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ModuleCode" DBName="module_code" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ContentTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Filepath" DBName="filepath" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ContentTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Filename" DBName="filename" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ContentTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Size" DBName="size" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="ContentTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="ContentTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="ContentTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

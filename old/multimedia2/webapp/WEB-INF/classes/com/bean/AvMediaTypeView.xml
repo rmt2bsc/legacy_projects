@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<DataSource Name="AvMediaTypeView">
+  <Sql Select="media_type_id, 
+		description" From="av_media_type" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="AvMediaTypeTable" DBName="av_media_type" Updateable="true"/>
+  <ColAttr Name="MediaTypeId" DBName="media_type_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="AvMediaTypeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="AvMediaTypeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

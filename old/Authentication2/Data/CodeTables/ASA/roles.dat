@@ -1,0 +1,8 @@
+'1','admin','Administrator',,,
+'2','security','Security Manager',,,
+'3','power','Power User',,,
+'4','manager','General Manager',,,
+'5','user','Application User',,,
+'6','guest','Temporary User',,,
+'7','member','Membership User',,,
+'20','open','No User Security',,,

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<DataSource Name="VwUserGroupView">
+  <Sql Select="login_id, 
+		username, 
+		firstname, 
+		lastname, 
+		birth_date, 
+		ssn, 
+		user_description, 
+		start_date, 
+		termination_date, 
+		email, 
+		active, 
+		group_id, 
+		group_description" From="vw_user_group" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwUserGroupTable" DBName="vw_user_group" Updateable="true"/>
+  <ColAttr Name="LoginId" DBName="login_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwUserGroupTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Username" DBName="username" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserGroupTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Firstname" DBName="firstname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserGroupTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Lastname" DBName="lastname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserGroupTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BirthDate" DBName="birth_date" SqlType="date" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwUserGroupTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Ssn" DBName="ssn" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserGroupTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserDescription" DBName="user_description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserGroupTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StartDate" DBName="start_date" SqlType="date" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwUserGroupTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TerminationDate" DBName="termination_date" SqlType="date" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwUserGroupTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Email" DBName="email" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserGroupTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Active" DBName="active" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwUserGroupTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GroupId" DBName="group_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwUserGroupTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GroupDescription" DBName="group_description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserGroupTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

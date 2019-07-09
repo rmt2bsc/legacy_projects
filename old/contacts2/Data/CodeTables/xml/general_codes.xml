@@ -1,0 +1,1730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<id>18</id>
+		<group_id>5</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Single</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>19</id>
+		<group_id>5</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Married</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>20</id>
+		<group_id>5</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Divorced</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>2003-05-17 10:46:16.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>21</id>
+		<group_id>5</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Widowed</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>22</id>
+		<group_id>6</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Male</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>23</id>
+		<group_id>6</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Female</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>24</id>
+		<group_id>7</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Sole Proprietorship</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>25</id>
+		<group_id>7</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Partnership</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>26</id>
+		<group_id>7</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Corporation</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>30</id>
+		<group_id>8</group_id>
+		<shortdesc>Test</shortdesc>
+		<longdesc>Air Conditioning Contractors, Systems &amp; Balancing</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>2006-05-25 21:26:51.123</date_updated>
+		<user_id>admin</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>31</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Apartments</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>2005-11-13 19:39:06.700</date_updated>
+		<user_id>admin</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>32</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Appliances-Household-Major-Dealers</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>33</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Appliances-Household-Major-Sevice &amp; Repair</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>34</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Attorneys</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>36</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Automobile Dealers-New Cars</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>37</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Automobile Dealers-Used Cars</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>38</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Automobile Parts &amp; Supplies-New</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>39</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Automobile Parts &amp; Supplies-Uesd &amp; Rebuilt</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>41</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Automobile Repair and Service</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>42</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Bail Bond</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>2006-11-04 23:52:32.950</date_updated>
+		<user_id>admin</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>43</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Banks</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>44</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Beauty Salons</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>46</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Bicycles-Dealers-New</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>48</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Brak Service and Repair</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>49</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Building Contractors</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>54</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Caterers</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>55</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Cellular Telephone Equipment &amp; Service</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>56</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Chiroptactic Physicians-DC</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>57</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Cleaners-Clothes</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>58</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Clinics-Medical</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>59</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Computer Dealer - Hardware</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>60</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Computer Dealer - Software</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>61</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Computer - Contractor/Consultant</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>62</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Copy Machines &amp; Supplies</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>63</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Compact Discs, Records and Tapes</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>64</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Day Care &amp; Nursery Centers</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>65</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Dentists</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>66</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Door Operating Devices</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>67</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Draperies &amp; Curtains-Retail &amp; Custom Made</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>68</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Driving Instruction</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>69</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Electric Contractors</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>70</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Employment Agencies</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>71</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Employment Contractors-Temporary Help</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>72</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Fax Equipment &amp; Systems</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>73</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Fence Contractors</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>74</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Glorists-Retail</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>75</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Funeral Directors</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>76</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Furniture-Retail</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>77</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Glass-Plate, Window, Etc.</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>78</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Health Clubs</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>79</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Heating Contractors</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>80</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Hospitals</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>81</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Insurance</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>82</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Jewelers-Retail</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>83</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Landscape Contractors</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>84</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Lawn Maintenance</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>85</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Lawn Mowers-Retail</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>86</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Limousine Service</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>87</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Loans</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>88</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Locks &amp; Locksmiths</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>89</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Mortgages</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>90</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Motorcycles &amp; Motor Scooters-Dealers</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>91</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Movers</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>92</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Mufflers &amp; Exhaust Systems-Engine-Retail</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>93</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Musical Instruments-Dealers</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>94</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Nursing Homes</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>95</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Office Furniture &amp; Equipment-Dealers</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>96</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Optical Goods-Retail</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>97</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Optometrists-OD</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>98</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Paging &amp; Signaling Equipment and Systems</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>99</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Painting Contractors</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>100</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Pawnbrokers</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>101</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Pest Control Services</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>102</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Pet Shops</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>103</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Phamacies</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>104</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Photo Finishing-Retail</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>105</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Photographers-Portrait</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>106</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Physicians &amp; Surgeons, DO</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>107</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Physicians &amp; Surgeons, DPM-Podiatry (FT)</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>108</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Physicians &amp; Surgeons-MD</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>109</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Picture Frames-Dealers</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>110</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Plumbing-Drain &amp; Sewer Cleaning</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>111</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Printers</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>112</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Radiators-Automotive-Retail</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>113</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Real Estate</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>114</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Remodeling &amp; Repairing-Bldg Contractors</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>115</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Rental Service Stores &amp; Yards</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>116</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Restaurants</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>117</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Roofing Contractors</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>118</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Stereo Equipment Retail</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>119</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Security Alarm Systems</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>120</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Signs</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>121</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Sporting Goods-Retail</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>122</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Storage-Household &amp; Commercial</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>123</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Storage-Self Service</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>124</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Swimming Pool Contractors, DLRS &amp; DSGNRS</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>125</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Taxis</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>126</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Tax Return Preparation</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>127</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Telephone Equipment &amp; Sytems</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>128</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Television Service and Repair</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>129</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Tire Dealers-Retail</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>130</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Transmissions-Automobile</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>131</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Travel Agencies and Bureaus</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>132</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Tree Service</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>133</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Tuxedos</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>134</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Theatres</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>135</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Veterinarians</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>136</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Video Equipment</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>137</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Water Companies-Bottled, Bulk, Etc.</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>138</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Wedding Arragement Service</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>139</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Wrecker Service</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>140</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Utilities-Water</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>141</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Utilities-Gas</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>142</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Utilities-Telephone</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>143</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Utilities-Electric</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>145</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Music - Recording</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+		<permcol>Y</permcol>
+	</row>
+	<row>
+		<id>206</id>
+		<group_id>25</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Mother</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-18 00:00:00.000</date_created>
+		<date_updated>2002-06-18 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>207</id>
+		<group_id>25</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Father</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-18 00:00:00.000</date_created>
+		<date_updated>2002-06-18 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>208</id>
+		<group_id>25</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Brother</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-18 00:00:00.000</date_created>
+		<date_updated>2002-06-18 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>209</id>
+		<group_id>25</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Sister</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-18 00:00:00.000</date_created>
+		<date_updated>2002-06-18 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>210</id>
+		<group_id>25</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Grand Mother</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-18 00:00:00.000</date_created>
+		<date_updated>2002-06-18 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>211</id>
+		<group_id>25</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Grand Father</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-18 00:00:00.000</date_created>
+		<date_updated>2002-06-18 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>212</id>
+		<group_id>25</group_id>
+		<shortdesc>test</shortdesc>
+		<longdesc>Aunt</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-18 00:00:00.000</date_created>
+		<date_updated>2006-05-25 21:27:25.687</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>213</id>
+		<group_id>25</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Uncle</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-18 00:00:00.000</date_created>
+		<date_updated>2002-06-18 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>214</id>
+		<group_id>25</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Cousin</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-18 00:00:00.000</date_created>
+		<date_updated>2002-06-18 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>215</id>
+		<group_id>25</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Wife</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-18 00:00:00.000</date_created>
+		<date_updated>2002-06-18 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>216</id>
+		<group_id>25</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Husband</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-18 00:00:00.000</date_created>
+		<date_updated>2002-06-18 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>217</id>
+		<group_id>25</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Son</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-18 00:00:00.000</date_created>
+		<date_updated>2002-06-18 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>218</id>
+		<group_id>25</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Daughter</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-18 00:00:00.000</date_created>
+		<date_updated>2002-06-18 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>219</id>
+		<group_id>25</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Grand Daughter</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-18 00:00:00.000</date_created>
+		<date_updated>2002-06-18 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>220</id>
+		<group_id>25</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Grand Son</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-18 00:00:00.000</date_created>
+		<date_updated>2002-06-18 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>221</id>
+		<group_id>25</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Friend</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-18 00:00:00.000</date_created>
+		<date_updated>2002-06-18 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>222</id>
+		<group_id>25</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Son-In-Law</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-18 00:00:00.000</date_created>
+		<date_updated>2002-06-18 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>223</id>
+		<group_id>25</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Daughter-In-Law</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-18 00:00:00.000</date_created>
+		<date_updated>2002-06-18 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>224</id>
+		<group_id>25</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Mother-In-Law</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-18 00:00:00.000</date_created>
+		<date_updated>2002-06-18 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>225</id>
+		<group_id>25</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Father-In-Law</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-18 00:00:00.000</date_created>
+		<date_updated>2002-06-18 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>226</id>
+		<group_id>15</group_id>
+		<shortdesc>Black</shortdesc>
+		<longdesc>African American</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-19 00:00:00.000</date_created>
+		<date_updated>2002-06-19 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>227</id>
+		<group_id>15</group_id>
+		<shortdesc>White</shortdesc>
+		<longdesc>Caucasian</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-19 00:00:00.000</date_created>
+		<date_updated>2002-06-19 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>228</id>
+		<group_id>15</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Native Indian</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-19 00:00:00.000</date_created>
+		<date_updated>2002-06-19 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>229</id>
+		<group_id>15</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Asian Indian</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-19 00:00:00.000</date_created>
+		<date_updated>2002-06-19 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>230</id>
+		<group_id>15</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Chinese</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-19 00:00:00.000</date_created>
+		<date_updated>2002-06-19 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>231</id>
+		<group_id>15</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Japanese</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-19 00:00:00.000</date_created>
+		<date_updated>2002-06-19 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>232</id>
+		<group_id>15</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Korean</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-19 00:00:00.000</date_created>
+		<date_updated>2002-06-19 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>233</id>
+		<group_id>15</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Italian</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-19 00:00:00.000</date_created>
+		<date_updated>2002-06-19 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>234</id>
+		<group_id>15</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Spanish</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-19 00:00:00.000</date_created>
+		<date_updated>2002-06-19 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>235</id>
+		<group_id>15</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>French</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-19 00:00:00.000</date_created>
+		<date_updated>2002-06-19 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>236</id>
+		<group_id>15</group_id>
+		<shortdesc>Mexican</shortdesc>
+		<longdesc>Hispanic</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-19 00:00:00.000</date_created>
+		<date_updated>2005-02-07 16:06:27.293</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>237</id>
+		<group_id>15</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Mexican</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-19 00:00:00.000</date_created>
+		<date_updated>2002-06-19 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>238</id>
+		<group_id>15</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>German</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-19 00:00:00.000</date_created>
+		<date_updated>2002-06-19 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>239</id>
+		<group_id>15</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Russian</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-19 00:00:00.000</date_created>
+		<date_updated>2002-06-19 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>240</id>
+		<group_id>15</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>African</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-19 00:00:00.000</date_created>
+		<date_updated>2002-06-19 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>241</id>
+		<group_id>15</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Latin</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-19 00:00:00.000</date_created>
+		<date_updated>2002-06-19 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>242</id>
+		<group_id>15</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Cuban</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2002-06-19 00:00:00.000</date_created>
+		<date_updated>2002-06-19 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>243</id>
+		<group_id>26</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Mr</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2004-07-01 00:00:00.000</date_created>
+		<date_updated>2004-07-01 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>244</id>
+		<group_id>26</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Mrs</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2004-07-01 00:00:00.000</date_created>
+		<date_updated>2004-07-01 00:00:00.000</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>246</id>
+		<group_id>7</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Cooperation</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2005-02-07 14:28:15.857</date_created>
+		<date_updated>2005-02-07 14:28:15.857</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+	<row>
+		<id>247</id>
+		<group_id>8</group_id>
+		<shortdesc>NULL</shortdesc>
+		<longdesc>Test</longdesc>
+		<gen_ind_value>NULL</gen_ind_value>
+		<date_created>2005-02-07 16:05:44.140</date_created>
+		<date_updated>2005-02-07 16:05:44.140</date_updated>
+		<user_id>admin</user_id>
+		<permcol>NULL</permcol>
+	</row>
+</table>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DataSource Name="BatchLogView">
+  <Sql Select="id, 
+		bat_id, 
+		msg, 
+		batch_date, 
+		user_id" From="batch_log" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="BatchLogTable" DBName="batch_log" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="BatchLogTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BatId" DBName="bat_id" SqlType="varchar" IsNull="false" JavaType="String" PrimaryKey="false" TableName="BatchLogTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Msg" DBName="msg" SqlType="varchar" IsNull="false" JavaType="String" PrimaryKey="false" TableName="BatchLogTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BatchDate" DBName="batch_date" SqlType="timestamp" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="BatchLogTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="String" PrimaryKey="false" TableName="BatchLogTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

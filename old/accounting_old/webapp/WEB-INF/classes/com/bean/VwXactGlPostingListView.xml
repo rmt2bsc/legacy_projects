@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<DataSource Name="VwXactGlPostingListView">
+  <Sql Select="id, 
+		gl_account_id, 
+		gl_acct_name, 
+		xact_amount, 
+		xact_date, 
+		post_date, 
+		xact_type_id, 
+		xact_type_name, 
+		xact_category_id, 
+		xact_category_description, 
+		to_multiplier, 
+		from_multiplier, 
+		to_acct_type_id, 
+		to_acct_catg_id, 
+		from_acct_type_id, 
+		from_acct_catg_id, 
+		has_subsidiary, 
+		reason" From="vw_xact_gl_posting_list" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwXactGlPostingListTable" DBName="vw_xact_gl_posting_list" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwXactGlPostingListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GlAccountId" DBName="gl_account_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwXactGlPostingListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GlAcctName" DBName="gl_acct_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwXactGlPostingListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactAmount" DBName="xact_amount" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwXactGlPostingListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactDate" DBName="xact_date" SqlType="date" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="VwXactGlPostingListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="PostDate" DBName="post_date" SqlType="date" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwXactGlPostingListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeId" DBName="xact_type_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwXactGlPostingListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeName" DBName="xact_type_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwXactGlPostingListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactCategoryId" DBName="xact_category_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwXactGlPostingListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactCategoryDescription" DBName="xact_category_description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwXactGlPostingListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ToMultiplier" DBName="to_multiplier" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwXactGlPostingListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="FromMultiplier" DBName="from_multiplier" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwXactGlPostingListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ToAcctTypeId" DBName="to_acct_type_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwXactGlPostingListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ToAcctCatgId" DBName="to_acct_catg_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwXactGlPostingListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="FromAcctTypeId" DBName="from_acct_type_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwXactGlPostingListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="FromAcctCatgId" DBName="from_acct_catg_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwXactGlPostingListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="HasSubsidiary" DBName="has_subsidiary" SqlType="smallint" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwXactGlPostingListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Reason" DBName="reason" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwXactGlPostingListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

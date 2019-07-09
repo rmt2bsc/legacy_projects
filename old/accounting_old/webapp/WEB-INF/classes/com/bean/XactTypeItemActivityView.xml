@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<DataSource Name="XactTypeItemActivityView">
+  <Sql Select="xact_type_item_actv_id, 
+		xact_id, 
+		xact_item_id, 
+		amount, 
+		description, 
+		date_created, 
+		date_updated, 
+		user_id, 
+		ip_created, 
+		ip_updated" From="xact_type_item_activity" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="XactTypeItemActivityTable" DBName="xact_type_item_activity" Updateable="true"/>
+  <ColAttr Name="XactTypeItemActvId" DBName="xact_type_item_actv_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="XactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactId" DBName="xact_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="XactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactItemId" DBName="xact_item_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="XactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Amount" DBName="amount" SqlType="decimal" IsNull="false" JavaType="double" PrimaryKey="false" TableName="XactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="XactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="XactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="XactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="String" PrimaryKey="false" TableName="XactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="IpCreated" DBName="ip_created" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="XactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="IpUpdated" DBName="ip_updated" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="XactTypeItemActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

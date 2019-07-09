@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<DataSource Name="VwUserResourceAccessView">
+  <Sql Select="rsrc_id, 
+		resrc_name, 
+		resrc_url, 
+		resrc_desc, 
+		resrc_secured, 
+		rsrc_type_id, 
+		resrc_type_name, 
+		rsrc_subtype_id, 
+		host, 
+		resrc_subtype_name, 
+		resrc_subtype_desc, 
+		user_uid, 
+		username, 
+		user_firstname, 
+		user_lastname, 
+		user_active_status, 
+		user_email, 
+		user_group_id, 
+		user_group_name" From="vw_user_resource_access" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwUserResourceAccessTable" DBName="vw_user_resource_access" Updateable="true"/>
+  <ColAttr Name="RsrcId" DBName="rsrc_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwUserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ResrcName" DBName="resrc_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ResrcUrl" DBName="resrc_url" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ResrcDesc" DBName="resrc_desc" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ResrcSecured" DBName="resrc_secured" SqlType="smallint" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwUserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="RsrcTypeId" DBName="rsrc_type_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwUserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ResrcTypeName" DBName="resrc_type_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="RsrcSubtypeId" DBName="rsrc_subtype_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwUserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Host" DBName="host" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ResrcSubtypeName" DBName="resrc_subtype_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ResrcSubtypeDesc" DBName="resrc_subtype_desc" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserUid" DBName="user_uid" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwUserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Username" DBName="username" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserFirstname" DBName="user_firstname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserLastname" DBName="user_lastname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserActiveStatus" DBName="user_active_status" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwUserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserEmail" DBName="user_email" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserGroupId" DBName="user_group_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwUserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserGroupName" DBName="user_group_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwUserResourceAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

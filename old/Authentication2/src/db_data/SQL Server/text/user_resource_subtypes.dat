@@ -1,0 +1,8 @@
+1	3	RPC	Rempote Procedure Call	NULL	NULL	NULL
+2	3	CORBA	Common Object Request Broker Architecture	NULL	NULL	NULL
+3	3	COM	Component Object Model	NULL	NULL	NULL
+4	3	DCOM	Distributed Component Object Model	NULL	NULL	NULL
+5	3	RMI	Remote Method Invocation	NULL	NULL	NULL
+6	3	HTTPURL	Hyper Text Transfer Protocol Uniform Resource Locator	NULL	NULL	NULL
+7	3	SOA	Service Oriented Architecture (Web Services)	NULL	NULL	NULL
+8	3	SOCK	Sockets	NULL	NULL	NULL

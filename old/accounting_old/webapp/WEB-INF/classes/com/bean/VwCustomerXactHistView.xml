@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<DataSource Name="VwCustomerXactHistView">
+  <Sql Select="xact_id, 
+		customer_id, 
+		person_id, 
+		business_id, 
+		account_no, 
+		credit_limit, 
+		active, 
+		xact_amount, 
+		xact_date, 
+		xact_type_id, 
+		xact_subtype_id, 
+		reason, 
+		confirm_no, 
+		document_id, 
+		xact_type_name, 
+		customer_activity_id, 
+		customer_activity_amount" From="vw_customer_xact_hist" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwCustomerXactHistTable" DBName="vw_customer_xact_hist" Updateable="true"/>
+  <ColAttr Name="XactId" DBName="xact_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CustomerId" DBName="customer_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="PersonId" DBName="person_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessId" DBName="business_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AccountNo" DBName="account_no" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditLimit" DBName="credit_limit" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Active" DBName="active" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactAmount" DBName="xact_amount" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactDate" DBName="xact_date" SqlType="date" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeId" DBName="xact_type_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactSubtypeId" DBName="xact_subtype_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Reason" DBName="reason" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ConfirmNo" DBName="confirm_no" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DocumentId" DBName="document_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeName" DBName="xact_type_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CustomerActivityId" DBName="customer_activity_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CustomerActivityAmount" DBName="customer_activity_amount" SqlType="decimal" IsNull="false" JavaType="double" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

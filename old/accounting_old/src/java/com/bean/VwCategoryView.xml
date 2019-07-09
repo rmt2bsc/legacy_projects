@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<DataSource Name="VwCategoryView">
+  <Sql Select="accttypeid, 
+		accttypedescr, 
+		acctcatid, 
+		acctcatgdescr, 
+		date_created, 
+		date_updated, 
+		user_id" From="vw_category" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwCategoryTable" DBName="vw_category" Updateable="true"/>
+  <ColAttr Name="Accttypeid" DBName="accttypeid" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwCategoryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Accttypedescr" DBName="accttypedescr" SqlType="varchar" IsNull="false" JavaType="String" PrimaryKey="false" TableName="VwCategoryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Acctcatid" DBName="acctcatid" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwCategoryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Acctcatgdescr" DBName="acctcatgdescr" SqlType="varchar" IsNull="false" JavaType="String" PrimaryKey="false" TableName="VwCategoryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="VwCategoryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="VwCategoryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="String" PrimaryKey="false" TableName="VwCategoryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

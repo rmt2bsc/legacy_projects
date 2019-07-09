@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<id>S-1-001</id>
+		<gl_account_id>10</gl_account_id>
+		<db_table>Customer_Activity</db_table>
+		<description>Serves the accounts receivables GL Account</description>
+	</row>
+</table>

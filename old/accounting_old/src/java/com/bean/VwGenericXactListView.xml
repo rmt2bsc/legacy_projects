@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<DataSource Name="VwGenericXactListView">
+  <Sql Select="xact_id, 
+		xact_date, 
+		xact_date_str, 
+		xact_amount, 
+		xact_type_id, 
+		xact_subtype_id, 
+		xact_type_name, 
+		xact_reason, 
+		confirm_no, 
+		document_id, 
+		parent_entity_id, 
+		spec_xact_level1_id, 
+		spec_xact_level1_date, 
+		spec_xact_level2_id, 
+		spec_xact_level2_date, 
+		account_no, 
+		business_id, 
+		business_name, 
+		invoice_no" From="vw_generic_xact_list" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwGenericXactListTable" DBName="vw_generic_xact_list" Updateable="true"/>
+  <ColAttr Name="XactId" DBName="xact_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwGenericXactListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactDate" DBName="xact_date" SqlType="date" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="VwGenericXactListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactDateStr" DBName="xact_date_str" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwGenericXactListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactAmount" DBName="xact_amount" SqlType="decimal" IsNull="true" JavaType="double" PrimaryKey="false" TableName="VwGenericXactListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeId" DBName="xact_type_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwGenericXactListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactSubtypeId" DBName="xact_subtype_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwGenericXactListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeName" DBName="xact_type_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwGenericXactListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactReason" DBName="xact_reason" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwGenericXactListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ConfirmNo" DBName="confirm_no" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwGenericXactListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DocumentId" DBName="document_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwGenericXactListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ParentEntityId" DBName="parent_entity_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwGenericXactListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="SpecXactLevel1Id" DBName="spec_xact_level1_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwGenericXactListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="SpecXactLevel1Date" DBName="spec_xact_level1_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwGenericXactListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="SpecXactLevel2Id" DBName="spec_xact_level2_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwGenericXactListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="SpecXactLevel2Date" DBName="spec_xact_level2_date" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="VwGenericXactListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AccountNo" DBName="account_no" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwGenericXactListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessId" DBName="business_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwGenericXactListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessName" DBName="business_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwGenericXactListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="InvoiceNo" DBName="invoice_no" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwGenericXactListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

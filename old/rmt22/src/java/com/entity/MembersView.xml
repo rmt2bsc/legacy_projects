@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<DataSource Name="MembersView">
+  <Sql Select="member_id, 
+		firstname, 
+		lastname, 
+		company, 
+		email, 
+		addr1, 
+		addr2, 
+		city, 
+		state, 
+		zip, 
+		effective_date, 
+		end_date" From="members" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="MembersTable" DBName="members" Updateable="true"/>
+  <ColAttr Name="MemberId" DBName="member_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="MembersTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Firstname" DBName="firstname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="MembersTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Lastname" DBName="lastname" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="MembersTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Company" DBName="company" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="MembersTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Email" DBName="email" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="MembersTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Addr1" DBName="addr1" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="MembersTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Addr2" DBName="addr2" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="MembersTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="City" DBName="city" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="MembersTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="State" DBName="state" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="MembersTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Zip" DBName="zip" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="MembersTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EffectiveDate" DBName="effective_date" SqlType="date" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="MembersTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EndDate" DBName="end_date" SqlType="date" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="MembersTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

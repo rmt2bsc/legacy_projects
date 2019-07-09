@@ -1,0 +1,10 @@
+1	authentication	User authentication and authorization	1	2007-05-01 00:00:00.000	2008-03-06 15:34:11.000	admin
+2	common	External Test	1	2007-05-01 00:00:00.000	2008-03-06 22:44:14.000	admin
+3	contacts	Person and Business Contacts Application	1	2007-05-01 00:00:00.000	2007-05-01 00:00:00.000	admin
+4	project	Projects, Emplloyee, and Time Keeping Applicatin	0	2007-05-01 00:00:00.000	2007-05-01 00:00:00.000	admin
+5	sales	Sales Transaction, Invoicing and Cash Receipts Application	0	2007-05-01 00:00:00.000	2007-05-01 00:00:00.000	admin
+6	inventory	Inventory Application	0	2007-05-01 00:00:00.000	2007-05-01 00:00:00.000	admin
+7	disbursements	General and Creditor/Vendor Cash Disbursements Application	0	2007-05-01 00:00:00.000	2007-05-01 00:00:00.000	admin
+8	purchases	Vendor and Expense Credit Purchases Application	0	2007-05-01 00:00:00.000	2007-05-01 00:00:00.000	admin
+9	entertainment	Music and Video Management Application	0	2007-05-01 00:00:00.000	2007-05-01 00:00:00.000	admin
+10	rmt2app	RMT2 Business Systems Corp	1	2007-05-01 00:00:00.000	2007-05-01 00:00:00.000	admin

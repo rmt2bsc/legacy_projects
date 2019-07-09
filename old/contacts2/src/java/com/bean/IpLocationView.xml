@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<DataSource Name="IpLocationView">
+  <Sql Select="ip_from, 
+		ip_to, 
+		country_code, 
+		country_name, 
+		region, 
+		city, 
+		latitude, 
+		longitude, 
+		zipcode, 
+		timezone, 
+		ip_id" From="ip_location" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="IpLocationTable" DBName="ip_location" Updateable="true"/>
+  <ColAttr Name="IpFrom" DBName="ip_from" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="IpLocationTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="IpTo" DBName="ip_to" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="IpLocationTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CountryCode" DBName="country_code" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="IpLocationTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CountryName" DBName="country_name" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="IpLocationTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Region" DBName="region" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="IpLocationTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="City" DBName="city" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="IpLocationTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Latitude" DBName="latitude" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="IpLocationTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Longitude" DBName="longitude" SqlType="numeric" IsNull="true" JavaType="double" PrimaryKey="false" TableName="IpLocationTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Zipcode" DBName="zipcode" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="IpLocationTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Timezone" DBName="timezone" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="IpLocationTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="IpId" DBName="ip_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="IpLocationTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

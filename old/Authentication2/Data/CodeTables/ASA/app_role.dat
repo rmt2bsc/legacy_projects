@@ -1,0 +1,8 @@
+'1','2','1','comadmin','Common Admin','Administrator of  Common Application.',,'2008-03-16 23:00:10.000000','admin'
+'2','10','1','rmt2admin','RMT2 Admin','Adminstrator of RMT2 Webste',,,'admin'
+'3','1','1','authadmin','Security Admin','Security Administrator',,'2008-06-25 11:13:26.000000','admin'
+'6','2','2','comsecure','Common Security','Common Security Admnistatro',,,
+'7','1','5','SecureView','Security View Only','View-Only mode for typical users','2008-04-26 15:46:32.000000','2008-04-26 15:46:32.000000','admin'
+'8','3','1','conadmin','Contact Adminitstrator','Adminitstrator of the contacts application','2008-06-06 10:25:07.000000','2008-06-06 10:25:07.000000','admin'
+'10','12','1','acctadmin','Accounting Admin','Administrator for Account and Financial Transaction App','2008-06-30 21:43:52.000000','2008-07-24 01:50:23.000000','admin'
+'13','4','1','ProjAdm','Project Admin','Administrator of the project tracker application','2009-01-02 01:45:42.000000','2009-01-02 01:45:42.000000','admin'

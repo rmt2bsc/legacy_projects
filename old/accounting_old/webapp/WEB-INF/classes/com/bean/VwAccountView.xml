@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<DataSource Name="VwAccountView">
+  <Sql Select="acct_no, 
+		code, 
+		name, 
+		description, 
+		balance_type_id, 
+		accttypedescr, 
+		acctcatgdescr, 
+		date_created, 
+		date_updated, 
+		user_id, 
+		id, 
+		acct_type_id, 
+		acct_cat_id, 
+		acct_seq" From="vw_account" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwAccountTable" DBName="vw_account" Updateable="true"/>
+  <ColAttr Name="AcctNo" DBName="acct_no" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwAccountTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Code" DBName="code" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwAccountTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Name" DBName="name" SqlType="varchar" IsNull="false" JavaType="String" PrimaryKey="false" TableName="VwAccountTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="VwAccountTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BalanceTypeId" DBName="balance_type_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwAccountTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Accttypedescr" DBName="accttypedescr" SqlType="varchar" IsNull="false" JavaType="String" PrimaryKey="false" TableName="VwAccountTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Acctcatgdescr" DBName="acctcatgdescr" SqlType="varchar" IsNull="false" JavaType="String" PrimaryKey="false" TableName="VwAccountTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="timestamp" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="VwAccountTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="timestamp" IsNull="false" JavaType="java.util.Date" PrimaryKey="false" TableName="VwAccountTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="String" PrimaryKey="false" TableName="VwAccountTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Id" DBName="id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwAccountTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AcctTypeId" DBName="acct_type_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwAccountTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AcctCatId" DBName="acct_cat_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="VwAccountTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AcctSeq" DBName="acct_seq" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="VwAccountTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

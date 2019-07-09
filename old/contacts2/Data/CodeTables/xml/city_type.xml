@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<code>A</code>
+		<description>Airport Mail Facility (AMF)</description>
+	</row>
+	<row>
+		<code>B</code>
+		<description>Branch</description>
+	</row>
+	<row>
+		<code>C</code>
+		<description>Community Post Office (CPO)</description>
+	</row>
+	<row>
+		<code>D</code>
+		<description>Area Distribution Center (ASC)</description>
+	</row>
+	<row>
+		<code>E</code>
+		<description>Sectional Center Facility (SCF)</description>
+	</row>
+	<row>
+		<code>F</code>
+		<description>Delivery Distribution Center (DDC)</description>
+	</row>
+	<row>
+		<code>G</code>
+		<description>General Mailing Facility (GMF)</description>
+	</row>
+	<row>
+		<code>K</code>
+		<description>Bulk Mail Center (BMC)</description>
+	</row>
+	<row>
+		<code>M</code>
+		<description>Money Order Unit</description>
+	</row>
+	<row>
+		<code>1</code>
+		<description>Unknown</description>
+	</row>
+	<row>
+		<code>N</code>
+		<description>Non Postal Community Name</description>
+	</row>
+	<row>
+		<code>P</code>
+		<description>Post Office</description>
+	</row>
+	<row>
+		<code>S</code>
+		<description>Station</description>
+	</row>
+	<row>
+		<code>H</code>
+		<description>Unknown</description>
+	</row>
+	<row>
+		<code>U</code>
+		<description>Urbanization</description>
+	</row>
+	<row>
+		<code>J</code>
+		<description>Unknown</description>
+	</row>
+	<row>
+		<code>L</code>
+		<description>Unknown</description>
+	</row>
+	<row>
+		<code>R</code>
+		<description>Unknown</description>
+	</row>
+	<row>
+		<code>V</code>
+		<description>Unknown</description>
+	</row>
+	<row>
+		<code>W</code>
+		<description>Unknown</description>
+	</row>
+	<row>
+		<code>Z</code>
+		<description>Unknown</description>
+	</row>
+</table>
