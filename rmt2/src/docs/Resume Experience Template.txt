@@ -1,0 +1,73 @@
+<font face="Verdana" size="2"><b>Company Name goes here.  06/96 to 06/12/98 - </b></font>
+General Description goes here...
+<ul>
+	<li>
+	    <div>
+
+	    </div>
+	</li>
+	<li>
+	    <div>
+
+	    </div>
+	</li>
+	<li>
+	    <div>
+
+	    </div>
+	</li>	
+	<li>
+	    <div>
+	
+	    </div>
+	</li>
+	<li>
+	    <div>
+
+	    </div>
+	</li>
+	<li>
+	    <div>
+
+	    </div>
+	</li>		
+	<li>
+	    <div>
+	
+	    </div>
+	</li>
+	<li>
+	    <div>
+
+	    </div>
+	</li>
+	<li>
+	    <div>
+
+	    </div>
+	</li>	
+	<li>
+	    <div>
+	
+	    </div>
+	</li>
+	<li>
+	    <div>
+
+	    </div>
+	</li>
+	<li>
+	    <div>
+
+	    </div>
+	</li>			
+</ul>
+<blockquote>
+  <strong>Software:</strong>&nbsp;
+</blockquote>
+<blockquote>
+  <strong>Databases:</strong>&nbsp;
+</blockquote>
+<blockquote>
+  <strong>Platforms:</strong>&nbsp;
+</blockquote>

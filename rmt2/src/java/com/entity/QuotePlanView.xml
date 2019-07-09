@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<DataSource Name="QuotePlanView">
+  <Sql Select="quote_plan_id, 
+		quote_id, 
+		company_descr, 
+		website_purpose, 
+		target_audience, 
+		proposed_deadline, 
+		have_logo, 
+		need_logo, 
+		budget_range, 
+		total_pages, 
+		have_content_struct, 
+		content_details, 
+		need_content_struct, 
+		interest_websites, 
+		look_and_feel, 
+		func_critical, 
+		need_cms, 
+		comments" From="quote_plan" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="QuotePlanTable" DBName="quote_plan" Updateable="true"/>
+  <ColAttr Name="QuotePlanId" DBName="quote_plan_id" SqlType="integer" IsNull="true" JavaType="int" PrimaryKey="false" TableName="QuotePlanTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="QuoteId" DBName="quote_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="false" TableName="QuotePlanTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CompanyDescr" DBName="company_descr" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="QuotePlanTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="WebsitePurpose" DBName="website_purpose" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="QuotePlanTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TargetAudience" DBName="target_audience" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="QuotePlanTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ProposedDeadline" DBName="proposed_deadline" SqlType="timestamp" IsNull="true" JavaType="java.util.Date" PrimaryKey="false" TableName="QuotePlanTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="HaveLogo" DBName="have_logo" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="QuotePlanTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="NeedLogo" DBName="need_logo" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="QuotePlanTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BudgetRange" DBName="budget_range" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="QuotePlanTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TotalPages" DBName="total_pages" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="QuotePlanTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="HaveContentStruct" DBName="have_content_struct" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="QuotePlanTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ContentDetails" DBName="content_details" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="QuotePlanTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="NeedContentStruct" DBName="need_content_struct" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="QuotePlanTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="InterestWebsites" DBName="interest_websites" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="QuotePlanTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LookAndFeel" DBName="look_and_feel" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="QuotePlanTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="FuncCritical" DBName="func_critical" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="QuotePlanTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="NeedCms" DBName="need_cms" SqlType="smallint" IsNull="true" JavaType="int" PrimaryKey="false" TableName="QuotePlanTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Comments" DBName="comments" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="QuotePlanTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

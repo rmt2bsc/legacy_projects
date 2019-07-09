@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<DataSource Name="QuoteStatusView">
+  <Sql Select="quote_status_id, 
+		description" From="quote_status" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="QuoteStatusTable" DBName="quote_status" Updateable="true"/>
+  <ColAttr Name="QuoteStatusId" DBName="quote_status_id" SqlType="integer" IsNull="false" JavaType="int" PrimaryKey="true" TableName="QuoteStatusTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="true" JavaType="String" PrimaryKey="false" TableName="QuoteStatusTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

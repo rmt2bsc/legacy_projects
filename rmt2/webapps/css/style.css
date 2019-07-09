@@ -1,0 +1,56 @@
+body {margin:0; padding:0; background:#1E1E1E;}
+form {margin:0; padding:0}
+
+td, tr {font:14px/14px tahoma, arial, helvetica, sans-serif; color:#FFFFFF; vertical-align:top;  text-align:left;}
+
+.end{ color:#8F8F8F; text-decoration:none;}
+.end a{ color:#8F8F8F; text-decoration:none;}
+.end a:hover{ color:#8F8F8F; text-decoration:underline;}
+
+.end1{ color:#575757; text-decoration:none;}
+.end1 a{ color:#575757; text-decoration:none;}
+.end1 a:hover{ color:#575757; text-decoration:underline;}
+
+.top a{ color:#C2C2C2; text-decoration:none;}
+.top a:hover{ color:#C2C2C2; text-decoration:underline;}
+
+a{ color:#D4D174; text-decoration:underline; font-family:Arial, Helvetica, sans-serif;}
+a:hover{ color:#D4D174; text-decoration:none;}
+
+.ins a{ color:#FFFFFF; text-decoration:underline;}
+.ins a:hover{ color:#FFFFFF; text-decoration:none;}
+
+.smalltxt{font-size:10px; font-weight:normal;}
+.blocktext {font-family:Arial; font-size:12px; line-height:18px;}
+.blocktextsmall {font-family:Arial; font-size:11px; line-height:18px;}
+
+.strongbold{ color:#D4D174; font-weight:bold}
+strong{ color:#D4D174; font-weight:normal}
+strong a{ color:#D4D174; font-weight:normal; font-size:10px; text-transform:uppercase;  text-decoration:none}
+strong a:hover{ color:#D4D174; font-weight:normal; font-size:10px; text-transform:uppercase;  text-decoration:underline}
+
+.table_main{
+	border: 1px solid #CCCCCC;
+}
+.table_header {
+    background-image: url(../images/bgr_2.jpg);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #1E1E1E;
+	vertical-align: bottom;
+}
+
+
+.r1 ul { margin:0; padding:0; list-style:none;}
+.r1 li { background:url(images/ch_go.gif) center left no-repeat; margin:0 0 0 0; padding:0 0 0 18px;}
+.r1 li a {line-height:20px; color:#D4D174; text-decoration:underline;  background-position:left center;}
+.r1 li a:hover { text-decoration:none; color:#D4D174;}
+
+.form1 td input { width:133px; height:21px; border:1px solid #000000; background: #AFAD8C; padding:2px 0 1px 6px; color:#000000; font-size:11px; font-family:tahoma;}
+
+.form td input { width:191px; height:19px;  background: #FFFFFF; padding:1px 0 1px 6px; color:#000000; font-size:11px; font-family:tahoma;}
+.form td select { width:191px; height:19px;  background: #FFFFFF; padding:1px 0 1px 6px; color:#000000; font-size:11px; font-family:tahoma;}
+.form td textarea { width:191px; height:85px;  background: #FFFFFF; padding:2px 0 1px 6px; color:#000000; font-size:11px; font-family:tahoma; overflow:auto}
+
+
