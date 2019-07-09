@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:include schemaLocation="RMT2_Message_Header_Type.xsd"/>
+	<xsd:include schemaLocation="RMT2_Message_Reply_Status_Type.xsd"/>
+	<xsd:include schemaLocation="postal/Contacts_Postal_Codes_Type.xsd"/>
+	<xsd:include schemaLocation="misc/Misc_Types_Type.xsd"/>
+	<xsd:element name="RS_postal_search">
+		<xsd:complexType>
+		  <xsd:sequence>
+				<xsd:element name="header" type="header_type" minOccurs="1" nillable="false">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">Known as the Web Service Header.  This element is to be used as part of the request data.  Contains the data needed to identify and route message to its property service implementation.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="reply_status" type="reply_status_type" minOccurs="0" maxOccurs="1" nillable="false" >
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">The status of the content web service invocation.  The return code will be greater than or equal to zero indicating the total number of records retrieved.   Otherwise, a value less than zero is present when an error occurs.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			    <xsd:element name="zip_short" type="zipcode_type" minOccurs="0" maxOccurs="unbounded" nillable="true">
+			    	<xsd:annotation>
+			    		<xsd:documentation>List of zip code detail records in short format.</xsd:documentation>
+			    	</xsd:annotation>
+			    </xsd:element>
+				<xsd:element name="zip_full" type="zipcode_full_type" minOccurs="0" maxOccurs="unbounded" nillable="true">
+			    	<xsd:annotation>
+			    		<xsd:documentation>List of zip code detail records in full format.</xsd:documentation>
+			    	</xsd:annotation>
+			    </xsd:element>
+				<xsd:element name="country" type="country_type" minOccurs="0" maxOccurs="unbounded" nillable="true">
+			    	<xsd:annotation>
+			    		<xsd:documentation>List of country type records.</xsd:documentation>
+			    	</xsd:annotation>
+			    </xsd:element>
+				<xsd:element name="state" type="state_type" minOccurs="0" maxOccurs="unbounded" nillable="true">
+			    	<xsd:annotation>
+			    		<xsd:documentation>List of State/Province type records.</xsd:documentation>
+			    	</xsd:annotation>
+			    </xsd:element>
+				<xsd:element name="ip_data" type="ip_details" minOccurs="1" maxOccurs="1" nillable="true">
+			    	<xsd:annotation>
+			    		<xsd:documentation>Geographical details of an IP address.</xsd:documentation>
+			    	</xsd:annotation>
+			    </xsd:element>
+				<xsd:element name="timezone_data" type="timezone_type" minOccurs="0" maxOccurs="unbounded" nillable="true">
+			    	<xsd:annotation>
+			    		<xsd:documentation>List of Timezone records.</xsd:documentation>
+			    	</xsd:annotation>
+			    </xsd:element>
+				<xsd:element name="pagination_info" type="pagination_type" minOccurs="1" maxOccurs="1" nillable="false"/>
+
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

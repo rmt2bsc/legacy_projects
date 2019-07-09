@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+	<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:include schemaLocation="RMT2_Message_Header_Type.xsd"/>
+	<xsd:include schemaLocation="postal/Contacts_Postal_Codes_Type.xsd"/>
+	<xsd:element name="RQ_postal_search">
+		<xsd:complexType>
+			<xsd:annotation>
+				<xsd:documentation>Request one or more records from the Country/State/Province data source.</xsd:documentation>
+			</xsd:annotation>
+
+			<xsd:sequence>
+				<xsd:element name="header" type="header_type" minOccurs="1" nillable="false">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">Known as the Web Service Header.  This element is to be used as part of the request data.  Contains the data needed to identify and route message to its property service implementation.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+
+				<xsd:element name="postal_criteria">
+					<xsd:complexType>
+						<xsd:choice minOccurs="1" maxOccurs="1">
+							<xsd:element name="zipcode" type="zipcode_criteria_type" minOccurs="1" maxOccurs="1" nillable="false">
+								<xsd:annotation>
+									<xsd:documentation xml:lang="en">The selection criteria used to search for zip code records.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="country" type="country_criteria_type" minOccurs="1" maxOccurs="1" nillable="false">
+								<xsd:annotation>
+									<xsd:documentation xml:lang="en">The selection criteria used to search for country records.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="province" type="states_criteria_type" minOccurs="1" maxOccurs="1" nillable="false">
+								<xsd:annotation>
+									<xsd:documentation xml:lang="en">The selection criteria used to search for zip code records.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="ip_addr" type="ip_criteria_type" minOccurs="1" maxOccurs="1" nillable="false">
+								<xsd:annotation>
+									<xsd:documentation xml:lang="en">The selection criteria used to search for IP records.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="timezone" type="timezone_criteria_type" minOccurs="1" maxOccurs="1" nillable="false">
+								<xsd:annotation>
+									<xsd:documentation xml:lang="en">The selection criteria used to search for Time Zone records.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
