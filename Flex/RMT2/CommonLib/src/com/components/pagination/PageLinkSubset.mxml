@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:HBox xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:pagination="com.components.pagination.*" 
+	                                               initialize="initListener(event)" 
+	                                               creationComplete="creationCompleteListener(event)">
+	
+	 <mx:Metadata>
+   		[Event (name="newPageRequest", type="com.components.pagination.PaginationPageRequestEvent")]
+   </mx:Metadata>
+   
+	<mx:Script>
+		<![CDATA[
+			import com.util.RMT2DataProviderUtility;
+			import mx.collections.ArrayCollection;
+			import mx.core.Application;
+			import mx.events.ItemClickEvent;
+			import mx.binding.utils.ChangeWatcher;
+			import mx.events.PropertyChangeEvent;
+			  
+			  private var prevPageGroup : int;
+			  
+			  private var pageMetrics : PaginationData;
+			  
+			  
+			  private function initListener(e : Event) : void {
+				Application.application.addEventListener(ResetPaginationComponentEvent.EVENT_NAME, this.resetListener, true);
+				Application.application.addEventListener(PaginationMetricChangeEvent.EVENT_NAME, this.pageMetricsChangeListener);
+				this.prevPageGroup = -1;
+				return;
+			}
+			
+			private function creationCompleteListener(e : Event) : void {
+				return;
+			}
+			
+			
+			/**
+			 * Handles any PaginationData changes coming from the parent.
+			 */
+			private function pageMetricsChangeListener(e : PaginationMetricChangeEvent) : void {
+				this.pageMetrics = e.pageMetrics;
+				this.drawPageLinks();
+				
+				// Hignlight selectec Page number.
+				var provideUtil : RMT2DataProviderUtility = new RMT2DataProviderUtility();
+				var selectedItemNdx : int = provideUtil.getNavBarItemIndex(this.pageLinks, new String(this.pageMetrics.curPage));
+				this.callLater(provideUtil.turnOnSelectedNavBarItem, [this.pageLinks, selectedItemNdx]);
+			}
+
+			/**
+			 * Draws the individual page links if necessary.
+			 */			
+			private function drawPageLinks() : void {
+				// Get the page group that the current page number will be assigned. 
+				// The page group value will be zero based and in most cases, the result will 
+				// be a decimal in which the most significant number will indicate the actual 
+				// page group.
+				var targetPageGroup : int = this.pageMetrics.curPage / this.pageMetrics.maxPagesPerGroup;
+				
+				// Indicator for determining if the previous state of the UI is an 
+				// emtyp result set or has been reset. 
+				var firstTime : Boolean = true;
+
+				// Do not rebuild links if the current page is the last page of the 
+				// current page set.
+				if (this.pageMetrics.curPage % this.pageMetrics.maxPagesPerGroup == 0) {
+					if (this.prevPageGroup == targetPageGroup) {
+						//  This appears to be a request to move to teh last page of the previous  
+						//  page set.  Decrement the target page group and continue evaulation.
+						targetPageGroup--;
+					}
+					else {
+						// This appears to be a request to move to the last page of the current page set.
+						// Indicate that the last LinkBar item is selected.
+						return;
+					}
+				}
+				
+				// Do not rebuild links if the current page exists within the current page set.
+				if (this.prevPageGroup == targetPageGroup) {
+					return;
+				}
+					
+				this.pageLinks.removeAllChildren();
+				var links : Array = new Array();
+				
+				// Build each page link where the text of the label is the page number.
+				// Each page number is calculated by multiplying the value of the 
+				// target page group by the allowable maximum pages per group.   Since 
+				// the target page group is zero based, we will need to add the loop 
+				// index to the group's current page number in order to display the
+				// page number accurately.
+				for (var ndx : int = 1; ndx <= this.pageMetrics.maxPagesPerGroup; ndx++) {
+					firstTime = false;
+					var pageNdx : int =  (targetPageGroup * this.pageMetrics.maxPagesPerGroup) + ndx;
+					links.push({label : pageNdx});
+					
+					// Do not add any more pages to the Array if we have reached the last page 
+					// of the dataset regardless of what iteration we are currently on.
+					if (pageNdx >= this.pageMetrics.totalPages) {
+						break;
+					}
+				}
+				if (!firstTime) {
+					this.prevPageGroup = targetPageGroup;
+					this.pageLinks.dataProvider = links;	
+				}
+			}
+			
+			/**
+			 * Sends a reqeust to the parent for a new page.
+			 */
+			private function requestNewPage(e : ItemClickEvent) : void {
+				var newPageNo : int = parseInt(e.label);
+				var evt : PaginationPageRequestEvent = new PaginationPageRequestEvent(PaginationPageRequestEvent.EVENT_NAME);
+				evt.newPage = newPageNo;
+				this.pageMetrics.curPage = newPageNo;
+				this.dispatchEvent(evt);	
+			}
+			
+			/**
+			 * Resets the UI component  
+			 */
+			private function resetListener(e : ResetPaginationComponentEvent) : void {
+				this.prevPageGroup = -1;
+				return;
+			}
+			
+		]]>
+	</mx:Script>
+	
+	<mx:LinkBar id="pageLinks" horizontalGap="2" width="100%" itemClick="requestNewPage(event)"/>
+	
+</mx:HBox>

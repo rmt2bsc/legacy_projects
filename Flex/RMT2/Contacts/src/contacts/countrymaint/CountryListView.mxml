@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:List xmlns:mx="http://www.adobe.com/2006/mxml"
+	     dataProvider="{this.xmlList}"
+	     creationComplete="setupListener(event)"
+	     itemClick="itemClickListener(event)">
+	
+	
+    <mx:Metadata>
+    	[Event(name="displayCountryDetails", type="contacts.countrymaint.events.DisplayCountryDetailsEvent")]
+    </mx:Metadata>
+    
+    <mx:Script>
+    	<![CDATA[
+    		import mx.core.Application;
+    		import contacts.countrymaint.events.DisplayCountryDetailsEvent;
+    		import com.util.RMT2Utility;
+    		import contacts.countrymaint.events.NewCountryEvent;
+    		import contacts.countrymaint.valueobjects.Country;
+    		import com.event.UpdateListComponentDataEvent;
+    		import mx.collections.XMLListCollection;
+    		import mx.events.ListEvent;
+    		
+    		private function setupListener(e : Event) : void {
+    			Application.application.addEventListener(UpdateListComponentDataEvent.EVENT_NAME, updateListSelectedItemListener);
+				return;
+			}
+			
+			
+    		private function itemClickListener(e : ListEvent) : void {
+    			var item : XML = this.selectedItem as XML;
+    			var evt : DisplayCountryDetailsEvent = new DisplayCountryDetailsEvent(DisplayCountryDetailsEvent.EVENT_NAME, true);
+    			var c : Country = new Country();
+    			c.countryId = int(item.country_id);
+				c.countryName = item.country_name;
+				c.code = item.country_code;
+    			evt.model = c;
+    			evt.itemIndex = this.selectedIndex;
+    			this.dispatchEvent(evt); 
+    		}
+    		
+    		private function updateListSelectedItemListener(e : UpdateListComponentDataEvent) : void {
+    			var c : Country = e.updateData as Country;
+    			var ndx : int = 0;
+    			if (e.isNew) {
+    				this.newXmlModel.country_id = c.countryId;
+	    			this.newXmlModel.country_name = c.countryName;
+	    			this.newXmlModel.country_code = c.code;		
+    				this.dataProvider.addItem(this.newXmlModel);
+    				ndx = this.dataProvider.length - 1;
+    				this.scrollToIndex(ndx);
+    				this.selectedIndex = ndx;
+    			}
+    			else if (e.isDeleted) {
+    				this.dataProvider.removeItemAt(this.selectedIndex);
+    			}
+    		}
+    		
+    		
+    	]]>
+    </mx:Script>
+
+	<mx:XML id="newXmlModel" source="contacts/countrymaint/model/CountryListModel.xml"/>
+ 	<mx:XMLListCollection id="xmlList"/>
+ 	
+</mx:List>

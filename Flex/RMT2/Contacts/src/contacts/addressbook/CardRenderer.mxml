@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml" 
+	     width="200" 
+	     height="155" 
+	     backgroundColor="white" 
+	     verticalAlign="top" 
+	     borderStyle="outset"
+	     paddingLeft="6" 
+	     paddingTop="4" 
+	     paddingRight="8" 
+	     paddingBottom="4"
+         verticalGap="0"
+	     dataChange="init()"
+	     rollOver="rollOverHandler(event)"
+	     rollOut="rollOutHandler(event)"
+	     toolTip="Click card to view details">
+	     
+	
+    <mx:Script>
+    	<![CDATA[
+    		import com.util.RMT2Utility;
+    		[Bindable]
+    		private var contactName : String = null;
+    		[Bindable]
+    		private var addr : String = null;
+    		[Bindable]
+    		private var email : String = null;
+    		[Bindable]
+    		private var home : String = null;
+    		[Bindable]
+    		private var work : String = null;
+    		[Bindable]
+    		private var cell : String = null;
+    		[Bindable]
+    		private var bus : String = null;
+    		
+    		
+    		public function init() : void {
+    			var value : Object = this.data;
+    			if (value == null) {
+    				return;
+    			}
+    			
+    			// If we are dealing with an empty list result set, then indicate that no 
+    			// records were found and bypass showing any contact card structures.
+    			if (value.hasOwnProperty("empty")) {
+    				this.addr = null;
+    				this.contactName =  value.contact_name;
+    				this.txtName.setStyle("color", "red");
+    				this.setStyle("borderStyle", "none");
+    				return;
+    			}
+    			else {
+    				try {
+    					this.txtName.setStyle("color", "black");
+    					this.setStyle("borderStyle", "outset");	
+    				}
+    				catch(e : Error) {
+    					// DO Nothing
+    				}
+    			}
+    			
+   				this.contactName = value.contact_name;	
+    			this.addr = this.buildAddress(value.address);
+    			if (this.addr == null) {
+    				this.addr = "";
+    			}
+
+				var phone : String;
+				if (value.address.phone_home != "") {
+					phone = value.address.phone_home;
+					phone = RMT2Utility.formatPhoneNumber(phone);
+					this.addPhone(phone, "Home");
+//    				if (this.addr.length > 0) {
+//    					this.addr += "&#10;Home: " + phone;
+//    				}
+//    				else {
+//    					this.addr = "Home: " + phone
+//    				}
+    			}
+				
+				if (value.address.phone_work != "") {
+					phone = value.address.phone_work;
+					phone = RMT2Utility.formatPhoneNumber(phone);
+					this.addPhone(phone, "Work");
+//    				if (this.addr.length > 0) {
+//    					this.addr += "&#10;Work: " + value.address.phone_work
+//    				}
+//    				else {
+//    					this.addr = "Work: " + value.address.phone_work
+//    				}
+    			}
+    			if (value.address.phone_cell != "") {
+    				phone = value.address.phone_cell;
+					phone = RMT2Utility.formatPhoneNumber(phone);
+					this.addPhone(phone, "Mobile");
+//    				if (this.addr.length > 0) {
+//    					this.addr += "&#10;Mobile: " + value.address.phone_cell
+//    				}
+//    				else {
+//    					this.addr = "Mobile: " + value.address.phone_cell
+//    				}
+    			}
+    			if (value.address.phone_main != "") {
+    				phone = value.address.phone_main;
+					phone = RMT2Utility.formatPhoneNumber(phone);
+					this.addPhone(phone, "Business");
+//    				if (this.addr != null && this.addr.length > 0) {
+//    					this.addr += "&#10;Business: " + value.address.phone_main
+//    				}
+//    				else {
+//    					this.addr = "Business: " + value.address.phone_main
+//    				}
+    			}
+    		}
+    		
+ 			
+ 			private function addPhone(phone : String, label : String) : void {
+ 				if (this.addr.length > 0) {
+    				this.addr += "&#10;" + label + ": " + phone;
+				}
+				else {
+					this.addr = label + ": " + phone
+				}
+ 			}
+    		
+    		private function buildAddress(addrXml : Object) : String {
+    			if (addrXml == null) {
+    				return null;
+    			}
+    			
+    			var address : String = null;
+    			if (addrXml.addr1 != "") {
+    				address = addrXml.addr1;
+    			}
+    			if (addrXml.addr2 != "") {
+    				if (address.length > 0) {
+    					address += "&#10;" + addrXml.addr2;
+    				}
+    				else {
+    					address = addrXml.addr2;	
+    				}
+    			}
+    			if (addrXml.addr3 != "") {
+    				if (address.length > 0) {
+    					address += "&#10;" + addrXml.addr3;
+    				}
+    				else {
+    					address + addrXml.addr3;	
+    				}
+    			}
+    			if (addrXml.addr4 != "") {
+    				if (address.length > 0) {
+    					address += "&#10;" + addrXml.addr4;
+    				}
+    				else {
+    					address + addrXml.addr4;	
+    				}
+    			}
+    			var postalInfo : String = this.buildZipInfo(addrXml.zip);
+    			if (postalInfo != "") {
+    				if (address == null) {
+    					address = postalInfo;
+	    			}
+	    			else {
+	    				address += "&#10;" + postalInfo;
+	    			}	
+    			}
+    			return address;
+    		}
+    		
+    		private function buildZipInfo(zipXml : Object) : String {
+    			var postalInfo : String = "";
+    			if (zipXml == null || zipXml == "") {
+    				return postalInfo;
+    			}
+				if (zipXml.city != "") {
+					postalInfo = zipXml.city;
+				}    			
+				if (zipXml.state != "") {
+					if (postalInfo.length > 0) {
+						postalInfo += ", " + zipXml.state;
+					}
+					else {
+						postalInfo = zipXml.state;
+					}
+				}
+				if (zipXml.zipcode != "" && zipXml.zipcode != "0") {
+					if (postalInfo.length > 0) {
+						postalInfo += " " + zipXml.zipcode;
+					}
+					else {
+						postalInfo = zipXml.zipcode;
+					}
+				}
+
+				return postalInfo;
+    		}
+    		
+    		private function rollOverHandler(event:MouseEvent):void   {
+//	            this.setStyle("borderColor", "#CCCCCC");
+	            this.setStyle("dropShadowEnabled", true);
+				this.setStyle("backgroundColor", "#f3e490");	            
+//	            buttons.visible = true;
+        	}
+
+	        private function rollOutHandler(event:MouseEvent):void {
+//	            this.setStyle("borderColor", "#FFFFFF");
+	            this.setStyle("dropShadowEnabled", false);
+	            this.setStyle("backgroundColor", "white");
+//	            buttons.visible = false;
+	        }
+	        
+	        private function showDetails(e : Event):void {
+	        	// Do nothing...Allow the ListEvent of the TileList's currently clicked item to be handled.
+	        	
+	        	return;
+	        }
+	        
+    	]]>
+    </mx:Script>
+    
+    <mx:Text id="txtName" text="{this.contactName}" width="100%" fontWeight="bold" textAlign="left"/>
+	<mx:Text id="txtAddress" width="100%" textAlign="left" htmlText="{this.addr}"/>
+	
+	<mx:HBox id="buttons" width="100%" visible="false" verticalGap="10" paddingRight="8" right="8" bottom="10" horizontalAlign="right" verticalAlign="bottom">
+        <mx:Button id="bDetails" icon="@Embed(&apos;assets/images/note_edit.png&apos;)" width="30" toolTip="View Details" click="showDetails(event)"/>
+    </mx:HBox>
+
+		
+</mx:VBox>
+

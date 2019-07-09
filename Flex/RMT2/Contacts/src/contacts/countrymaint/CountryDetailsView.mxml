@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml"
+	     initialize="initListener(event)"
+	     creationComplete="setupListener(event)">
+	     
+	 <mx:states>
+	 	 <mx:State name="{STATE_ADD}">
+	 	 	<mx:SetProperty target="{lTitle}" name="text" value="New Country Details"/>
+	 	 	<mx:SetProperty target="{CountryId}" name="text" value="0"/>
+	 	 	<mx:SetProperty target="{Name}" name="text" value=""/>
+	 	 	<mx:SetProperty target="{Code}" name="text" value=""/>
+	 	 </mx:State>
+	 	 
+	 	 <mx:State name="{STATE_EMPTY}">
+	 	    <mx:SetProperty target="{lTitle}" name="text" value="Country Details Not Available"/>
+	 	    <mx:RemoveChild target="{this.container}"/>
+	 	 </mx:State>
+	 </mx:states>
+	
+	 <mx:Metadata>
+    	[Event(name="updateFormChanges", type="contacts.countrymaint.events.UpdateFormChangesEvent")]
+    	[Event(name="updateListComponentDataEvent", type="com.event.UpdateListComponentDataEvent")]
+    </mx:Metadata>
+    
+	<mx:Script>
+		<![CDATA[
+			import mx.core.Application;
+			import contacts.countrymaint.events.CountrySelectedEvent;
+			import contacts.countrymaint.events.NewCountryEvent;
+			import com.event.UpdateListComponentDataEvent;
+			import com.valueobject.SessionTokenVO;
+			import com.event.SessionTokenEvent;
+			import contacts.countrymaint.events.DisplayCountryDetailsEvent;
+			import com.event.UpdateReplyEvent;
+			import com.event.UpdateFormChangesEvent;
+			import contacts.countrymaint.valueobjects.Country;
+			import com.util.RMT2Utility;
+			import com.event.LoadFormChangesEvent;
+			
+			
+			private const STATE_ADD : String = "AddState";
+			
+			private const STATE_EMPTY : String = "EmptyState";
+			
+			
+			
+			private var session : SessionTokenVO;
+			
+			private var deleteTrans : Boolean;
+						
+			[Bindable]
+			private var detailData : Country;
+			
+			[Bindable]
+    		private var msg : String;
+    		
+    		private var selectedIndex : int;
+    		
+			
+			private function initListener(e : Event) : void {
+				// Get Session 
+				var event : SessionTokenEvent = new SessionTokenEvent(SessionTokenEvent.EVENT_NAME, false);
+				this.dispatchEvent(event);
+				this.session = event.getToken();	
+				
+				Application.application.addEventListener(NewCountryEvent.EVENT_NAME, addListener);
+				Application.application.addEventListener(UpdateReplyEvent.EVENT_NAME, updateReplyListener);
+				Application.application.addEventListener(DisplayCountryDetailsEvent.EVENT_NAME, displayCountryDetailsListener);	
+    		}
+    		
+    		
+    		private function setupListener(e : Event) : void {
+    			this.detailData = new Country();
+				if (this.detailData == null) {
+					this.currentState = STATE_EMPTY;
+				}
+				return;
+			}
+			
+			
+			
+			private function displayCountryDetailsListener(e : DisplayCountryDetailsEvent) : void {
+				this.detailData = e.model;
+				this.selectedIndex = e.itemIndex;
+				this.currentState = "";
+				this.msg = "";
+			}
+			
+			
+			private function saveChangesListener(e : Event) : void {
+				RMT2Utility.clearProperties(this.formModel);
+				RMT2Utility.getFormData(this.formModel, this);
+				var evt : UpdateFormChangesEvent = new UpdateFormChangesEvent(UpdateFormChangesEvent.EVENT_NAME);
+				evt.formData = this.formModel;
+				if (this.formModel.countryId == "0") {
+					evt.mode = UpdateFormChangesEvent.MODE_ADD;
+				}
+				else {
+				    evt.mode = UpdateFormChangesEvent.MODE_UPDATE;
+				}
+				this.dispatchEvent(evt);
+				return;
+			}
+			
+			
+			private function deleteListener(e : Event) : void { 
+				RMT2Utility.clearProperties(this.formModel);
+				RMT2Utility.getFormData(this.formModel, this);
+				var evt : UpdateFormChangesEvent = new UpdateFormChangesEvent(UpdateFormChangesEvent.EVENT_NAME);
+				evt.formData = this.formModel;
+			    evt.mode = UpdateFormChangesEvent.MODE_DELETE;
+			    evt.itemIndex = this.selectedIndex;  
+				this.dispatchEvent(evt);
+				this.deleteTrans = true;
+				return;
+			}
+			
+			private function addListener(e : Event) : void {
+				this.currentState = STATE_ADD;
+			}		
+			
+			
+			private function updateReplyListener(e : UpdateReplyEvent) : void { 
+				this.msg = e.msg;
+				var evt : UpdateListComponentDataEvent = new UpdateListComponentDataEvent(UpdateListComponentDataEvent.EVENT_NAME, true);
+				var c : Country = new Country();
+				evt.isNew = false;
+				if (this.CountryId.text == "0") {
+					this.CountryId.text = String(e.code);
+					evt.isNew = true;
+				}
+				evt.isDeleted = this.deleteTrans;
+				this.deleteTrans = false;
+				c.countryId = int(this.CountryId.text);
+				c.countryName = this.Name.text;
+				c.code = this.Code.text;
+				evt.updateData = c;
+				this.dispatchEvent(evt);
+			}
+			
+		]]>
+	</mx:Script>
+	
+	<mx:Model id="formModel" source="contacts/countrymaint/model/SrvcParms_Country.xml"/>
+	
+    <mx:Label id="lTitle" text="Country Details" fontSize="13" fontWeight="bold"/>
+    <mx:VBox id="container">
+        <mx:Form id="fDetails" borderStyle="outset">
+			<mx:FormItem id="fiKeyLabel" label="Country Id:" styleName="formItemHead"> 
+				<mx:Text id="CountryId" text="{this.detailData.countryId}" styleName="formInputItem"/>
+		   </mx:FormItem>
+		   <mx:FormItem id="fiDescription" label="Name:" styleName="formItemHead" >
+				<mx:TextInput id="Name" text="{this.detailData.countryName}" styleName="formInputItem" width="240" tabIndex="1"/>
+		   </mx:FormItem>
+		    <mx:FormItem id="fiCode" label="Code:" styleName="formItemHead" >
+				<mx:TextInput id="Code" text="{this.detailData.code}" styleName="formInputItem" width="40" tabIndex="2"/>
+		   </mx:FormItem>
+		</mx:Form>
+		
+		<mx:Text id="txtMsg" text="{this.msg}"/>
+		<mx:Spacer id="spacer" height="20"/>
+		<mx:HBox id="buttonContainer" width="85%" horizontalAlign="left">
+			<mx:LinkButton id="bSave" label="Save Changes" click="this.saveChangesListener(event)" tabIndex="3"/>
+			<mx:LinkButton id="bAdd" label="Add" click="this.addListener(event)" tabIndex="4"/>
+			<mx:LinkButton id="bDelete" label="Delete" click="this.deleteListener(event)" tabIndex="5"/>
+		</mx:HBox>	
+    </mx:VBox>
+	
+</mx:VBox>

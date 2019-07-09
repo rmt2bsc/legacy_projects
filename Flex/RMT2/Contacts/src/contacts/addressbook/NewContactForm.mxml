@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml"
+	            title="Add Contact" 
+	            showCloseButton="true"
+	            layout="horizontal" 
+	            fontFamily="Verdana"
+	            opaqueBackground="#CCCCCC"
+	            creationCompleteEffect="Rotate"
+	            removedEffect="Rotate"
+	            initialize="initListener(event)"
+				creationComplete="setUpListener(event)"	  
+				close="closeListener(event)"           
+	            xmlns:addressbook="contacts.addressbook.*">
+	            
+	<mx:Script>
+		<![CDATA[
+			import contacts.addressbook.events.UpdateContactEvent;
+			import contacts.addressbook.events.DisplayContactDetailsEvent;
+			import com.valueobject.SessionTokenVO;
+			import com.event.SessionTokenEvent;
+			import mx.managers.PopUpManager;
+		
+		    [Bindable]
+    	    public var session : SessionTokenVO;
+    	    
+    	    
+			private function initListener(e : Event) : void {
+				this.addEventListener(SessionTokenEvent.EVENT_NAME, getSessionTokenListener, true);
+				return;
+			}
+			
+			private function getSessionTokenListener(e : SessionTokenEvent) : void {
+				e.setToken(this.session);
+			}
+			
+			private function setUpListener(e : Event) : void {
+				// Instruct details component to display itself as a new contact.
+				var evt : DisplayContactDetailsEvent = new DisplayContactDetailsEvent(DisplayContactDetailsEvent.EVENT_NAME); 
+				evt.contactId = DisplayContactDetailsEvent.NEW_CONTACT;
+				evt.contactType = null;
+				evt.nullContact = false;
+				this.details.dispatchEvent(evt);
+    		}
+    		
+    		private function closeListener(e : Event) : void {
+    			PopUpManager.removePopUp(this);
+    		}
+    		
+    		private function saveContactListener(e : Event) : void {
+    			// Instruct details component to update itself as a new contact.
+				var evt : UpdateContactEvent = new UpdateContactEvent(UpdateContactEvent.EVENT_NAME); 
+				evt.mode = UpdateContactEvent.DML_MODIFY;
+				this.details.dispatchEvent(evt);
+    	    }
+    		
+		]]>
+	</mx:Script>
+	
+	<mx:XMLList id="lookupCodes"/>
+	<addressbook:ContactDetails id="details"
+		                        width="100%" 
+ 								height="100%"
+		                        lookupCodes="{this.lookupCodes}"/>
+		                        	    
+	<mx:ControlBar id="cbButtons" height="10%" width="118">
+		  <mx:Button label="Save" click="saveContactListener(event)"/>
+		  <mx:Button label="Close" click="this.closeListener(event)"/>
+	</mx:ControlBar>		                                
+	
+</mx:TitleWindow>

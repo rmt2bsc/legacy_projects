@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Form xmlns:mx="http://www.adobe.com/2006/mxml" 
+	     initialize="initListener(event)" 
+	     creationComplete="setUpListener(event)" 
+	     xmlns:list="com.components.list.*">
+
+    <mx:Metadata>
+    	[Event (name="acceptFormChanges", type="com.event.AcceptFormChangesEvent")]
+    </mx:Metadata> 
+    
+	<mx:Script>
+		<![CDATA[
+			import com.event.AcceptFormChangesEvent;
+			import com.event.LoadFormChangesEvent;
+			import mx.binding.utils.ChangeWatcher;
+			import com.util.RMT2Utility;
+			
+			
+			// Setup the forms model property name constants
+			public const PROP_GENDERID : String = "GenderId";
+			public const PROP_GENERATION : String = "Generation";
+			public const PROP_MARITALSTATUSID : String = "MaritalStatusId";
+			public const PROP_RACEID : String = "RaceId";
+			public const PROP_TITLE : String = "Title";
+			public const PROP_SHORTNAME : String = "Shortname";
+			
+		    [Bindable]
+		    private var codesTitle : XMLList;
+		    
+		    [Bindable]
+		    private var codesGender : XMLList;
+		    
+		    [Bindable]
+		    private var codesMaritalStatus : XMLList;
+		    
+		    [Bindable]
+		    private var codesRace : XMLList;
+
+
+			
+    		
+    		private function initListener(e : Event) : void {
+    			this.addEventListener(LoadFormChangesEvent.EVENT_NAME, this.requestChangesListener);
+    		}
+    		
+    		
+    		private function setUpListener(e : Event) : void {
+				return;
+    		}
+    		
+			
+			private function maritalStatusChangeListener(e : Event) : void {
+				var marriedCode : String = "19";
+    			var xml : XML = this.MaritalStatusId.selectedItem as XML;
+    			var selValue : String;
+    			if (xml == null) {
+    				selValue = null;
+    			}
+    			else {
+    				selValue = xml.code_id;
+    			}
+    			this.fiMaidenName.visible = (marriedCode == selValue);
+    			this.fiMaidenName.includeInLayout = (marriedCode == selValue);
+    			return;
+    		}
+    		
+    		
+			
+			private function requestChangesListener(e : LoadFormChangesEvent) : void {
+				RMT2Utility.getFormData(e.model, this);
+				
+				// Derive short name from last name and first name.
+				e.model[PROP_SHORTNAME] = this.Lastname + ", " + this.Firstname;
+				
+				// Get the actual code id's for the selected drop down values.
+				var val : String;
+				var xml : XML = this.Title.selectedItem as XML;
+				if (xml) {
+					val = xml.code_id;
+					e.model[PROP_TITLE] = val;	
+				}
+				else {
+					e.model[PROP_TITLE] = "";
+				}
+				
+				xml = this.Generation.selectedItem as XML;
+				if (xml) {
+					val = xml.@data;
+					e.model[PROP_GENERATION] = val;	
+				}
+				else {
+					e.model[PROP_GENERATION] = "";
+				}
+				
+				xml = this.GenderId.selectedItem as XML;
+				if (xml) {
+					val = xml.code_id;
+					e.model[PROP_GENDERID] = val;	
+				}
+				else {
+					e.model[PROP_GENDERID] = "";
+				}
+				
+				xml = this.MaritalStatusId.selectedItem as XML;
+				if (xml) {
+					val = xml.code_id;
+					e.model[PROP_MARITALSTATUSID] = val;	
+				}
+				else {
+					e.model[PROP_MARITALSTATUSID] = "";
+				}
+				
+				xml = this.RaceId.selectedItem as XML;
+				if (xml) {
+					val = xml.code_id;
+					e.model[PROP_RACEID] = val;					
+				}
+				else {
+					e.model[PROP_RACEID] = "";
+				}
+				
+				var outEvt : AcceptFormChangesEvent = new AcceptFormChangesEvent(AcceptFormChangesEvent.EVENT_NAME, true);
+				outEvt.model = e.model;
+				this.dispatchEvent(outEvt);					
+			}
+		]]>
+	</mx:Script>
+   
+   <mx:XMLList id="lookupCodes"/>
+   <mx:XML id="contact"/>
+   
+   <mx:XML id="genrationModel" source="model/Entity_GenerationList.xml"/>
+  
+   <mx:FormItem label="Contact Id:" styleName="formItemHead">
+ 	 	<mx:Label id="PersonId" text="{this.contact.person_id}" styleName="formInputItem"/>
+   </mx:FormItem>
+   <mx:FormItem label="Title:" styleName="formItemHead"> 
+   
+        <list:RMT2SelectComboBox id="Title" 
+						         styleName="formInputItem" 
+						         dataProvider="{this.lookupCodes.(@group_id == 26).code}"
+						         labelField="longdesc"
+						         keyField="code_id"
+						         selectedKeyValue="{contact.title.code_id}"
+						         prompt="Select one..."
+						         editable="false"
+						         tabIndex="2"/>
+   </mx:FormItem>
+   <mx:FormItem label="First Name:" required="true" styleName="formItemHead"> 
+		<mx:TextInput id="Firstname" text="{contact.first_name}" styleName="formInputItem" tabIndex="3"/>
+   </mx:FormItem>
+   <mx:FormItem label="Last Name:" required="true" styleName="formItemHead"> 
+		<mx:TextInput id="Lastname" text="{contact.last_name}" styleName="formInputItem" tabIndex="4"/>
+   </mx:FormItem>
+   <mx:FormItem label="Middle Name:"  styleName="formItemHead"> 
+		<mx:TextInput id="Midname" text="{contact.mid_name}" styleName="formInputItem" tabIndex="5"/>
+   </mx:FormItem>
+   <mx:FormItem id="fiMaidenName" label="Maiden Name:" styleName="formItemHead" visible="false" includeInLayout="false"> 
+		<mx:TextInput id="Maidenname" text="{contact.maiden_name}" styleName="formInputItem" tabIndex="6"/>
+   </mx:FormItem>
+   <mx:FormItem label="Generation:" styleName="formItemHead"> 
+        <list:RMT2SelectComboBox id="Generation" 
+						         styleName="formInputItem" 
+			 			         dataProvider="{genrationModel.item}"
+						         labelField="@label"
+						         keyField="@data"
+						         selectedKeyValue="{contact.generation}"
+						         prompt="Select one..."
+						         editable="false"
+						         tabIndex="7"/>
+   </mx:FormItem>
+   
+   <mx:FormItem label="Gender:" styleName="formItemHead">
+        <list:RMT2SelectComboBox id="GenderId" 
+						         styleName="formInputItem" 
+			 			         dataProvider="{this.lookupCodes.(@group_id == 6).code}"
+						         labelField="longdesc"
+						         keyField="code_id"
+						         selectedKeyValue="{contact.gender.code_id}"
+						         prompt="Select one..."
+						         editable="false"
+						         tabIndex="8"/>
+   </mx:FormItem>
+   <mx:FormItem label="Marital Status:" styleName="formItemHead">
+        <list:RMT2SelectComboBox id="MaritalStatusId" 
+						         styleName="formInputItem" 
+						         dataProvider="{this.lookupCodes.(@group_id == 5).code}"
+						         labelField="longdesc"
+						         keyField="code_id"
+						         selectedKeyValue="{contact.marital_status.code_id}"
+						         prompt="Select one..."
+						         editable="false"
+						         change="maritalStatusChangeListener(event)"
+						         tabIndex="9"/>
+   </mx:FormItem>
+   <mx:FormItem label="Race:" styleName="formItemHead">
+        <list:RMT2SelectComboBox id="RaceId" 
+						         styleName="formInputItem" 
+						         dataProvider="{this.lookupCodes.(@group_id == 15).code}"
+						         labelField="longdesc"
+						         keyField="code_id"
+						         selectedKeyValue="{contact.race.code_id}"
+						         prompt="Select one..."
+						         editable="false"
+						         tabIndex="20"/>
+   </mx:FormItem>
+   <mx:FormItem label="SSN:" styleName="formItemHead"> 
+		<mx:TextInput id="Ssn" text="{contact.ssn}" styleName="formInputItem" tabIndex="11"/>
+   </mx:FormItem>
+   <mx:FormItem label="DOB" styleName="formItemHead" >
+		<mx:DateField id="BirthDate" text="{contact.birth_date}" editable="true" styleName="formInputItem" width="120" tabIndex="12"/>
+   </mx:FormItem>
+   <mx:FormItem label="EMail" styleName="formItemHead" >
+		<mx:TextInput id="Email" text="{contact.email}" styleName="formInputItem" width="280" tabIndex="13"/>
+   </mx:FormItem>
+</mx:Form>

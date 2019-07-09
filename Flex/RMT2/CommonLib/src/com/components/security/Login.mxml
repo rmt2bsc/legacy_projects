@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Panel xmlns:mx="http://www.adobe.com/2006/mxml" horizontalAlign="center" 
+									                                                verticalAlign="middle"
+									                                                layout="vertical"
+										                                            title="{appName == null ? 'Unknown Application' : appName} Application Authentication"
+										                                            titleIcon="@Embed(source='assets/images/id_card.gif')"
+										                                            initialize="initListener(event)">
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			import mx.core.Application;
+			
+			
+			[Bindable]
+			public var appName : String;
+			
+			[Bindable]
+			public var appCode : String;
+			
+			
+			private function initListener(e : Event) : void {
+				// force listener to handle event during the bubble phase in the event the AuthenticationFailureEvent event is 
+				// dispatched from the Application context where the event phase could possibly be "target" or "bubble" and 
+				// never "capture".
+				Application.application.addEventListener(AuthenticationFailureEvent.EVENT_NAME, loginFailedListener);
+			}
+			
+			private function resetUI() : void {
+				this.UserId.text = null;
+				this.Password.text = null;
+				this.ErrorMsg.text = null;
+			}
+			
+			
+			private function submitCredentials(e : Event) : void {
+				var evt : AuthenticateUserEvent = new AuthenticateUserEvent(AuthenticateUserEvent.EVENT_NAME);
+				evt.userId = this.UserId.text;
+				evt.password = this.Password.text;
+				evt.appCode = this.appCode;
+				this.dispatchEvent(evt);
+				this.resetUI();
+			}
+			
+			
+			private function loginFailedListener(e : AuthenticationFailureEvent) : void {
+				this.ErrorMsg.text = e.message;
+			}
+			
+		]]>
+	</mx:Script>
+	
+	
+	<mx:Metadata>
+		[Event (name="authenticateUser", type="com.components.security.AuthenticateUserEvent")]
+	</mx:Metadata>
+	
+	<mx:HBox width="95%">
+	    <mx:Image source="@Embed(source='assets/images/safe.gif')"/>
+	    <mx:VBox width="60%" height="55%">
+	    	<mx:Form width="100%" height="100%">
+				<mx:FormItem label="User Id:" styleName="formItemHead">
+					<mx:TextInput id="UserId" styleName="formInputItem" tabIndex="1"/>
+				</mx:FormItem>
+				<mx:FormItem label="Password:" styleName="formItemHead">
+					<mx:TextInput id="Password" styleName="formInputItem" displayAsPassword="true" tabIndex="2"/>
+				</mx:FormItem>
+			</mx:Form>	
+			
+			<mx:Text id="ErrorMsg" width="100%" color="red"/>
+	    </mx:VBox>
+	</mx:HBox>
+	
+	<mx:ControlBar>
+		<mx:LinkButton id="submit" label="Submit Login Credentials" click="submitCredentials(event)"/>
+	</mx:ControlBar>
+</mx:Panel>

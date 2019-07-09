@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Form xmlns:mx="http://www.adobe.com/2006/mxml" 
+	     initialize="initListener(event)" 
+	     creationComplete="setUpListener(event)" 
+	     xmlns:list="com.components.list.*">
+	
+	<mx:Metadata>
+    	[Event (name="acceptFormChanges", type="com.event.AcceptFormChangesEvent")]
+    </mx:Metadata>
+    
+	<mx:Script>
+		<![CDATA[
+			import com.event.AcceptFormChangesEvent;
+			import com.event.LoadFormChangesEvent;
+			import mx.binding.utils.ChangeWatcher;
+			import com.util.RMT2Utility;
+		    
+		    // Setup the forms model property name constants
+			public const PROP_ENTITYTYPE : String = "EntityTypeId";
+			public const PROP_SERVTYPE : String = "ServTypeId";
+			
+			
+		    [Bindable]
+		    private var codesBusServ : XMLList;
+
+		    [Bindable]
+		    private var codesBusEntity : XMLList;
+		    
+		    
+		    private function initListener(e : Event) : void {
+		    	this.addEventListener(LoadFormChangesEvent.EVENT_NAME, this.requestChangesListener);
+    		}
+    		
+    		
+    		private function setUpListener(e : Event) : void {
+    			return;
+    		}
+    		
+    		private function requestChangesListener(e : LoadFormChangesEvent) : void {
+				RMT2Utility.getFormData(e.model, this);
+				// Get the actual code id's for the selected drop down values.
+				var val : String;
+				var entityXml : XML = this.EntityTypeId.selectedItem as XML; 
+				var servXml : XML = this.ServTypeId.selectedItem as XML;
+				
+				if (entityXml) {
+					val = entityXml.code_id;
+					e.model[PROP_ENTITYTYPE] = val;	
+				}
+				else {
+					e.model[PROP_ENTITYTYPE] = "";
+				}
+				
+				if (servXml) {
+					val = servXml.code_id;
+					e.model[PROP_SERVTYPE] = val;	
+				}
+				else {
+					e.model[PROP_SERVTYPE] = "";
+				}
+				
+				var outEvt : AcceptFormChangesEvent = new AcceptFormChangesEvent(AcceptFormChangesEvent.EVENT_NAME, true);
+				outEvt.model = e.model;
+				this.dispatchEvent(outEvt);					
+			}
+		]]>
+	</mx:Script>
+   
+   <mx:XMLList id="lookupCodes"/>
+   <mx:XML id="contact"/>
+   
+   <mx:FormItem label="Contact Id:" styleName="formItemHead">
+ 	 	<mx:Label id="BusinessId" text="{this.contact.business_id}" styleName="formInputItem"/>
+   </mx:FormItem>
+   <mx:FormItem label="Business Name:" required="true"  styleName="formItemHead"> 
+		<mx:TextInput id="Longname" text="{contact.long_name}" width="300" styleName="formInputItem" tabIndex="1"/>
+   </mx:FormItem>
+   <mx:FormItem label="Abbrev. Name:"  styleName="formItemHead"> 
+		<mx:TextInput id="Shortname" text="{contact.short_name}" width="150" styleName="formInputItem" tabIndex="2"/>
+   </mx:FormItem>
+   <mx:FormItem label="Business Type:" styleName="formItemHead"> 
+   		<list:RMT2SelectComboBox id="EntityTypeId" 
+						         styleName="formInputItem" 
+						         dataProvider="{this.lookupCodes.(@group_id == 7).code}"
+						         labelField="longdesc"
+						         keyField="code_id"
+						         selectedKeyValue="{contact.entity_type.code_id}"
+						         prompt="Select one..."
+						         editable="false"
+						         tabIndex="3"/>
+   </mx:FormItem>
+   <mx:FormItem label="Service Type:" styleName="formItemHead"> 
+        <list:RMT2SelectComboBox id="ServTypeId" 
+						         styleName="formInputItem" 
+						         dataProvider="{this.lookupCodes.(@group_id == 8).code}"
+						         labelField="longdesc"
+						         keyField="code_id"
+						         selectedKeyValue="{contact.service_type.code_id}"
+						         prompt="Select one..."
+						         editable="false"
+						         rowCount="20"
+						         tabIndex="4"/>
+   </mx:FormItem>
+   <mx:FormItem label="Contact First Name:" styleName="formItemHead"> 
+		<mx:TextInput id="ContactFirstname" text="{contact.contact_firstname}" styleName="formInputItem" tabIndex="5"/>
+   </mx:FormItem>
+   <mx:FormItem label="Contact Last Name:" styleName="formItemHead"> 
+		<mx:TextInput id="ContactLastname" text="{contact.contact_lastname}" styleName="formInputItem" tabIndex="6"/>
+   </mx:FormItem>
+   <mx:FormItem label="Contact Phone:"  styleName="formItemHead"> 
+		<mx:TextInput id="ContactPhone" text="{contact.contact_phone}" styleName="formInputItem" tabIndex="7"/>
+   </mx:FormItem>
+   <mx:FormItem label="Contact Ext:" styleName="formItemHead" visible="false" includeInLayout="false"> 
+		<mx:TextInput id="ContactExt" text="{contact.contact_ext}" styleName="formInputItem" tabIndex="8"/>
+   </mx:FormItem>
+   <mx:FormItem label="Contact Email:" styleName="formItemHead"> 
+		<mx:TextInput id="ContactEmail" text="{contact.contact_email}" width="280" styleName="formInputItem" tabIndex="9"/>
+   </mx:FormItem>
+   <mx:FormItem label="Tax Id:" styleName="formItemHead"> 
+		<mx:TextInput id="TaxId" text="{contact.taxId}" styleName="formInputItem" tabIndex="10"/>
+   </mx:FormItem>
+   <mx:FormItem label="Website URL:" styleName="formItemHead"> 
+		<mx:TextInput id="Website" text="{contact.website}" styleName="formInputItem" width="280" tabIndex="11"/>
+   </mx:FormItem>
+</mx:Form>

@@ -1,0 +1,90 @@
+#Wed Mar 02 10:55:04 CST 2011
+/instance/com.adobe.flexbuilder.editors.mxml/compViewSize=400 x 300;300 x 200
+@org.eclipse.debug.ui=3.3.1.v20070731_r331
+/instance/org.eclipse.jdt.launching/org.eclipse.jdt.launching.PREF_VM_XML=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<vmSettings defaultVM\="57,org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType13,1252996096416" defaultVMConnector\="">\r\n<vmType id\="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType">\r\n<vm id\="1252996096416" javadocURL\="http\://java.sun.com/j2se/1.5.0/docs/api/" name\="Flex Builder 3" path\="C\:\\Program Files\\Adobe\\Flex Builder 3"/>\r\n</vmType>\r\n</vmSettings>\r\n
+/instance/com.adobe.flexbuilder.editors.mxml/SizedContainerInserter.Form.height=100%
+/instance/com.adobe.flexbuilder.editors.mxml/newCompLayout=vertical
+/instance/com.adobe.flexbuilder.project/flexBuilderVersion=3.0.214193
+/instance/com.adobe.flexbuilder.editors.mxml/mxmlCommentColor=\#AFACAC
+/instance/com.adobe.flexbuilder.editors.actionscript/asFunctionColor=\#0ECA20
+/instance/org.eclipse.debug.ui/pref_state_memento.org.eclipse.debug.ui.ExpressionView=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<VariablesViewMemento org.eclipse.debug.ui.SASH_DETAILS_PART\="453" org.eclipse.debug.ui.SASH_VIEW_PART\="546"/>
+@org.eclipse.ui.browser=3.2.100.v20070524A
+/instance/org.eclipse.ui.editors/overviewRuler_migration=migrated_3.1
+/instance/org.eclipse.core.resources/version=1
+@org.eclipse.core.resources=3.3.0.v20070604
+/instance/com.adobe.flexbuilder.editors.actionscript/asVarColor=\#0ECA20
+/instance/org.eclipse.help.ui/browser.y=145
+/instance/org.eclipse.help.ui/browser.x=110
+/instance/org.eclipse.help.ui/browser.maximized=true
+/instance/org.eclipse.help.ui/browser.w=1024
+/instance/com.adobe.flexbuilder.editors.mxml/SizedContainerInserter.VBox=true
+@org.eclipse.debug.core=3.3.1.v20070731_r331
+/instance/com.adobe.flexbuilder.editors.common/activeViewIDs4=com.adobe.flexbuilder.navigator,org.eclipse.ui.views.ContentOutline,org.eclipse.ui.views.ProblemView,com.adobe.flexbuilder.editors.mxml.inspector.view.PropertiesView
+/instance/com.adobe.flexbuilder.editors.common/activeViewIDs3=com.adobe.flexbuilder.navigator,com.adobe.flexbuilder.editors.mxml.components.ComponentsView,org.eclipse.debug.ui.DebugView,com.adobe.flexbuilder.editors.mxml.states.StatesView,com.adobe.flexbuilder.editors.mxml.inspector.view.PropertiesView
+/instance/com.adobe.flexbuilder.editors.common/activeViewIDs2=com.adobe.flexbuilder.navigator,com.adobe.flexbuilder.editors.mxml.components.ComponentsView,org.eclipse.ui.views.ProblemView,com.adobe.flexbuilder.editors.mxml.states.StatesView
+/instance/com.adobe.flexbuilder.editors.css/cssPropertyValueColor=\#CC3E33
+/instance/com.adobe.flexbuilder.editors.mxml/expandState=_NONE
+/instance/com.adobe.flexbuilder.editors.actionscript/asMetadataColor=\#C4B17D
+/configuration/org.eclipse.ui.ide/MAX_RECENT_WORKSPACES=5
+@org.eclipse.ui.workbench=3.3.1.M20070921-1200
+file_export_version=3.0
+@org.eclipse.jdt.launching=3.3.1.v20070808_r331
+/instance/org.eclipse.help.ui/browser.h=768
+/instance/org.eclipse.ui.workbench/org.eclipse.jface.textfont=1|Courier New|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|0|3|2|1|49|Courier New;
+/instance/org.eclipse.core.net/org.eclipse.core.net.hasMigrated=true
+/instance/com.adobe.flexbuilder.editors.mxml/lastEditorView=Source
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
+/instance/com.adobe.flexbuilder.editors.mxml/SizedContainerInserter.VBox.height=100%
+/instance/com.adobe.flexbuilder.project/playerTrustFileCleaned30=true
+/instance/com.adobe.flexbuilder.editors.actionscript/asInterfaceColor=\#0ECA20
+@com.adobe.flexbuilder.editors.css=3.0.214193
+@org.eclipse.core.net=1.0.1.r33x_20070709
+\!/=
+/instance/com.adobe.flexbuilder.editors.mxml/mxmlStringColor=\#FC0303
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.compliance=1.5
+/instance/com.adobe.flexbuilder.editors.common/hyperlinkColor=RGB {0, 0, 255}
+/instance/org.eclipse.debug.ui/pref_state_memento.org.eclipse.debug.ui.VariableView=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<VariablesViewMemento org.eclipse.debug.ui.SASH_DETAILS_PART\="327" org.eclipse.debug.ui.SASH_VIEW_PART\="672">\r\n<COLUMN_SIZES IMemento.internal.id\="org.eclipse.debug.ui.VARIALBE_COLUMN_PRESENTATION.COL_VAR_VALUE" SIZE\="330"/>\r\n<COLUMN_SIZES IMemento.internal.id\="org.eclipse.debug.ui.VARIALBE_COLUMN_PRESENTATION.COL_VAR_NAME" SIZE\="431"/>\r\n</VariablesViewMemento>
+/instance/com.adobe.flexbuilder.standalone/flexbuilder.afterFirstLaunch=true
+/instance/org.eclipse.ui.browser/internalWebBrowserHistory=file\:/C\:/Program Files/Adobe/Flex Builder 3/plugins/com.adobe.flexbuilder.ui_3.0.214193/welcome/welcome.html?firstLaunch\=true|*|http\://127.0.0.1\:64417/help/nftopic/com.adobe.flexbuilder.help/langref/mx/controls/Menu.html|*|http\://127.0.0.1\:64417/help/nftopic/com.adobe.flexbuilder.help/langref/flash/xml/XMLDocument.html|*|http\://127.0.0.1\:64417/help/nftopic/com.adobe.flexbuilder.help/langref/mxml/xml.html|*|http\://127.0.0.1\:64417/help/nftopic/com.adobe.flexbuilder.help/html/ui_reference_4.html|*|http\://127.0.0.1\:64417/help/nftopic/com.adobe.flexbuilder.help/langref/mx/controls/ComboBox.html|*|http\://127.0.0.1\:64417/help/nftopic/com.adobe.flexbuilder.help/langref/mx/controls/DateField.html|*|http\://127.0.0.1\:64417/help/nftopic/com.adobe.flexbuilder.help/langref/mx/controls/CheckBox.html|*|http\://127.0.0.1\:64417/help/nftopic/com.adobe.flexbuilder.help/langref/mx/controls/RadioButton.html|*|http\://127.0.0.1\:64417/help/nftopic/com.adobe.flexbuilder.help/langref/mx/controls/List.html|*|http\://127.0.0.1\:63410/help/nftopic/com.adobe.flexbuilder.help/langref/mx/formatters/PhoneFormatter.html|*|http\://127.0.0.1\:63410/help/nftopic/com.adobe.flexbuilder.help/langref/RegExp.html|*|http\://127.0.0.1\:63410/help/nftopic/com.adobe.flexbuilder.help/langref/String.html|*|http\://127.0.0.1\:63410/help/nftopic/com.adobe.flexbuilder.help/langref/mx/controls/TileList.html|*|http\://127.0.0.1\:63632/help/nftopic/com.adobe.flexbuilder.help/langref/mx/controls/TileList.html|*|http\://127.0.0.1\:63632/help/nftopic/com.adobe.flexbuilder.help/langref/mx/controls/List.html|*|http\://127.0.0.1\:50773/help/nftopic/com.adobe.flexbuilder.help/langref/mx/controls/Text.html|*|http\://127.0.0.1\:65299/help/nftopic/com.adobe.flexbuilder.help/langref/mxml/xml.html|*|http\://127.0.0.1\:55719/help/nftopic/com.adobe.flexbuilder.help/langref/mx/controls/ComboBox.html|*|http\://127.0.0.1\:55719/help/nftopic/com.adobe.flexbuilder.help/langref/mx/rpc/http/mxml/HTTPService.html|*|http\://127.0.0.1\:54942/help/nftopic/com.adobe.flexbuilder.help/langref/flash/events/EventDispatcher.html\#removeEventListener()|*|http\://127.0.0.1\:54942/help/nftopic/com.adobe.flexbuilder.help/langref/mx/rpc/http/HTTPService.html|*|http\://127.0.0.1\:54942/help/nftopic/com.adobe.flexbuilder.help/langref/mx/rpc/events/FaultEvent.html|*|http\://127.0.0.1\:61307/help/nftopic/com.adobe.flexbuilder.help/langref/flash/net/URLRequest.html|*|http\://127.0.0.1\:61307/help/nftopic/com.adobe.flexbuilder.help/langref/flash/net/URLVariables.html|*|http\://127.0.0.1\:49915/help/nftopic/com.adobe.flexbuilder.help/langref/XMLList.html|*|http\://127.0.0.1\:49915/help/nftopic/com.adobe.flexbuilder.help/langref/mx/controls/ComboBox.html|*|http\://127.0.0.1\:49915/help/nftopic/com.adobe.flexbuilder.help/langref/mx/containers/Form.html|*|http\://127.0.0.1\:49915/help/nftopic/com.adobe.flexbuilder.help/langref/flash/display/DisplayObject.html\#opaqueBackground|*|http\://127.0.0.1\:50016/help/nftopic/com.adobe.flexbuilder.help/langref/mx/containers/Panel.html|*|http\://127.0.0.1\:50016/help/nftopic/com.adobe.flexbuilder.help/langref/mx/states/AddChild.html|*|http\://127.0.0.1\:50016/help/nftopic/com.adobe.flexbuilder.help/langref/mx/rpc/http/mxml/HTTPService.html|*|http\://127.0.0.1\:50016/help/nftopic/com.adobe.flexbuilder.help/langref/mx/controls/TextInput.html|*|http\://127.0.0.1\:57947/help/nftopic/com.adobe.flexbuilder.help/langref/mx/controls/TextInput.html|*|http\://127.0.0.1\:57947/help/nftopic/com.adobe.flexbuilder.help/langref/mx/core/Container.html\#addEventListener()|*|http\://127.0.0.1\:57947/help/nftopic/com.adobe.flexbuilder.help/langref/mx/collections/XMLListCollection.html|*|http\://127.0.0.1\:57947/help/nftopic/com.adobe.flexbuilder.help/langref/mx/binding/utils/ChangeWatcher.html|*|http\://127.0.0.1\:49863/help/nftopic/com.adobe.flexbuilder.help/langref/mx/controls/ComboBox.html|*|http\://127.0.0.1\:56848/help/nftopic/com.adobe.flexbuilder.help/langref/String.html|*|http\://127.0.0.1\:56848/help/nftopic/com.adobe.flexbuilder.help/langref/mx/rpc/http/mxml/HTTPService.html|*|http\://127.0.0.1\:56848/help/nftopic/com.adobe.flexbuilder.help/langref/mx/states/State.html|*|http\://127.0.0.1\:56848/help/nftopic/com.adobe.flexbuilder.help/langref/mx/containers/Form.html|*|http\://127.0.0.1\:56848/help/nftopic/com.adobe.flexbuilder.help/langref/mx/controls/ComboBox.html\#dropdownWidth|*|http\://127.0.0.1\:65338/help/nftopic/com.adobe.flexbuilder.help/langref/mx/rpc/events/ResultEvent.html|*|http\://127.0.0.1\:65338/help/nftopic/com.adobe.flexbuilder.help/langref/mx/collections/XMLListCollection.html|*|http\://127.0.0.1\:65338/help/nftopic/com.adobe.flexbuilder.help/langref/mx/controls/ComboBox.html|*|http\://127.0.0.1\:56786/help/nftopic/com.adobe.flexbuilder.help/langref/mx/controls/List.html|*|http\://127.0.0.1\:62008/help/nftopic/com.adobe.flexbuilder.help/langref/mx/events/ListEvent.html|*|http\://127.0.0.1\:62008/help/nftopic/com.adobe.flexbuilder.help/langref/mx/core/Application.html|*|http\://127.0.0.1\:65335/help/nftopic/com.adobe.flexbuilder.help/langref/String.html|*|
+/instance/org.eclipse.ui.workbench/ColorsAndFontsPreferencePage.selectedElement=Forg.eclipse.jface.textfont
+@org.eclipse.ui.editors=3.3.1.r331_v20070629
+/instance/com.adobe.flexbuilder.editors.css/LastCSSEditorView=Source
+/instance/com.adobe.flexbuilder.editors.mxml/SizedContainerInserter.Form.width=100%
+/configuration/org.eclipse.ui.ide/RECENT_WORKSPACES=C\:\\Documents and Settings\\appdev\\My Documents\\Flex Builder 3\nC\:\\projects\\Flex\\RMT2
+/instance/com.adobe.flexbuilder.editors.mxml/SizedContainerInserter.Tile=true
+/instance/com.adobe.flexbuilder.editors.common/defaultCurrentLineColor=RGB {232, 242, 254}
+/instance/com.adobe.flexbuilder.editors.actionscript/asTraceColor=\#F31EE6
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.5
+/instance/com.adobe.flexbuilder.editors.mxml/SizedContainerInserter.VBox.width=100%
+/instance/com.adobe.flexbuilder.editors.actionscript/asStringColor=\#F90E0E
+/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.PREF_LAUNCH_PERSPECTIVES=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<launchPerspectives/>\r\n
+@com.adobe.flexbuilder.editors.common=3.0.214193
+/instance/org.eclipse.ui.workbench/ENABLED_DECORATORS=com.adobe.flexbuilder.editors.common.ui.project.applicationDecorator\:true,com.adobe.flexbuilder.editors.common.ui.project.classpathDecorator\:true,org.eclipse.datatools.connectivity.sqm.core.internal.ui.explorer.DependencyDecoration\:true,org.eclipse.datatools.connectivity.sqm.core.internal.ui.explorer.ColumnDecoration\:true,org.eclipse.datatools.connectivity.sqm.core.internal.ui.explorer.ForeignKeyDecoration\:true,org.eclipse.datatools.connectivity.sqm.internal.core.ui.bookmarkDecoration\:true,org.eclipse.datatools.connectivity.ui.decorator.contentextension\:false,org.eclipse.team.cvs.ui.decorator\:false,org.eclipse.ui.LinkedResourceDecorator\:true,
+@com.adobe.flexbuilder.editors.mxml=3.0.214193
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
+@org.eclipse.jdt.core=3.3.1.v_780_R33x
+@org.eclipse.search=3.3.1.r331_v20070831-0800
+/instance/org.eclipse.debug.ui/preferredDetailPanes=DefaultDetailPane\:DefaultDetailPane|
+@com.adobe.flexbuilder.editors.actionscript=3.0.214193
+/instance/org.eclipse.ui.workbench/ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.ui.workbenchMisc
+/instance/com.adobe.flexbuilder.editors.actionscript/asStringBold=false
+/instance/org.eclipse.debug.core/prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="this.session"/>\r\n</watchExpressions>\r\n
+/instance/org.eclipse.ui.browser/browsers=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<web-browsers current\="0">\r\n<system/>\r\n<external location\="C\:\\Program Files\\Mozilla Firefox\\firefox.exe" name\="Firefox"/>\r\n<external location\="C\:\\Program Files\\Internet Explorer\\iexplore.exe" name\="Internet Explorer"/>\r\n</web-browsers>
+/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.user_view_bindings=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<viewBindings>\r\n<view id\="org.eclipse.debug.ui.ExpressionView">\r\n<perspective id\="com.adobe.flexbuilder.debug.ui.perspectives.debug" userAction\="opened"/>\r\n</view>\r\n<view id\="org.eclipse.ui.console.ConsoleView">\r\n<perspective id\="com.adobe.flexbuilder.editors.mxml.ui.perspectives.development" userAction\="opened"/>\r\n</view>\r\n</viewBindings>\r\n
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.source=1.5
+/instance/org.eclipse.core.resources/pathvariable.DOCUMENTS=C\:/Documents and Settings/appdev/My Documents/Flex Builder 3
+/instance/org.eclipse.search/org.eclipse.search.defaultPerspective=org.eclipse.search.defaultPerspective.none
+/instance/com.adobe.flexbuilder.editors.mxml/SizedContainerInserter.Tile.width=100%
+/instance/com.adobe.flexbuilder.editors.common/autoViewIDs=com.adobe.flexbuilder.editors.mxml.states.StatesView\=unmanaged,com.adobe.flexbuilder.editors.mxml.inspector.view.PropertiesView\=design-mxml;design-css,com.adobe.flexbuilder.editors.mxml.components.ComponentsView\=unmanaged
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.builder.resourceCopyExclusionFilter=*.launch
+/configuration/org.eclipse.ui.ide/RECENT_WORKSPACES_PROTOCOL=3
+/instance/com.adobe.flexbuilder.project/com.adobe.flexbuilder.project.flex_sdks=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<sdks>\r\n<sdk defaultSDK\="true" location\="C\:/Program Files/Adobe/Flex Builder 3/sdks/3.4.0" name\="Flex 3.4.0.6955 Stable"/>\r\n<sdk location\="C\:/Program Files/Adobe/Flex Builder 3/sdks/3.2.0" name\="Flex 3.2"/>\r\n<sdk location\="C\:/Program Files/Adobe/Flex Builder 3/sdks/2.0.1" name\="Flex 2.0.1 Hotfix 3"/>\r\n</sdks>\r\n
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
+@com.adobe.flexbuilder.project=3.0.214193
+@org.eclipse.help.ui=3.3.1.v20070726_33x
+/instance/com.adobe.flexbuilder.editors.actionscript/asCommentColor=\#ADB1AD
+/instance/com.adobe.flexbuilder.editors.mxml/SizedContainerInserter.Form=true
+/instance/com.adobe.flexbuilder.editors.mxml/appViewSizes=1024 x 768;800 x 600
+@com.adobe.flexbuilder.standalone=3.0.214193
+/instance/com.adobe.flexbuilder.editors.actionscript/asClassColor=\#0ECA20
+/configuration/org.eclipse.ui.ide/SHOW_WORKSPACE_SELECTION_DIALOG=false

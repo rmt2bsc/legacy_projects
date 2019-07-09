@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" initialize="initListener(event)" 
+	                                                 creationComplete="creationCompleteListener(event)">
+
+	<mx:Script>
+		<![CDATA[
+			import contacts.zipcode.events.ZipcodeDetailsEvent;
+			import mx.events.ListEvent;
+			import mx.events.PropertyChangeEvent;
+			import mx.binding.utils.ChangeWatcher;
+			import com.util.RMT2Utility;
+		
+			private const STATE_EMPTY : String = "EmptyResultSet";
+			
+						
+			private function initListener(e : Event) : void {
+				return;
+			}
+			
+			private function creationCompleteListener(e : Event) : void {
+				return;
+			}
+			
+		]]>
+	</mx:Script>
+	
+	<mx:Metadata>
+    	[Event (name="zipcodeDetailsEvent", type="contacts.zipcode.events.ZipcodeDetailsEvent")]
+    </mx:Metadata>
+
+	<mx:Model id="zipcodeModel" source="contacts/zipcode/model/ZipcodeDetailsModel.xml"/>
+	
+	<mx:XML id="zipData"/>
+	
+	<mx:NumberFormatter  id="numFormat" precision="1"
+								        rounding="none"
+								        decimalSeparatorTo="."
+								        thousandsSeparatorTo=","
+								        useThousandsSeparator="true"
+								        useNegativeSign="true"/>
+        
+	<mx:VBox left="10" top="10" width="100%" height="100%" verticalGap="0">
+	    <mx:HBox id="titleContainer" width="97%">
+	    		<mx:FormItem label="Details for Zip Code: " styleName="sectionHeader">
+					<mx:Text text="{this.zipData.zipcode}" color="blue" styleName="sectionHeader"/>
+				</mx:FormItem>	
+	    		<mx:Spacer width="70%"/>
+		        <mx:LinkButton id="hideDetailsLink" label="Hide Details"/>	
+	    </mx:HBox>
+        
+        <mx:HRule height="5" width="98%"/>
+        <mx:Spacer height="8" width="100%"/>
+        
+        <mx:Canvas id="zipContainer" width="100%" height="100%">
+		        <mx:Accordion id="detailContainer" width="98%"  height="97%">
+		            <mx:HBox label="General Information">
+			            <mx:Form id="fGeneral1">
+			        		<mx:FormItem label="Id:" styleName="formItemHead">
+			        			<mx:Text id="zip_id" text="{this.zipData.zip_id}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+			        		<mx:FormItem label="City:" styleName="formItemHead">
+			        			<mx:Text id="city" text="{this.zipData.city}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+			        		<mx:FormItem label="City Alias:" styleName="formItemHead">
+			        			<mx:Text id="cityAliasName" text="{this.zipData.cityAliasName}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+			        		<mx:FormItem label="State:" styleName="formItemHead">
+			        			<mx:Text id="state" text="{this.zipData.state}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+			        		<mx:FormItem label="County:" styleName="formItemHead">
+			        			<mx:Text id="countyName" text="{this.zipData.countyName}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+			        		<mx:FormItem label="Area Code:" styleName="formItemHead">
+			        			<mx:Text id="areaCode" text="{this.zipData.areaCode}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+			        	</mx:Form>	
+			        	 <mx:Form id="fGeneral2">
+			        		<mx:FormItem label="City Type:" styleName="formItemHead">
+			        			<mx:Text id="city_type_desc" text="{this.zipData.cityTypeId.city_type_desc}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+			        		<mx:FormItem label="Day Light Savings:" styleName="formItemHead">
+			        			<mx:Text id="dayLightSaving" text="{this.zipData.dayLightSaving}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+			        		<mx:FormItem label="Time Zone:" styleName="formItemHead">
+			        			<mx:Text id="timeszone_desc" text="{this.zipData.timeZoneId.timeszone_desc}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+			        		<mx:FormItem label="Latitude:" styleName="formItemHead">
+			        			<mx:Text id="latitude" text="{this.zipData.latitude}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+			        		<mx:FormItem label="Longitude:" styleName="formItemHead">
+			        			<mx:Text id="longitude" text="{this.zipData.longitude}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+			        		<mx:FormItem label="Elevation:" styleName="formItemHead">
+			        			<mx:Text id="elevation" text="{this.zipData.elevation}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+			        	</mx:Form>	
+		            </mx:HBox>
+		        	
+		        	<mx:HBox label="Metropolitan Statistical Area Data">
+		        		<mx:Form id="fMsa">
+		        			<mx:FormItem label="MSA:" styleName="formItemHead">
+			        			<mx:Text id="msa" text="{this.zipData.msa}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+		        		</mx:Form>
+		        		<mx:Form id="fPmsa">
+		        			<mx:FormItem label="PMSA:" styleName="formItemHead">
+			        			<mx:Text id="pmsa" text="{this.zipData.pmsa}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+		        		</mx:Form>
+		        	</mx:HBox>
+		        	
+		        	<mx:HBox label="Core Based Statistical Area Data">
+		        		<mx:Form id="fcbsa">
+		        			<mx:FormItem label="SBSA:" styleName="formItemHead">
+			        			<mx:Text id="cbsa" text="{this.zipData.cbsa}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+		        		</mx:Form>
+		        		<mx:Form id="fCbsaDiv">
+		        			<mx:FormItem label="CBSA Div:" styleName="formItemHead">
+			        			<mx:Text id="cbsaDiv" text="{this.zipData.cbsaDiv}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+		        		</mx:Form>
+		        	</mx:HBox>
+		        	
+		        	<mx:HBox label="Population Related Area">
+			            <mx:Form id="fPopulation1">
+			                <mx:FormItem label="Zip Code Population:" styleName="formItemHead">
+			        			<mx:Text id="zipcode_population" text="{this.numFormat.format(this.zipData.zipcode_population)}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+			        		<mx:FormItem label="Persons/Household:" styleName="formItemHead">
+			        			<mx:Text id="persons_per_household" text="{this.numFormat.format(this.zipData.persons_per_household)}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+			        		<mx:FormItem label="Households/Zip code:" styleName="formItemHead">
+			        			<mx:Text id="households_per_zipcode" text="{this.numFormat.format(this.zipData.households_per_zipcode)}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+			        		<mx:FormItem label="Income/Household:" styleName="formItemHead">
+			        			<mx:Text id="income_per_household" text="{this.numFormat.format(this.zipData.income_per_household)}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+			        	</mx:Form>	
+			        	 <mx:Form id="fPopulation2">
+			        		<mx:FormItem label="Avg Household Value:" styleName="formItemHead">
+			        			<mx:Text id="average_house_value" text="{this.numFormat.format(this.zipData.average_house_value)}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+			        		<mx:FormItem label="White Population:" styleName="formItemHead">
+			        			<mx:Text id="white_population" text="{this.numFormat.format(this.zipData.white_population)}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+			        		<mx:FormItem label="Black Population:" styleName="formItemHead">
+			        			<mx:Text id="black_population" text="{this.numFormat.format(this.zipData.black_population)}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+			        		<mx:FormItem label="Hispanic Population:" styleName="formItemHead">
+			        			<mx:Text id="hispanic_population" text="{this.numFormat.format(this.zipData.hispanic_population)}" styleName="formInputItem"/>
+			        		</mx:FormItem>
+			        	</mx:Form>	
+		            </mx:HBox>
+		        </mx:Accordion>	
+        </mx:Canvas>
+    </mx:VBox>
+</mx:Canvas>

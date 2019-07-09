@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:provinces="contacts.provinces.*" initialize="initListener(event)" creationComplete="creationCompleteListener(event)">
+
+	<mx:Script>
+		<![CDATA[
+			import contacts.provinces.events.ProvinceEditEvent;
+			import contacts.provinces.events.ProvinceResetEvent;
+			
+			[Bindable]
+			public var province : Object;
+			
+			private function initListener(e : Event) : void {
+				this.addEventListener(ProvinceResetEvent.EVENT_NAME, this.resetProvinceList, true);
+				this.addEventListener(ProvinceEditEvent.EVENT_NAME, this.editProvince, true);
+				
+				return;
+			}
+			
+			private function creationCompleteListener(e : Event) : void {
+				return;
+			}
+			
+			/**
+			 * Clears the result set of the province list and sets the list variable to null.   The null setting will notify 
+			 * the "listView" component of the update which in turn should respond by changing its view state.  
+			 */
+			private function resetProvinceList(e : ProvinceResetEvent) : void {
+				if (this.provinceList != null) {
+					this.provinceList.removeAll();
+					this.provinceList = null;	
+				}
+				return;
+			}
+			
+			/**
+			 * Updates province member variable which in turn will notify detailView component of the change so 
+			 * that it may make the necessary visal adjustments. 
+			 */
+			private function editProvince(e : ProvinceEditEvent) : void {
+				this.province = e.province;
+			}
+			
+		]]>
+	</mx:Script>
+	
+	<mx:XMLList id="countryList"/>
+	<mx:XMLListCollection id="provinceList"/>
+	
+	<mx:HBox id="container" width="99%" height="100%" top="10" styleName="colorPanel">
+		<mx:VBox id="formContainer" width="35%" height="98%">
+		    <provinces:ProvinceCriteriaView id="criteriaView" width="100%" height="50%" backgroundColor="#ebebe9" styleName="formSection" countryList="{this.countryList}"/>
+            <provinces:ProvinceDetailsView id="detailView" width="100%" height="50%" backgroundColor="#ffffff" styleName="formSection" countryList="{this.countryList}" recData="{this.province}"/>
+		</mx:VBox>
+		<mx:VBox id="listContainer" width="65%" height="98%">
+		    <provinces:ProvinceListView id="listView" listData="{provinceList}" width="100%" height="100%" backgroundColor="#ffffff"  styleName="formSection"/>
+		</mx:VBox>
+	</mx:HBox>
+</mx:Canvas>

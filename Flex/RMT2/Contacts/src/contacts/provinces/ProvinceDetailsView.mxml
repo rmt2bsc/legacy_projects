@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:list="com.components.list.*"  initialize="initListener(event)" creationComplete="creationCompleteListener(event)">
+
+	<mx:Script>
+		<![CDATA[
+			import contacts.provinces.service.ProvinceHttpSrvcResponder;
+			import contacts.provinces.events.ProvinceUpdateEvent;
+			import contacts.provinces.events.ProvinceEditEvent;
+			import com.util.RMT2Utility;
+			import mx.events.PropertyChangeEvent;
+			import mx.binding.utils.ChangeWatcher;
+			
+//			private const CLIENT_ACTION_SAVE : String = "save";
+//			
+//			private const CLIENT_ACTION_DELETE : String = "delete";
+			
+			private function initListener(e : Event) : void {
+				var changeWatcher : ChangeWatcher = ChangeWatcher.watch(this, "recData", this.updateInputControlValues);
+				return;
+			}
+			
+			private function creationCompleteListener(e : Event) : void {
+				return;
+			}
+			
+			private function updateInputControlValues(e : PropertyChangeEvent) : void {
+				if (this.recData == null) {
+					this.StateId.text = null;
+					this.AbbrCode.text = null;
+					this.StateName.text = null;
+					this.CountryId.selectedIndex = -1;
+				}
+				else {
+					this.StateId.text = this.recData.state_id;
+					this.AbbrCode.text = this.recData.state_code;
+					this.StateName.text = this.recData.state_name;
+					this.CountryId.selectedKeyValue = this.recData.country_id;
+				}
+			}
+			
+			private function saveProvinceChanges(e : Event) : void {
+				this.updateProvince(ProvinceHttpSrvcResponder.CLIENT_ACTION_SAVE);
+				return;
+			}
+			
+			private function deleteProvince(e : Event) : void {
+				this.updateProvince(ProvinceHttpSrvcResponder.CLIENT_ACTION_DELETE);
+				return;
+			}
+			
+			private function updateProvince(updateAction : String) : void {
+				RMT2Utility.getFormData(this.editParms, this);
+				this.editParms.clientAction = updateAction;
+				var evt : ProvinceUpdateEvent = new ProvinceUpdateEvent(ProvinceUpdateEvent.EVENT_NAME, true);
+				evt.province = this.editParms;
+				this.dispatchEvent(evt);				
+			}
+			
+			
+			private function addProvinceListener(e : Event) : void {
+				this.StateId.text = "0"; 
+				this.StateName.text = null;
+				this.AbbrCode.text = null;
+				this.CountryId.selectedIndex = -1;
+			}
+			
+		]]>
+	</mx:Script>
+	
+	<mx:Metadata>
+		  [Event (name="provinceUpdateEvent", type="contacts.provinces.events.ProvinceUpdateEvent")]
+	</mx:Metadata>
+	
+	<mx:XMLList id="countryList"/>
+	<mx:XML id="recData"/>
+	<mx:Model id="editParms" source="model/SrvcParms_ProvinceEdit.xml"/>
+	
+	<mx:VBox left="10" top="10" width="100%" height="100%" verticalGap="0">
+        <mx:Label text="Province Details" styleName="sectionHeader"/>
+        <mx:HRule height="5" width="197"/>
+        <mx:Spacer height="8" width="100%"/>
+        
+       	<mx:Label text="Province Id: " width="50%" height="22" styleName="formItemHeader"/>	
+       	<mx:Label id="StateId" />
+        
+        <mx:Label text="Province Code" width="90%" height="22" styleName="formItemHeader"/>
+        <mx:TextInput id="AbbrCode" height="20" width="50"/>
+        
+        <mx:Label text="Province Name" width="90%" height="22" styleName="formItemHeader"/>
+        <mx:TextInput id="StateName" height="20" width="250"/>
+        
+        <mx:Label text="Country" width="90%" height="22" styleName="formItemHeader"/>
+        <list:RMT2SelectComboBox id="CountryId" 
+										         styleName="formInputItem" 
+							 			         dataProvider="{this.countryList}"
+										         labelField="country_name"
+										         keyField="country_id"
+										         prompt="Select one..."
+										         editable="false"
+										         tabIndex="8"/>
+        
+        <mx:Spacer height="25" width="100%"/>
+        <mx:HBox>
+        	<mx:Button label="Save" width="80" height="20" styleName="glassLook" click="saveProvinceChanges(event)"/>	
+        	<mx:Button label="New" width="80" height="20" styleName="glassLook" click="addProvinceListener(event)"/>
+        	<mx:Button label="Delete" width="80" height="20" styleName="glassLook" click="deleteProvince(event)"/>
+        </mx:HBox>
+    </mx:VBox>
+</mx:Canvas>

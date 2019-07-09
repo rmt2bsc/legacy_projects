@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:list="com.components.list.*"  
+	                                                 initialize="initListener(event)" 
+	                                                 creationComplete="creationCompleteListener(event)">
+
+	<mx:Metadata>
+    	[Event (name="zipcodeRequestEvent", type="contacts.zipcode.events.ZipcodeQueryRequestEvent")]
+    	[Event (name="zipcodeResetEvent", type="contacts.zipcode.events.ZipcodeResetEvent")]
+    </mx:Metadata>
+    
+	<mx:Script>
+		<![CDATA[
+			import contacts.zipcode.service.ZipcodeHttpSrvcResponder;
+			import com.util.RMT2Utility;
+			import contacts.zipcode.events.ZipcodeQueryRequestEvent;
+			import contacts.zipcode.events.ZipcodeResetEvent;
+			
+			
+			private function initListener(e : Event) : void {
+				return;
+			}
+			
+			private function creationCompleteListener(e : Event) : void {
+				return;
+			}
+			
+			/**
+			 * Send query request to the parent component.   Basically gathers values from the input 
+			 * controls (provice code, province name, and country), maps the values to the service request 
+			 * parameter XML model, and sends a ProvinceQueryRequestEvent for the parent component 
+			 * to handle the request.  
+			 */
+			private function sendQuery(e : Event) : void {
+				// Send reset event for other components to update themselves.  This is 
+				// particularly needed in order that the pagination navigator component 
+				// is notified to reset itself.
+				var evtReset : ZipcodeResetEvent = new ZipcodeResetEvent(ZipcodeResetEvent.EVENT_NAME);
+				this.dispatchEvent(evtReset);
+				
+				// Send search request to the server
+				RMT2Utility.getFormData(this.searchParms, this);
+				this.searchParms["clientAction"] = ZipcodeHttpSrvcResponder.CLIENT_ACTION_SEARCH;
+				this.searchParms["PageNo"] = 1;
+				var evt : ZipcodeQueryRequestEvent = new ZipcodeQueryRequestEvent(ZipcodeQueryRequestEvent.EVENT_NAME);
+				evt.request = this.searchParms;
+				this.dispatchEvent(evt);
+				trace("Zipcode search request has been sent for page number " + 1 + " via the search criteria section");
+			}
+			
+			/**
+			 * Clears all input control values and sends a ZipcodeResetEvent all interested parties. 
+			 */
+			private function resetCriteriaSection(e : Event) : void {
+				this.qry_TimeZone.selectedIndex = -1;
+				this.qry_Zip.text = null;
+				this.qry_State.text = null;
+				this.qry_CountyName.text = null;
+				this.qry_City.text = null;
+				this.qry_CityAliasName.text = null;
+				this.qry_AreaCode.text = null;
+				
+				// Send reset event for other components to update themselves. 
+				var evt : ZipcodeResetEvent = new ZipcodeResetEvent(ZipcodeResetEvent.EVENT_NAME, true);
+				this.dispatchEvent(evt);
+			}
+			
+		]]>
+	</mx:Script>
+	
+    <mx:XMLList id="timezoneList"/>
+
+    <mx:Model id="searchParms" source="contacts/zipcode/model/SrvcParms_ZipcodeSearch.xml"/>
+    	
+	<mx:VBox id="form" left="10" top="10" height="100%">
+	    <mx:Label text="Zip Code Search Criteria" styleName="sectionHeader"/>
+        <mx:HRule height="5" width="197"/>
+        <mx:Spacer height="8" width="100%"/>
+        <mx:Label text="Zip Code" width="90%" height="22" styleName="criteriaItemHeader"/>
+        <mx:TextInput id="qry_Zip" height="20" width="55"/>
+        <mx:Label text="State Code" width="90%" height="22" styleName="criteriaItemHeader"/>
+        <mx:TextInput id="qry_State" height="20" width="55"/>
+        <mx:Label text="County" width="90%" height="22" styleName="criteriaItemHeader"/>
+        <mx:TextInput id="qry_CountyName" height="20" width="150"/>
+        <mx:Label text="City" width="90%" height="22" styleName="criteriaItemHeader"/>
+        <mx:TextInput id="qry_City" height="20" width="150"/>
+        <mx:Label text="City Alias" width="90%" height="22" styleName="criteriaItemHeader"/>
+        <mx:TextInput id="qry_CityAliasName" height="20" width="150"/>
+        <mx:Label text="Area Code" width="90%" height="22" styleName="criteriaItemHeader"/>
+        <mx:TextInput id="qry_AreaCode" height="20" width="150"/>
+        
+        <mx:Label text="Time Zone" width="90%" height="22" styleName="criteriaItemHeader"/>
+        
+         <list:RMT2SelectComboBox id="qry_TimeZone" 
+						         styleName="formInputItem" 
+			 			         dataProvider="{this.timezoneList}"
+						         labelField="timeszone_desc"
+						         keyField="timezone_id"
+						         prompt="Select one..."
+						         editable="false"
+						         tabIndex="8"/>
+        
+        <mx:Spacer height="8" width="100%"/>
+        <mx:HBox>
+        	<mx:Button label="Search" width="80" height="20" styleName="glassLook" click="sendQuery(event)"/>	
+        	<mx:Button label="Reset" width="80" height="20" styleName="glassLook" click="resetCriteriaSection(event)"/>
+        </mx:HBox>
+    </mx:VBox>
+</mx:Canvas>

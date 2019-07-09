@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml" 
+	     initialize="initListener(event)"
+	     creationComplete="setupListener(event)"
+	     styleName="formDetailStyle" 
+	     xmlns:addressbook="contacts.addressbook.*">
+
+
+    
+    <mx:Script>
+    	<![CDATA[
+    		import mx.controls.Alert;
+    		import com.components.service.data.RMT2ResponderResultsEvent;
+    		import contacts.addressbook.valueobjects.SingleContactResultsVO;
+    		import com.components.service.data.RMT2AbstractResponder;
+    		import mx.rpc.AsyncToken;
+    		import mx.core.Application;
+    		import contacts.addressbook.service.AddressBookHttpSrvcResponder;
+    		import com.event.LoadFormChangesEvent;
+    		import com.event.AcceptFormChangesEvent;
+    		import contacts.addressbook.events.UpdateContactEvent;
+    		import contacts.addressbook.events.DisplayContactDetailsEvent;
+    		import mx.rpc.events.FaultEvent;
+    		import com.net.RMT2HttpService;
+    		import contacts.addressbook.valueobjects.ZipcodeVO;
+    		import contacts.addressbook.events.ZipTargetUpdateEvent;
+    		import contacts.addressbook.events.ZipChangeEvent;
+    		import com.event.SessionTokenEvent;
+    		import com.valueobject.SessionTokenVO;
+    		import flash.utils.describeType;
+    		import mx.events.PropertyChangeEvent;
+    		import mx.binding.utils.ChangeWatcher;
+    		import mx.rpc.events.ResultEvent;
+    		import mx.collections.XMLListCollection;
+    	    import mx.controls.ComboBox;
+    	    import com.util.RMT2Utility;
+    	    
+    	    private const CONTACT_TYPE_PERSON : String = "per";
+    	    
+    	    private const CONTACT_TYPE_BUSINESS : String = "bus";
+    	    
+    	    private const STATE_BUSINESSCONTACT : String = "businssContact";
+    	    
+    	    private const STATE_DETAILS_NOT_AVAIL : String = "detailsNotAvailable";
+    	    
+    	    private const HTTP_URL_PERSON_SEARCH : String = "/contacts/xmlStreamProcessor/Person.Search";
+			
+			private const HTTP_URL_BUSINESS_SEARCH : String = "/contacts/xmlStreamProcessor/Business.Search";
+			
+			private const HTTP_URL_PERSON_UPDATE : String = "/contacts/xmlStreamProcessor/Person.Edit";
+			
+			private const HTTP_URL_BUSINESS_UPDATE : String = "/contacts/xmlStreamProcessor/Business.Edit";
+			
+			private const HTTP_URL_ZIP : String = "/contacts/xmlStreamProcessor/Zipcode.Search";
+    	    
+    	    [Bindable]
+            private var contactId : int;
+            
+            [Bindable]
+			private var contactType : String;
+			
+    	    [Bindable]
+    	    private var zipId : String;
+    	    
+    	    [Bindable]
+    	    private var session : SessionTokenVO;
+    	    
+    	    [Bindable]
+    	    private var contactXml : XML;
+    	    
+    	    [Bindable]
+    	    private var addressXml : XML;
+    	    
+    	    private var callBackZipObj : EventDispatcher;
+    	    
+    	    
+    	    
+    	    
+    	 	
+    	    private function initListener(e : Event) : void {
+    	    	this.addEventListener(AcceptFormChangesEvent.EVENT_NAME, acceptFormChangesListener);
+    	    	this.addEventListener(ZipChangeEvent.ZIP_CHANGE, fetchZipcodeDataListener, true);
+    	    	Application.application.addEventListener(DisplayContactDetailsEvent.EVENT_NAME, showDetailsListener);
+    	    	this.addEventListener(UpdateContactEvent.EVENT_NAME, updateContactListener);
+    	    	this.addEventListener(RMT2ResponderResultsEvent.EVENT_NAME, bindHttpServiceResultsListener);
+    	    	
+    	    	chgFetchCount = 0;
+    	    	ChangeWatcher.watch(this, "chgFetchCount", checkFetchChangeCountListener);
+    	    	
+    	    	// Obtain user session token
+    	    	var event : SessionTokenEvent = new SessionTokenEvent(SessionTokenEvent.EVENT_NAME, false);
+				this.dispatchEvent(event);
+				this.session = event.getToken();
+				return;	    	    		
+    	    }
+    	    
+    	    private function setupListener(e : Event) : void { 
+    	    	// Try to obtain session in the event this component could be a child of a popu component
+    	    	if (this.session == null) {
+    	    		var event : SessionTokenEvent = new SessionTokenEvent(SessionTokenEvent.EVENT_NAME, false);
+					this.dispatchEvent(event);
+					this.session = event.getToken();	
+    	    	}
+    	    }
+    	    
+    	    
+
+
+			private function fetchZipcodeDataListener(e : ZipChangeEvent) : void {
+    	        var rootUrl : String = this.session.hostUrl; 
+    	    	this.zipId = e.zipCode;
+    	    	
+    	    	// If input zip is null or blank, don't bother performing a HTTP call 
+   	    		// and just send back null city and state values. 
+    	    	if (e.zipCode == null || e.zipCode == "") {
+		    	    if (e.callbackObj != null && e.callbackObj.hasEventListener(ZipTargetUpdateEvent.EVENT_NAME)) {
+		    	    	var newZip : ZipcodeVO = new ZipcodeVO(0, null, null, null, null);
+		    	    	var event : ZipTargetUpdateEvent = new ZipTargetUpdateEvent(ZipTargetUpdateEvent.EVENT_NAME);
+		    	    	event.setData(newZip);
+		    	    	this.callBackZipObj.dispatchEvent(event);
+		    	    	return
+		    	    }
+    	    	}
+    	    	// Calback will be either the business form or the person form component
+    	    	this.callBackZipObj = e.callbackObj;
+    	    	
+    	    	// Make HTTP Service call.
+    	    	var httpSrvc : RMT2HttpService =  new RMT2HttpService(rootUrl); 
+    	    	httpSrvc.setupURL(HTTP_URL_ZIP, rootUrl);
+    	    	var token2 : AsyncToken = httpSrvc.send(this.getZipReqModel);
+    	    	token2[RMT2AbstractResponder.PROP_NAME_SERVICE_ID] = AddressBookHttpSrvcResponder.CLIENT_ACTION_GETZIP;
+				token2[RMT2AbstractResponder.PROP_NAME_CALLER] = this;
+				token2.addResponder(new AddressBookHttpSrvcResponder());
+    	    }
+    	    
+    	    
+    	    
+    	    private function showDetailsListener(e : DisplayContactDetailsEvent) : void {
+    	    	this.contactId = e.contactId;
+    	    	this.contactType = e.contactType;
+    	    	if (e.nullContact) {
+    	    		this.showEmptyDetails();
+    	    	}
+    	    	else {
+    	    		this.fetchContactDetails();
+    	    	}
+    	    }
+    	    
+    	    private function showEmptyDetails() : void {
+    	    	this.currentState = STATE_DETAILS_NOT_AVAIL;
+    	    	return;	
+    	    }
+    	    
+    	    
+
+    	    
+    		private function fetchContactDetails() : void {
+    			this.txtResultMsg.text = "";
+    			var rootUrl : String = this.session.hostUrl;   
+    			
+    			// Determine if we are dealing with a new or existing contact and apply the appropriate state.
+    			if (this.contactId > 0) {
+    				contactTypeDesc.visible = true;
+    				contactTypeToggle.visible = false;
+    				contactTypeToggle.includeInLayout = false;
+    				
+    				// Setup Http Service instance
+    				var httpSrvc : RMT2HttpService = new RMT2HttpService(rootUrl);
+    				
+    			    // Determine what type of existing contact we are dealing with and apply the appropriate component.	
+    			    // Fetch data for existing contact.
+    				switch (this.contactType) {
+	    				case null:
+	    				case CONTACT_TYPE_PERSON:
+	    				   contactTypeDesc.text = "Contact Type: Personal";
+	    				   this.currentState = "";
+	    				   httpSrvc.setupURL(HTTP_URL_PERSON_SEARCH, rootUrl);
+	    				   break;
+	    				   
+	    				case CONTACT_TYPE_BUSINESS:
+	    				   contactTypeDesc.text = "Contact Type: Business";
+	    				   this.currentState = "businssContact";
+	    				   httpSrvc.setupURL(HTTP_URL_BUSINESS_SEARCH, rootUrl);
+	    				   break;
+	    			}
+	    			var token : AsyncToken = httpSrvc.send(this.searchReqModel);
+	    			token[RMT2AbstractResponder.PROP_NAME_SERVICE_ID] = AddressBookHttpSrvcResponder.CLIENT_ACTION_EDIT;
+					token[RMT2AbstractResponder.PROP_NAME_CALLER] = this;
+					token.addResponder(new AddressBookHttpSrvcResponder());
+					httpSrvc.close();
+					httpSrvc = null;
+    			}
+    			else {
+    				// Setup a new contact record.
+    				contactTypeToggle.visible = true;
+    				contactTypeToggle.includeInLayout = true;
+    				contactTypeDesc.visible = false;
+    				contactTypeDesc.includeInLayout = false;
+    				
+    				switch (this.rbgContactType.selectedValue) {
+	    				case null:
+	    				case CONTACT_TYPE_PERSON:
+	    				   this.currentState = "";
+	    				   this.contactType = CONTACT_TYPE_PERSON;
+	    				   this.contactXml = new XML(this.newPersonConactXml);
+	    				   break;
+	    				case CONTACT_TYPE_BUSINESS:
+	    				   this.currentState = "businssContact";
+	    				   this.contactType = CONTACT_TYPE_BUSINESS;
+	    				   this.contactXml = new XML(this.newBusinessConactXml);
+	    				   break;
+	    			}
+	    			this.addressXml = new XML(this.contactXml.address);
+    			}
+    		}
+
+    		private function bindHttpServiceResultsListener(e : RMT2ResponderResultsEvent) : void {
+				if (e.error) {
+					Alert.show(e.message, "Server Error");
+					return;
+				}
+				switch (e.serviceId) {
+					case AddressBookHttpSrvcResponder.CLIENT_ACTION_EDIT:
+						var vo : SingleContactResultsVO = e.results as SingleContactResultsVO;
+						this.contactXml = vo.contact;
+    					this.addressXml = vo.address;
+						break;
+						
+					case AddressBookHttpSrvcResponder.CLIENT_ACTION_SAVE:
+						var reply : XML = e.results as XML;
+	    				var msg : String = reply.message;
+	    				var dtlMsg : String = reply.ext_message;
+	    				var status : String = reply.return_status;
+	    				if (status == "ERROR") {
+	    					dtlMsg = "Error: " + dtlMsg;
+	    					this.txtResultMsg.setStyle("color", "red");
+	    				}
+	    				else {
+	    					this.txtResultMsg.setStyle("color", "black");
+	    				}
+	    				this.txtResultMsg.text = dtlMsg;
+    					break;
+						
+					case AddressBookHttpSrvcResponder.CLIENT_ACTION_GETZIP:
+					    var zipXml : XML = e.results as XML;
+			    	    // Use the call back reference obtained from the "ZipChangeEvent" previously 
+			    	    // to send the new city and state values back to the caller.
+			    	    if (this.callBackZipObj != null && this.callBackZipObj.hasEventListener(ZipTargetUpdateEvent.EVENT_NAME)) {
+			    	    	var newZip : ZipcodeVO = new ZipcodeVO(zipXml.zip_id, zipXml.zipcode, zipXml.city, zipXml.state, zipXml.areaCode);
+			    	    	var event : ZipTargetUpdateEvent = new ZipTargetUpdateEvent(ZipTargetUpdateEvent.EVENT_NAME);
+			    	    	event.setData(newZip);
+			    	    	this.callBackZipObj.dispatchEvent(event);
+			    	    }
+						break;
+					
+					default:
+				}
+			}
+			
+			
+			private function updateContactListener(e : UpdateContactEvent) : void {
+				switch (e.mode) {
+					case UpdateContactEvent.DML_MODIFY:
+					   	this.doModify();
+					   	break;
+					case UpdateContactEvent.DML_DELETE:
+						this.doDelete();
+						break;
+				}
+			}
+			
+			
+			private function doModify() : void {
+				RMT2Utility.clearProperties(this.updateReqModel);
+				// Since we are doing custom binding for the save request, client action must be set manually.
+				this.updateReqModel.clientAction = AddressBookHttpSrvcResponder.CLIENT_ACTION_SAVE;
+				this.getFormChanges();
+				return;
+			}
+			
+			private function doDelete() : void {
+				RMT2Utility.clearProperties(this.updateReqModel);
+				// Since we are doing custom binding for the save request, client action must be set manually.
+				this.updateReqModel.clientAction = AddressBookHttpSrvcResponder.CLIENT_ACTION_DELETE;
+				this.getFormChanges();
+				return;
+			}
+			
+			
+			private function acceptFormChangesListener(e : AcceptFormChangesEvent) : void {
+				this.chgFetchCount++;
+			}
+			
+			
+			private function getFormChanges() : void {
+				this.txtResultMsg.text = "";
+				
+				if (this.contactType == CONTACT_TYPE_PERSON) {
+					var e1 : LoadFormChangesEvent = new LoadFormChangesEvent(LoadFormChangesEvent.EVENT_NAME, true);
+					e1.model = this.updateReqModel;
+					this.perForm.dispatchEvent(e1);
+				}
+				if (this.contactType == CONTACT_TYPE_BUSINESS) {
+					var e2 : LoadFormChangesEvent = new LoadFormChangesEvent(LoadFormChangesEvent.EVENT_NAME, true);
+					e2.model = this.updateReqModel;
+					this.busForm.dispatchEvent(e2);
+				}
+				
+				var e3 : LoadFormChangesEvent = new LoadFormChangesEvent(LoadFormChangesEvent.EVENT_NAME, true);
+				e3.model = this.updateReqModel;
+				this.addrForm.dispatchEvent(e3);
+			}
+			
+			
+			
+			/**
+			 * Triggers the saveChanges method when all the contact's changes have been gathered.
+			 * Currently, there are two sets of changes that are needed in order to apply contact
+			 * updates: 1) contact info and 2) address info.   The contact info is regarded as
+			 * either personal or business.  The tracking of changes is monitored by the member 
+			 * variable, chgFetchCount.  Once it value reaches "2", then the changes are packaged
+			 * and sent to the caller.
+			 * 
+			 * @param e
+			 *         an instance of PropertyChangeEvent which tracks the state of the change
+			 *         counter memeber variable, chgFetchCount.   The act of gathering all of 
+			 *         the contact's changes is considered completed once the count reaches  
+			 *         the value of "2".
+			 *  
+			 */ 
+			private function checkFetchChangeCountListener(e : PropertyChangeEvent) : void {
+				if (e.newValue == 2) {
+					this.doUpdate();
+					// Start change counter over for the next transaction
+					this.chgFetchCount = 0;
+				}
+				return;
+			}
+			
+			
+    				
+    		private function doUpdate() : void {
+				// send the form's changes to the appropriate service for processing
+				var rootUrl : String = this.session.hostUrl;
+				
+				// Setup Http Service instance
+    			var httpSrvc : RMT2HttpService = new RMT2HttpService(rootUrl);
+				
+				// Since we are doing custom binding for the save request, contact type must be set manually.
+				this.updateReqModel.contactType = this.contactType;				
+				   
+				if (this.contactType == CONTACT_TYPE_PERSON) {
+					httpSrvc.setupURL(HTTP_URL_PERSON_UPDATE, rootUrl); 
+				}
+				else {
+					httpSrvc.setupURL(HTTP_URL_BUSINESS_UPDATE, rootUrl);
+				}
+
+				var token : AsyncToken = httpSrvc.send(this.updateReqModel);
+    			token[RMT2AbstractResponder.PROP_NAME_SERVICE_ID] = AddressBookHttpSrvcResponder.CLIENT_ACTION_SAVE;
+				token[RMT2AbstractResponder.PROP_NAME_CALLER] = this;
+				token.addResponder(new AddressBookHttpSrvcResponder());
+				httpSrvc.close();
+				httpSrvc = null;
+			}
+			
+    	]]>
+    </mx:Script>
+
+
+	<mx:Metadata>
+		[Event(name="sessionTokenRequest", type="com.event.SessionTokenEvent")]
+		[Event(name="displayContactDetails", type="contacts.addressbook.events.DisplayContactDetailsEvent")]
+		[Event(name="updateContactDetails", type="contacts.addressbook.events.UpdateContactEvent")]
+	</mx:Metadata>
+	
+    <mx:states>
+        <mx:State name="{STATE_BUSINESSCONTACT}">
+        	<mx:RemoveChild target="{perForm}"/>
+        	<mx:AddChild relativeTo="{container}" position="firstChild">
+        		<addressbook:BusinessForm id="busForm" width="50%" height="100%" contact="{this.contactXml}" lookupCodes="{this.lookupCodes}" tabIndex="1"/>
+        	</mx:AddChild>
+        </mx:State>
+        <mx:State name="{STATE_DETAILS_NOT_AVAIL}">
+            <mx:SetProperty target="{this.container}" name="visible" value="false"/>
+            <mx:SetProperty target="{this.contactTypeDesc}" name="text" value="Details Not Available"/>
+        </mx:State>
+    </mx:states>
+    
+    <mx:transitions>
+    	<mx:Transition fromState="" toState="{STATE_BUSINESSCONTACT}">
+    		<mx:Parallel target="{this.container}">
+    		    <mx:Dissolve duration="1100"/>
+    			<mx:Resize duration="600"/>
+    		</mx:Parallel>
+    	</mx:Transition>
+    	<mx:Transition fromState="{STATE_BUSINESSCONTACT}" toState="">
+    		<mx:Parallel target="{this.container}">
+    			<mx:Dissolve duration="1100"/>
+    			<mx:Resize duration="320"/>
+    		</mx:Parallel>
+    	</mx:Transition>
+    </mx:transitions>	        
+        
+    <mx:XMLList id="lookupCodes"/>
+    <mx:Number id="chgFetchCount"/>
+
+	<mx:Model id="searchReqModel" source="model/SrvcParms_SingleContactSearch.xml"/>
+	<mx:Model id="updateReqModel"  source="model/SrvcParms_UpdateContact.xml"/>
+	<mx:Model id="getZipReqModel"  source="model/SrvcParms_SingleZipCodeSearch.xml"/>
+	<mx:XML id="newPersonConactXml"  source="model/Entity_NewPersonContact.xml"/> 
+	<mx:XML id="newBusinessConactXml"  source="model/Entity_NewBusinessContact.xml"/>
+	
+	<mx:Binding source="AddressBookHttpSrvcResponder.CLIENT_ACTION_EDIT" destination="this.searchReqModel.clientAction"/>
+	<mx:Binding source="this.contactType" destination="this.searchReqModel.contactType"/>
+	<mx:Binding source="this.contactId" destination="this.searchReqModel.Id"/>
+	
+	<mx:Binding source="AddressBookHttpSrvcResponder.CLIENT_ACTION_SAVE" destination="this.updateReqModel.clientAction"/>
+	<mx:Binding source="this.contactType" destination="this.updateReqModel.contactType"/>
+	
+	<mx:Binding source="AddressBookHttpSrvcResponder.CLIENT_ACTION_GETZIP" destination="this.getZipReqModel.clientAction"/>
+	<mx:Binding source="this.zipId" destination="this.getZipReqModel.ZipCode"/>
+	
+    <mx:Label id="contactTypeDesc" text="Test Contact Type" fontWeight="bold" fontSize="16" fontFamily="Arial"/>
+    <mx:Box id="contactTypeToggle" width="20%" borderStyle="outset" backgroundColor="white">
+        <mx:Label text="Select Contact Type" color="black" fontWeight="bold" fontSize="10" />
+    	<mx:RadioButtonGroup id="rbgContactType" change="fetchContactDetails()"/>
+        <mx:RadioButton id="rbPersonType" label="Personal" fontWeight="normal" paddingLeft="10" groupName="rbgContactType" value="{CONTACT_TYPE_PERSON}" selected="true"/>
+        <mx:RadioButton id="rbBusinessType" label="Business" fontWeight="normal" paddingLeft="10" groupName="rbgContactType" value="{CONTACT_TYPE_BUSINESS}"/>
+    </mx:Box>
+    
+	<mx:HBox id="container" width="100%" height="80%" >
+	    <addressbook:PersonForm id="perForm" 
+	    	                    width="50%" 
+	    	                    height="100%" 
+	    	                    contact="{this.contactXml}" 
+	    	                    lookupCodes="{this.lookupCodes}" 
+	    	                    tabIndex="1" />
+	    	                    
+		<mx:VRule height="100%" strokeColor="black"/>
+		
+		<addressbook:AddressForm id="addrForm" 
+			                     width="50%" 
+			                     height="100%" 
+			                     address="{this.addressXml}" 
+			                     contactType="{this.contactType}" 
+			                     tabIndex="20"/>
+	</mx:HBox>
+    <mx:Text id="txtResultMsg" color="black" fontSize="12" width="70%"/>
+</mx:VBox>

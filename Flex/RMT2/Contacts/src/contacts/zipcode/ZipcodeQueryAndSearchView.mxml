@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:zip="contacts.zipcode.*" initialize="initListener(event)" creationComplete="creationCompleteListener(event)" xmlns:pagination="com.components.pagination.*">
+
+	
+	<mx:Script>
+		<![CDATA[
+			import com.components.pagination.PaginationPageRequestEvent;
+			import contacts.zipcode.events.ZipcodeUpdateDetailsEvent;
+			import mx.core.Application;
+			import mx.binding.utils.ChangeWatcher;
+			import mx.events.PropertyChangeEvent;
+			import contacts.zipcode.events.ZipcodeDetailsEvent;
+			import contacts.zipcode.events.ZipcodeResetEvent;
+			import contacts.provinces.events.ProvinceEditEvent;
+			import contacts.provinces.events.ProvinceResetEvent;
+			
+			private const STATE_LIST_ONLY : String = "";
+			
+			private const STATE_DETAILS : String = "stateDetails";
+			
+			
+			private function initListener(e : Event) : void {
+				this.addEventListener(ZipcodeResetEvent.EVENT_NAME, this.resetUIListener);
+				this.addEventListener(PaginationPageRequestEvent.EVENT_NAME, this.changePageListener);
+				Application.application.addEventListener(ZipcodeUpdateDetailsEvent.EVENT_NAME, this.changeZipcodeViewState);
+				this.addEventListener(MouseEvent.CLICK, this.hideDetailsListener);
+				return;
+			}
+			
+			private function creationCompleteListener(e : Event) : void {
+				return;
+			}
+			
+			/**
+			 * Changes the component's view state based on the availability of zip code details data. 
+			 * <p>
+			 * Updates zip code details member variable which in turn will 1) notify detailView component 
+			 * of the change so that it may make the necessary visual adjustments and 2) change the view
+			 * state to a list only or combined list and detail view based on the state of the zipcode 
+			 * property of ZipcodeUpdateDetailsEvent instance. 
+			 */
+			private function changeZipcodeViewState(e : ZipcodeUpdateDetailsEvent) : void {
+				if (e.zipcode == null) {
+					this.currentState  = STATE_LIST_ONLY;
+					this.zipDetails = null;
+				}
+				else {
+					this.currentState = STATE_DETAILS;
+					this.zipDetails = e.zipcode as XML;
+				}
+			}
+
+			
+			/**
+			 * Clears the result set of the province list and updates the state of the zip code view.
+			 */
+			private function resetUIListener(e : ZipcodeResetEvent) : void {
+				if (this.zipcodeList != null) {
+					this.zipcodeList.removeAll();
+					this.zipcodeList = null;	
+				}
+				var evt : ZipcodeUpdateDetailsEvent = new ZipcodeUpdateDetailsEvent(ZipcodeUpdateDetailsEvent.EVENT_NAME);
+				evt.zipcode = null;
+				this.changeZipcodeViewState(evt);
+				return;
+			}
+			
+			/**
+			 * Changes the component's view state to "LIST_ONLY" when another page is selected.
+			 */
+			private function changePageListener(e : PaginationPageRequestEvent) : void {
+				var evt : ZipcodeUpdateDetailsEvent = new ZipcodeUpdateDetailsEvent(ZipcodeUpdateDetailsEvent.EVENT_NAME);
+				evt.zipcode = null;
+				this.changeZipcodeViewState(evt);
+				return;
+			}
+			
+			/**
+			 * Processes the request to hide the details view.   
+			 * <p>
+			 * This event handler attracts all clicked events dispatched by itself as 
+			 * well as from all child components.
+			 */ 
+			private function hideDetailsListener(e : MouseEvent) : void {
+				if (!e.target.hasOwnProperty("id")) {
+					return;
+				}
+				if (e.target.id == null) {
+					return;
+				}
+				if (e.target.id == "hideDetailsLink") {
+					var evt : ZipcodeUpdateDetailsEvent = new ZipcodeUpdateDetailsEvent(ZipcodeUpdateDetailsEvent.EVENT_NAME);
+					evt.zipcode = null;
+					this.changeZipcodeViewState(evt);					
+				}
+				return;
+			}
+			
+		]]>
+	</mx:Script>
+	
+	<mx:states>
+		<mx:State name="stateDetails">
+			<mx:SetProperty target="{listView}" name="height" value="40%"/>
+			<mx:AddChild relativeTo="{this.listView}" position="after">
+				<zip:ZipcodeDetailsView id="detailsView" 
+					                    zipData="{this.zipDetails}" 
+					                    width="80%" 
+					                    height="60%" 
+					                    backgroundColor="#ffffff"  
+					                    styleName="formSection"/>
+			</mx:AddChild>
+		</mx:State>
+	</mx:states>
+
+	<mx:transitions>
+		<mx:Transition fromState="" toState="{STATE_DETAILS}">
+			<mx:Parallel target="{listView}">
+				<mx:Resize duration="500"/>
+			</mx:Parallel>
+		</mx:Transition>
+		<mx:Transition fromState="{STATE_DETAILS}" toState="">
+			<mx:Sequence >
+				<mx:Resize target="{listView}" duration="500"/>
+			</mx:Sequence>
+		</mx:Transition>
+	</mx:transitions>
+	
+	<mx:XMLList id="timezoneList"/>
+	<mx:XMLListCollection id="zipcodeList"/>
+	<mx:XML id="zipDetails"/>
+	
+	<mx:HBox id="container" width="100%" height="100%" top="10" styleName="colorPanel">
+		<mx:VBox id="formContainer" width="20%" height="98%">
+		    <zip:ZipcodeCriteriaView id="criteriaView" width="100%" height="90%" backgroundColor="#ebebe9" styleName="formSection" timezoneList="{this.timezoneList}"/>
+		</mx:VBox>
+		<mx:VBox id="listContainer" width="80%" height="98%">
+		    <zip:ZipcodeListView id="listView" listData="{zipcodeList}" width="97%" height="100%" backgroundColor="#ffffff"  styleName="formSection"/>
+		</mx:VBox>
+	</mx:HBox>
+</mx:Canvas>

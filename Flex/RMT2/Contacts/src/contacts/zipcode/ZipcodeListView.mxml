@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" initialize="initListener(event)" 
+	                                                 creationComplete="creationCompleteListener(event)"
+	                                                 resize="checkResizeListener(event)" 
+	                                                 xmlns:pagination="com.components.pagination.*">
+
+	<mx:Metadata>
+    	[Event (name="zipcodeDetailsEvent", type="contacts.zipcode.events.ZipcodeDetailsEvent")]
+    	[Event (name="resetPaginationEvent", type="com.components.pagination.ResetPaginationComponentEvent")]
+    	[Event (name="paginationMetricChangeEvent", type="com.components.pagination.PaginationMetricChangeEvent")]
+    </mx:Metadata>
+    
+	<mx:Script>
+		<![CDATA[
+			import mx.events.ResizeEvent;
+			import contacts.zipcode.events.ZipcodeResetEvent;
+			import mx.core.Application;
+			import mx.controls.List;
+			import com.components.pagination.PaginationResultsEvent;
+			import com.components.pagination.PaginationData;
+			import com.components.pagination.PaginationMetricChangeEvent;
+			import com.components.pagination.ResetPaginationComponentEvent;
+			import contacts.zipcode.events.ZipcodeDetailsEvent;
+			import mx.events.ListEvent;
+			import mx.events.PropertyChangeEvent;
+			import mx.binding.utils.ChangeWatcher;
+		
+			private const STATE_EMPTY : String = "EmptyResultSet";
+			
+			
+			
+			private function initListener(e : Event) : void {
+				Application.application.addEventListener(PaginationResultsEvent.EVENT_NAME, this.displayZipcodeListListener);
+				Application.application.addEventListener(ZipcodeResetEvent.EVENT_NAME, this.resetUIListener);
+				return;
+			}
+			
+			private function creationCompleteListener(e : Event) : void {
+				this.currentState  = STATE_EMPTY;
+				return;
+			}
+			
+			private function displayZipcodeListListener(e : PaginationResultsEvent) : void {
+				var pageMetrics : PaginationData = e.pageMetrics;
+				this.listData = null;
+				if (e.pageResults != null) {
+					if (e.pageResults is XMLListCollection) {
+						this.listData = e.pageResults as XMLListCollection; 
+					}
+				}
+				
+				if (this.listData == null || this.listData.length == 0) {
+					this.currentState  = STATE_EMPTY;
+				}
+				else {
+					this.currentState = "";
+					if (pageMetrics.isMoreThanOnePage())  {
+						// Since we are going make the navigation component visible, broadcast 
+						// pagination metric change event to navigation component.
+						var evt : PaginationMetricChangeEvent = new PaginationMetricChangeEvent(PaginationMetricChangeEvent.EVENT_NAME);
+						evt.pageMetrics = pageMetrics;
+						this.dispatchEvent(evt);
+						
+						// Turn on component
+						this.listNav.visible = true;
+						this.listNav.includeInLayout = true;
+					}
+					else {
+						this.listNav.visible = false;
+						this.listNav.includeInLayout = false;
+					}
+				}
+			}
+			
+			
+			private function getSelectedRow(e : ListEvent) : void {
+				var curItem : Object = this.zipcodeGrid.selectedItem;
+				var evt : ZipcodeDetailsEvent = new ZipcodeDetailsEvent(ZipcodeDetailsEvent.EVENT_NAME);
+				evt.zipcode = curItem;
+				this.dispatchEvent(evt);
+			}
+			
+			/**
+			 * Clears the result set and changes the view state to EMPTY which basically 
+			 * displays a message indicating to the user to perform a search.
+			 */
+			private function resetUIListener(e : ZipcodeResetEvent) : void {
+				this.currentState  = STATE_EMPTY;
+				return;
+			}
+
+			/**
+			 * Handler for responding to resize event of the DataGrid. 
+			 * <p>
+			 * Use the Flex method, callLater(), to delay scrolling to the selected row after 
+			 * the List view is finsished with its resizing.  Without its usage the scrolling 
+			 * works a little inconsistent due to the transitions implemented for resizing this component.
+			 */			
+			private function checkResizeListener(e : ResizeEvent) : void {
+				// Delay scrolling to the selected row until resize has finished.
+				this.callLater(forceSelectedRowVisible);
+				return;
+			}
+			
+			/**
+			 * Force the selected row in the list to be visible since the DataGrid control has 
+			 * been resized.
+			 */
+			private function forceSelectedRowVisible() : void {
+				var rc : Boolean;
+				if (this.zipcodeGrid.selectedIndex > -1) {
+					rc = this.zipcodeGrid.scrollToIndex(this.zipcodeGrid.selectedIndex);
+				}					
+			}
+			
+		]]>
+	</mx:Script>
+	
+	
+	
+	<mx:states>
+		<mx:State name="{STATE_EMPTY}">
+		     <mx:RemoveChild target="{this.zipcodeGrid}"/>
+		     <mx:RemoveChild target="{this.listNav}"/>
+		     <mx:AddChild relativeTo="{this.listContainer}" position="firstchild">
+		     	    <mx:Label id="emptyRestultMessage" text="Empty Result Set" width="100%" color="red" fontWeight="bold" textAlign="center"/>
+		     </mx:AddChild> 
+		</mx:State>
+	</mx:states>
+	
+	<mx:XMLListCollection id="listData"/>
+	<mx:XML id="detailData"/>
+	
+	<mx:VBox left="10" top="10" width="100%" height="100%" verticalGap="0">
+        <mx:Label text="Zip Code List" styleName="sectionHeader"/>
+        <mx:HRule height="5" width="99%"/>
+        <mx:Spacer height="8" width="100%"/>
+
+        <pagination:PageNavigator id="listNav" width="100%" visible="false" includeInLayout="false"/>
+        
+        <mx:Canvas id="listContainer" width="99%" height="100%">
+		        <mx:DataGrid id="zipcodeGrid" dataProvider="{this.listData}" 
+		        	                          width="100%"  
+		        	                          height="97%" 
+		        	                          alternatingItemColors="['white', '#daddde']" 
+		        	                          selectable="true"
+        		         					  allowMultipleSelection="false"
+		        	                          itemClick="getSelectedRow(event)">
+		        	<mx:columns>
+		        		<mx:DataGridColumn headerText="Zip Code" dataField="zipcode" width="30"/>
+		        		<mx:DataGridColumn headerText="City" dataField="city" width="95"/>
+		        		<mx:DataGridColumn headerText="City Alias" dataField="cityAliasName" width="95"/>
+		        		<mx:DataGridColumn headerText="State" dataField="state" width="30"/>
+		        		<mx:DataGridColumn headerText="Area Code" dataField="areaCode" width="40"/>
+		        		<mx:DataGridColumn headerText="County" dataField="countyName" width="70"/>
+		        	</mx:columns>
+		        </mx:DataGrid>	
+        </mx:Canvas>
+    </mx:VBox>
+</mx:Canvas>

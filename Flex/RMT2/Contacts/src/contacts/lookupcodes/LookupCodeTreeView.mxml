@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Tree xmlns:mx="http://www.adobe.com/2006/mxml" 
+							     dataProvider="{this.codeData}" 
+							     labelField="@label" 
+							     styleName="formDetailStyle" 
+							     initialize="initListener(event)"
+							     creationComplete="createCompleteListener(event)"
+							     dataDescriptor="{new LookupTreeFilterDataDescriptor()}"
+							     itemClick="treeItemClickListener(event)">
+	
+	<mx:Metadata>
+    	[Event (name="displayLookupDetails", type="contacts.lookupcodes.events.DisplayCodeDetailsEvent")]
+    </mx:Metadata>
+    
+	<mx:Script>
+		<![CDATA[
+			import mx.core.Application;
+			import contacts.lookupcodes.events.CommonCodeDetailsEvent;
+			import contacts.lookupcodes.events.LookupTreeNodeEvent;
+			import contacts.lookupcodes.events.DisplayCodeDetailsEvent;
+			import contacts.lookupcodes.valueobjects.LookupDetailsVO;
+			import mx.events.ListEvent;
+			
+			
+			
+			
+			private function initListener(e : Event) : void {
+				return;
+			}
+			
+			 private function createCompleteListener(event : Event) : void {
+			 	Application.application.addEventListener(LookupTreeNodeEvent.EVENT_NAME, updateTreeListener);
+			 	this.displaySelectedNodeDetails(null);
+			 }
+			 
+			 
+			 private function treeItemClickListener(evt : Event) : void {
+                var item : XML = evt.currentTarget.selectedItem as XML;
+                var vo : LookupDetailsVO = this.getSelectedNodeVO(item);
+              	this.displaySelectedNodeDetails(vo);
+            }
+            
+            
+            private function getSelectedNodeVO(item : XML) : LookupDetailsVO {
+            	var group_id : String;
+			 	var group_desc : String;
+			 	var code_id : String;
+			 	var vo : LookupDetailsVO = new LookupDetailsVO();
+            	
+            	  // Test if we are on the group node
+                group_id = item.@group_id;
+                if (group_id != null && group_id.length > 0) {
+                	group_id = item.@group_id;
+					group_desc = item.@label;
+					vo.grpId = int(group_id);
+					vo.grpName = group_desc;
+					vo.type = CommonCodeDetailsEvent.TYPE_GRP;
+                }
+                else {
+	                // Test if we are on the code node
+	                code_id = item.code_id;
+					if (code_id != null) {
+						group_id = item.parent().@group_id;
+						group_desc = item.parent().@label;
+						vo.grpId = int(group_id);
+						vo.grpName = group_desc;
+						vo.codeId = int(code_id);
+						vo.codeName = item.longdesc;
+						vo.codeAbbrvName = item.shortdesc;
+						vo.type = CommonCodeDetailsEvent.TYPE_CODE;
+					}                                	
+                }
+                return vo;
+            }
+            
+            
+            private function displaySelectedNodeDetails(vo : LookupDetailsVO) : void {
+            	var e : DisplayCodeDetailsEvent = new DisplayCodeDetailsEvent(DisplayCodeDetailsEvent.EVENT_NAME, true);
+            	if (vo == null) {
+            		e.codeType = 0;
+                	e.codeDetails = null;
+            	}
+            	else {
+            		e.codeType = vo.type;
+                	e.codeDetails = vo;
+            	}
+                this.dispatchEvent(e);
+            }
+            
+            
+            private function updateTreeListener(e : LookupTreeNodeEvent) : void {
+            	var item : XML;
+            	switch (e.mode) {
+            		case CommonCodeDetailsEvent.MODE_ADD:
+	            		switch (e.codeType) {
+		            		case CommonCodeDetailsEvent.TYPE_CODE:
+			   					item = this.selectedItem as XML;
+			   					if (item.localName() == "code") {
+			   						item = item.parent();
+			   					}
+			   					this.addGroupChildNode(e.codeDetails, item);
+			   					break;
+			   					
+		            		case CommonCodeDetailsEvent.TYPE_GRP:
+		            			this.addGroupNode(e.codeDetails);
+		            			break;
+		            	}	
+		            	break;
+		            	
+		            case CommonCodeDetailsEvent.MODE_UPDATE:
+		                item = this.selectedItem as XML;
+		                switch (e.codeType) {
+		                	case CommonCodeDetailsEvent.TYPE_GRP:
+		            			item.@group_id = e.codeDetails.grpId;
+		            			item.@label = e.codeDetails.grpName;
+		            			break;
+		            		case CommonCodeDetailsEvent.TYPE_CODE:
+			   					item.@label = e.codeDetails.codeName;
+			   					item.longdesc = e.codeDetails.codeName;
+			   					item.code_id = e.codeDetails.codeId;
+		            			item.shortdesc = e.codeDetails.codeAbbrvName;
+			   					break;
+	            		}	
+	            		break;
+	            		
+	            	case CommonCodeDetailsEvent.MODE_DELETE:
+	            		var node : XML = XML(this.selectedItem);  
+  						this.deleteNode(node);
+  						this.selectedIndex = -1;
+	            	    break;
+	            	    
+	            	default:
+	            		break;
+            	}
+            }
+            
+            private function addGroupNode(node : LookupDetailsVO) : void {
+            	var list : XMLListCollection = this.dataProvider as XMLListCollection;
+            	this.newGroupNode.@group_id = node.grpId;
+	            this.newGroupNode.@label = node.grpName;
+	            var result : Boolean = this.dataDescriptor.addChildAt(null, this.newGroupNode, 1000, list);
+	            this.selectedIndex = this.dataProvider.length;
+	            if (!result) {
+	            	trace("Problem adding new Group to Tree Control [Group Id=" + node.grpId + "Group Name=" + node.grpName + "]");
+	            }
+            	return;
+            }
+            
+             private function addGroupChildNode(node : LookupDetailsVO, grpNode : XML) : void {
+             	// Setup measure to remove the top two group nodes, which are mysteriously added 
+             	// to the list, after the first child is added to a group.
+             	var cnt : int = grpNode.children().length();
+            	if (grpNode != null) {
+	            	this.newCodeNode.@label = node.codeName;
+	            	this.newCodeNode.code_id = node.codeId;
+	            	this.newCodeNode.shortdesc = node.codeAbbrvName;
+	            	this.newCodeNode.longdesc = node.codeName;
+					var result : Boolean = this.dataDescriptor.addChildAt(grpNode, this.newCodeNode, 1000, null);
+		            if (!result) {
+		            	trace("Problem adding new Lookup code to group in Tree Control [Group Name=" + grpNode.grpName + "Code Id=" + node.codeId + "Code Name=" + node.codeName + "]");
+		            }
+            	}
+            	return;
+            }
+            
+            private function deleteNode(node : XML) : void {
+            	var node : XML = XML(this.selectedItem);  
+        		var ndx : int = node.childIndex();
+        		var parentNode : XML = node.parent();
+  				var result : Boolean = this.dataDescriptor.removeChildAt(parentNode, node, node.childIndex());
+  				if (!result) {
+		           	trace("Problem deleting node from the Tree Control [Node Name=" + node.localName() + "Parent node name=" + parentNode.localName() + "]");
+		        }
+            }
+            
+		]]>
+	</mx:Script>
+	
+	<mx:XML id="newGroupNode" xmlns="" source="model/NewGroupNode.xml"/>
+	<mx:XML id="newCodeNode" xmlns="" source="model/NewCodeNode.xml"/>
+	
+	<mx:XMLListCollection id="codeData"/>
+</mx:Tree>

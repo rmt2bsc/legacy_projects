@@ -1,0 +1,11 @@
+ <parms>
+	<clientAction></clientAction>
+	<PageNo></PageNo>
+	<qry_Zip></qry_Zip>
+	<qry_City></qry_City>
+	<qry_CityAliasName></qry_CityAliasName>
+	<qry_State></qry_State>
+	<qry_AreaCode></qry_AreaCode>
+	<qry_CountyName></qry_CountyName>
+	<qry_TimeZone></qry_TimeZone>
+</parms>

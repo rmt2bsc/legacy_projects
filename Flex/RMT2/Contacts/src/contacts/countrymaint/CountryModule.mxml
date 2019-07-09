@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Module xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute"
+																				       initialize="initListener(event)"
+																				       creationComplete="createCompletListener(event)"
+																				       xmlns:countrymaint="contacts.countrymaint.*">
+	
+	<mx:Metadata>
+    	[Event(name="newCountryDetails", type="contacts.countrymaint.events.NewCountryEvent")]
+    	[Event(name="updateReply", type="com.event.UpdateReplyEvent")]
+    </mx:Metadata>
+    
+	<mx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			import com.components.service.data.RMT2ResponderResultsEvent;
+			import contacts.countrymaint.service.CountryHttpSrvcResponder;
+			import com.components.service.data.RMT2AbstractResponder;
+			import mx.rpc.AsyncToken;
+			import contacts.countrymaint.events.NewCountryEvent;
+			import com.event.UpdateReplyEvent;
+			import com.util.RMT2Utility;
+			import com.event.UpdateFormChangesEvent;
+			import mx.collections.XMLListCollection;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			import com.event.SessionTokenEvent;
+			import com.valueobject.SessionTokenVO;
+			import com.net.RMT2HttpService;
+			
+			
+			private const HTTP_URL_FETCH : String = "/contacts/xmlStreamProcessor/Country.Search";
+			
+			private const HTTP_URL_UPDATE : String = "/contacts/xmlStreamProcessor/Country.Edit";
+			
+			private const HTTP_URL_DELETE : String = "/contacts/xmlStreamProcessor/Country.Edit";
+			
+			private var session : SessionTokenVO;  
+			
+			[Bindable]
+			private var list : XMLListCollection;
+			
+
+			 
+			private function initListener(e : Event) : void {
+				// Get Session 
+				var event : SessionTokenEvent = new SessionTokenEvent(SessionTokenEvent.EVENT_NAME, false);
+				this.dispatchEvent(event);
+				this.session = event.getToken();	
+				
+				this.addEventListener(UpdateFormChangesEvent.EVENT_NAME, doFormUpdateListener, true);
+				this.addEventListener(RMT2ResponderResultsEvent.EVENT_NAME, bindHttpServiceResultsListener);
+			}
+
+
+			
+			private function createCompletListener(e : Event) : void {
+				this.fetchCountryList();
+				return;
+			}
+			
+			
+			private function fetchCountryList() : void { 
+				var rootUrl : String = this.session.hostUrl;                    
+				var srvc : RMT2HttpService = new RMT2HttpService(rootUrl);   
+				srvc.setupURL(HTTP_URL_FETCH, rootUrl);
+				this.srvcParmModel.clientAction = CountryHttpSrvcResponder.CLIENT_ACTION_LIST;
+				var token : AsyncToken =  srvc.send(this.srvcParmModel);
+				token[RMT2AbstractResponder.PROP_NAME_SERVICE_ID] = CountryHttpSrvcResponder.CLIENT_ACTION_LIST;
+				token[RMT2AbstractResponder.PROP_NAME_CALLER] = this;
+				token.addResponder(new CountryHttpSrvcResponder());
+				srvc.close();
+				srvc = null;
+			}
+			
+			
+			
+			private function doFormUpdateListener(e : UpdateFormChangesEvent) : void {
+				var url : String;
+				var rootUrl : String = this.session.hostUrl;      
+				RMT2Utility.clearProperties(this.srvcParmModel);
+				RMT2Utility.copyDynamObject(e.formData, this.srvcParmModel);
+				switch (e.mode) {
+					case UpdateFormChangesEvent.MODE_ADD:
+					case UpdateFormChangesEvent.MODE_UPDATE:
+						this.srvcParmModel.clientAction = CountryHttpSrvcResponder.CLIENT_ACTION_SAVE;
+						url = HTTP_URL_UPDATE;
+						break;
+					case UpdateFormChangesEvent.MODE_DELETE:
+					    this.srvcParmModel.clientAction =CountryHttpSrvcResponder. CLIENT_ACTION_DELETE;
+					    url = HTTP_URL_DELETE;
+					    break;
+				}          
+				var srvc : RMT2HttpService = new RMT2HttpService(rootUrl);
+				srvc.setupURL(url, rootUrl);
+				var token : AsyncToken = srvc.send(this.srvcParmModel);
+				token[RMT2AbstractResponder.PROP_NAME_SERVICE_ID] = this.srvcParmModel.clientAction;
+				token[RMT2AbstractResponder.PROP_NAME_CALLER] = this;
+				token.addResponder(new CountryHttpSrvcResponder());
+				srvc.close();
+				srvc = null;
+			}
+			
+			
+			
+			private function bindHttpServiceResultsListener(e : RMT2ResponderResultsEvent) : void {
+				if (e.error) {
+					Alert.show(e.message, "Server Error");
+					return;
+				}
+				switch (e.serviceId) {
+					case CountryHttpSrvcResponder.CLIENT_ACTION_LIST:
+						this.list =  e.results as  XMLListCollection;
+						break;
+					
+					case CountryHttpSrvcResponder.CLIENT_ACTION_SAVE:
+					case CountryHttpSrvcResponder.CLIENT_ACTION_DELETE:
+						var reply : XML = e.results as XML;
+						
+						var evt : UpdateReplyEvent = new UpdateReplyEvent(UpdateReplyEvent.EVENT_NAME, true);
+						evt.msg = reply.ext_message;
+						evt.code = int(reply.return_code);
+						evt.status = reply.return_status;
+						this.dispatchEvent(evt);
+						break;
+						
+					default:
+				}
+			}
+			
+
+
+			
+			private function addListener(e : Event) : void {
+				var evt : NewCountryEvent = new NewCountryEvent(NewCountryEvent.EVENT_NAME, true);
+				evt.model = null;
+				this.dispatchEvent(evt);
+			}		
+			
+		]]>
+	</mx:Script>
+	
+	
+	<mx:Model id="srvcParmModel" source="model/SrvcParms_Country.xml"/>
+	
+	<mx:Panel id="pContainer" title="Country Maintenance" width="900" height="600">
+		<countrymaint:CountryMaintenanceView id="comp" countries="{list}" width="100%" height="100%" styleName="formDetailStyle"/>
+		<mx:ControlBar id="cbButtons">
+			<mx:Button id="bAdd" label="Add" click="addListener(event)"/>
+		</mx:ControlBar>
+	</mx:Panel>
+</mx:Module>

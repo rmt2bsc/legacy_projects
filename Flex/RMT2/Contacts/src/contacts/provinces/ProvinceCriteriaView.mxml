@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:list="com.components.list.*"  initialize="initListener(event)" creationComplete="creationCompleteListener(event)">
+
+
+	<mx:Script>
+		<![CDATA[
+			import contacts.provinces.service.ProvinceHttpSrvcResponder;
+			import contacts.provinces.events.ProvinceResetEvent;
+			import contacts.provinces.valueobjects.ProvinceRequestParmsVO;
+			import contacts.provinces.events.ProvinceQueryRequestEvent;
+			import com.util.RMT2Utility;
+			
+//			private const CLIENT_ACTION_SEARCH : String = "search";
+			
+			private function initListener(e : Event) : void {
+				return;
+			}
+			
+			private function creationCompleteListener(e : Event) : void {
+				return;
+			}
+			
+			/**
+			 * Send query request to the parent component.   Basically gathers values from the input 
+			 * controls (provice code, province name, and country), maps the values to the service request 
+			 * parameter XML model, and sends a ProvinceQueryRequestEvent for the parent component 
+			 * to handle the request.  
+			 */
+			private function sendQuery(e : Event) : void {
+				RMT2Utility.getFormData(this.searchParms, this);
+				this.searchParms["clientAction"] = ProvinceHttpSrvcResponder.CLIENT_ACTION_SEARCH;
+				var evt : ProvinceQueryRequestEvent = new ProvinceQueryRequestEvent(ProvinceQueryRequestEvent.EVENT_NAME, false);
+				evt.request = this.searchParms;
+				trace("Before event dispatch");
+				this.dispatchEvent(evt);
+				trace("After event dispatch");
+			}
+			
+			/**
+			 * Clears all input control values and sends a ProvinceResetEvent all interested parties. 
+			 */
+			private function resetCriteriaSection(e : Event) : void {
+				this.qry_CountryId.selectedIndex = -1;
+				this.qry_StateCode.text = null;
+				this.qry_StateName.text = null;
+				
+				// Send reset event for other components to update themselves. 
+				var evt : ProvinceResetEvent = new ProvinceResetEvent(ProvinceResetEvent.EVENT_NAME);
+				this.dispatchEvent(evt);
+			}
+			
+		]]>
+	</mx:Script>
+	
+	 <mx:Metadata>
+    	[Event (name="provinceRequestEvent", type="contacts.provinces.events.ProvinceQueryRequestEvent")]
+    	[Event (name="provinceResetEvent", type="contacts.provinces.events.ProvinceResetEvent")]
+    </mx:Metadata>
+
+    <mx:XMLList id="countryList"/>
+
+    <mx:Model id="searchParms" source="model/SrvcParms_ProvinceSearch.xml">
+    	
+    	
+    </mx:Model>
+	<mx:VBox id="form" left="10" top="10" height="100%">
+	    <mx:Label text="Province Search Criteria" styleName="sectionHeader"/>
+        <mx:HRule height="5" width="197"/>
+        <mx:Spacer height="8" width="100%"/>
+        <mx:Label text="Province Code" width="90%" height="22" styleName="criteriaItemHeader"/>
+        <mx:TextInput id="qry_StateCode" height="20" width="50"/>
+        <mx:Label text="Province Name" width="90%" height="22" styleName="criteriaItemHeader"/>
+        <mx:TextInput id="qry_StateName" height="20" width="250"/>
+        <mx:Label text="Country" width="90%" height="22" styleName="criteriaItemHeader"/>
+        
+         <list:RMT2SelectComboBox id="qry_CountryId" 
+						         styleName="formInputItem" 
+			 			         dataProvider="{this.countryList}"
+						         labelField="country_name"
+						         keyField="country_id"
+						         prompt="Select one..."
+						         editable="false"
+						         tabIndex="8"/>
+        
+        <mx:Spacer height="8" width="100%"/>
+        <mx:HBox>
+        	<mx:Button label="Search" width="80" height="20" styleName="glassLook" click="sendQuery(event)"/>	
+        	<mx:Button label="Reset" width="80" height="20" styleName="glassLook" click="resetCriteriaSection(event)"/>
+        </mx:HBox>
+    </mx:VBox>
+</mx:Canvas>

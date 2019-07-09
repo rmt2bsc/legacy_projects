@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Module xmlns:mx="http://www.adobe.com/2006/mxml" layout="vertical" 
+																				       initialize="initListener(event)"
+																				       creationComplete="completeListener(event)" 
+																				       xmlns:luc="contacts.lookupcodes.*">
+	
+	<mx:Metadata>
+    	[Event (name="updateReply", type="com.event.UpdateReplyEvent")]
+    	[Event (name="displayLookupDetails", type="contacts.lookupcodes.events.DisplayCodeDetailsEvent")]
+    	[Event (name="lookupTreeNode", type="contacts.lookupcodes.events.LookupTreeNodeEvent")]
+    </mx:Metadata>
+    
+	<mx:Script>
+		<![CDATA[
+			import contacts.lookupcodes.valueobjects.LookupUpdateResultsVO;
+			import mx.controls.Alert;
+			import com.components.service.data.RMT2ResponderResultsEvent;
+			import contacts.lookupcodes.service.LookupHttpSrvcResponder;
+			import com.components.service.data.RMT2AbstractResponder;
+			import mx.rpc.AsyncToken;
+			import contacts.lookupcodes.events.LookupTreeNodeEvent;
+			import com.event.UpdateReplyEvent;
+			import contacts.lookupcodes.events.LookupUpdateEvent;
+			import contacts.lookupcodes.events.CommonCodeDetailsEvent;
+			import contacts.lookupcodes.valueobjects.LookupDetailsVO;
+			import contacts.lookupcodes.events.DisplayCodeDetailsEvent;
+			import mx.collections.XMLListCollection;
+			import com.event.SessionTokenEvent;
+			import com.valueobject.SessionTokenVO;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			import com.net.RMT2HttpService;
+			
+			
+			
+			private const HTTP_URL_FETCH : String = "/contacts/xmlStreamProcessor/GeneralCode.GeneralCodeList";
+			
+			private const HTTP_URL_GRP_UPDATE : String = "/contacts/xmlStreamProcessor/GeneralCodeGroup.GeneralCodeGroupEdit";
+			
+			private const HTTP_URL_CODE_UPDATE : String = "/contacts/xmlStreamProcessor/GeneralCode.GeneralCodeEdit";
+			
+			
+			[Bindable]
+			private var lookupCodes : XMLListCollection;
+			
+			[Bindable]
+            private var session : SessionTokenVO;
+			 
+			private var updateMode : int;
+			
+			private var codeType : int;
+			
+			
+			private function initListener(e : Event) : void {
+				return;
+			}
+			
+			
+			private function completeListener(e : Event) : void {
+				this.addEventListener(DisplayCodeDetailsEvent.EVENT_NAME, displayDetailDataListener, true);
+				this.addEventListener(LookupUpdateEvent.EVENT_NAME, submitChangesListener, true);
+				this.addEventListener(RMT2ResponderResultsEvent.EVENT_NAME, bindHttpServiceResultsListener);
+				
+				var event : SessionTokenEvent = new SessionTokenEvent(SessionTokenEvent.EVENT_NAME, false);
+				this.dispatchEvent(event);
+				this.session = event.getToken();	
+				
+				this.fetchLookupCodes();
+			}
+			
+			private function addGroupListener(e : Event) : void {
+				var evt : DisplayCodeDetailsEvent = new DisplayCodeDetailsEvent(DisplayCodeDetailsEvent.EVENT_NAME, true);
+				var vo : LookupDetailsVO = new LookupDetailsVO();
+				evt.codeDetails = vo;
+				evt.codeType = CommonCodeDetailsEvent.TYPE_GRP;
+				this.dispatchEvent(evt);
+			}
+			
+			private function addCodeListener(e : Event) : void {
+				var vo : LookupDetailsVO = this.getSelectedItem();
+				var evt : DisplayCodeDetailsEvent = new DisplayCodeDetailsEvent(DisplayCodeDetailsEvent.EVENT_NAME, true);
+				evt.codeDetails = vo;
+				evt.codeType = CommonCodeDetailsEvent.TYPE_CODE;
+				this.dispatchEvent(evt);
+			}
+			
+			private function getSelectedItem() : LookupDetailsVO {
+				var vo : LookupDetailsVO = new LookupDetailsVO();
+				var item : XML = this.treeCtrl.selectedItem as XML;
+				var nodeName : String = item.localName();
+				var groupId : String;
+				var groupName : String;
+				if (nodeName == "group") {
+                	groupId = item.@group_id;
+                	groupName = item.@label;
+            	}
+            	if (nodeName == "code") {
+            		groupId = item.parent().@group_id;
+                	groupName = item.parent().@label;
+            	}
+            	vo.grpId = int(groupId);
+            	vo.grpName = groupName;
+				return vo;
+			}
+			
+			private function fetchLookupCodes() : void {
+				// Get general codes records
+				if (this.session == null) {
+					return;
+				}
+				
+				var rootUrl : String = this.session.hostUrl;
+				var httpSrvc : RMT2HttpService = new RMT2HttpService(rootUrl);
+				httpSrvc.setupURL(HTTP_URL_FETCH, rootUrl);
+				var token : AsyncToken = httpSrvc.send(this.codeLookupReqModel);
+				token[RMT2AbstractResponder.PROP_NAME_SERVICE_ID] = LookupHttpSrvcResponder.CLIENT_ACTION_CODELOOKUP;
+				token[RMT2AbstractResponder.PROP_NAME_CALLER] = this;
+				token.addResponder(new LookupHttpSrvcResponder());
+				
+			}
+			
+			
+			private function bindHttpServiceResultsListener(e : RMT2ResponderResultsEvent) : void {
+				if (e.error) {
+					Alert.show(e.message, "Server Error");
+					return;
+				}
+				switch (e.serviceId) {
+					case LookupHttpSrvcResponder.CLIENT_ACTION_CODELOOKUP:
+						this.lookupCodes = e.results as XMLListCollection;
+						break;
+						
+					case LookupHttpSrvcResponder.CLIENT_ACTION_SAVE:
+					case LookupHttpSrvcResponder.CLIENT_ACTION_DELETE:
+						var results : LookupUpdateResultsVO = e.results as LookupUpdateResultsVO;
+						var evt : UpdateReplyEvent = new UpdateReplyEvent(UpdateReplyEvent.EVENT_NAME, true);
+						evt.msg = results.status.ext_message;
+						evt.code = int(results.status.return_code);
+						evt.status = results.status.return_status;
+						evt.returnData = results.lookupRec;
+						this.dispatchEvent(evt);
+				
+						// update tree node for add, modify, and delete transactions
+						var treeEvt : LookupTreeNodeEvent = new LookupTreeNodeEvent(LookupTreeNodeEvent.EVENT_NAME, true);
+						switch (this.updateMode) {
+						    case CommonCodeDetailsEvent.MODE_ADD:
+						    case CommonCodeDetailsEvent.MODE_UPDATE: 
+								treeEvt.mode = this.updateMode;
+								treeEvt.codeType = this.codeType;
+								treeEvt.codeDetails = results.lookupRec;
+								this.dispatchEvent(treeEvt);
+								break;
+								
+							case CommonCodeDetailsEvent.MODE_DELETE:
+								treeEvt.mode = this.updateMode;
+								this.dispatchEvent(treeEvt);
+						}
+		
+						// Update this display based on the deleting of a tree node.
+						this.displayDetailDataListener(null);
+						break;
+					
+					default:
+				}
+			}
+			
+			
+			private function displayDetailDataListener(e : DisplayCodeDetailsEvent) : void {
+				// enable Add button only when a tree node is selected
+				this.bAddCode.enabled = (this.treeCtrl.selectedIndex >= 0);
+    		} 
+    		
+    		
+    		private function submitChangesListener(e : LookupUpdateEvent) : void {
+    			var parms : Object = e.formData;
+    			var updateUrl : String;
+    			var rootUrl : String = this.session.hostUrl;   
+    			this.updateMode = e.mode;
+    			this.codeType = e.codeType;
+    			switch (e.codeType) {
+    				case CommonCodeDetailsEvent.TYPE_GRP:
+    				    // Cannot delete group node with one or more children
+    					if (e.mode == CommonCodeDetailsEvent.MODE_DELETE) {
+							try {
+								this.validateGroupStatus()
+							}
+							catch (err : Error) {
+								var evt : UpdateReplyEvent = new UpdateReplyEvent(UpdateReplyEvent.EVENT_NAME, true);
+								evt.msg = err.message;
+								this.dispatchEvent(evt);
+								return;
+							}
+    					}
+    					updateUrl = HTTP_URL_GRP_UPDATE;
+    					break;
+    				case CommonCodeDetailsEvent.TYPE_CODE:
+    					updateUrl = HTTP_URL_CODE_UPDATE;
+    					break;
+    			}                 
+    			
+    			var httpSrvc : RMT2HttpService = new RMT2HttpService(rootUrl);
+    			httpSrvc.setupURL(updateUrl, rootUrl);
+				var token : AsyncToken = httpSrvc.send(parms);
+				token[RMT2AbstractResponder.PROP_NAME_SERVICE_ID] = parms.clientAction;
+				token[RMT2AbstractResponder.PROP_NAME_CALLER] = this;
+				token.addResponder(new LookupHttpSrvcResponder());
+    		}
+    		
+    		
+    		
+    		
+    		private function validateGroupStatus() : void {
+    			var item : XML = this.treeCtrl.selectedItem as XML;
+    			if (item.children().length() > 0) {
+    				throw new Error("Code group cannot be deleted due to the existence of one or more lookup codes");
+    			}
+    		}
+    		
+		]]>
+	</mx:Script>
+	
+	
+	<mx:Model id="codeLookupReqModel" source="model/SrvcParms_AllContactLookups.xml"/>
+	<mx:Binding source="LookupHttpSrvcResponder.CLIENT_ACTION_CODELOOKUP" destination="codeLookupReqModel.clientAction"/>
+	
+	<mx:Panel id="pContainer" title="Lookup Codes" width="900" height="600">
+		<mx:HDividedBox id="hdContainer" width="100%" height="100%" styleName="formDetailStyle">
+			<luc:LookupCodeTreeView id="treeCtrl" codeData="{this.lookupCodes}" width="40%"  height="100%"/>
+			<luc:LookupCodeDetailsForm id="dtlForm" width="60%"/>
+		</mx:HDividedBox>
+		<mx:ControlBar id="cbButtons">
+			<mx:Button id="bAddGrp" label="Add Group" click="addGroupListener(event)"/>
+			<mx:Button id="bAddCode" label="Add Code" enabled="false" click="addCodeListener(event)"/>
+		</mx:ControlBar>
+	</mx:Panel>
+	
+</mx:Module>

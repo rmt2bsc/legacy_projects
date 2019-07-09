@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:CheckBox xmlns:mx="http://www.adobe.com/2006/mxml">
+	<mx:Script>
+		<![CDATA[
+		    
+			private var _value : String;
+			
+			
+			public function set value(data : String) : void {
+				this._value = data;
+				this.invalidateProperties();
+			}
+			public function get value() : String {
+				return this._value;
+			}
+			
+		]]>
+	</mx:Script>
+</mx:CheckBox>

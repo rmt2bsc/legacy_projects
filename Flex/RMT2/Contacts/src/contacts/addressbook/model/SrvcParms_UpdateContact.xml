@@ -1,0 +1,47 @@
+<parms>
+	<clientAction></clientAction>
+	<contactType></contactType>
+	
+	<BusinessId></BusinessId>
+	<EntityTypeId></EntityTypeId>
+	<ServTypeId></ServTypeId>
+	<Longname></Longname>
+	<Shortname></Shortname>
+	<ContactFirstname></ContactFirstname>
+	<ContactLastname></ContactLastname>
+	<ContactPhone></ContactPhone>
+	<ContactExt></ContactExt>
+	<ContactEmail></ContactEmail>
+	<TaxId></TaxId>
+	<Website></Website>
+	
+	<PersonId></PersonId>
+	<Firstname></Firstname>
+	<Midname></Midname>
+	<Lastname></Lastname>
+	<Maidenname></Maidenname>
+	<Generation></Generation>
+	<Title></Title>
+	<GenderId></GenderId>
+	<MaritalStatusId></MaritalStatusId>
+	<BirthDate></BirthDate>
+	<RaceId></RaceId>
+	<Ssn></Ssn>
+	<Email></Email>
+	
+	<AddrId></AddrId>
+	<Addr1></Addr1>
+	<Addr2></Addr2>
+	<Addr3></Addr3>
+	<Addr4></Addr4>
+	<Zip></Zip>
+	<Zipext></Zipext>
+	<PhoneHome></PhoneHome>
+	<PhoneWork></PhoneWork>
+	<PhoneExt></PhoneExt>
+	<PhoneMain></PhoneMain>
+	<PhoneCell></PhoneCell>
+	<PhoneFax></PhoneFax>
+	<PhonePager></PhonePager>
+	<UserId></UserId>
+</parms>

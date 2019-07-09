@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:HDividedBox xmlns:mx="http://www.adobe.com/2006/mxml"
+	initialize="initListener(event)"
+	creationComplete="setupListener(event)" 
+	xmlns:countrymaint="contacts.countrymaint.*">
+	
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.collections.XMLListCollection;
+			import com.valueobject.SessionTokenVO;
+			import com.event.SessionTokenEvent;
+			
+			
+			private var session : SessionTokenVO;
+			
+			[Bindable]
+			public var countries : XMLListCollection;
+			
+			
+			
+			private function initListener(e : Event) : void {
+				// Get Session 
+				var event : SessionTokenEvent = new SessionTokenEvent(SessionTokenEvent.EVENT_NAME, false);
+				this.dispatchEvent(event);
+				this.session = event.getToken();	
+			}
+			
+			private function setupListener(e : Event) : void {
+				return;
+			}
+			
+		]]>
+	</mx:Script>
+
+	<countrymaint:CountryListView id="lstCountry" xmlList="{this.countries}" labelField="country_name" width="35%" height="100%" styleName="formDetailStyle"/>
+	<countrymaint:CountryDetailsView id="dtlCountry" width="65%"/>
+</mx:HDividedBox>

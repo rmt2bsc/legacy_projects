@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" initialize="initListener(event)"
+	                                                 creationComplete="createCompleteListener(event)">
+	
+	<mx:Metadata>
+		[ResourceBundle("CommonConfig")]
+		[Event (name="sessionTokenRequest", type="com.event.SessionTokenEvent")]
+		[Event (name="logoutUser", type="com.components.security.LogoutUserEvent")]
+		[Event (name="startUserLogin", type="com.components.security.StartUserLoginEvent")]
+	</mx:Metadata>
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.core.Application;
+			import com.valueobject.SessionTokenVO;
+			import com.event.SessionTokenEvent;
+			import mx.resources.ResourceManager;
+			import mx.resources.IResourceManager;
+			import com.util.RMT2AppUrlUtility;
+			
+			
+			private const STATE_LOGIN : String = "Login";
+			
+			private var session : SessionTokenVO;
+			
+			[Bindable]
+			public var appCode : String;
+			
+			[Bindable]
+			private var welcomeMsg : String;
+			
+			[Bindable]
+			public var securityController : EventDispatcher;
+
+
+			
+			private function initListener(e : Event) : void {
+				return;
+			}
+			
+			
+			private function createCompleteListener(e : Event) : void {
+				securityController.addEventListener(AuthenticationSucessEvent.EVENT_NAME, this.loginSuccessListener);
+				return;	
+			}
+			
+			private function loginSuccessListener(e : AuthenticationSucessEvent) : void {
+				this.showInfo();
+				return;	
+			}
+			
+			private function showInfo() : void {
+				var r : IResourceManager =  ResourceManager.getInstance();
+				var msg : String = r.getString(RMT2AppUrlUtility.CONFIG_COMMON, "welcome"); 
+				var evt : SessionTokenEvent = new SessionTokenEvent(SessionTokenEvent.EVENT_NAME, true);
+				this.dispatchEvent(evt);
+				this.session = evt.getToken();
+				this.welcomeMsg = msg + this.session.firstName + " " + this.session.lastName;
+				this.currentState = "";
+			}
+			
+			
+			private function hideInfo() : void {
+				var evt : LogoutUserEvent = new LogoutUserEvent(LogoutUserEvent.EVENT_NAME);
+				if (this.session != null) {
+					evt.userId = this.session.loginId;
+					evt.appName = this.session.appName;
+					evt.sessionId = this.session.sessionId;
+					evt.appCode = this.appCode;
+					this.dispatchEvent(evt);
+					this.session = null;	
+				}
+				this.currentState = STATE_LOGIN;
+			}
+			
+			
+			private function requestUserLogin() : void {
+				var evt : StartUserLoginEvent = new StartUserLoginEvent(StartUserLoginEvent.EVENT_NAME, true);
+				this.dispatchEvent(evt);
+			}
+		
+		]]>
+	</mx:Script>
+	
+
+	<mx:states>
+		<mx:State name="{STATE_LOGIN}">
+			<mx:RemoveChild target="{logoutContainer}"/>
+			<mx:AddChild>
+				<mx:HBox id="loginContainer" width="100%">
+					<mx:Spacer width="85%"/>
+					<mx:LinkButton id="linkLogin"  label="Login" fontWeight="normal" click="this.requestUserLogin()"/>
+				</mx:HBox>
+			</mx:AddChild>
+		</mx:State>
+	</mx:states>
+	
+	
+	<mx:HBox id="logoutContainer" width="100%" horizontalAlign="right">
+		<mx:Spacer width="50%"/>
+		<mx:Text id="txtWelcome" text="{this.welcomeMsg}" width="35%" color="black" fontWeight="bold"/>
+		<mx:LinkButton id="linkLogout"  label="Logout" fontWeight="normal" click="this.hideInfo()"/>
+	</mx:HBox>
+	
+</mx:Canvas>

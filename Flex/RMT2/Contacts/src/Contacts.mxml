@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:security="com.components.security.*" 
+				                                                                                         xmlns:application="com.components.application.*"
+				                                                                                         xmlns:addressbook="com.contacts.addressbook.*" 
+												                                                     	 layout="vertical" 
+																							             verticalAlign="top" 
+																							             backgroundColor="white" 
+																							             initialize="initListener(event)"
+																							             creationComplete="createCompleteListener(event)"
+																							             applicationComplete="appComplete(event)" 
+																							             creationCompleteEffect="Dissolve" xmlns:local="*">
+	
+	<mx:Style source="assets/css/rmt2_styles.css"/>
+	
+	<mx:Metadata>
+		[ResourceBundle("CommonConfig")]
+		[ResourceBundle("Contacts")]
+	</mx:Metadata>
+	
+	<mx:Script>
+		<![CDATA[
+			import com.event.FetchFirstPageEvent;
+			import mx.utils.URLUtil;
+			import mx.controls.Alert;
+			import com.components.security.SingleSignOnResultsEvent;
+			import com.components.application.SingleSignOnCheckEvent;
+			import com.valueobject.UserTokenVO;
+			import mx.events.ItemClickEvent;
+			import com.components.security.LogoutUserSuccessEvent;
+			import com.util.RMT2ModuleUtility;
+			import com.components.security.StartUserLoginEvent;
+			import com.components.security.AuthenticationSucessEvent;
+			import com.util.RMT2AppUrlUtility;
+			import com.components.security.LogoutUserEvent;
+			import mx.collections.ArrayCollection;
+			import com.components.security.AuthenticationFailureEvent;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			import com.net.RMT2HttpService;
+			import com.components.security.AuthenticateUserEvent;
+			import mx.resources.ResourceBundle;
+			import mx.resources.ResourceManager;
+			import mx.resources.IResourceManager;
+			import com.valueobject.SessionTokenVO;
+			import com.event.SessionTokenEvent;
+			
+			
+			// Import and declare module components so they can be shared amongst each other  between load/unload activities
+			import contacts.addressbook.AddressForm;
+			import contacts.addressbook.BusinessForm;
+			import contacts.addressbook.CardRenderer;
+			import contacts.addressbook.ContactDetails;
+			import contacts.addressbook.NewContactForm;
+			import contacts.addressbook.PersonForm;
+			import contacts.lookupcodes.LookupCodeDetailsForm;
+			import contacts.lookupcodes.LookupCodeTreeView;
+			import contacts.lookupcodes.LookupTreeFilterDataDescriptor;
+			import contacts.countrymaint.CountryDetailsView;
+			import contacts.countrymaint.CountryListView;
+			import contacts.countrymaint.CountryMaintenanceView;
+			import contacts.provinces.ProvinceCriteriaView;
+			import contacts.provinces.ProvinceDetailsView;
+			import contacts.provinces.ProvinceListView;
+			import contacts.provinces.ProvinceQueryAndSearchView
+			import contacts.zipcode.ZipcodeCriteriaView;
+			import contacts.zipcode.ZipcodeDetailsView;
+			import contacts.zipcode.ZipcodeListView;
+			import contacts.zipcode.ZipcodeQueryAndSearchView;
+			
+			private var a1 : AddressForm;
+			private var a2 : BusinessForm;
+			private var a3 : CardRenderer;
+			private var a4 : ContactDetails;
+			private var a5 : NewContactForm;
+			private var a6 : PersonForm;
+			private var a7 : LookupCodeDetailsForm;
+			private var a8 : LookupCodeTreeView;
+			private var a9 : LookupTreeFilterDataDescriptor;
+			private var a10 : CountryDetailsView;
+			private var a11 : CountryListView;
+			private var a12 : CountryMaintenanceView;
+			private var a13 : ProvinceCriteriaView;
+			private var a14 : ProvinceDetailsView;
+			private var a15 : ProvinceListView;
+			private var a16 : ProvinceQueryAndSearchView;
+			private var a17 : ZipcodeCriteriaView;
+			private var a18 : ZipcodeDetailsView;
+			private var a19 : ZipcodeListView;
+			private var a20 : ZipcodeQueryAndSearchView;
+			
+			
+			
+			private static const CONFIG_COMMON : String = "CommonConfig";
+			
+			private static const CONFIG_CONTACT : String = "Contacts";
+			
+			private var session : SessionTokenVO;
+			
+			private var r : IResourceManager;
+			
+			[Bindable]
+			private var appName : String;
+			
+			[Bindable]
+			private var appcode : String;
+			
+			[Bindable]
+			private var modURL : Dictionary;
+			
+			
+			
+			
+			private function initListener(e : Event) : void {
+				this.security.addEventListener(AuthenticationSucessEvent.EVENT_NAME, loginRequestSuccessListener);
+				this.security.addEventListener(LogoutUserSuccessEvent.EVENT_NAME, logoutRequestSuccessListener);
+				this.security.addEventListener(SingleSignOnResultsEvent.EVENT_NAME, verifySingleSignOnResultsListener);
+				this.addEventListener(StartUserLoginEvent.EVENT_NAME, loginRequestListener, true);
+				
+				this.r = ResourceManager.getInstance();
+				
+				this.modURL = new Dictionary();
+				this.modURL["modAddrBook"] = "contacts/addressbook/AddressBookModule.swf";
+				this.modURL["modLookupCodes"] =  "contacts/lookupcodes/LookupCodesModule.swf";
+				this.modURL["modCountryMaint"] =  "contacts/countrymaint/CountryModule.swf";
+				this.modURL["modProvinceMaint"] =  "contacts/provinces/ProvinceModule.swf";
+				this.modURL["modZipcodeMaint"] =  "contacts/zipcode/ZipcodeModule.swf";
+				
+				return;
+			}
+			
+			
+			private function createCompleteListener(e : Event) : void {
+				this.currentState = this.security.stateStartUp;
+				this.userWelcome.setStyle("horizontalAlign", "right");
+				
+				// Get application code and application name from contacts configuration properties file.
+				this.appcode = this.r.getString(CONFIG_CONTACT, "app_code");
+				this.appName = this.r.getString(CONFIG_CONTACT, "app_name");
+				
+				// Get any URL parameters when application is first loaded.
+				var loginId : String =this.security.getParm("loginId");
+				var env : String = this.security.getParm("env");
+
+				var evt : SingleSignOnCheckEvent = new SingleSignOnCheckEvent(SingleSignOnCheckEvent.EVENT_NAME, true);
+				evt.userId = loginId;
+				evt.appCode = this.appcode;
+				this.dispatchEvent(evt);
+				return;	
+			}
+			
+			private function appComplete(e : Event) : void {
+				var util : RMT2ModuleUtility = new RMT2ModuleUtility();
+				util.preloadModule(this.modURL[this.modAddrBook.id], this.appViews);
+				util.preloadModule(this.modURL[this.modLookupCodes.id], this.appViews);
+				util.preloadModule(this.modURL[this.modCountryMaint.id], this.appViews);
+				util.preloadModule(this.modURL[this.modProvinceMaint.id], this.appViews);
+				util.preloadModule(this.modURL[this.modZipcodeMaint.id], this.appViews);
+				util = null;
+				return;
+			}
+			
+			private function loginRequestListener(e : StartUserLoginEvent) : void {
+				this.showPage();
+			}
+			
+			
+			private function verifySingleSignOnResultsListener(e : SingleSignOnResultsEvent) : void {
+				this.session = e.session;
+				this.showPage();
+			}
+			
+			
+			private function loginRequestSuccessListener(e : AuthenticationSucessEvent) : void {
+				this.session = e.session;
+				this.showPage();
+				this.currentState = "";
+			}
+			
+			private function logoutRequestSuccessListener(e : LogoutUserSuccessEvent) : void {
+				this.session = null;
+				var util : RMT2ModuleUtility = new RMT2ModuleUtility();
+				util.unloadRemoveModule(this.modAddrBook, this.appViews);
+				util.unloadRemoveModule(this.modLookupCodes, this.appViews);
+				util.unloadRemoveModule(this.modCountryMaint, this.appViews);
+				util.unloadRemoveModule(this.modProvinceMaint, this.appViews);
+				util.unloadRemoveModule(this.modZipcodeMaint, this.appViews);
+				this.appViews.removeAllChildren();
+				
+				this.currentState = RMT2SecureApp.STATE_LOGGEDOUT;
+			}
+
+
+			private function showPage() : void {
+				this.currentState = this.security.getAppAuthenticationState();
+				if (this.currentState == "") {
+					var util : RMT2ModuleUtility = new RMT2ModuleUtility();
+					
+					// If we need to add modules to toggle button bar, don't depend on ModuleEvent.READY event to a
+					// add modules to display list since it cannot guarantee the order in which the modules will be added 
+					// to the display list.
+					if (this.appViews.getChildren().length == 0) {
+						this.appViews.addChild(this.modAddrBook);
+						this.appViews.addChild(this.modLookupCodes);
+						this.appViews.addChild(this.modCountryMaint);
+						this.appViews.addChild(this.modProvinceMaint);
+						this.appViews.addChild(this.modZipcodeMaint);	
+					}
+
+					util.loadModule(this.modAddrBook, this.modURL[this.modAddrBook.id]);
+					util.loadModule(this.modLookupCodes, this.modURL[this.modLookupCodes.id]);
+					util.loadModule(this.modCountryMaint, this.modURL[this.modCountryMaint.id]);
+					util.loadModule(this.modProvinceMaint, this.modURL[this.modProvinceMaint.id]);
+					util.loadModule(this.modZipcodeMaint, this.modURL[this.modZipcodeMaint.id]);
+					
+					// Attempt to retrieve data for the first view once successfully logged in
+					if (this.appViews.getChildren().length > 0) {
+						var evt : FetchFirstPageEvent = new FetchFirstPageEvent(FetchFirstPageEvent.EVENT_NAME);
+						util.loadModule(this.modAddrBook, this.modURL[this.modAddrBook.id]);
+						this.appViews.getChildAt(0).dispatchEvent(evt);
+						this.appViews.selectedIndex = 0;	
+					}
+				}
+				return;
+			}
+		]]>
+	</mx:Script>
+
+	<mx:Model id="loginModel" source="assets/model/SrvcParms_Login.xml"/>
+	
+	<application:RMT2SecureApp id="security" loginModel="{this.loginModel}" parentApp="{this}"/>
+	
+	<mx:states>
+	    <mx:State name="{this.security.stateStartUp}">
+		    <mx:RemoveChild target="{this.mainApp}"/>
+		    <mx:RemoveChild target="{this.appViews}"/>
+		</mx:State>
+		
+		<mx:State name="{this.security.stateLogin}">
+		    <mx:RemoveChild target="{this.mainApp}"/>
+		    <mx:RemoveChild target="{this.appViews}"/>
+			<mx:AddChild>
+				<security:Login id="login" appName="{this.appName}" appCode="{this.appcode}" width="30%" height="25%" verticalCenter="0" horizontalCenter="0"/>
+			</mx:AddChild>
+		</mx:State>
+		
+		<mx:State name="{this.security.stateLoggedOut}">
+			<mx:AddChild relativeTo="{this.mainApp}" position="after">
+				<security:UserLoggedOutView id="loggedOutView" label="Address Book" appName="{this.appName}" width="80%" height="100%"/>
+			</mx:AddChild>
+			<mx:SetProperty target="{this.buttonBar}" name="enabled" value="false"/>
+		</mx:State>
+	</mx:states>
+	
+	
+    <mx:ApplicationControlBar id="mainApp" width="80%" dock="false">
+    	<mx:Image source="@Embed(source='assets/images/logo_app_menu.gif')"/>
+    	<mx:Image source="@Embed(source='assets/images/module_title_contacts.gif')"/>
+    	<mx:ToggleButtonBar id="buttonBar" height="100%" dataProvider="{appViews}"/>
+    	<security:UserWelcome id="userWelcome" appCode="{this.appcode}" securityController="{this.security}" width="40%" height="20"/>
+    </mx:ApplicationControlBar>
+    
+     <mx:ViewStack id="appViews" width="80%" height="90%">
+    	<mx:ModuleLoader id="modAddrBook" label="Address Book" url="{this.modURL[this.modAddrBook.id]}" showEffect="Dissolve"/>
+    	<mx:ModuleLoader id="modLookupCodes" label="Lookup Codes" url="{this.modURL[this.modLookupCodes.id]}" showEffect="Dissolve"/>
+    	<mx:ModuleLoader id="modCountryMaint" label="Countries" url="{this.modURL[this.modCountryMaint.id]}" showEffect="Dissolve"/>
+    	<mx:ModuleLoader id="modProvinceMaint" label="State/Province" url="{this.modURL[this.modProvinceMaint.id]}" showEffect="Dissolve"/>
+    	<mx:ModuleLoader id="modZipcodeMaint" label="Zip Code" url="{this.modURL[this.modZipcodeMaint.id]}" showEffect="Dissolve"/>
+    </mx:ViewStack>
+    
+</mx:Application>

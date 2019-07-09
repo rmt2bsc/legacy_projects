@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Form xmlns:mx="http://www.adobe.com/2006/mxml" initialize="initListener(event)">
+	     
+	<mx:Metadata>
+		[Event(name="zipChange", type="contacts.addressbook.ZipChangeEvent")]
+		[Event(name="updateTargetZipChange", type="contacts.addressbook.ZipTargetUpdateEvent")]
+		[Event (name="acceptFormChanges", type="com.event.AcceptFormChangesEvent")]
+	</mx:Metadata>
+	
+	<mx:states>
+		<mx:State name="businessAddress">
+			<mx:RemoveChild target="{fiHomePhone}"/>
+			<mx:RemoveChild target="{fiWorkPhone}"/>
+			<mx:RemoveChild target="{fiWorkExt}"/>
+			<mx:RemoveChild target="{fiCellPhone}"/>
+			<mx:RemoveChild target="{fiPagePhone}"/>
+			<mx:AddChild relativeTo="{fiFaxPhone}" position="before">
+				<mx:FormItem id="fiBusPhone" label="Business Phone:" styleName="formItemHead"> 
+					<mx:TextInput id="PhoneMain" text="{RMT2Utility.formatPhoneNumber(address.phone_main)}" styleName="formInputItem" tabIndex="33"/>
+   				</mx:FormItem>
+			</mx:AddChild>
+		</mx:State>
+	</mx:states>
+	
+	<mx:Script>
+		<![CDATA[
+			import com.event.AcceptFormChangesEvent;
+			import com.event.LoadFormChangesEvent;
+			import contacts.addressbook.events.ZipTargetUpdateEvent;
+			import contacts.addressbook.events.ZipChangeEvent;
+			import contacts.addressbook.valueobjects.ZipcodeVO;
+			import com.util.RMT2Utility;
+			import mx.binding.utils.ChangeWatcher;
+			import mx.events.PropertyChangeEvent;
+		    import mx.events.FlexEvent;
+		    
+			
+			
+			public function initListener(e : Event) : void {
+				// Create change watcher on the address property in order to manipulate personal 
+				// and business contact view states on subsequent usage of this component.
+				var addrChgWatcher : ChangeWatcher = ChangeWatcher.watch(this, "address", addressChangeListener);
+				this.addressChangeListener(new PropertyChangeEvent(PropertyChangeEvent.PROPERTY_CHANGE));
+				this.addEventListener(ZipTargetUpdateEvent.EVENT_NAME, updateZipcodeData);
+				this.addEventListener(LoadFormChangesEvent.EVENT_NAME, this.requestChangesListener);
+			}
+    		
+			
+			private function addressChangeListener(e : PropertyChangeEvent) : void {
+				if (this.contactType == "bus") {
+					this.currentState = "businessAddress";
+				}
+				else {
+					this.currentState = "";
+				}
+			}
+			
+			
+			private function requestChangesListener(e : LoadFormChangesEvent) : void {
+				RMT2Utility.getFormData(e.model, this);
+				var ee : AcceptFormChangesEvent = new AcceptFormChangesEvent(AcceptFormChangesEvent.EVENT_NAME, true);
+				ee.model = e.model;
+				this.dispatchEvent(ee);			
+			}
+			
+			private function zipChangeListener(e : Event) : void {
+				var event : ZipChangeEvent = new ZipChangeEvent(ZipChangeEvent.ZIP_CHANGE, false);
+				event.callbackObj = this;
+				event.zipCode = e.target.text;
+				this.dispatchEvent(event);
+			}
+			
+			private function updateZipcodeData(e : ZipTargetUpdateEvent) : void {
+				var obj : ZipcodeVO = e.getData();
+				this.lCity.text = obj.getCity();
+				this.lState.text = obj.getState();
+			}
+		]]>
+	</mx:Script>
+	
+	
+	<mx:XML id="address"/>
+	<mx:String id="contactType"/>
+			
+	<mx:FormItem label="Address Id:" styleName="formItemHead">
+ 	 	<mx:Label id="AddrId" text="{this.address.addr_id}" styleName="formInputItem"/>
+   </mx:FormItem>
+   <mx:FormItem label="Address Line 1:" styleName="formItemHead"> 
+		<mx:TextInput id="Addr1" text="{address.addr1}" width="250" styleName="formInputItem" tabIndex="20"/>
+   </mx:FormItem>
+   <mx:FormItem label="Address Line 2:" styleName="formItemHead"> 
+		<mx:TextInput id="Addr2" text="{address.addr2}" width="250" styleName="formInputItem" tabIndex="21"/>
+   </mx:FormItem>
+   <mx:FormItem label="Address Line 3:" styleName="formItemHead"> 
+		<mx:TextInput id="Addr3" text="{address.addr3}" width="250" styleName="formInputItem" tabIndex="22"/>
+   </mx:FormItem>
+   <mx:FormItem label="Address Line 4:" styleName="formItemHead"> 
+		<mx:TextInput id="Addr4" text="{address.addr4}" width="250" styleName="formInputItem" tabIndex="23"/>
+   </mx:FormItem>
+   <mx:FormItem label="Zip Code:" styleName="formItemHead"> 
+		<mx:TextInput id="Zip" text="{address.zip.zipcode}" width="60" styleName="formInputItem" valueCommit="this.zipChangeListener(event)" tabIndex="24"/>
+   </mx:FormItem>
+   <mx:FormItem id="zipExt" label="Zip Code Ext:" styleName="formItemHead"> 
+		<mx:TextInput id="Zipext" text="{address.zip_ext}" width="60" styleName="formInputItem" tabIndex="25"/>
+   </mx:FormItem>
+   <mx:FormItem id="fiCity" label="City:" styleName="formItemHead"> 
+		<mx:Label id="lCity" text="{address.zip.city}" styleName="formInputItem" tabIndex="26"/>
+   </mx:FormItem>
+   <mx:FormItem id="fiState" label="State:" styleName="formItemHead"> 
+		<mx:Label id="lState" text="{address.zip.state}" styleName="formInputItem" tabIndex="27"/>
+   </mx:FormItem>
+   
+   <!-- Phone numbers -->
+   <mx:FormItem id="fiHomePhone" label="Home Phone:"  styleName="formItemHead"> 
+		<mx:TextInput id="PhoneHome" text="{RMT2Utility.formatPhoneNumber(address.phone_home)}" styleName="formInputItem" tabIndex="28"/>
+   </mx:FormItem>
+   <mx:FormItem id="fiWorkPhone" label="Work Phone:" styleName="formItemHead"> 
+		<mx:TextInput id="PhoneWork" text="{RMT2Utility.formatPhoneNumber(address.phone_work)}" styleName="formInputItem" tabIndex="29"/>
+   </mx:FormItem>
+   <mx:FormItem id="fiWorkExt" label="Work Phone Ext:" styleName="formItemHead"> 
+		<mx:TextInput id="PhoneExt" text="{address.phone_work_ext}" styleName="formInputItem" tabIndex="30"/>
+   </mx:FormItem>
+   <mx:FormItem id="fiCellPhone" label="Mobile Phone:" styleName="formItemHead"> 
+		<mx:TextInput id="PhoneCell" text="{RMT2Utility.formatPhoneNumber(address.phone_cell)}" styleName="formInputItem" tabIndex="31"/>
+   </mx:FormItem>
+    <mx:FormItem id="fiPagePhone" label="Pager:" styleName="formItemHead"> 
+		<mx:TextInput id="PhonePager" text="{RMT2Utility.formatPhoneNumber(address.phone_pager)}" styleName="formInputItem" tabIndex="32"/>
+   </mx:FormItem>
+    <mx:FormItem id="fiFaxPhone" label="Fax:" styleName="formItemHead"> 
+		<mx:TextInput id="PhoneFax" text="{RMT2Utility.formatPhoneNumber(address.phone_fax)}" styleName="formInputItem" tabIndex="34"/>
+   </mx:FormItem>
+</mx:Form>

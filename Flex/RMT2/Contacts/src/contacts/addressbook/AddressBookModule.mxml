@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Module xmlns:mx="http://www.adobe.com/2006/mxml"  xmlns:addressbook="contacts.addressbook.*" 
+			                                                                                        xmlns:security="com.components.security.*" 
+																									initialize="initListener(event)" 
+																									creationComplete="createCompleteListener(event)"
+																									width="100%"
+																									height="100%">
+
+    <mx:Script>
+    
+		<![CDATA[
+			import com.event.FetchFirstPageEvent;
+			import com.components.service.data.RMT2AbstractResponder;
+			import mx.rpc.AsyncToken;
+			import contacts.addressbook.service.AddressBookHttpSrvcResponder;
+			import com.components.service.data.RMT2ResponderResultsEvent;
+			import mx.events.ItemClickEvent;
+			import mx.events.FlexEvent;
+			import com.components.security.StartUserLoginEvent;
+			import com.components.security.LogoutUserEvent;
+			import contacts.addressbook.events.UpdateContactEvent;
+			import contacts.addressbook.events.DisplayContactDetailsEvent;
+			import mx.rpc.events.FaultEvent;
+			import com.net.RMT2HttpService;
+			import flash.utils.getQualifiedClassName;
+			import mx.core.Application;
+			import mx.managers.PopUpManager;
+			import contacts.addressbook.NewContactForm;
+			import com.valueobject.SessionTokenVO;
+			import com.event.SessionTokenEvent;
+			import mx.events.ListEvent;
+			import mx.collections.XMLListCollection;
+			import mx.rpc.events.ResultEvent;
+			import mx.controls.Alert;
+			import contacts.addressbook.CardRenderer;
+
+
+			private const STATE_EDIT : String = "editState";
+			
+			private const HTTP_URL_SEARCH : String = "/contacts/xmlStreamProcessor/CommonContact.Search";
+			
+			private const HTTP_URL_CODES : String = "/contacts/xmlStreamProcessor/GeneralCode.GeneralCodeList";
+			
+			[Bindable]
+            private var session : SessionTokenVO;
+            
+            [Bindable]
+            private var contactIdNum : Number;
+			
+			[Bindable]
+			private var selectedItem : int;
+			
+			[Bindable]
+			private var criteria : String;
+			
+			[Bindable]
+			private var appName : String;
+			
+			[Bindable]
+			private var xmlList : XMLList;
+			
+			[Bindable]
+			private var lookupCodes : XMLList;
+			
+			
+			
+			
+			private function initListener(e : Event) : void {
+				// Adjust component width, if requested
+				var num : Array;
+				if (this.vWidth != null) {
+					if (this.vWidth.indexOf("%") > -1) {
+						num = this.vWidth.split("%");
+						this.percentWidth = Number(num[0]);	
+					}
+					else {
+						this.width = Number(this.vWidth);
+					}
+				}
+				// Adjust component height, if requested.
+				if (this.vHeight != null) {
+					if (this.vHeight.indexOf("%") > -1) {
+						num = this.vHeight.split("%");
+						this.percentHeight = Number(num[0]);	
+					}
+					else {
+						this.height = Number(this.vHeight);
+					}
+				}
+			}
+			
+			private function createCompleteListener(e : Event) : void {
+				this.cardFilterBar.addEventListener(ItemClickEvent.ITEM_CLICK, changeContactListListener);
+				Application.application.addEventListener(FetchFirstPageEvent.EVENT_NAME, firstTimeFetchListener, true);
+				this.addEventListener(RMT2ResponderResultsEvent.EVENT_NAME, bindHttpServiceResultsListener);
+				this.fetchContacts();
+				return;
+			}
+
+			
+			private function returnToCardListListener(e : Event) : void {
+				this.tlContactCardList.selectedIndex = this.lContactNameList.selectedIndex;	
+				this.currentState = "";
+			}
+			
+			private function showEditListSelectionListener(e : Event) : void {
+				this.lContactNameList.selectedIndex = this.tlContactCardList.selectedIndex;
+				var result : Boolean = this.lContactNameList.scrollToIndex(this.tlContactCardList.selectedIndex);
+			}
+			
+			protected function firstTimeFetchListener(e : FetchFirstPageEvent):void {
+				this.fetchContacts();	
+				return;
+			}
+			
+			protected function changeContactListListener(e : ItemClickEvent):void {
+				this.fetchContacts();	
+				return;
+			}
+			
+			private function fetchContacts() : void {
+				if (this.session == null) {
+					var event : SessionTokenEvent = new SessionTokenEvent(SessionTokenEvent.EVENT_NAME, false);
+					this.dispatchEvent(event);
+					this.session = event.getToken();	
+					if (this.session == null) {
+						return;
+					}
+				}
+				
+				// Fetch data from the server using HTTPService intance.
+				var rootUrl : String = this.session.hostUrl;  
+				var httpSrvc : RMT2HttpService = new RMT2HttpService(rootUrl);
+				
+				// Get general codes records
+				if (this.lookupCodes == null) {
+					httpSrvc.setupURL(HTTP_URL_CODES, rootUrl);
+					var token : AsyncToken = httpSrvc.send(this.codeLookupReqModel);
+					token[RMT2AbstractResponder.PROP_NAME_SERVICE_ID] = AddressBookHttpSrvcResponder.CLIENT_ACTION_CODELOOKUP;
+					token[RMT2AbstractResponder.PROP_NAME_CALLER] = this;
+					token.addResponder(new AddressBookHttpSrvcResponder());
+				}
+				
+				// Get selected criteria from the alphabet nav bar
+				this.criteria = this.getContactListFilter();;
+				
+				// Make Http call to get contacts
+				httpSrvc.setupURL(HTTP_URL_SEARCH, rootUrl);
+				var token2 : AsyncToken = httpSrvc.send(this.cardSearchReqModel);
+				token2[RMT2AbstractResponder.PROP_NAME_SERVICE_ID] = AddressBookHttpSrvcResponder.CLIENT_ACTION_SEARCH;
+				token2[RMT2AbstractResponder.PROP_NAME_CALLER] = this;
+				token2.addResponder(new AddressBookHttpSrvcResponder());
+				
+				// Release the HTTP Service's resources
+				httpSrvc.close();
+			}
+			
+			
+			
+			private function getContactListFilter() : String {
+				var criteria : String;
+				var ndx:Number = cardFilterBar.selectedIndex;
+				criteria = addrBookFilterModel.filter[ndx].data;  //data[ndx] as String;
+				if (ndx == 0) {
+					criteria = "[^a-zA-Z]";
+				}
+				return criteria;
+			}
+			
+			
+			private function bindHttpServiceResultsListener(e : RMT2ResponderResultsEvent) : void {
+				if (e.error) {
+					Alert.show(e.message, "Server Error");
+					return;
+				}
+				switch (e.serviceId) {
+					case AddressBookHttpSrvcResponder.CLIENT_ACTION_CODELOOKUP:
+						this.lookupCodes = e.results.group;
+						break;
+					
+					case AddressBookHttpSrvcResponder.CLIENT_ACTION_SEARCH:
+						this.xmlList = e.results as XMLList;
+						
+						// if we are in edit state, make the first list item the selected one.
+						if (this.currentState == STATE_EDIT && e.found) {
+							this.lContactNameList.selectedIndex = 0;
+							this.editContactListener(null);
+						}
+						// Show null contact state if list result set is empty and the current state is "edit"
+						if (!e.found && this.currentState == STATE_EDIT) {
+							var evt : DisplayContactDetailsEvent = new DisplayContactDetailsEvent(DisplayContactDetailsEvent.EVENT_NAME);
+							evt.contactId = DisplayContactDetailsEvent.NULL_CONTACT;
+							evt.contactType = null;
+							evt.nullContact = true;
+							this.details.dispatchEvent(evt);
+						}
+						break;
+						
+					default:
+				}
+			}
+
+			
+
+			private function editContactListener(e : ListEvent) : void {
+				var contact : Object;
+				switch (this.currentState) {
+					case '':
+					case null:
+						contact = this.tlContactCardList.selectedItem;	
+						this.currentState = STATE_EDIT;
+						
+						// Execute only if edit state contact list has been initialized.   
+						// The "initialized" property will equal true once the list has reached 
+						// the "createComplete" event.
+						if (this.lContactNameList.initialized) {
+							this.showEditListSelectionListener(e);	
+						}
+						break;
+				 	case STATE_EDIT:
+				 		contact = this.lContactNameList.selectedItem;	
+			 		break;
+				}
+				
+				// Send an event to the details component intructing it to fetch the contact 
+				// details specific to the selected contact and display the details of the 
+				// current selection
+				var evt : DisplayContactDetailsEvent = new DisplayContactDetailsEvent(DisplayContactDetailsEvent.EVENT_NAME, true); 
+				evt.contactId = contact.contact_id;
+				evt.contactType = contact.contact_type;
+				evt.nullContact = false;
+//				this.details.dispatchEvent(evt);
+				this.dispatchEvent(evt);
+				return;
+			}
+						
+						
+			/**
+			 * Show pop up window for adding contact
+			 */						
+			private function addContactListener(e : Event) : void {
+				var parent : DisplayObject = Application.application as DisplayObject;
+				var popup : NewContactForm = PopUpManager.createPopUp(parent, NewContactForm, false) as NewContactForm;
+				popup.percentWidth = 50;
+				popup.percentHeight = 60;
+				popup.lookupCodes = this.lookupCodes;
+				popup.session = this.session;
+				PopUpManager.centerPopUp(popup);
+				return;
+			}
+			
+			/**
+			 * Instruct details component to update its current contact.
+			 */
+			private function saveContactListener(e : Event) : void {
+				var evt : UpdateContactEvent = new UpdateContactEvent(UpdateContactEvent.EVENT_NAME); 
+				evt.mode = UpdateContactEvent.DML_MODIFY;
+				this.details.dispatchEvent(evt);
+				return;
+    	    }
+
+			/**
+			 * Instruct details component to delete its current contact.
+			 */     	    
+    	    private function deleteContactListener(e : Event) : void {
+				var evt : UpdateContactEvent = new UpdateContactEvent(UpdateContactEvent.EVENT_NAME); 
+				evt.mode = UpdateContactEvent.DML_DELETE;
+				this.details.dispatchEvent(evt);
+				return;
+    	    }
+    	    
+		]]>
+	</mx:Script>
+
+
+	<mx:Metadata>
+	    [Event (name="cardChange", type="contacts.addressbook.CardFilterEvent")]
+		[Event(name="sessionTokenRequest", type="com.event.SessionTokenEvent")]
+	</mx:Metadata>
+
+	<mx:String id="vWidth"/>
+    <mx:String id="vHeight"/>
+    
+	<mx:Model id="cardSearchReqModel" source="model/SrvcParms_ContactListSearch.xml"/>
+	<mx:Model id="codeLookupReqModel" source="model/SrvcParms_ContactLookups.xml"/>
+	<mx:Model id="addrBookFilterModel" source="model/Entity_AddressBookListFilters.xml"/>
+	
+	<mx:Binding source="AddressBookHttpSrvcResponder.CLIENT_ACTION_SEARCH" destination="cardSearchReqModel.clientAction"/>
+	<mx:Binding source="this.criteria" destination="cardSearchReqModel.qry_ContactName"/>
+	<mx:Binding source="AddressBookHttpSrvcResponder.CLIENT_ACTION_CODELOOKUP" destination="codeLookupReqModel.clientAction"/>
+
+    <mx:states>
+        <mx:State name="editState">
+        	<mx:RemoveChild target="{tlContactCardList}"/>
+        	<mx:AddChild relativeTo="{panContainer}" position="lastChild">
+        		<mx:List id="lContactNameList"
+		        			     styleName="formDetailStyle"
+		        		         dataProvider="{this.xmlList}"
+		        		         labelField="contact_name"
+		        		         selectable="true"
+		        		         allowMultipleSelection="false"
+		        		         width="25%"
+		        		         height="100%"
+		        		         creationComplete="showEditListSelectionListener(event)" 
+		        		         itemClick="editContactListener(event)"/>
+        	</mx:AddChild>
+        	<mx:AddChild relativeTo="{panContainer}" position="lastChild">
+        		<addressbook:ContactDetails id="details" width="100%" height="100%"  lookupCodes="{this.lookupCodes}"/>
+        	</mx:AddChild>
+        	<mx:AddChild relativeTo="{this.bNew}" position="after">
+        		<mx:Button id="bDelete" label="Delete Contact" click="deleteContactListener(event)"/>
+        	</mx:AddChild>
+        	<mx:AddChild relativeTo="{this.bDelete}" position="after">
+        		<mx:Button id="bSave" label="Save Contact" click="saveContactListener(event)"/>
+        	</mx:AddChild>
+        	<mx:AddChild relativeTo="{this.bSave}" position="after">
+        		<mx:Button id="bBack" label="Back To Contact Cards" click="returnToCardListListener(event)"/>
+        	</mx:AddChild>
+        </mx:State>
+        
+    </mx:states>
+    
+    <mx:transitions>
+    	<mx:Transition fromState="" toState="{STATE_EDIT}">
+    		<mx:Sequence target="{this.panContainer}">
+    			<mx:WipeRight duration="1000"/>
+    		</mx:Sequence>
+    	</mx:Transition>
+    	<mx:Transition fromState="{STATE_EDIT}" toState="">
+    		<mx:Sequence target="{this.panContainer}">
+    			<mx:Rotate />
+    		</mx:Sequence>
+    	</mx:Transition>
+    </mx:transitions>
+    
+	
+    <mx:HBox width="100%" height="100%">
+	 	<mx:ToggleButtonBar id="cardFilterBar"  height="70%" dataProvider="{filterButtons}" 	minHeight="30" 	direction="vertical"/>
+	 	
+	 	<mx:ViewStack id="filterButtons" resizeToContent="true" >
+		        <mx:Repeater id="iter" dataProvider="{addrBookFilterModel.filter}" >
+			  			<mx:Canvas id="canv" label="{iter.currentItem.label}"/>
+		        </mx:Repeater>
+	    </mx:ViewStack>
+		    
+	    <mx:Panel id="panContainer" width="100%" height="100%" layout="horizontal"  fontFamily="Verdana">
+			<mx:TileList id="tlContactCardList"  selectable="true" 
+				                                                      width="100%" 
+				                                                      height="100%"  
+				                                                      direction="vertical"
+																	  dataProvider="{this.xmlList}" 
+																	   itemRenderer="contacts.addressbook.CardRenderer"
+																	   itemClick="editContactListener(event)"/>
+				         
+			<mx:ControlBar id="cbButtons" height="10%" width="118">
+			  <mx:Button id="bNew" label="New Contact" click="addContactListener(event)"/>
+			  <mx:Spacer width="100%"/>
+			  <mx:HBox right="10">
+			  	  <mx:Label id="lListCount" text="Page Total: " fontSize="12" fontWeight="bold"/>
+				  <mx:Text id="txtTotal" fontSize="12" fontWeight="bold" text="{tlContactCardList.dataProvider.length}"/>		  	
+			  </mx:HBox>
+			</mx:ControlBar>
+			
+		</mx:Panel>
+	</mx:HBox>
+</mx:Module>

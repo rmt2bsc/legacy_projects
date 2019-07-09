@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" initialize="initListener(event)" creationComplete="creationCompleteListener(event)">
+
+	<mx:Script>
+		<![CDATA[
+			import mx.events.ListEvent;
+			
+			import contacts.provinces.events.ProvinceEditEvent;
+			import mx.events.PropertyChangeEvent;
+			import mx.binding.utils.ChangeWatcher;
+		
+			private const STATE_EMPTY : String = "EmptyResultSet";
+			
+			private function initListener(e : Event) : void {
+				var listWatcher : ChangeWatcher = ChangeWatcher.watch(this, "listData", listChangeListener);
+				return;
+			}
+			
+			private function creationCompleteListener(e : Event) : void {
+				return;
+			}
+			
+			private function listChangeListener(e : PropertyChangeEvent) : void {
+				if (this.listData == null || this.listData.length == 0) {
+					this.currentState  = STATE_EMPTY;
+				}
+				else {
+					this.currentState = "";
+				}
+			}
+			
+			private function getSelectedRow(e : ListEvent) : void {
+				var curItem : Object = this.provinceGrid.selectedItem;
+				trace(curItem.state_name);
+				var evt : ProvinceEditEvent = new ProvinceEditEvent(ProvinceEditEvent.EVENT_NAME);
+				evt.province = curItem;
+				this.dispatchEvent(evt);
+			}
+			
+			
+		]]>
+	</mx:Script>
+	
+	<mx:Metadata>
+    	[Event (name="provinceEditEvent", type="contacts.provinces.events.ProvinceEditEvent")]
+    </mx:Metadata>
+	
+	<mx:states>
+		<mx:State name="{STATE_EMPTY}">
+		     <mx:RemoveChild target="{this.provinceGrid}"/>
+		     <mx:AddChild relativeTo="{this.listContainer}" position="firstchild">
+		     	    <mx:Label id="emptyRestultMessage" text="Empty Result Set" width="100%" color="red" fontWeight="bold" textAlign="center"/>
+		     </mx:AddChild> 
+		</mx:State>
+	</mx:states>
+	
+	<mx:XMLListCollection id="listData"/>
+	
+	<mx:VBox left="10" top="10" width="97%" height="100%" verticalGap="0">
+        <mx:Label text="Province List" styleName="sectionHeader"/>
+        <mx:HRule height="5" width="100%"/>
+        <mx:Spacer height="8" width="100%"/>
+        
+        <mx:Canvas id="listContainer" width="100%" height="100%">
+		        <mx:DataGrid id="provinceGrid" dataProvider="{this.listData}" width="100%"  height="97%" alternatingItemColors="['white', '#daddde']" itemClick="getSelectedRow(event)">
+		        	<mx:columns>
+		        		<mx:DataGridColumn headerText="Id" dataField="state_id" width="30"/>
+		        		<mx:DataGridColumn headerText="Name" dataField="state_name" width="120"/>
+		        		<mx:DataGridColumn headerText="Code" dataField="state_code" width="30"/>
+		        		<mx:DataGridColumn headerText="Country" dataField="country_name" width="120"/>
+		        	</mx:columns>
+		        </mx:DataGrid>	
+        </mx:Canvas>
+    </mx:VBox>
+</mx:Canvas>

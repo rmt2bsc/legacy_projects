@@ -1,0 +1,36 @@
+<zip_full>
+	<zip_id></zip_id>
+	<zipcode></zipcode>
+	<city></city>
+	<state></state>
+	<areaCode></areaCode>
+	<cityAliasName></cityAliasName>
+	<cityAliasAbbr/>
+	<cityTypeId>
+		<city_type_id></city_type_id>
+		<city_type_desc></city_type_desc>
+	</cityTypeId>
+	<countyName></countyName>
+	<countyFips></countyFips>
+	<timeZoneId>
+		<timezone_id></timezone_id>
+		<timeszone_desc></timeszone_desc>
+	</timeZoneId>
+	<dayLightSaving></dayLightSaving>
+	<latitude></latitude>
+	<longitude></longitude>
+	<elevation></elevation>
+	<msa></msa>
+	<pmsa></pmsa>
+	<cbsa></cbsa>
+	<cbsaDiv></cbsaDiv>
+	<persons_per_household></persons_per_household>
+	<zipcode_population></zipcode_population>
+	<counties_area></counties_area>
+	<households_per_zipcode></households_per_zipcode>
+	<white_population></white_population>
+	<black_population></black_population>
+	<hispanic_population></hispanic_population>
+	<income_per_household></income_per_household>
+	<average_house_value></average_house_value>
+</zip_full>

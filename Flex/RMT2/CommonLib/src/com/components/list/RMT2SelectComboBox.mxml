@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  This component inherits Flex's Combonbox control for te purpose of providing selectedValue 
+  support and overcoming some of the flawed key functional behavior when selecting an item from 
+  the list based on an incoming value.  Typical functionality is now added to the combo box 
+  that will recognize the selected key value along with the related key field, compare the 
+  selected value to the key field value in the dataProvider, and display the associated text 
+  value when a match is found.  If the select value is not found or not supplied, then the 
+  selected index is  set to -1.   This implementation really comes in handy when a combo box 
+  is used repeatedly once the enclosing component is created.       
+  
+  Added the properties, selectedKeyValue and keyField.
+-->
+<mx:ComboBox xmlns:mx="http://www.adobe.com/2006/mxml">
+	
+	<mx:Script>
+		<![CDATA[
+			
+			private var _selectedKeyValue : String;
+			
+			private var _keyField : String;
+			
+			private var bSelKeyValSet : Boolean = false;
+			
+			
+			
+			
+			public function set selectedKeyValue(value : String) : void {
+				if (value != null && value.length > 0) {
+					this._selectedKeyValue = value;
+					this.bSelKeyValSet = true;
+				}
+				this.invalidateProperties();				
+			}
+			
+			public function set keyField(value : String) : void {
+				if (value != null && value.length > 0) {
+					this._keyField = value;
+				}
+				this.invalidateProperties();
+			}
+			
+			public function get keyField() : String {
+				return this._keyField;
+			}
+			
+			
+			protected override function commitProperties() : void {
+				var bFound : Boolean = false;
+				var sId : String = this.id;
+				// Call ancestor version of this method
+				super.commitProperties();
+				
+				// No need to compare values in data provider if key value is not set
+				if (!this.bSelKeyValSet) {
+					this.selectedIndex = -1;
+					return
+				}
+				// Try to match the selected value with a value from dataProvider based on the key field
+				var bDataProviderSet : Boolean = (this.dataProvider != null && this.dataProvider.length > 0);
+				var bKeyFieldSet : Boolean = (this._keyField != null && this._keyField.length > 0);
+				if (bDataProviderSet && bKeyFieldSet) {
+					var rows : int = this.dataProvider.length;
+					// Key field must exist as a property of "dataProvider"
+					if (this.dataProvider[0].hasOwnProperty(this._keyField)) {
+						// Set flag to false so code won't be called until selectedValue is set again
+						this.bSelKeyValSet = false;
+
+						// Loop through data provider looking for selected value						
+						for (var ndx : int = 0; ndx < rows; ndx++) {
+							var item : Object = this.dataProvider[ndx];
+							var keyVal : String = item[this._keyField];
+							var origTxt : String = item[this.labelField];
+							var prevSelIndex : int = this.selectedIndex;
+							if (this._selectedKeyValue == keyVal) {
+								this.selectedIndex = ndx;
+								bFound = true;
+								break;
+							}
+						}
+						if (!bFound) {
+							// Initialize the selectedIndex property of the combo boxes to -1 to prevent the 
+			    			// display of the first list item since, by the default, the first combobox item 
+			    			// is selected upon intial display.  This is important in situations where the 
+			    			// incoming data for the respective property does not have, hence, nothing in 
+			    			// the list should be selected.  As a complement, set the "prompt" property
+			    			// which will automatically display as the selected text when the selectedIndex
+			    			// property is set to -1.
+							this.selectedIndex = -1;	
+						}
+					}
+				}
+			}
+			
+		]]>
+	</mx:Script>
+</mx:ComboBox>

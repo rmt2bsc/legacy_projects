@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:HBox xmlns:mx="http://www.adobe.com/2006/mxml" width="450" height="25" xmlns:pagination="com.components.pagination.*"  initialize="initListener(event)" creationComplete="creationCompleteListener(event)">
+
+   <mx:Metadata>
+   		[Event (name="newPageRequest", type="com.components.pagination.PaginationPageRequestEvent")]
+   </mx:Metadata>
+   
+	<mx:Script>
+		<![CDATA[
+			import mx.core.Application;
+			import mx.events.PropertyChangeEvent;
+			import mx.binding.utils.ChangeWatcher;
+			
+			
+			private var pageMetrics : PaginationData;
+			
+			[Embed(source="assets/images/first.gif")]
+			[Bindable]
+			private var firstImg : Class;
+			
+			[Embed(source="assets/images/last.gif")]
+			[Bindable]
+			private var lastImg : Class;
+			
+			[Embed(source="assets/images/prev.gif")]
+			[Bindable]
+			private var prevImg : Class;
+			
+			[Embed(source="assets/images/next.gif")]
+			[Bindable]
+			private var nextImg : Class;
+
+			[Bindable]
+			private var linkWidth : int;
+
+			
+			
+			private function initListener(e : Event) : void {
+				Application.application.addEventListener(ResetPaginationComponentEvent.EVENT_NAME, this.resetListener);
+				Application.application.addEventListener(PaginationMetricChangeEvent.EVENT_NAME, this.pageMetricsChangeListener);
+				return;
+			}
+			
+			private function creationCompleteListener(e : Event) : void {
+				return;
+			}			
+			
+
+			private function pageMetricsChangeListener(e : PaginationMetricChangeEvent) : void {
+				this.pageMetrics = e.pageMetrics;
+				this.manageComponentAttributes();
+			}
+	
+			private function requestFirstPage() : void {
+				this.requestNewPage(1);
+			}	
+			
+			/**
+			 * Identifies the last page of the query using a custom rounding approach as it relates to 
+			 * the "totalPages' property of the PaginationData instance.  Total page count can represent 
+			 * partial pages which a partial page constitutes a number on the right side of the decimal 
+			 * value that is greater than or equal to .1. 
+			 */
+			private function requestLastPage() : void {
+				var lastPageNo : int = PaginationUtil.getRoundedTotalPages(this.pageMetrics.totalPages);
+				this.requestNewPage(lastPageNo);
+			}	
+			
+			
+			private function requestPrevPage() : void {
+				var prev : int = this.pageMetrics.curPage - 1;
+				if (prev > 1) {
+					this.requestNewPage(prev);
+				}
+				else {
+					this.requestFirstPage();
+				}
+			}	
+			
+			
+			private function requestNextPage() : void {
+				var next : int = this.pageMetrics.curPage + 1;
+				if (next < this.pageMetrics.totalPages) {
+					this.requestNewPage(next);
+				}
+				else {
+					this.requestLastPage();
+				}
+			}	
+			
+			
+			private function requestNewPage(newPageNo : int) : void {
+				var evt : PaginationPageRequestEvent = new PaginationPageRequestEvent(PaginationPageRequestEvent.EVENT_NAME, true);
+				evt.newPage = newPageNo;
+				this.pageMetrics.curPage = newPageNo;
+				this.dispatchEvent(evt);	
+				trace("A new page has been requested from the pagination navigation component: " + newPageNo);
+			}
+			
+			/**
+			 * Dynamically manages the width size of the page link section.
+			 */ 
+			private function manageComponentAttributes() : void {
+				// For every two link items, increase the width of the page links section by 65 pixels
+				var units : int  = this.pageMetrics.maxPagesPerGroup / 2;
+				this.linkWidth = units * 65;
+			}
+			
+			/**
+			 * This method has an empty implementation at this time.  
+			 */
+			private function resetListener(e : ResetPaginationComponentEvent) : void {
+				return;
+			}
+			
+		]]>
+	</mx:Script>
+
+  
+	
+	<mx:Image id="FirstPage" source="{this.firstImg}" click="this.requestFirstPage()"/>
+	<mx:Spacer width="5" height="2"/>
+	<mx:Image id="PrevPage" source="{this.prevImg}" click="this.requestPrevPage()"/>
+
+	<pagination:PageLinkSubset  id="pageLinks" width="{this.linkWidth}" height="55"/>
+	
+	<mx:Image id="NextPage" source="{this.nextImg}" click="this.requestNextPage()"/>
+	<mx:Spacer width="5" height="2"/>
+	<mx:Image id="LastPage" source="{this.lastImg}" click="this.requestLastPage()"/>
+</mx:HBox>

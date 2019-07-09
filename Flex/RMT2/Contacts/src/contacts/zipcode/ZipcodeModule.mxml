@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Module xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" 
+										                                                 xmlns:zipcode="contacts.zipcode.*" 
+										                                                 initialize="initListener(event)" 
+										                                                 creationComplete="creationCompleteListener(event)">
+
+	<mx:Metadata>
+		[Event (name="resetPaginationEvent", type="com.components.pagination.ResetPaginationComponentEvent")]
+		[Event (name="updateZipcodeDetailsEvent", type="contacts.zipcode.events.ZipcodeUpdateDetailsEvent")]
+		[Event (name="paginationResultsEvent", type="com.components.pagination.PaginationResultsEvent")]
+		
+	</mx:Metadata>
+		                                                 
+	<mx:Script>
+		<![CDATA[
+			import contacts.zipcode.valueobjects.ZipcodeServiceResultsVO;
+			import mx.controls.Alert;
+			import mx.rpc.AsyncToken;
+			import com.components.service.data.RMT2AbstractResponder;
+			import com.components.service.data.RMT2ResponderResultsEvent;
+			import contacts.zipcode.service.ZipcodeHttpSrvcResponder;
+			import com.components.pagination.PaginationPageRequestEvent;
+			import com.components.pagination.PaginationResultsEvent;
+			import com.components.pagination.PaginationMetricChangeEvent;
+			import contacts.zipcode.events.ZipcodeUpdateDetailsEvent;
+			import com.components.pagination.ResetPaginationComponentEvent;
+			import com.components.pagination.PaginationData;
+			import contacts.zipcode.events.ZipcodeResetEvent;
+			import com.net.RMT2HttpService;
+			import mx.collections.XMLListCollection;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			import contacts.zipcode.events.ZipcodeQueryRequestEvent;
+			import contacts.zipcode.events.ZipcodeDetailsEvent;
+			import com.valueobject.SessionTokenVO;
+			import com.event.SessionTokenEvent;
+			
+			
+			private const HTTP_URL_FETCH : String = "/contacts/xmlStreamProcessor/Zipcode.Search";
+			
+			[Bindable]
+            private var session : SessionTokenVO;
+            
+			[Bindable]
+			private var timezoneList : XMLList;
+			
+			[Bindable]
+			private var zipList : XMLListCollection;
+			
+			private var prevSearchCriteria : Object;
+			
+			
+			
+			private function initListener(e : Event) : void {
+				var event : SessionTokenEvent = new SessionTokenEvent(SessionTokenEvent.EVENT_NAME, false);
+				this.dispatchEvent(event);
+				this.session = event.getToken();
+				
+				this.addEventListener(ZipcodeQueryRequestEvent.EVENT_NAME, this.zipcodeRequestQueryListener);
+				this.addEventListener(ZipcodeDetailsEvent.EVENT_NAME, this.zipcodeRequestDetailsListener);
+				this.addEventListener(ZipcodeResetEvent.EVENT_NAME, this.resetZipcodeUIListener);
+				this.addEventListener(PaginationPageRequestEvent.EVENT_NAME, this.getPageListener);
+				this.addEventListener(RMT2ResponderResultsEvent.EVENT_NAME, bindHttpServiceResultsListener);
+			}
+			
+			private function creationCompleteListener(e : Event) : void {
+				if (this.timezoneList == null) {
+					var rootUrl : String = this.session.hostUrl;                    
+					var srvc : RMT2HttpService =  new RMT2HttpService(rootUrl);
+					srvc.setupURL(HTTP_URL_FETCH, rootUrl);
+					var token : AsyncToken = srvc.send(this.timezoneListReqModel);
+					token[RMT2AbstractResponder.PROP_NAME_SERVICE_ID] = ZipcodeHttpSrvcResponder.CLIENT_ACTION_TIMEZONE_LIST;
+					token[RMT2AbstractResponder.PROP_NAME_CALLER] = this;
+					token.addResponder(new ZipcodeHttpSrvcResponder());
+					srvc.close();
+					srvc = null;
+				}
+			}
+			
+			
+			
+			private function getPageListener(e : PaginationPageRequestEvent) : void {
+				var evt : ZipcodeQueryRequestEvent = new ZipcodeQueryRequestEvent(ZipcodeQueryRequestEvent.EVENT_NAME);
+				this.prevSearchCriteria["PageNo"] = e.newPage;
+				evt.request = this.prevSearchCriteria;
+				this.zipcodeRequestQueryListener(evt); 
+			}
+			
+			
+			
+			private function zipcodeRequestQueryListener(e : ZipcodeQueryRequestEvent) : void {
+				this.prevSearchCriteria = e.request;
+				var rootUrl : String = this.session.hostUrl;                    
+				var srvc : RMT2HttpService =  new RMT2HttpService(rootUrl);
+				srvc.setupURL(HTTP_URL_FETCH, rootUrl);
+				var token : AsyncToken = srvc.send(e.request);
+				token[RMT2AbstractResponder.PROP_NAME_SERVICE_ID] = e.request.clientAction;
+				token[RMT2AbstractResponder.PROP_NAME_CALLER] = this;
+				token.addResponder(new ZipcodeHttpSrvcResponder());
+				srvc.close();
+				srvc = null;
+				return;
+			}
+			
+			
+			private function bindHttpServiceResultsListener(e : RMT2ResponderResultsEvent) : void {
+				if (e.error) {
+					Alert.show(e.message, "Server Error");
+					return;
+				}
+				
+				var vo : ZipcodeServiceResultsVO = null;
+				var msg : String = null;
+				switch (e.serviceId) {
+					case ZipcodeHttpSrvcResponder.CLIENT_ACTION_TIMEZONE_LIST:
+						this.timezoneList = e.results as XMLList;
+						break;
+						
+					case ZipcodeHttpSrvcResponder.CLIENT_ACTION_SEARCH:
+						vo = e.results as ZipcodeServiceResultsVO;			  
+						 if (vo.status != null) {
+							if (vo.status.return_status == "SUCCESS") {
+								// Capture page info
+								var pageMetrics : PaginationData = vo.pageMetrics;
+								// Capture Zip list.
+								this.zipList = vo.zipList;
+									
+								var evt : PaginationResultsEvent = new PaginationResultsEvent(PaginationResultsEvent.EVENT_NAME);
+								evt.pageMetrics = pageMetrics;
+								evt.pageResults = this.zipList;
+								this.dispatchEvent(evt);
+								
+								// Capture fetch message with record count
+								msg = "Total records found: " + pageMetrics.totalRows;
+								this.messageArea.setStyle("color", "black");
+							}
+							else {
+								this.zipList = null;
+								msg = vo.status.ext_message;
+								this.messageArea.setStyle("color", "red");
+							}
+							this.messageArea.text = msg;
+						} 
+						break;
+					
+					case ZipcodeHttpSrvcResponder.CLIENT_ACTION_VIEW:
+						var zipDetails : XML = null;
+						try {
+							vo = e.results as ZipcodeServiceResultsVO;
+							if (vo.status != null) {
+								if (vo.status.return_status == "ERROR") {
+									this.messageArea.setStyle("color", "red");
+									this.messageArea.text =  vo.status.ext_message;
+									return;
+								}
+								zipDetails = vo.zipDetails;;
+							}	
+						}
+						catch (e : Error) {
+							this.messageArea.setStyle("color", "red");
+							this.messageArea.text =  e.message;
+						}
+						finally {
+							// Broadcast zipcode details to intertested components
+							var evtDetail : ZipcodeUpdateDetailsEvent = new ZipcodeUpdateDetailsEvent(ZipcodeUpdateDetailsEvent.EVENT_NAME);
+							evtDetail.zipcode = zipDetails;
+							this.dispatchEvent(evtDetail);
+						}    
+						break;
+						
+					default:
+				}
+			}
+			
+			
+			
+			private function zipcodeRequestDetailsListener(e : ZipcodeDetailsEvent) : void {
+				var rootUrl : String = this.session.hostUrl;   
+				this.zipcodeDetailsReqModel.ZipId = e.zipcode.zip_id;    
+				var srvc : RMT2HttpService =  new RMT2HttpService(rootUrl);
+				srvc.setupURL(HTTP_URL_FETCH, rootUrl);             
+				var token : AsyncToken = srvc.send(this.zipcodeDetailsReqModel);
+				token[RMT2AbstractResponder.PROP_NAME_SERVICE_ID] = this.zipcodeDetailsReqModel.clientAction;
+				token[RMT2AbstractResponder.PROP_NAME_CALLER] = this;
+				token.addResponder(new ZipcodeHttpSrvcResponder());
+				srvc.close();
+				srvc = null;
+				return;
+			}
+			
+			
+			/**
+			 * Clears the message area.  
+			 */
+			private function resetZipcodeUIListener(e : ZipcodeResetEvent) : void {
+				this.messageArea.text = null;
+				// Broadcast pagination reset event to interested components 
+				var evt : ResetPaginationComponentEvent = new ResetPaginationComponentEvent(ResetPaginationComponentEvent.EVENT_NAME); 
+				this.dispatchEvent(evt);
+				return;
+			}
+		]]>
+	</mx:Script>	                                                 
+	        
+	<mx:Model id="timezoneListReqModel" source="model/SrvcParms_TimezoneList.xml"/>   
+    <mx:Model id="zipcodeDetailsReqModel" source="model/SrvcParms_ZipcodeView.xml"/>
+    <mx:Binding source="ZipcodeHttpSrvcResponder.CLIENT_ACTION_TIMEZONE_LIST" destination="timezoneListReqModel.clientAction"/>
+    <mx:Binding source="ZipcodeHttpSrvcResponder.CLIENT_ACTION_VIEW" destination="zipcodeDetailsReqModel.clientAction"/>
+            
+	<mx:Canvas id="pContainer" width="1100" height="600" styleName="colorPanel">
+	    <mx:VBox width="98%" height="100%"  left="10">
+		    <zipcode:ZipcodeQueryAndSearchView id="querySearchView" width="100%" height="99%" left="10" timezoneList="{this.timezoneList}" zipcodeList="{this.zipList}"/>
+			<mx:Label id="messageArea" width="100%" color="red"/>	
+	    </mx:VBox>
+	</mx:Canvas>
+	                                                 
+</mx:Module>

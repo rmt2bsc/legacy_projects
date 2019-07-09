@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" initialize="initListener(event)"
+	                                                 creationComplete="createCompleteListener(event)">
+	
+	
+	
+	<mx:Script>
+		<![CDATA[
+			
+			[Bindable]
+			private var msg1 : String;
+			[Bindable]
+			private var msg2 : String;
+			
+			
+			private function initListener(e : Event) : void {
+				return;
+			}
+			
+			private function createCompleteListener(e : Event) : void {
+				this.msg1 = "You are now logged out!";
+				this.msg2 = "You have been successfully logged out of your " + (appName == null ? '[Application Unknown]' : appName) + " session.";
+				return;	
+			}
+			
+		]]>
+	</mx:Script>
+	
+	<mx:String id="appName"/>
+	
+	<mx:Panel id="logoutContainer" width="100%" height="100%">
+		<mx:VBox  width="100%">
+			<mx:Spacer height="10%"/>
+			<mx:Text text="{this.msg1}" width="100%" color="black" fontWeight="bold" fontSize="24"/>
+			<mx:Spacer height="20%"/>
+			<mx:Text text="{this.msg2}" width="100%" color="#1FB2C8" fontWeight="bold" fontSize="14"/>
+		</mx:VBox>	
+	</mx:Panel>
+	
+	
+</mx:Canvas>

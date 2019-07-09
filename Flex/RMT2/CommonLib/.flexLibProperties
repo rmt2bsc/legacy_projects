@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flexLibProperties version="1">
+<includeClasses>
+<classEntry path="com.components.RMT2CheckBox"/>
+<classEntry path="com.components.application.RMT2CommonApp"/>
+<classEntry path="com.components.application.RMT2SecureApp"/>
+<classEntry path="com.components.application.SingleSignOnCheckEvent"/>
+<classEntry path="com.components.list.RMT2SelectComboBox"/>
+<classEntry path="com.components.pagination.PageLinkSubset"/>
+<classEntry path="com.components.pagination.PageNavigator"/>
+<classEntry path="com.components.pagination.PaginationData"/>
+<classEntry path="com.components.pagination.PaginationMetricChangeEvent"/>
+<classEntry path="com.components.pagination.PaginationPageRequestEvent"/>
+<classEntry path="com.components.pagination.PaginationResultsEvent"/>
+<classEntry path="com.components.pagination.PaginationUtil"/>
+<classEntry path="com.components.pagination.ResetPaginationComponentEvent"/>
+<classEntry path="com.components.security.AuthenticateUserEvent"/>
+<classEntry path="com.components.security.AuthenticationFailureEvent"/>
+<classEntry path="com.components.security.AuthenticationSucessEvent"/>
+<classEntry path="com.components.security.CommonSecurityEvent"/>
+<classEntry path="com.components.security.Login"/>
+<classEntry path="com.components.security.LogoutUserEvent"/>
+<classEntry path="com.components.security.LogoutUserFailureEvent"/>
+<classEntry path="com.components.security.LogoutUserSuccessEvent"/>
+<classEntry path="com.components.security.SingleSignOnResultsEvent"/>
+<classEntry path="com.components.security.StartUserLoginEvent"/>
+<classEntry path="com.components.security.UserLoggedOutView"/>
+<classEntry path="com.components.security.UserWelcome"/>
+<classEntry path="com.components.service.data.RMT2AbstractResponder"/>
+<classEntry path="com.components.service.data.RMT2ResponderResultsEvent"/>
+<classEntry path="com.event.AcceptFormChangesEvent"/>
+<classEntry path="com.event.FetchFirstPageEvent"/>
+<classEntry path="com.event.LoadFormChangesEvent"/>
+<classEntry path="com.event.RMT2Event"/>
+<classEntry path="com.event.SessionTokenEvent"/>
+<classEntry path="com.event.UpdateFormChangesEvent"/>
+<classEntry path="com.event.UpdateListComponentDataEvent"/>
+<classEntry path="com.event.UpdateReplyEvent"/>
+<classEntry path="com.net.RMT2HttpService"/>
+<classEntry path="com.util.RMT2AppUrlUtility"/>
+<classEntry path="com.util.RMT2DataProviderUtility"/>
+<classEntry path="com.util.RMT2ModuleUtility"/>
+<classEntry path="com.util.RMT2SessionUtility"/>
+<classEntry path="com.util.RMT2Utility"/>
+<classEntry path="com.valueobject.SessionTokenVO"/>
+<classEntry path="com.valueobject.UserTokenVO"/>
+</includeClasses>
+<includeResources>
+<resourceEntry destPath="assets/model/SrvcParms_Login.xml" sourcePath="assets/model/SrvcParms_Login.xml"/>
+</includeResources>
+<namespaceManifests/>
+</flexLibProperties>

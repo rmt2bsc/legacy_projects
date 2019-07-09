@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml" initialize="initListener(event)" creationComplete="createCompleteListener(event)">
+    
+    <mx:Metadata>
+    	[Event (name="updateLookupDetails", type="contacts.lookupcodes.events.LookupUpdateEvent")]
+    </mx:Metadata>
+    
+    <mx:Script>
+    	<![CDATA[
+    		import contacts.lookupcodes.service.LookupHttpSrvcResponder;
+    		import mx.core.Application;
+    		import com.event.UpdateReplyEvent;
+    		import contacts.lookupcodes.events.LookupUpdateEvent;
+    		import com.util.RMT2Utility;
+    		import contacts.lookupcodes.events.CommonCodeDetailsEvent;
+    		import contacts.lookupcodes.events.DisplayCodeDetailsEvent;
+    		import contacts.lookupcodes.valueobjects.LookupDetailsVO;
+    		
+    		private const STATE_CODEDETAILS : String = "CodeDetails";
+    		
+    		private const STATE_EMPTY : String = "EmptyDetails";
+    		
+    		
+    		[Bindable]
+    		private var codeData : LookupDetailsVO;
+    		
+    		[Bindable]
+    		private var msg : String;
+    		
+    		
+    		
+    		
+    		private function initListener(e : Event) : void {
+    			return;
+    		}
+    		
+    		private function createCompleteListener(e : Event) : void {
+    			Application.application.addEventListener(DisplayCodeDetailsEvent.EVENT_NAME, displayFormData);
+    			Application.application.addEventListener(UpdateReplyEvent.EVENT_NAME, handleUpdateReplyListener);	
+    		}
+    		
+    		
+    		private function displayFormData(e : DisplayCodeDetailsEvent) : void {
+    			this.msg = null;
+    			this.codeData = e.codeDetails;
+    			if (e.codeType == CommonCodeDetailsEvent.TYPE_GRP) {
+    				this.currentState = "";
+    				// Have to manually force font weight of Description input 
+    				// field to normal when returning back to the default view state.
+    				this.Description.setStyle("fontWeight", "normal");
+    			}
+    			else if (e.codeType == CommonCodeDetailsEvent.TYPE_CODE) {
+    				this.currentState = STATE_CODEDETAILS;
+    			}
+    			else if (e.codeDetails == null && e.codeType <= 0) {
+    				this.currentState = STATE_EMPTY;
+    			}
+    		}
+    		
+    		private function saveChangesListener(e : Event) : void {
+    			RMT2Utility.getFormData(this.formModel, this);
+    			this.formModel.clientAction = LookupHttpSrvcResponder.CLIENT_ACTION_SAVE;
+    			var evt : LookupUpdateEvent = new LookupUpdateEvent(LookupUpdateEvent.EVENT_NAME);
+    			
+    			// Indicate whether we are updating a Lookup Group or Lookup Code 
+    			try {
+    				evt.codeType = int(this.formModel.CodeType);
+    			}
+    			catch (e : Error) {
+    				evt.codeType = 0;
+    			}
+    			switch (evt.codeType) {
+    				case CommonCodeDetailsEvent.TYPE_GRP:
+    					// Indicate the update mode
+    					evt.mode = (this.formModel.CodeGrpId == 0 ? CommonCodeDetailsEvent.MODE_ADD : CommonCodeDetailsEvent.MODE_UPDATE);
+    					break;
+    				case CommonCodeDetailsEvent.TYPE_CODE:
+    				    // Indicate the update mode
+    				    evt.mode = (this.formModel.CodeId == 0 ? CommonCodeDetailsEvent.MODE_ADD : CommonCodeDetailsEvent.MODE_UPDATE);
+    					break;
+    			}
+    			evt.formData = this.formModel;
+    			// Dispatch the event to parent component
+    			this.dispatchEvent(evt);
+    		}
+    		
+    		private function deleteNodeListener(e : Event) : void {
+    			RMT2Utility.getFormData(this.formModel, this);
+    			this.formModel.clientAction = LookupHttpSrvcResponder.CLIENT_ACTION_DELETE;
+    			var evt : LookupUpdateEvent = new LookupUpdateEvent(LookupUpdateEvent.EVENT_NAME);
+    			
+    			// Indicate whether we are updating a Lookup Group or Lookup Code 
+    			try {
+    				evt.codeType = int(this.formModel.CodeType);
+    			}
+    			catch (e : Error) {
+    				evt.codeType = 0;
+    			}
+    			evt.mode = CommonCodeDetailsEvent.MODE_DELETE;
+    			evt.formData = this.formModel;
+    			// Dispatch the event to parent component
+    			this.dispatchEvent(evt);
+    		}
+    		
+    		private function handleUpdateReplyListener(e : UpdateReplyEvent) : void {
+    			this.msg = e.msg;
+    		}
+    	]]>
+    </mx:Script>
+    
+    
+    <mx:states>
+        <mx:State name="{STATE_CODEDETAILS}">
+        	<mx:SetProperty target="{lTitle}" name="text" value="Lookup Code Details"/>
+        	<mx:SetProperty target="{fDetails}" name="visible" value="true"/>
+            <mx:SetProperty target="{fiDescription}" name="label" value="Group Name:"/>
+            
+            <mx:SetProperty target="{Description}" name="editable" value="false"/>
+            <mx:SetStyle target="{Description}" name="borderStyle" value="none"/>
+            <mx:SetStyle target="{Description}" name="styleName" value="formDetailStyle"/>
+            
+            <mx:SetProperty target="{CodeType}" name="text" value="{CommonCodeDetailsEvent.TYPE_CODE}"/>
+        	<mx:AddChild relativeTo="{fiDescription}" position="after">
+        		<mx:FormItem id="fiCodeId" label="Code Id:" styleName="formItemHead">
+        			<mx:Text id="CodeId" text="{this.codeData.codeId}" styleName="formInputItem" tabIndex="1"/>
+        		</mx:FormItem>
+        	</mx:AddChild>
+        	
+        	<mx:AddChild relativeTo="{fiCodeId}" position="after">
+        		<mx:FormItem id="fiShortDesc" label="Short Description:" styleName="formItemHead" >
+					<mx:TextInput id="Shortdesc" text="{this.codeData.codeAbbrvName}" styleName="formInputItem" width="50" tabIndex="12"/>
+	   			</mx:FormItem>
+        	</mx:AddChild>
+        	
+        	<mx:AddChild relativeTo="{fiShortDesc}" position="after">
+        		<mx:FormItem id="fiLongdesc" label="Long Description:" styleName="formItemHead" >
+					<mx:TextInput id="Longdesc" text="{this.codeData.codeName}" styleName="formInputItem" width="350" tabIndex="12"/>
+	   			</mx:FormItem>
+        	</mx:AddChild>
+        </mx:State>
+        
+        <mx:State name="{STATE_EMPTY}">
+        	<mx:SetProperty target="{lTitle}" name="text" value="Details Not Available"/>
+        	<mx:SetProperty target="{fDetails}" name="visible" value="false"/>
+        	<mx:SetProperty target="{buttonContainer}" name="visible" value="false"/>
+        </mx:State>
+    </mx:states>
+
+	
+	
+	<mx:transitions>
+		<mx:Transition fromState="" toState="{STATE_CODEDETAILS}">
+			<mx:Parallel target="{fDetails}">
+				<mx:Resize duration="700"/>
+			</mx:Parallel>
+		</mx:Transition>
+		<mx:Transition fromState="{STATE_CODEDETAILS}" toState="">
+			<mx:Parallel target="{fDetails}">
+				<mx:Resize duration="700"/>
+			</mx:Parallel>
+		</mx:Transition>
+	</mx:transitions>
+	
+	
+    <mx:Model id="formModel" source="contacts/lookupcodes/model/SrvcParms_ContactLookups.xml"/>
+    
+    <mx:Label id="lTitle" text="Group Details" fontSize="13" fontWeight="bold"/>
+    <mx:Text id="CodeType" text="{CommonCodeDetailsEvent.TYPE_GRP}" visible="false" includeInLayout="false"/>
+	<mx:Form id="fDetails" borderStyle="outset">
+		<mx:FormItem id="fiKeyLabel" label="Group Id:" styleName="formItemHead"> 
+			<mx:Text id="CodeGrpId" text="{this.codeData.grpId}" styleName="formInputItem"/>
+	   </mx:FormItem>
+	   <mx:FormItem id="fiDescription" label="Description:" styleName="formItemHead" >
+			<mx:TextInput id="Description" text="{this.codeData.grpName}" styleName="formInputItem" width="240" tabIndex="12"/>
+	   </mx:FormItem>
+	</mx:Form>
+	
+	<mx:Text id="txtMsg" text="{this.msg}"/>
+	<mx:Spacer height="20"/>
+	<mx:HBox id="buttonContainer" width="85%" horizontalAlign="left">
+		<mx:LinkButton id="bSave" label="Save Changes" click="this.saveChangesListener(event)"/>
+		<mx:LinkButton id="bDelete" label="Delete" click="this.deleteNodeListener(event)"/>
+	</mx:HBox>
+</mx:VBox>

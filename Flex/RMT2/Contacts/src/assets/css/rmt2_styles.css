@@ -1,0 +1,80 @@
+/* CSS file */
+
+Application {
+	backgroundGradientAlphas : 1.0, 1.0; 
+    backgroundGradientColors : #EBC7EB, #110C11;
+}
+ 
+Panel {
+	titleStyleName : formTitle;
+}
+
+.formTitle {
+	color : black;
+	fontWeight : bold;
+	fontSize : 16;
+	fontFamily: Verdana;
+}
+
+.contact-cards-title {
+	textAlign : left;
+	backgroundColor : yellow;
+}
+
+.formItemHead {
+	fontWeight : bold;
+	
+}
+
+.formInputItem {
+	fontWeight : normal;
+}
+
+.formDetailStyle {
+	backgroundColor : #d8dadb;
+	fontWeight : normal;
+}
+
+.formSection {
+    cornerRadius: 4;
+    borderStyle:  "solid";
+}
+
+.sectionHeader {
+    fontWeight: "bold";
+    fontSize:    13;
+}
+
+.glassLook {
+    borderColor:  #767473;
+    fillAlphas:   .60, .60, .60, .60;
+    fillColors:   #888888, #F3F3F3, #9E9E9E, #FCFCFC;
+    highlightAlphas: .07, .45;
+}
+
+/* for the background of some surfaces */
+.colorPanel  { 
+    borderStyle: "solid";
+    borderThickness: 0;
+    backgroundColor: #dccfb1;
+    /* backgroundAlpha: 0.4; */
+    color: #170505;
+    cornerRadius: 4;
+    dropShadowEnabled:      true;
+}
+
+.criteriaItemHeader {
+    fontWeight: "bold";
+    fontSize:   11;
+    color:      #BE7E3F;
+}
+
+.formItemHeader {
+    fontWeight: "bold";
+    fontSize:   11;
+    color:      black;
+}
+
+
+
+
