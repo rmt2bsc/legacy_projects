@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<DataSource Name="ProjEmployeeView">
+  <Sql Select="bill_rate, 
+		date_created, 
+		date_updated, 
+		id, 
+		login_id, 
+		manager_id, 
+		ot_bill_rate, 
+		person_id, 
+		start_date, 
+		termination_date, 
+		title_id, 
+		type_id, 
+		user_id" From="proj_employee" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ProjEmployeeTable" DBName="proj_employee" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="PersonId" DBName="person_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LoginId" DBName="login_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TitleId" DBName="title_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TypeId" DBName="type_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ManagerId" DBName="manager_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StartDate" DBName="start_date" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TerminationDate" DBName="termination_date" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BillRate" DBName="bill_rate" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="OtBillRate" DBName="ot_bill_rate" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="ProjEmployeeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

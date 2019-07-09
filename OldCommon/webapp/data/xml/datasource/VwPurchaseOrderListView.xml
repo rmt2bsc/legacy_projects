@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<DataSource Name="VwPurchaseOrderListView">
+  <Sql Select="account_number, 
+		credit_limit, 
+		credit_type_id, 
+		creditor_type_id, 
+		effective_date, 
+		end_date, 
+		id, 
+		longname, 
+		ref_no, 
+		shortname, 
+		status_description, 
+		status_hist_id, 
+		status_id, 
+		tax_id, 
+		total, 
+		user_id, 
+		vendor_id" From="vw_purchase_order_list" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwPurchaseOrderListTable" DBName="vw_purchase_order_list" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="VendorId" DBName="vendor_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StatusId" DBName="status_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="RefNo" DBName="ref_no" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Total" DBName="total" SqlType="decimal" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StatusDescription" DBName="status_description" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StatusHistId" DBName="status_hist_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EffectiveDate" DBName="effective_date" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EndDate" DBName="end_date" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AccountNumber" DBName="account_number" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditLimit" DBName="credit_limit" SqlType="decimal" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditTypeId" DBName="credit_type_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditorTypeId" DBName="creditor_type_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Longname" DBName="longname" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Shortname" DBName="shortname" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TaxId" DBName="tax_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwPurchaseOrderListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

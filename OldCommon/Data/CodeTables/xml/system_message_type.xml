@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<id>1</id>
+		<description>Inform</description>
+		<date_created>1990-01-01 00:00:00.000</date_created>
+		<date_updated>1990-01-01 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>2</id>
+		<description>Warning</description>
+		<date_created>1990-01-01 00:00:00.000</date_created>
+		<date_updated>1990-01-01 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>3</id>
+		<description>Error</description>
+		<date_created>1990-01-01 00:00:00.000</date_created>
+		<date_updated>1990-01-01 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>4</id>
+		<description>Fatal</description>
+		<date_created>1990-01-01 00:00:00.000</date_created>
+		<date_updated>1990-01-01 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+</table>

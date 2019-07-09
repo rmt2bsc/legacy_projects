@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<DataSource Name="CreditorActivityView">
+  <Sql Select="amount, 
+		creditor_id, 
+		date_created, 
+		date_updated, 
+		id, 
+		user_id, 
+		xact_id" From="creditor_activity" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="CreditorActivityTable" DBName="creditor_activity" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="CreditorActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditorId" DBName="creditor_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="CreditorActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactId" DBName="xact_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="CreditorActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Amount" DBName="amount" SqlType="decimal" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="CreditorActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="CreditorActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="CreditorActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="CreditorActivityTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

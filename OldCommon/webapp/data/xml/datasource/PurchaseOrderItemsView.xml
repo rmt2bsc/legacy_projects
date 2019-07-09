@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<DataSource Name="PurchaseOrderItemsView">
+  <Sql Select="date_created, 
+		date_updated, 
+		id, 
+		item_master_id, 
+		purchase_order_id, 
+		qty, 
+		qty_rcvd, 
+		qty_rtn, 
+		unit_cost, 
+		user_id" From="purchase_order_items" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="PurchaseOrderItemsTable" DBName="purchase_order_items" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="PurchaseOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="PurchaseOrderId" DBName="purchase_order_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="PurchaseOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemMasterId" DBName="item_master_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="PurchaseOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UnitCost" DBName="unit_cost" SqlType="decimal" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="PurchaseOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Qty" DBName="qty" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="PurchaseOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="QtyRcvd" DBName="qty_rcvd" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="PurchaseOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="QtyRtn" DBName="qty_rtn" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="PurchaseOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="PurchaseOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="PurchaseOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="PurchaseOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

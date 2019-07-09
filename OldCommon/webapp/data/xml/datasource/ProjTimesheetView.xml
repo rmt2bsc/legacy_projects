@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<DataSource Name="ProjTimesheetView">
+  <Sql Select="begin_period, 
+		date_created, 
+		date_updated, 
+		display_value, 
+		end_period, 
+		id, 
+		invoice_ref_no, 
+		proj_client_id, 
+		proj_employee_id, 
+		user_id" From="proj_timesheet" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ProjTimesheetTable" DBName="proj_timesheet" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="ProjTimesheetTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ProjClientId" DBName="proj_client_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="ProjTimesheetTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ProjEmployeeId" DBName="proj_employee_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="ProjTimesheetTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DisplayValue" DBName="display_value" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="ProjTimesheetTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BeginPeriod" DBName="begin_period" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="ProjTimesheetTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EndPeriod" DBName="end_period" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="ProjTimesheetTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="InvoiceRefNo" DBName="invoice_ref_no" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="ProjTimesheetTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="ProjTimesheetTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="ProjTimesheetTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="ProjTimesheetTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

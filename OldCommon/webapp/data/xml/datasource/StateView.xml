@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DataSource Name="StateView">
+  <Sql Select="country_id, 
+		state_id, 
+		state_name, 
+		stt_void_ind" From="state" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="StateTable" DBName="state" Updateable="true"/>
+  <ColAttr Name="Id" DBName="state_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="true" TableName="StateTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CountryId" DBName="country_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="StateTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="StateName" DBName="state_name" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="StateTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="SttVoidInd" DBName="stt_void_ind" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="StateTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

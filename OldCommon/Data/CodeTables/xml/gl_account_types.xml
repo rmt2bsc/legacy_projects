@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<id>1</id>
+		<description>Assets</description>
+		<balance_type_id>1</balance_type_id>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>2003-07-31 20:15:44.000</date_updated>
+		<user_id>admin</user_id>
+	</row>
+	<row>
+		<id>2</id>
+		<description>Liabilities</description>
+		<balance_type_id>2</balance_type_id>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>3</id>
+		<description>Owner's Equity</description>
+		<balance_type_id>2</balance_type_id>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>4</id>
+		<description>Revenue</description>
+		<balance_type_id>2</balance_type_id>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>5</id>
+		<description>Expenses</description>
+		<balance_type_id>1</balance_type_id>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>6</id>
+		<description>Debit Contra Account</description>
+		<balance_type_id>2</balance_type_id>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>7</id>
+		<description>Credit Contra Account</description>
+		<balance_type_id>1</balance_type_id>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>8</id>
+		<description>Asset Contra Acccount</description>
+		<balance_type_id>1</balance_type_id>
+		<date_created>1999-09-09 00:00:00.000</date_created>
+		<date_updated>1999-09-09 00:00:00.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+</table>

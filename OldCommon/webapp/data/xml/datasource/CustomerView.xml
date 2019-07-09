@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<DataSource Name="CustomerView">
+  <Sql Select="account_no, 
+		active, 
+		business_id, 
+		credit_limit, 
+		date_created, 
+		date_updated, 
+		description, 
+		gl_account_id, 
+		id, 
+		person_id, 
+		user_id" From="customer" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="CustomerTable" DBName="customer" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="CustomerTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GlAccountId" DBName="gl_account_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="CustomerTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AccountNo" DBName="account_no" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="CustomerTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="PersonId" DBName="person_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="CustomerTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessId" DBName="business_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="CustomerTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditLimit" DBName="credit_limit" SqlType="decimal" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="CustomerTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Active" DBName="active" SqlType="bit" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="CustomerTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="CustomerTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="datetime" IsNull="false" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="CustomerTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="datetime" IsNull="false" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="CustomerTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="CustomerTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

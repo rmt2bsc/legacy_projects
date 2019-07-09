@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<DataSource Name="VwCustomerNameView">
+  <Sql Select="account_no, 
+		active, 
+		balance, 
+		business_id, 
+		credit_limit, 
+		customer_id, 
+		date_created, 
+		date_updated, 
+		gl_account_id, 
+		name, 
+		person_id, 
+		user_id" From="vw_customer_name" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwCustomerNameTable" DBName="vw_customer_name" Updateable="true"/>
+  <ColAttr Name="CustomerId" DBName="customer_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwCustomerNameTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AccountNo" DBName="account_no" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwCustomerNameTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GlAccountId" DBName="gl_account_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwCustomerNameTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditLimit" DBName="credit_limit" SqlType="decimal" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwCustomerNameTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Active" DBName="active" SqlType="bit" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwCustomerNameTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="datetime" IsNull="false" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="VwCustomerNameTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="datetime" IsNull="false" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="VwCustomerNameTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwCustomerNameTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="PersonId" DBName="person_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwCustomerNameTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessId" DBName="business_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwCustomerNameTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Name" DBName="name" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwCustomerNameTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Balance" DBName="balance" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwCustomerNameTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

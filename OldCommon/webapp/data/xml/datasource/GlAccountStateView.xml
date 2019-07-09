@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DataSource Name="GlAccountStateView">
+  <Sql Select="dec_multiplier, 
+		gl_accoun_type_id, 
+		id, 
+		inc_multiplier" From="gl_account_state" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="GlAccountStateTable" DBName="gl_account_state" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="GlAccountStateTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GlAccounTypeId" DBName="gl_accoun_type_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="GlAccountStateTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="IncMultiplier" DBName="inc_multiplier" SqlType="smallint" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="GlAccountStateTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DecMultiplier" DBName="dec_multiplier" SqlType="smallint" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="GlAccountStateTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Untitled Document</title>
+<script src="js/AjaxApi.js"></script>
+<script>
+   function testAjax() {
+   	   var config = new RequestConfig();
+	   config.serviceId="userprofile";  
+	   config.resourceURL = "http://localhost:8080/common/services?serviceId=userprofile&UID=admin";
+	   config.renderHTML = true;
+	   config.component = document.getElementById("txtName");
+	   config.displayValueId = "firstname";
+	   config.customResponseHandler = handleResults;
+	   processRequest(config);
+	   alert("End Ajax Call");
+   }
+   
+   function handleResults(results) {
+ 		var name;
+		var nodes = results.getElementsByTagName("firstname");
+		for (var ndx = 0; ndx < nodes.length; ndx++) {
+			var node = nodes[ndx];
+			name = node.childNodes[0].nodeValue;
+   }
+   document.getElementById("txtName").value = name;
+//   alert("Firstname from caller: " + name);
+ }
+ 
+</script>
+
+</head>
+
+<body>
+<form name="form1" method="post" action="" onSubmit="">
+	<input type="button" name="handler" value="Check Handler" onClick="testAjax()"><br><br>
+	<input id="txtName" type="text" name="comp1" value="Text Component"><br>
+	<input type="checkbox" name="comp2" value="1"> Check Box<br>
+	<input type="radio" name="comp3" value="2">Radio Button<br>
+	<textarea name="comp4">This is a  multiline text box</textarea><br>
+	<select name="comp5" multiple>
+	  <option value="1">item 1</option>
+	  <option value="2">item 2</option>
+	</select>
+	
+</form>
+</body>
+</html>

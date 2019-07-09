@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v2.5 NT  - http://www.xmlspy.com -->
+<root>
+	<menuItem>
+		<hyperLink>/default/default.jsp</hyperLink>
+		<name>Home</name>
+	</menuItem>
+	<menuItem>
+		<hyperLink/>
+		<name>About Our Company</name>
+		<menuItem>
+			<hyperLink>/calendar/default.jsp</hyperLink>
+			<name>Calendars</name>
+			<menuItem>
+				<hyperLink>/calendar/default.jsp</hyperLink>
+				<name>This Year</name>
+			</menuItem>
+			<menuItem>
+				<hyperLink>/calendar/default.jsp</hyperLink>
+				<name>This Month</name>
+			</menuItem>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/countygovt/default.jsp</hyperLink>
+			<name>County Government</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/countygovt/pdf/orgchart.pdf</hyperLink>
+			<name>Organization Charts</name>
+		</menuItem>
+	</menuItem>
+	<menuItem>
+		<hyperLink/>
+		<name>Communications</name>
+		<menuItem>
+			<hyperLink>/phonebooks/employee_directory/telephone_lookup.jsp</hyperLink>
+			<name>Employee Directory</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/phonebooks/default.jsp</hyperLink>
+			<name>Department Phone Books</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>http://www.yp.uswest.com/</hyperLink>
+			<name>US West</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/pio/default.jsp</hyperLink>
+			<name>Publications</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/materials/mail/default.jsp</hyperLink>
+			<name>Mail Tips</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>mail.jsp</hyperLink>
+			<name>Bulletin Board</name>
+		</menuItem>
+	</menuItem>
+	<menuItem>
+		<hyperLink/>
+		<name>e-Info</name>
+		<menuItem>
+			<hyperLink>/pp/default.jsp</hyperLink>
+			<name>Policies &amp; Procedures</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/library/default.jsp</hyperLink>
+			<name>Documents</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/training/ethics/default.jsp</hyperLink>
+			<name>Ethics@Work</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/library/default.jsp</hyperLink>
+			<name>Libraries</name>
+		</menuItem>
+	</menuItem>
+	<menuItem>
+		<hyperLink/>
+		<name>Tech World</name>
+		<menuItem>
+			<hyperLink>pwd.jsp</hyperLink>
+			<name>Change Password</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/itsite/client_configuration.jsp</hyperLink>
+			<name>Client Configuration</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/feedback/feedback.jsp</hyperLink>
+			<name>Feedback</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/help/default.jsp</hyperLink>
+			<name>Help</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/default/hot.jsp</hyperLink>
+			<name>HOT!</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/itsite/is_configuration.jsp</hyperLink>
+			<name>Infrastructure</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/new/default.jsp</hyperLink>
+			<name>New</name>
+		</menuItem>
+	</menuItem>
+	<menuItem>
+		<hyperLink/>
+		<name>For Employees</name>
+		<menuItem>
+			<hyperLink>/benefits/default.jsp</hyperLink>
+			<name>Benefits</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/library/employee_corner/default.jsp</hyperLink>
+			<name>Cigna Doctors</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/csc/default.jsp</hyperLink>
+			<name>Customer Support Center</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/empcorner/default.jsp</hyperLink>
+			<name>Employee Corner</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/emppgms/default.jsp</hyperLink>
+			<name>Employee Programs</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/pp/hr/tocs/hr_toc.jsp</hyperLink>
+			<name>HR Policies &amp; Procedures</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/internaljobs/default.jsp</hyperLink>
+			<name>Internal Jobs</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/benefits/ombudsman.jsp</hyperLink>
+			<name>Ombudsman</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/emppgms/cop/default.jsp</hyperLink>
+			<name>Commute Options</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/default/includes/traffic_links_include.jsp</hyperLink>
+			<name>Traffic Update</name>
+		</menuItem>
+	</menuItem>
+	<menuItem>
+		<hyperLink/>
+		<name>Dollars &amp; Sense</name>
+		<menuItem>
+			<hyperLink>strategy.jsp</hyperLink>
+			<name>Annual Business Strategies</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink/>
+			<name>Budget World</name>
+			<menuItem>
+				<hyperLink>/library/budget/default.jsp</hyperLink>
+				<name>Infomemos</name>
+			</menuItem>
+			<menuItem>
+				<hyperLink>/phonebooks/pdf/omb_phones.pdf</hyperLink>
+				<name>Analysts</name>
+			</menuItem>
+			<menuItem>
+				<hyperLink>/pp/budget/tocs/Policies_TOC.jsp</hyperLink>
+				<name>Budget Policies</name>
+			</menuItem>
+		</menuItem>
+		<menuItem>
+			<hyperLink/>
+			<name>Finance World</name>
+			<menuItem>
+				<hyperLink>/finance/default.jsp</hyperLink>
+				<name>Infomenu</name>
+			</menuItem>
+			<menuItem>
+				<hyperLink>/finance/phones.jsp</hyperLink>
+				<name>Finance Contacts</name>
+			</menuItem>
+			<menuItem>
+				<hyperLink>reports.jsp</hyperLink>
+				<name>CAFR Reports</name>
+			</menuItem>
+			<menuItem>
+				<hyperLink>reports.jsp</hyperLink>
+				<name>Financial Reporting</name>
+			</menuItem>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/materials/default.jsp</hyperLink>
+			<name>Procurement</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/officedepot/default.jsp</hyperLink>
+			<name>Office Depot</name>
+		</menuItem>
+	</menuItem>
+	<menuItem>
+		<hyperLink/>
+		<name>Technology</name>
+		<menuItem>
+			<hyperLink>/itsite/default.jsp</hyperLink>
+			<name>Tech World</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/library/itsite/pdf/desktop_strategy.pdf</hyperLink>
+			<name>Desktop Configuration Standards</name>
+		</menuItem>
+		<menuItem>
+			<hyperlink>/engineering/default.jsp</hyperlink>
+			<name>Engineering</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/itsite/cois.jsp</hyperLink>
+			<name>Technology Forums</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/feedback/feedback.jsp?keyword1=technology&amp;keyword2=compensation</hyperLink>
+			<name>OCIO Feedback</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/training/comp_train.jsp</hyperLink>
+			<name>IT Training</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/year2000/default.jsp</hyperLink>
+			<name>Y2K Site</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/itsite/tips_and_tricks.jsp</hyperLink>
+			<name>Tips &amp; Tricks</name>
+		</menuItem>
+	</menuItem>
+	<menuItem>
+		<hyperLink/>
+		<name>Training &amp; Development</name>
+		<menuItem>
+			<hyperLink>/training/default.jsp</hyperLink>
+			<name>Training Homepage</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/training/pdf/catalog.pdf</hyperLink>
+			<name>Course Catalog</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/training/schedules.jsp</hyperLink>
+			<name>Course Schedule</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/training/pdf/registration.pdf</hyperLink>
+			<name>Course Registration</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/training/pdf/tuition.pdf</hyperLink>
+			<name>Tuition Reimbursement</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/training/resource_network/default.jsp</hyperLink>
+			<name>Learning Resource Network</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/itsite/tips_and_tricks.jsp</hyperLink>
+			<name>Technology Tips &amp; Tricks</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/wellness/brown_bag_lunch/brownbag.jsp</hyperLink>
+			<name>Brown Bag Series</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/training/ethics/default.jsp</hyperLink>
+			<name>Ethics@Work</name>
+		</menuItem>
+	</menuItem>
+	<menuItem>
+		<hyperLink/>
+		<name>Workplace Services</name>
+		<menuItem>
+			<hyperLink>/equipmentxchange/default.jsp</hyperLink>
+			<name>Equipment Xchange</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/materials/mail/default.jsp</hyperLink>
+			<name>Mail Tips</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/pp/admin/tocs/PropFac_TOC.jsp</hyperLink>
+			<name>Security</name>
+		</menuItem>
+	</menuItem>
+</root>

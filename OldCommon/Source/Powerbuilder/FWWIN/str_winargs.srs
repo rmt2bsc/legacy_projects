@@ -1,0 +1,13 @@
+$PBExportHeader$str_winargs.srs
+$PBExportComments$Contains window arguments for window objects
+global type str_winargs from structure
+	long		handle
+	str_dwparms		parms
+	string		winname
+	w_rmt_ancestor		parentwin
+	boolean		isnew
+	powerobject		busobj
+	string		dataclassname
+	any		data
+	datawindow		dw
+end type

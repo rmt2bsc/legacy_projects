@@ -1,0 +1,5 @@
+// Dialogs
+function long PFC_PrintDlg (ulong hwnd, ref str_printdlgattrib printstruct) library "pfccom32.dll"
+
+// Sound
+function Boolean PlaySound( String szSound, uInt Hmodule, uLong Flags) library "winmm.dll"

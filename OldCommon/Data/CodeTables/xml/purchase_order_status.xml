@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<id>1</id>
+		<description>Quote</description>
+	</row>
+	<row>
+		<id>2</id>
+		<description>Finalized</description>
+	</row>
+	<row>
+		<id>3</id>
+		<description>Received</description>
+	</row>
+	<row>
+		<id>4</id>
+		<description>Cancelled</description>
+	</row>
+	<row>
+		<id>5</id>
+		<description>Returned</description>
+	</row>
+	<row>
+		<id>6</id>
+		<description>Partially Returned</description>
+	</row>
+</table>

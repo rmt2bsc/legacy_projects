@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<menuItem>
+		<hyperLink>/phonebooks/default.jsp</hyperLink>
+		<name>PhoneBooks Home</name>
+	</menuItem>
+	<menuItem>
+		<hyperLink>http://www.yp.uswest.com</hyperLink>
+		<name>USWest</name>
+	</menuItem>
+	<menuItem>
+		<hyperLink>/phonebooks/departments.jsp</hyperLink>
+		<name>Department PhoneBooks</name>
+		<menuItem>
+			<hyperLink>/phonebooks/hr.jsp</hyperLink>
+			<name>HR PhoneBook</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/phonebooks/finance.jsp</hyperLink>
+			<name>Finance PhoneBook</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/phonebooks/marketing.jsp</hyperLink>
+			<name>Marketing PhoneBook</name>
+		</menuItem>
+		<menuItem>
+			<hyperLink>/phonebooks/tech.jsp</hyperLink>
+			<name>Technology PhoneBook</name>
+		</menuItem>
+	</menuItem>
+</root>

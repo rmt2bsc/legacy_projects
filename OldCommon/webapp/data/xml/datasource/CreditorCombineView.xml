@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<DataSource Name="CreditorCombineView">
+  <Sql Select="account_no, 
+		business_bus_type, 
+		business_contact_ext, 
+		business_contact_firstname, 
+		business_contact_lastname, 
+		business_contact_phone, 
+		business_id, 
+		business_longname, 
+		business_serv_type, 
+		business_shortname, 
+		business_tax_id, 
+		business_website, 
+		credit_limit, 
+		creditor_type_id, 
+		gl_account_id, 
+		id, 
+		person_id" From="creditorcombine" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="CreditorcombineTable" DBName="creditorcombine" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="CreditorcombineTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GlAccountId" DBName="gl_account_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="CreditorcombineTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AccountNo" DBName="account_no" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="CreditorcombineTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="PersonId" DBName="person_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="CreditorcombineTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessId" DBName="business_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="CreditorcombineTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditLimit" DBName="credit_limit" SqlType="decimal" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="CreditorcombineTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditorTypeId" DBName="creditor_type_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="CreditorcombineTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessBusType" DBName="business_bus_type" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="CreditorcombineTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessServType" DBName="business_serv_type" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="CreditorcombineTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessLongname" DBName="business_longname" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="CreditorcombineTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessShortname" DBName="business_shortname" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="CreditorcombineTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessContactFirstname" DBName="business_contact_firstname" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="CreditorcombineTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessContactLastname" DBName="business_contact_lastname" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="CreditorcombineTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessContactPhone" DBName="business_contact_phone" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="CreditorcombineTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessContactExt" DBName="business_contact_ext" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="CreditorcombineTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessTaxId" DBName="business_tax_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="CreditorcombineTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessWebsite" DBName="business_website" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="CreditorcombineTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

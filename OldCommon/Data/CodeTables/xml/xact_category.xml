@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<id>1</id>
+		<description>Bad Debt Expense Transaction</description>
+		<code>BADDEBT</code>
+	</row>
+	<row>
+		<id>2</id>
+		<description>Cash Receipts Transaction</description>
+		<code>CASHRECT</code>
+	</row>
+	<row>
+		<id>3</id>
+		<description>Cash Disbursement Transaction</description>
+		<code>CASHPAY</code>
+	</row>
+	<row>
+		<id>4</id>
+		<description>Credit Sales Transaction</description>
+		<code>CREDSALES</code>
+	</row>
+	<row>
+		<id>6</id>
+		<description>Fee Transactions</description>
+		<code>FEES</code>
+	</row>
+	<row>
+		<id>7</id>
+		<description>Interest Transactions</description>
+		<code>INTEREST</code>
+	</row>
+	<row>
+		<id>8</id>
+		<description>Purchase Transactions</description>
+		<code>PURCH</code>
+	</row>
+	<row>
+		<id>9</id>
+		<description>Sales Returns Transactions</description>
+		<code>SALESRET</code>
+	</row>
+	<row>
+		<id>10</id>
+		<description>Bank Deposit Transactions</description>
+		<code>DEPOSIT</code>
+	</row>
+	<row>
+		<id>11</id>
+		<description>Bank Withdrawal Transactions</description>
+		<code>WITHDRAW</code>
+	</row>
+	<row>
+		<id>12</id>
+		<description>Write Offs Transactions</description>
+		<code>WRITEOFF</code>
+	</row>
+	<row>
+		<id>13</id>
+		<description>Purchases Returns Transactions</description>
+		<code>PURCHRTN</code>
+	</row>
+	<row>
+		<id>14</id>
+		<description>Sales Discount Transactions</description>
+		<code>SALESDISC</code>
+	</row>
+	<row>
+		<id>15</id>
+		<description>Purchases Discount Transactions</description>
+		<code>PURCHDISC</code>
+	</row>
+	<row>
+		<id>16</id>
+		<description>Sale of Merchandise</description>
+		<code>MNDSESALES</code>
+	</row>
+	<row>
+		<id>17</id>
+		<description>Transaction Reversal</description>
+		<code>REVERSAL</code>
+	</row>
+	<row>
+		<id>18</id>
+		<description>Transaction Cancellation</description>
+		<code>CANCEL</code>
+	</row>
+	<row>
+		<id>19</id>
+		<description>Transaction Finalized</description>
+		<code>FINAL</code>
+	</row>
+</table>

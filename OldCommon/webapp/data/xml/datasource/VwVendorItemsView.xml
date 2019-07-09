@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<DataSource Name="VwVendorItemsView">
+  <Sql Select="description, 
+		item_master_id, 
+		item_serial_no, 
+		markup, 
+		override_retail, 
+		qty_on_hand, 
+		unit_cost, 
+		vendor_id, 
+		vendor_item_no" From="vw_vendor_items" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwVendorItemsTable" DBName="vw_vendor_items" Updateable="true"/>
+  <ColAttr Name="ItemMasterId" DBName="item_master_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwVendorItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="VendorId" DBName="vendor_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwVendorItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="VendorItemNo" DBName="vendor_item_no" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwVendorItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemSerialNo" DBName="item_serial_no" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwVendorItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UnitCost" DBName="unit_cost" SqlType="decimal" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwVendorItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwVendorItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="QtyOnHand" DBName="qty_on_hand" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwVendorItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Markup" DBName="markup" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwVendorItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="OverrideRetail" DBName="override_retail" SqlType="bit" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwVendorItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

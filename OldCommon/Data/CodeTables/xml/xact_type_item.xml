@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<id>1</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Rent Expense</name>
+		<date_created>6/3/2006 16:32:15:17</date_created>
+		<date_updated>6/3/2006 16:32:15:17</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>2</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Salary Expense</name>
+		<date_created>6/3/2006 16:32:36:78</date_created>
+		<date_updated>6/3/2006 16:32:36:78</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>3</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Utilities Expense</name>
+		<date_created>6/3/2006 16:32:55:983</date_created>
+		<date_updated>6/3/2006 16:32:55:983</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>4</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Depreciation Expense</name>
+		<date_created>6/3/2006 16:33:11:153</date_created>
+		<date_updated>6/3/2006 16:33:11:153</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>5</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Travel Expense</name>
+		<date_created>6/3/2006 16:33:28:67</date_created>
+		<date_updated>6/3/2006 16:33:28:67</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>6</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Food Expense</name>
+		<date_created>6/3/2006 16:33:44:45</date_created>
+		<date_updated>6/3/2006 16:33:44:45</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>7</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Airline Expense</name>
+		<date_created>6/3/2006 16:34:14:53</date_created>
+		<date_updated>6/3/2006 16:34:14:53</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>8</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Medical Expense</name>
+		<date_created>6/3/2006 16:35:08:5</date_created>
+		<date_updated>6/3/2006 16:35:08:5</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>9</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Car Rental Expense</name>
+		<date_created>6/3/2006 16:35:17:606</date_created>
+		<date_updated>6/3/2006 16:35:17:606</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>10</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Laundry Expense</name>
+		<date_created>6/3/2006 16:35:47:34</date_created>
+		<date_updated>6/3/2006 16:35:47:34</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>11</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Entertainment Expense</name>
+		<date_created>6/3/2006 16:36:05:17</date_created>
+		<date_updated>6/3/2006 16:36:05:17</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>12</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Gas (Automobile) Expense</name>
+		<date_created>6/3/2006 16:36:29:233</date_created>
+		<date_updated>6/3/2006 16:36:29:233</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>13</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Insurance Expense</name>
+		<date_created>6/3/2006 16:37:14:326</date_created>
+		<date_updated>6/3/2006 16:37:14:326</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>14</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Lease Expense</name>
+		<date_created>6/3/2006 16:37:42:67</date_created>
+		<date_updated>6/3/2006 16:37:42:67</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>15</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Miscellaneous Expense</name>
+		<date_created>6/3/2006 16:38:34:543</date_created>
+		<date_updated>6/3/2006 16:38:34:543</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>16</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Office Equipment</name>
+		<date_created>6/3/2006 16:38:48:263</date_created>
+		<date_updated>6/3/2006 16:38:48:263</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>17</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Parking</name>
+		<date_created>6/3/2006 16:39:04:95</date_created>
+		<date_updated>6/3/2006 16:39:04:95</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>18</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Supplies Expense</name>
+		<date_created>6/3/2006 16:39:30:14</date_created>
+		<date_updated>6/3/2006 16:39:30:14</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>19</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Telephone (Mobile) Expense</name>
+		<date_created>6/3/2006 16:40:11:56</date_created>
+		<date_updated>6/3/2006 16:40:11:56</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>20</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Telephone (LAN) Expense</name>
+		<date_created>6/3/2006 16:40:25:06</date_created>
+		<date_updated>6/3/2006 16:40:25:06</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>21</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Trade Magazine - Book Expense</name>
+		<date_created>6/3/2006 16:40:54:89</date_created>
+		<date_updated>6/3/2006 16:40:54:89</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>22</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Ineternet Expense</name>
+		<date_created>6/3/2006 16:41:11:966</date_created>
+		<date_updated>6/3/2006 16:41:11:966</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>23</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Bank Service Charge Expense</name>
+		<date_created>6/3/2006 16:41:33:78</date_created>
+		<date_updated>6/3/2006 16:41:33:78</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>24</id>
+		<xact_type_id>60</xact_type_id>
+		<name>Toll Expense</name>
+		<date_created>6/3/2006 16:41:44:106</date_created>
+		<date_updated>6/3/2006 16:41:44:106</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>26</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Salary Expense</name>
+		<date_created>6/3/2006 16:32:36:78</date_created>
+		<date_updated>6/3/2006 16:32:36:78</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>27</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Utilities Expense</name>
+		<date_created>6/3/2006 16:32:55:983</date_created>
+		<date_updated>6/3/2006 16:32:55:983</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>28</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Depreciation Expense</name>
+		<date_created>6/3/2006 16:33:11:153</date_created>
+		<date_updated>6/3/2006 16:33:11:153</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>29</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Travel Expense</name>
+		<date_created>6/3/2006 16:33:28:67</date_created>
+		<date_updated>6/3/2006 16:33:28:67</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>30</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Food Expense</name>
+		<date_created>6/3/2006 16:33:44:45</date_created>
+		<date_updated>6/3/2006 16:33:44:45</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>31</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Airline Expense</name>
+		<date_created>6/3/2006 16:34:14:53</date_created>
+		<date_updated>6/3/2006 16:34:14:53</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>32</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Medical Expense</name>
+		<date_created>6/3/2006 16:35:08:5</date_created>
+		<date_updated>6/3/2006 16:35:08:5</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>33</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Car Rental Expense</name>
+		<date_created>6/3/2006 16:35:17:606</date_created>
+		<date_updated>6/3/2006 16:35:17:606</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>34</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Laundry Expense</name>
+		<date_created>6/3/2006 16:35:47:34</date_created>
+		<date_updated>6/3/2006 16:35:47:34</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>35</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Entertainment Expense</name>
+		<date_created>6/3/2006 16:36:05:17</date_created>
+		<date_updated>6/3/2006 16:36:05:17</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>36</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Gas (Automobile) Expense</name>
+		<date_created>6/3/2006 16:36:29:233</date_created>
+		<date_updated>6/3/2006 16:36:29:233</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>37</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Insurance Expense</name>
+		<date_created>6/3/2006 16:37:14:326</date_created>
+		<date_updated>6/3/2006 16:37:14:326</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>38</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Lease Expense</name>
+		<date_created>6/3/2006 16:37:42:67</date_created>
+		<date_updated>6/3/2006 16:37:42:67</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>39</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Miscellaneous Expense</name>
+		<date_created>6/3/2006 16:38:34:543</date_created>
+		<date_updated>6/3/2006 16:38:34:543</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>40</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Office Equipment</name>
+		<date_created>6/3/2006 16:38:48:263</date_created>
+		<date_updated>6/3/2006 16:38:48:263</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>41</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Parking</name>
+		<date_created>6/3/2006 16:39:04:95</date_created>
+		<date_updated>6/3/2006 16:39:04:95</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>42</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Supplies Expense</name>
+		<date_created>6/3/2006 16:39:30:14</date_created>
+		<date_updated>6/3/2006 16:39:30:14</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>43</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Telephone (Mobile) Expense</name>
+		<date_created>6/3/2006 16:40:11:56</date_created>
+		<date_updated>6/3/2006 16:40:11:56</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>44</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Telephone (LAN) Expense</name>
+		<date_created>6/3/2006 16:40:25:06</date_created>
+		<date_updated>6/3/2006 16:40:25:06</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>45</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Trade Magazine - Book Expense</name>
+		<date_created>6/3/2006 16:40:54:89</date_created>
+		<date_updated>6/3/2006 16:40:54:89</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>46</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Ineternet Expense</name>
+		<date_created>6/3/2006 16:41:11:966</date_created>
+		<date_updated>6/3/2006 16:41:11:966</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>47</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Bank Service Charge Expense</name>
+		<date_created>6/3/2006 16:41:33:78</date_created>
+		<date_updated>6/3/2006 16:41:33:78</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>48</id>
+		<xact_type_id>180</xact_type_id>
+		<name>Toll Expense</name>
+		<date_created>6/3/2006 16:41:44:106</date_created>
+		<date_updated>6/3/2006 16:41:44:106</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+</table>

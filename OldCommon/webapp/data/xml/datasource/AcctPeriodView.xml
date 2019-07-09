@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<DataSource Name="AcctPeriodView">
+  <Sql Select="description, 
+		id" From="acct_period" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="AcctPeriodTable" DBName="acct_period" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="AcctPeriodTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AcctPeriodTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

@@ -1,0 +1,69 @@
+$PBExportHeader$m_treeview.srm
+forward
+global type m_treeview from menu
+end type
+type m_edit from menu within m_treeview
+end type
+type m_expandcollapseall from menu within m_edit
+end type
+type m_expandcollapsenode from menu within m_edit
+end type
+type m_edit from menu within m_treeview
+m_expandcollapseall m_expandcollapseall
+m_expandcollapsenode m_expandcollapsenode
+end type
+end forward
+
+global type m_treeview from menu
+m_edit m_edit
+end type
+global m_treeview m_treeview
+
+on m_treeview.create
+m_treeview=this
+this.m_edit=create m_edit
+this.Item[]={this.m_edit}
+end on
+
+on m_treeview.destroy
+destroy(this.m_edit)
+end on
+
+type m_edit from menu within m_treeview
+m_expandcollapseall m_expandcollapseall
+m_expandcollapsenode m_expandcollapsenode
+end type
+
+on m_edit.create
+this.Text="Edit"
+this.m_expandcollapseall=create m_expandcollapseall
+this.m_expandcollapsenode=create m_expandcollapsenode
+this.Item[]={this.m_expandcollapseall, &
+this.m_expandcollapsenode}
+end on
+
+on m_edit.destroy
+destroy(this.m_expandcollapseall)
+destroy(this.m_expandcollapsenode)
+end on
+
+type m_expandcollapseall from menu within m_edit
+end type
+
+event clicked;parentwindow.triggerevent("ue_expandall")
+end event
+
+on m_expandcollapseall.create
+this.Text="Expand/Collapse All"
+end on
+
+type m_expandcollapsenode from menu within m_edit
+end type
+
+event clicked;parentwindow.triggerevent("ue_expandnode")
+end event
+
+on m_expandcollapsenode.create
+this.Text="Expand/Collapse Node"
+end on
+

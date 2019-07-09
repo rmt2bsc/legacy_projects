@@ -1,0 +1,3 @@
+CALL %netlogon%\getuser.bat
+
+

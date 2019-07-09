@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<DataSource Name="ProjPrefView">
+  <Sql Select="email_confirm, 
+		end_period_day, 
+		timesheet_base" From="proj_pref" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ProjPrefTable" DBName="proj_pref" Updateable="true"/>
+  <ColAttr Name="EndPeriodDay" DBName="end_period_day" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="ProjPrefTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TimesheetBase" DBName="timesheet_base" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="ProjPrefTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EmailConfirm" DBName="email_confirm" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="ProjPrefTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

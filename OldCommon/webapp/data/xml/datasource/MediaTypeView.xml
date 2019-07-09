@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<DataSource Name="MediaTypeView">
+  <Sql Select="description, 
+		id" From="media_type" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="MediaTypeTable" DBName="media_type" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="MediaTypeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="MediaTypeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

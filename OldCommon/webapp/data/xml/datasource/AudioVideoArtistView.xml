@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<DataSource Name="AudioVideoArtistView">
+  <Sql Select="artist_type_id, 
+		id, 
+		name" From="audio_video_artist" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="AudioVideoArtistTable" DBName="audio_video_artist" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="AudioVideoArtistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Name" DBName="name" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AudioVideoArtistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ArtistTypeId" DBName="artist_type_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="AudioVideoArtistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

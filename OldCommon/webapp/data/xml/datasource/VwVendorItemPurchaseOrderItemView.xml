@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<DataSource Name="VwVendorItemPurchaseOrderItemView">
+  <Sql Select="actual_unit_cost, 
+		description, 
+		item_master_id, 
+		item_serial_no, 
+		markup, 
+		override_retail, 
+		purchase_order_id, 
+		qty_on_hand, 
+		qty_orderd, 
+		qty_received, 
+		qty_returned, 
+		unit_cost, 
+		vendor_id, 
+		vendor_item_no" From="vw_vendor_item_purchase_order_item" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwVendorItemPurchaseOrderItemTable" DBName="vw_vendor_item_purchase_order_item" Updateable="true"/>
+  <ColAttr Name="ItemMasterId" DBName="item_master_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwVendorItemPurchaseOrderItemTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="VendorId" DBName="vendor_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwVendorItemPurchaseOrderItemTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="VendorItemNo" DBName="vendor_item_no" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwVendorItemPurchaseOrderItemTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemSerialNo" DBName="item_serial_no" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwVendorItemPurchaseOrderItemTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UnitCost" DBName="unit_cost" SqlType="decimal" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwVendorItemPurchaseOrderItemTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwVendorItemPurchaseOrderItemTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="QtyOnHand" DBName="qty_on_hand" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwVendorItemPurchaseOrderItemTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Markup" DBName="markup" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwVendorItemPurchaseOrderItemTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="OverrideRetail" DBName="override_retail" SqlType="bit" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwVendorItemPurchaseOrderItemTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="PurchaseOrderId" DBName="purchase_order_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwVendorItemPurchaseOrderItemTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="QtyOrderd" DBName="qty_orderd" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwVendorItemPurchaseOrderItemTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ActualUnitCost" DBName="actual_unit_cost" SqlType="decimal" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwVendorItemPurchaseOrderItemTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="QtyReceived" DBName="qty_received" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwVendorItemPurchaseOrderItemTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="QtyReturned" DBName="qty_returned" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwVendorItemPurchaseOrderItemTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

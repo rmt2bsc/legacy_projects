@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<DataSource Name="VwSalesorderItemsBySalesorderView">
+  <Sql Select="back_order_qty, 
+		business_id, 
+		customer_id, 
+		customer_name, 
+		init_markup, 
+		init_unit_cost, 
+		invoiced, 
+		item_master_id, 
+		item_name, 
+		item_serial_no, 
+		item_type_descr, 
+		item_type_id, 
+		markup, 
+		order_qty, 
+		person_id, 
+		qty_on_hand, 
+		retail_price, 
+		sales_order_id, 
+		sales_order_item_id, 
+		unit_cost, 
+		vendor_id, 
+		vendor_item_no" From="vw_salesorder_items_by_salesorder" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwSalesorderItemsBySalesorderTable" DBName="vw_salesorder_items_by_salesorder" Updateable="true"/>
+  <ColAttr Name="SalesOrderItemId" DBName="sales_order_item_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="SalesOrderId" DBName="sales_order_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemMasterId" DBName="item_master_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="VendorId" DBName="vendor_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemTypeId" DBName="item_type_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemName" DBName="item_name" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="VendorItemNo" DBName="vendor_item_no" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemSerialNo" DBName="item_serial_no" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="QtyOnHand" DBName="qty_on_hand" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UnitCost" DBName="unit_cost" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Markup" DBName="markup" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="RetailPrice" DBName="retail_price" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemTypeDescr" DBName="item_type_descr" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="OrderQty" DBName="order_qty" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BackOrderQty" DBName="back_order_qty" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="InitUnitCost" DBName="init_unit_cost" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="InitMarkup" DBName="init_markup" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CustomerId" DBName="customer_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Invoiced" DBName="invoiced" SqlType="bit" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="PersonId" DBName="person_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessId" DBName="business_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CustomerName" DBName="customer_name" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwSalesorderItemsBySalesorderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

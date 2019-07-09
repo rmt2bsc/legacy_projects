@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<DataSource Name="AudioVideoView">
+  <Sql Select="artist_id, 
+		date_created, 
+		date_updated, 
+		genre_id, 
+		gl_account_id, 
+		id, 
+		master_dup_id, 
+		media_type_id, 
+		title, 
+		ripped,
+		user_id, 
+		year_recorded" From="audio_video" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="AudioVideoTable" DBName="audio_video" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="AudioVideoTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GlAccountId" DBName="gl_account_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="AudioVideoTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ArtistId" DBName="artist_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="AudioVideoTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Title" DBName="title" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AudioVideoTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GenreId" DBName="genre_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="AudioVideoTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="MediaTypeId" DBName="media_type_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="AudioVideoTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="YearRecorded" DBName="year_recorded" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="AudioVideoTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="MasterDupId" DBName="master_dup_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="AudioVideoTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Ripped" DBName="ripped" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="AudioVideoTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="datetime" IsNull="false" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="AudioVideoTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="datetime" IsNull="false" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="AudioVideoTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AudioVideoTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

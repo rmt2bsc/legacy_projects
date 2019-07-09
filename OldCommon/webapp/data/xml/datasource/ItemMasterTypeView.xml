@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DataSource Name="ItemMasterTypeView">
+  <Sql Select="date_created, 
+		date_updated, 
+		description, 
+		id, 
+		user_id" From="item_master_type" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ItemMasterTypeTable" DBName="item_master_type" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="ItemMasterTypeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="ItemMasterTypeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="ItemMasterTypeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="ItemMasterTypeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="ItemMasterTypeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

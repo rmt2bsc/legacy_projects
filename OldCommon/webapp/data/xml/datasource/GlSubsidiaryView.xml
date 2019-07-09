@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DataSource Name="GlSubsidiaryView">
+  <Sql Select="activity_table, 
+		description, 
+		gl_account_id, 
+		id" From="gl_subsidiary" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="GlSubsidiaryTable" DBName="gl_subsidiary" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="true" TableName="GlSubsidiaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GlAccountId" DBName="gl_account_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="GlSubsidiaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ActivityTable" DBName="activity_table" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="GlSubsidiaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="GlSubsidiaryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

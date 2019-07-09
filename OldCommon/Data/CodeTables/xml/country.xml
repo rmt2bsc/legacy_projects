@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<id>0</id>
+		<description>Unknown</description>
+		<modifiable>n</modifiable>
+	</row>
+	<row>
+		<id>1</id>
+		<description>United States</description>
+		<modifiable>n</modifiable>
+	</row>
+	<row>
+		<id>2</id>
+		<description>Canada</description>
+		<modifiable>n</modifiable>
+	</row>
+	<row>
+		<id>3</id>
+		<description>France</description>
+		<modifiable>n</modifiable>
+	</row>
+	<row>
+		<id>4</id>
+		<description>Mexico</description>
+		<modifiable>n</modifiable>
+	</row>
+	<row>
+		<id>5</id>
+		<description>England</description>
+		<modifiable>n</modifiable>
+	</row>
+	<row>
+		<id>6</id>
+		<description>New Zealand</description>
+		<modifiable>n</modifiable>
+	</row>
+	<row>
+		<id>7</id>
+		<description>Cuba</description>
+		<modifiable>n</modifiable>
+	</row>
+	<row>
+		<id>8</id>
+		<description>Australia</description>
+		<modifiable>n</modifiable>
+	</row>
+	<row>
+		<id>9</id>
+		<description>Italy</description>
+		<modifiable>n</modifiable>
+	</row>
+</table>

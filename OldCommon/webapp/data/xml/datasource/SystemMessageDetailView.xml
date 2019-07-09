@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DataSource Name="SystemMessageDetailView">
+  <Sql Select="date_created, 
+		date_updated, 
+		description, 
+		id, 
+		system_message_type_id, 
+		user_id" From="system_message_detail" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="SystemMessageDetailTable" DBName="system_message_detail" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="SystemMessageDetailTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="SystemMessageTypeId" DBName="system_message_type_id" SqlType="numeric" IsNull="false" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="SystemMessageDetailTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="SystemMessageDetailTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="SystemMessageDetailTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="SystemMessageDetailTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="SystemMessageDetailTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

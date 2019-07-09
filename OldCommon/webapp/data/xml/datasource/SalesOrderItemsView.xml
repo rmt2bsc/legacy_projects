@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<DataSource Name="SalesOrderItemsView">
+  <Sql Select="back_order_qty, 
+		id, 
+		init_markup, 
+		init_unit_cost, 
+		item_master_id, 
+		item_name_override, 
+		order_qty, 
+		sales_order_id" From="sales_order_items" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="SalesOrderItemsTable" DBName="sales_order_items" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="SalesOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="SalesOrderId" DBName="sales_order_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="SalesOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemMasterId" DBName="item_master_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="SalesOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemNameOverride" DBName="item_name_override" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="SalesOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="OrderQty" DBName="order_qty" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="SalesOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="InitUnitCost" DBName="init_unit_cost" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="SalesOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="InitMarkup" DBName="init_markup" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="SalesOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BackOrderQty" DBName="back_order_qty" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="SalesOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

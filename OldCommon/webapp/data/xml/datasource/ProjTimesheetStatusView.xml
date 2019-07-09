@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<DataSource Name="ProjTimesheetStatusView">
+  <Sql Select="description, 
+		id, 
+		name" From="proj_timesheet_status" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ProjTimesheetStatusTable" DBName="proj_timesheet_status" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="ProjTimesheetStatusTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Name" DBName="name" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="ProjTimesheetStatusTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="ProjTimesheetStatusTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

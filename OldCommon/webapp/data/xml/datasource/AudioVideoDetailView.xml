@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<DataSource Name="AudioVideoDetailView">
+  <Sql Select="id, 
+		asset_master_id, 
+		category, 
+		media_type, 
+		year_recorded, 
+		date_created, 
+		date_changed, 
+		change_reason, 
+		areacode_created, 
+		city_created, 
+		user_id, 
+		comment_id" From="audio_video_detail" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="AudioVideoDetailTable" DBName="audio_video_detail" Updateable="true"/>
+  <ColAttr Name="AudioVideoDetailId" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="AudioVideoDetailTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AssetMasterId" DBName="asset_master_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="AudioVideoDetailTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Category" DBName="category" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="AudioVideoDetailTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="MediaType" DBName="media_type" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="AudioVideoDetailTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="YearRecorded" DBName="year_recorded" SqlType="varchar" IsNull="true" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AudioVideoDetailTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="datetime" IsNull="false" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="AudioVideoDetailTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateChanged" DBName="date_changed" SqlType="datetime" IsNull="false" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="AudioVideoDetailTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ChangeReason" DBName="change_reason" SqlType="varchar" IsNull="true" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AudioVideoDetailTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AreacodeCreated" DBName="areacode_created" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AudioVideoDetailTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CityCreated" DBName="city_created" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="AudioVideoDetailTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AudioVideoDetailTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CommentId" DBName="comment_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="AudioVideoDetailTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

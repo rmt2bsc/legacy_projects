@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<DataSource Name="XactPostDetailsView">
+  <Sql Select="xp.id xact_posting_id, 
+		   xp.gl_account_id gl_account_id, 
+       xp.post_amount post_amount,
+       gla.name gl_acct_name,
+       glat.id gl_acct_type_id,
+       glat.description gl_acct_type_desc,
+       xp.xact_id xact_id,
+       x.xact_type_id xact_type_id,
+       x.xact_date xact_date,
+       xt.description xact_type_desc, 
+       xp.period period,
+       xp.period_type_id period_type_id,
+       ap.description acct_prd_desc" 
+       From="gl_accounts gla, gl_account_types glat,  xact x, xact_posting xp, xact_type xt, acct_period ap " 
+       Where="xp.gl_account_id = gla.id  and xp.xact_id = x.id  and x.xact_type_id = xt.id  and xp.period_type_id = ap.id  and gla.acct_type_id = glat.id" 
+       GroupBy="" 
+       Having="" 
+       OrderBy="xp.post_date desc"/>
+  <TableUsage Name="GlAccountsTable" DBName="gl_accounts" Updateable="true"/>       
+  <TableUsage Name="GlAccountTypesTable" DBName="gl_account_types" Updateable="true"/>       
+	<TableUsage Name="XactTable" DBName="xact" Updateable="true"/>
+  <TableUsage Name="XactPostingTable" DBName="xact_posting" Updateable="true"/>
+  <TableUsage Name="XactTypeTable" DBName="xact_type" Updateable="true"/>
+  <TableUsage Name="AcctPeriodTable" DBName="acct_period" Updateable="true"/>
+  <ColAttr Name="XactItemPostId" DBName="xact_posting_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="XactPostingTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GlAccountId" DBName="gl_account_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="XactPostingTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="PostAmount" DBName="post_amount" SqlType="numeric" IsNull="false" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="XactPostingTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GlAccountName" DBName="gl_acct_name" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="GlAccountsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GlAcctTypeId" DBName="gl_acct_type_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="GlAccountTypesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="GlAcctTypeDesc" DBName="gl_acct_type_desc" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="GlAccountTypesTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactId" DBName="xact_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="XactPostingTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeId" DBName="xact_type_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="XactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactDate" DBName="xact_date" SqlType="datetime" IsNull="false" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="XactTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeDesc" DBName="xact_type_desc" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="XactTypeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AcctPeriod" DBName="period" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="XactPostingTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AcctPeriodTypeId" DBName="period_type_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="XactPostingTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AcctPeriodDesc" DBName="acct_prd_desc" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AcctPeriodTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

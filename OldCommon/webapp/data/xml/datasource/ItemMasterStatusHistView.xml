@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<DataSource Name="ItemMasterStatusHistView">
+  <Sql Select="date_created, 
+		effective_date, 
+		end_date, 
+		id, 
+		unit_cost,
+		markup, 
+		item_master_id, 
+		item_status_id, 
+		reason, 
+		user_id" From="item_master_status_hist" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ItemMasterStatusHistTable" DBName="item_master_status_hist" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="ItemMasterStatusHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemMasterId" DBName="item_master_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="ItemMasterStatusHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemStatusId" DBName="item_status_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="ItemMasterStatusHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UnitCost" DBName="unit_cost" SqlType="decimal" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="ItemMasterStatusHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>  
+  <ColAttr Name="Markup" DBName="markup" SqlType="decimal" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="ItemMasterStatusHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EffectiveDate" DBName="effective_date" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="ItemMasterStatusHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EndDate" DBName="end_date" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="ItemMasterStatusHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Reason" DBName="reason" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="ItemMasterStatusHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="ItemMasterStatusHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="ItemMasterStatusHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

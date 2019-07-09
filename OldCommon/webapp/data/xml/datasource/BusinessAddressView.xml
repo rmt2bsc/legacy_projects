@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<DataSource Name="BusinessAddressView">
+  <Sql Select="distinct address.id as addr_id, 
+		address.phone_cell as addr_phone_cell, 
+		address.phone_ext  as addr_phone_ext, 
+		address.phone_fax as addr_phone_fax, 
+		address.phone_home as addr_phone_home, 
+		address.phone_main as addr_phone_main, 
+		address.phone_pager as addr_phone_pager, 
+		address.phone_work as addr_phone_work, 
+		address.zip as addr_zip, 
+		address.zipext as addr_zipext, 
+		address.addr1 as addr1, 
+		address.addr2 as addr2, 
+		address.addr3 as addr3, 
+		address.addr4 as addr4, 
+		address.person_id as addr_person_id,
+		address.business_id as addr_business_id,
+		zipcode.city as zip_city,
+		zipcode.state as zip_state,
+		business.contact_ext as bus_contact_ext, 
+		business.contact_firstname as bus_contact_firstname, 
+		business.contact_lastname as bus_contact_lastname, 
+		business.contact_phone as bus_contact_phone, 
+		business.longname as bus_longname, 
+		business.serv_type as bus_serv_type, 
+		business.shortname as bus_shortname, 
+		business.tax_id as bus_tax_id, 
+		business.website as bus_website, 
+		business.bus_type as bus_type, 
+		business.id as business_id" 
+		From="business, address, zipcode" 
+		Where="business.id = address.business_id and 
+		             address.zip = zipcode.zip" 
+		GroupBy="" 
+		Having="" 
+		OrderBy="business.longname"/>
+  <TableUsage Name="AddressTable" DBName="address" Updateable="true"/>
+  <TableUsage Name="BusinessTable" DBName="business" Updateable="true"/>
+  <TableUsage Name="ZipcodeTable" DBName="zipcode" Updateable="true"/>
+  <ColAttr Name="BusinessId" DBName="business_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusType" DBName="bus_type" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusServType" DBName="bus_serv_type" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusLongname" DBName="bus_longname" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusShortname" DBName="bus_shortname" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusContactFirstname" DBName="bus_contact_firstname" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusContactLastname" DBName="bus_contact_lastname" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusContactPhone" DBName="bus_contact_phone" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusContactExt" DBName="bus_contact_ext" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusTaxId" DBName="bus_tax_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusWebsite" DBName="bus_website" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AddrId" DBName="addr_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="AddressTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Addr1" DBName="addr1" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AddressTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Addr2" DBName="addr2" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AddressTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Addr3" DBName="addr3" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AddressTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Addr4" DBName="addr4" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AddressTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AddrZip" DBName="addr_zip" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="AddressTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AddrZipext" DBName="addr_zipext" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AddressTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AddrPhoneHome" DBName="addr_phone_home" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AddressTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AddrPhoneWork" DBName="addr_phone_work" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AddressTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AddrPhoneExt" DBName="addr_phone_ext" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AddressTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AddrPhoneMain" DBName="addr_phone_main" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AddressTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AddrPhoneCell" DBName="addr_phone_cell" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AddressTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AddrPhoneFax" DBName="addr_phone_fax" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AddressTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AddrPhonePager" DBName="addr_phone_pager" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AddressTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AddrPersonId" DBName="addr_person_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="AddressTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AddrBusinessId" DBName="addr_business_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="AddressTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ZipCity" DBName="zip_city" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ZipState" DBName="zip_state" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="ZipcodeTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

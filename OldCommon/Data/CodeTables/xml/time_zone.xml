@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<id>4</id>
+		<description>Atlantic</description>
+	</row>
+	<row>
+		<id>5</id>
+		<description>Eastern</description>
+	</row>
+	<row>
+		<id>6</id>
+		<description>Central</description>
+	</row>
+	<row>
+		<id>7</id>
+		<description>Mountain</description>
+	</row>
+	<row>
+		<id>8</id>
+		<description>Pacific</description>
+	</row>
+	<row>
+		<id>9</id>
+		<description>Alaska</description>
+	</row>
+	<row>
+		<id>10</id>
+		<description>Hawaii-Aleutian</description>
+	</row>
+	<row>
+		<id>11</id>
+		<description>Somoa</description>
+	</row>
+	<row>
+		<id>13</id>
+		<description>Unknown</description>
+	</row>
+	<row>
+		<id>14</id>
+		<description>Unknown</description>
+	</row>
+	<row>
+		<id>15</id>
+		<description>Unknown</description>
+	</row>
+</table>

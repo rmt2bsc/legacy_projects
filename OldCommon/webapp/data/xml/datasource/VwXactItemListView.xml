@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<DataSource Name="VwXactItemListView">
+  <Sql Select="amount, 
+		item_activity_id, 
+		item_xact_reason, 
+		name, 
+		xact_id, 
+		xact_type_id, 
+		xact_type_item_id" From="vw_xact_item_list" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwXactItemListTable" DBName="vw_xact_item_list" Updateable="true"/>
+  <ColAttr Name="ItemActivityId" DBName="item_activity_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwXactItemListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeItemId" DBName="xact_type_item_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwXactItemListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactId" DBName="xact_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwXactItemListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeId" DBName="xact_type_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwXactItemListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Amount" DBName="amount" SqlType="decimal" IsNull="false" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwXactItemListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Name" DBName="name" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwXactItemListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemXactReason" DBName="item_xact_reason" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwXactItemListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

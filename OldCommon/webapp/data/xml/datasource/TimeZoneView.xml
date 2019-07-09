@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<DataSource Name="TimeZoneView">
+  <Sql Select="descr, 
+		id" From="time_zone" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="TimeZoneTable" DBName="time_zone" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="TimeZoneTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Descr" DBName="descr" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="TimeZoneTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

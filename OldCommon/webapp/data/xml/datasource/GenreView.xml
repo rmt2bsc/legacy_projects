@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<DataSource Name="GenreView">
+  <Sql Select="description, 
+		id" From="genre" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="GenreTable" DBName="genre" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="GenreTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="GenreTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

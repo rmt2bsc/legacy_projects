@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DataSource Name="UserDatabaseAccessView">
+  <Sql Select="date_created, 
+		date_updated, 
+		id, 
+		user_database_id, 
+		user_id, 
+		user_login_id" From="user_database_access" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="UserDatabaseAccessTable" DBName="user_database_access" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="UserDatabaseAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserLoginId" DBName="user_login_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="UserDatabaseAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserDatabaseId" DBName="user_database_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="UserDatabaseAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="UserDatabaseAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="UserDatabaseAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="UserDatabaseAccessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

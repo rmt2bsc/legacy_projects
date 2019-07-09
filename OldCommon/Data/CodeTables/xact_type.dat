@@ -1,0 +1,21 @@
+1	2	Cash Sales	cashsale	1	-1	1	101	4	401	1
+2	2	Cash Receipts	cashrcpt	1	-1	1		1		0
+10	4	Sales on Account	acctsale	1	-1	1	101	4	401	1
+30	8	Purchase Asset on Account	purchasset	1	-1	1		2		1
+40	6	Fee	fee	-1	1	4		1		0
+50	15	Purchases Discount	purchdisc	1	-1	7		1		0
+60	3	Cash Disbursement	cashpayexp	1	-1	5		1		1
+80	7	Interest	interest	-1	1	4		1		0
+90	9	Sales Returns and Allowances	salertn	-1	1	6		4		1
+100	12	Write Offs	writeoff	1	-1					0
+120	1	Bad Debt	baddebt	1	-1	5		1		0
+130	8	Purchase Inventory on Account	purchinv	1	-1	1		2		1
+140	10	Bank Deposit	bankdep	1	-1	1		1		0
+150	11	Bank Withdrawal	bankwith	1	-1	1		1		0
+160	13	Purchases Returns and Allowances	purchrtn	-1	1	1		7		1
+170	14	Sales Discount	salesdisc	-1	1	6		4		0
+180	8	Purchase Expense on Account	purchexp	1	-1	5		2		1
+190	16	Cost of Goods Sold	cgs	1	-1	5		1		0
+999	17	Reverse Transaction	reverse							0
+888	18	Cancel Transaction	cancel							0
+-100	19	Final Transaction	final							0

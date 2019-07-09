@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DataSource Name="TaxesAndDeductionsView">
+  <Sql Select="date_created, 
+		date_updated, 
+		description, 
+		id, 
+		rate, 
+		user_id" From="taxes_and_deductions" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="TaxesAndDeductionsTable" DBName="taxes_and_deductions" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="numeric" IsNull="false" JavaType="java.sql.Types.DOUBLE" PrimaryKey="true" TableName="TaxesAndDeductionsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Description" DBName="description" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="TaxesAndDeductionsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Rate" DBName="rate" SqlType="decimal" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="TaxesAndDeductionsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="datetime" IsNull="false" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="TaxesAndDeductionsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="datetime" IsNull="false" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="TaxesAndDeductionsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="TaxesAndDeductionsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

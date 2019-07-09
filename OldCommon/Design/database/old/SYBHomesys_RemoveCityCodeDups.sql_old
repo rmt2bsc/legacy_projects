@@ -1,0 +1,53 @@
+begin
+
+declare astate_id int;
+declare count int;
+declare cityname varchar(40);
+declare acity_id int;
+declare curGetCityID cursor for
+    select city_id
+        from city_code
+        where longname = cityname
+             and state_id = astate_id;
+
+set count = 0;
+for curlooopStates as  curStates cursor for
+  select state_id
+     from states_code
+  do
+     set astate_id = state_id;
+     for curInner as curDup cursor for
+        select count(*) as dup_count , longname as name
+           from city_code 
+           where state_id = astate_id
+           group by longname
+           having count(*) >= 2
+        do
+           if dup_count >= 2 then
+              set cityname = name;
+              open curGetCityID;
+              fetch next curGetCityID into acity_id;
+              close curGetCityID;
+              set count = count + 1;
+              delete from city_code
+                  where city_id = acity_id;
+
+              message name || '  ' || dup_count || '  Key: ' || acity_id;
+            end if;
+    end for;
+end for;
+
+
+delete from city_code
+   where longname = 'Jeffersonvill';
+
+delete from city_code
+   where longname = 'St Louis';
+
+delete from city_code
+   where longname = 'Carollton';
+
+delete from city_code
+   where longname = 'Carrolton';
+
+end

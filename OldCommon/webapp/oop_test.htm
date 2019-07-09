@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Untitled Document</title>
+
+<script>
+/**
+ *
+ */
+ 
+ function AjaxBase(serviceId, aUrl, aParmHandler, aResponseHandler) {
+ 	this.xmlHttp = null;
+	var srvcId = serviceId;
+	var url = aUrl;
+	var parmHandler = aParmHandler;
+	var responseHandler = aResponseHandler;
+	
+	/**
+	 * Function that creates a XMLHttpRequest object base on the browser type
+	 */ 	
+ 	var createXMLHttpRequest = function() {
+ 	    var obj;
+ 	    var isIE;
+ 	    
+		// Create XMLHttpRequest object for non-Microsoft browsers
+		if (window.XMLHttpRequest) {
+    		obj = new XMLHttpRequest();
+			isIE= false;
+		} 
+		else if (window.ActiveXObject) {
+    		try {
+		      // Try to create XMLHttpRequest in later versions
+    		  // of Internet Explorer
+	    	  obj = new ActiveXObject("Msxml2.XMLHTTP");
+	    	  isIE=true;
+		    }
+    		catch (e1) {
+		      // Failed to create required ActiveXObject
+    		  try {
+        		// Try version supported by older versions
+	        	// of Internet Explorer
+	    	    obj = new ActiveXObject("Microsoft.XMLHTTP");
+ 				isIE=true;
+	    	  } 
+	    	  catch (e2) {
+    	    	// Unable to create an XMLHttpRequest by any means
+	    	    obj = false;
+	    	  }
+    		}
+  		}
+		alert("XMLHttp object id is: " + obj.id);
+		return obj;
+	}
+	
+	var getParmHandler = function(handler) {
+	    if (handler == null) {
+			alert("Parm Handler was not defined");
+			return;
+		}
+ 		handler(url);
+ 	}
+	
+	var getStateChangeHandler = function(handler) {
+	    if (handler == null) {
+			alert("State Change Handler was not defined");
+			return;
+		}
+ 		handler(srvcId);
+ 	}
+
+
+  /**
+   *
+   *
+   */
+   this.startRequest = function() {
+      this.xmlHttp = createXMLHttpRequest();
+  	  getParmHandler(parmHandler);
+      getStateChangeHandler(responseHandler);
+   }
+ }  // end class
+ 
+ function h1(someURL) {
+    alert("Inside handler #1, URL: " + someURL);
+	// This set of statements determines the type of input control.
+	alert("Component 1 is a: " + document.form1.comp1.type);   // text
+	alert("Component 2 is a: " + document.form1.comp2.type);   // checkbox
+	alert("Component 3 is a: " + document.form1.comp3.type);   // radio button
+	alert("Component 4 is a: " + document.form1.comp4.type);   // textarea
+	alert("Component 5 is a: " + document.form1.comp5.type);   // select-one or select-multiple
+ }
+ 
+  function h2(someServiceId) {
+    alert("Inside handler #2, Service Id: " + someServiceId);
+ }
+ 
+ 
+ function testHandler(service) {
+      var handler = new AjaxBase(service, "http://localhost:8080/AuthService", h1, h2);
+	  handler.startRequest();
+	  alert("End of test");
+   }
+ 
+  function testAjax() {
+   	   var config = new RequestConfig();
+	   config.serviceId="testService";
+	   config.resourceURL = "http://localhost:8080/ajaxtest/test";
+	   config.renderHTML = true;
+	   config.component = document.getElementById("txtName");
+
+	   processRequest(config);
+	  alert("End Ajax Call");
+   }
+ 
+</script>
+<script src="/js/AjaxApi.js"></script>
+</head>
+
+<body>
+<!-- <form name="frmSample" method="post" action="" onSubmit="return javascript:ValidateForm()"> -->
+<form name="form1" method="post" action="" onSubmit="">
+	<input type="button" name="handler" value="Check Handler" onClick="testHandler('authroizeuser')"><br><br>
+	<input id="txtName" type="text" name="comp1" value="Text Component"><br>
+	<input type="checkbox" name="comp2" value="1"> Check Box<br>
+	<input type="radio" name="comp3" value="2">Radio Button<br>
+	<textarea name="comp4">This is a  multiline text box</textarea><br>
+	<select name="comp5" multiple>
+	  <option value="1">item 1</option>
+	  <option value="2">item 2</option>
+	</select>
+	
+</form>
+</body>
+</html>

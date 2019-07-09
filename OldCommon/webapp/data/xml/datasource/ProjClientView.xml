@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DataSource Name="ProjClientView">
+  <Sql Select="bill_rate, 
+		date_created, 
+		date_updated, 
+		id, 
+		ot_bill_rate, 
+		user_id" From="proj_client" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ProjClientTable" DBName="proj_client" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="ProjClientTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BillRate" DBName="bill_rate" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="ProjClientTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="OtBillRate" DBName="ot_bill_rate" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="ProjClientTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="ProjClientTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="ProjClientTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="ProjClientTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

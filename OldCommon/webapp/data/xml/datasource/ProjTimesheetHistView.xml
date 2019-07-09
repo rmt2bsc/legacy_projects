@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DataSource Name="ProjTimesheetHistView">
+  <Sql Select="effective_date, 
+		end_date, 
+		id, 
+		proj_timesheet_id, 
+		proj_timesheet_status_id, 
+		user_id" From="proj_timesheet_hist" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ProjTimesheetHistTable" DBName="proj_timesheet_hist" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="ProjTimesheetHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ProjTimesheetId" DBName="proj_timesheet_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="ProjTimesheetHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ProjTimesheetStatusId" DBName="proj_timesheet_status_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="ProjTimesheetHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EffectiveDate" DBName="effective_date" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="ProjTimesheetHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EndDate" DBName="end_date" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="ProjTimesheetHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="ProjTimesheetHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

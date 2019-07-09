@@ -1,0 +1,69 @@
+@echo off
+REM
+echo This file is the login script for user, royroy
+REM
+
+REM
+REM If this is running on dos, exit
+REM
+
+SET USERSHARE=\\rmt2system\rmt2users
+SET DRIVE=U:
+SET SCRIPTDIR=\\rmt2system\netlogon
+echo ************************
+echo Executing Userlogon.bat
+echo ************************
+echo SETUP HOME DIRECTORY 
+IF "%OS%" == "Windows_NT" goto winnt
+
+REM **************************
+REM Handle other OS Platforms
+REM **************************
+echo *** Initializing Home Directory for Windows 95/98 Client
+
+echo creating data file
+net config > %USERSHARE%\USER.DAT
+echo finish creating data file
+
+net use x: %USERSHARE%
+
+echo getting user name
+CALL %scriptdir%\getuser.bat
+echo finish getting user name
+pause
+if %NON_NT_USER% == "" goto clientnotfound
+echo Welcome %NON_NT_USER%
+echo *** Executing net use ***
+net use u: %NON_NT_USER%
+pause
+net use o: /delete
+goto homedir_exit
+
+:winnt
+echo Initializing Home Directory for Windows NT Client
+goto homedir_exit
+
+:clientnotfound
+echo Could not find Home Directory for Windows 95/98 Clinet
+
+:homedir_exit
+if "%windir%" == "" goto exit
+
+if "%COMPUTERNAME%" == "" goto proc_test
+if "%COMPUTERNAME%" == "RMT2SYSTEM" goto exit
+
+:proc_test
+
+REM
+REM Use PROCESSOR_ARCHITECTURE to pick the right directory
+REM
+
+if "%PROCESSOR_ARCHITECTURE%" == "" set DIRECTORY=win95
+if "%PROCESSOR_ARCHITECTURE%" == "x86" set DIRECTORY=i386
+if "%DIRECTORY%" == "" goto exit
+
+
+\\RMT2SYSTEM\Clients\Setup\%DIRECTORY%\startcli.exe /s:RMT2SYSTEM /u:royroy /l:c:\startcli.log
+
+
+:exit

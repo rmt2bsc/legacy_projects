@@ -1,0 +1,186 @@
+101	3	The database connection object is invalid	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+102	3	The supplied user id must be valid in order to obtain a database connection object	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+103	3	SQL statement is invalid	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+104	3	A database connection could not be established for the current connection object.  Possible causes: 1) database is down  2) Total allowable connections limit is exceeded	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+105	3	Database Server is down	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+106	3	Database driver class was not specified	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+107	3	Database URL was not specified	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+108	3	Database user id was not specified	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+109	3	Database Password was not specified	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+110	3	The total number of database connections was not specified	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+111	3	The total number of database connections was not specified	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+112	3	DataSource is invalid	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+113	3	Data source type for RMT2DataSourceApiImpl is invalid	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+114	3	Expected XML Data source, found found null instead	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+115	3	SQL select statement does not exist for the current datasource	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+116	3	System data file, SystemParms.properties, does not exist	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+117	3	Method cannot contain any null arguments	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+119	3	DataSource does not contain target column	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+120	3	DataSource does not contain the Select Statement attribute:	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+121	3	Cannot add or associate a null value with an attribute for a DataSource object.  This operation triggered a java NullPointerException	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+122	3	The date value entered is invalid and could not be converted to java.util.Date or java.sql.Date	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+123	3	Invalid Date Format	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+124	3	Invalid Number Format	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+125	3	String value could not be converted to java.lang.Number	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+126	3	One of the Login Parameters is invalid...Login Hashtable is invalid	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+127	3	The User Id is invalid and cannot be null	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+128	3	The Password is invalid and cannot be null	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+129	3	The User Id entered does not not exist as a valid user of the system	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+130	3	The Password entered is incorrect	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+131	3	A valid Datasource Object could not be obtained from the Database Connection object	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+132	3	The following operation cannot be performed without selecting an item	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+133	3	Request object is invalid	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+134	3	User is not logged into the system	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+135	3	Unable to obtain column name metadata for login Id column	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+136	3	The maximum number of database conntections has been reached.   Consult Database Administrator to increase to total number of concurrent database connections	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+137	3	Unable to obtain the connection pool	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+138	3	Unable to obtain the connection bean for the current process	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+140	3	A row must be selected before performing a delete	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+141	3	The target Code Group cannot be deleted, because it is associated with one or more code details.   The associated code details must be removed from the system prior to deleting target code group	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+142	3	DataSource does not contain target table name	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+143	3	API Datasource object is not valid when attempting to find data.  Ensure that the base Datasource View name has been set	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+144	3	API Bean object is not valid when attempting to find data.  Ensure that the base Bean Class Name has been set	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+145	3	Bean Name cannot be null or blank	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+146	3	A Genereal Code Group must selected in order to view and/or edit details	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+147	3	The description for group id, %s, could not obtained	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+148	3	Row was not found	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+149	3	State ID, %s, could not obtained	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+150	3	A Country must be selected and cannot be blank	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+151	3	Account Category ID, %s, could not obtained	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+152	3	An Account Type must be selected and cannot be blank	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+153	3	Description must have a value	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+154	3	Category Id, %s, was not found	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+155	3	A number format exception occurred when attempting to update login count	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+156	3	Null Pointer Exception occurred	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+157	3	Index Out Of Bounds Exception occurred	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+158	3	Attempted to obtain a Hashtable value which the key is null	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+159	3	Parm Key could not be coverted to a number	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+160	3	Dynamic SQL Parameter element cannot be found	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+161	3	Parameter value could not be converted to a number	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+162	3	Dynamic SQL Object is not initialized	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+401	3	Account Name must be entered	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+402	3	Account Category Name is invalid	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+403	3	Duplicate Account Category Name	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+404	3	Duplicate GL Account Name	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+405	3	Account Type does not exist	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+406	3	Account Number cannot be created without a valid account type code	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+407	3	Account Number cannot be created without a valid account category type code	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+408	3	Account Number cannot be created without a valid account sequence number	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+409	3	Account Category does not exist	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+410	3	General Ledger Account does not exist	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+411	3	Function Name must be provided to obtain a count of Account associations	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+412	3	Cannot create Creditor when GL Account data is not available	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+413	3	Cannot create Creditor when base creditor data is not available	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+414	3	Function Name must be provided to obtain a count of Account associations	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+415	3	Merchandise items must be associated with a vendor	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+416	3	Item Master must be associated with a base GL Account	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+417	3	Item Master Vendor Id is invalid...requires a value greater than zero	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+418	3	Merchandise items must have a Vendor Serial Number	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+419	3	Item Master Unit Cost is invalid...requires a value greater than zero	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+420	3	Customer's GL Account number must be of a value greater than zero	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+421	3	Customer must have personal or business contact information	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+422	3	GL Account is not found by id, %s	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+423	3	GL Account Name is invalid	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+424	3	New and existing Merchandise Items must have the vendor's version of an item number or part number	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+425	3	Creditor Type must have a value	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	dba
+501	3	Person First Name must be supplied	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+502	3	Person Last Name must be supplied	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+503	3	Social Security Number is invalid	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+504	3	Date of Birth is invalid	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+505	3	Business Long Name is invalid	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+506	3	Tax Id Number is invalid	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+507	3	Zip Code is invalid	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+508	3	Person Id and Business Id cannot be null.   One or the other must exist	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+509	3	Zip Code is required	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+510	3	Person Id and Business Id cannot have values concurrently since they are mutually exclusive.   Person Id: %s, Business Id: %s	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+547	3	The item cannot be deleted, because it is associated with detail data in other areas of the database	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+548	3	Person object is invalid	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+549	3	Person Id is invalid	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+552	3	Business object is invalid	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+553	3	Business Id is invalid	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+554	3	Address Id is invalid	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+555	3	Address object is invalid	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+600	3	Transaction details were not found using custom criteria: %s	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+601	3	Transaction Type code must be greater than zero	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+602	3	Target or one the Offset Transaction's GL Account ID must be a value greater than zero	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+603	3	Target Entry is not initialized	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+604	3	Offset Entry is not initialized	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+605	3	Offset Entry is initialized but does not contain any entries offsetting the Target Entry	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+606	3	A GL Account Id cannot exist as a debit and credit within a transaction	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+607	3	Transaction is not balanced	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+608	3	Transaction and Target Entry Amounts cannot differ	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+609	3	Transaction %s was not found	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+610	3	Transaction details were not found using Transaction Id %s	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+611	3	Transaction details were not found using Transaction Date %s	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+612	3	Transaction details were not found using Transaction Type %s	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+613	3	Transaction details were not found using Transaction Accounting Period %s	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+614	3	Transaction details were not found using Transaction Accounting Period Type %s	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+615	3	Transaction category code could not be found using Category Id %s	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+616	3	Transaction Code Group could not be found using Group Id %s	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+617	3	Transaction Code could not be found using Code Id %s	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+618	3	Transaction Type could not be found using transaction type id %s	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+701	3	Sales Order must be associated with a Cusomter Id that has a value greater than zero	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+702	3	In order to create a Sales Order,  there must be one or more items	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+703	3	Sales Order Number is invalid	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+704	3	The current Sales Order status could not be found for Item Id [%s]	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+800	3	Event Id must be a value grater than zero	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+801	3	Event Id Could not be found using the following criteria: Employee Id=%s Year=%s Month=%s	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+802	3	Employee object is invalid	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+803	3	Employee Id is invalid	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+804	3	Client object is invalid	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+805	3	Client Id is invalid	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+806	3	Project is invalid	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+807	3	Project Id is invalid	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+808	3	Event is invalid	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+809	3	Event Id is invalid	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+810	3	Event Details object is invalid	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+811	3	Event Details id is invalid	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+1000	3	General Error -  %s	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+1001	3	E-Mail Messaging Failed: EMailBean is invalid	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+1002	3	E-Mail Messaging Failed: E-Mail From address was null	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+1003	3	E-Mail Messaging Failed: E-Mail To address was null.    Must have a least one valid "To Address"	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+1004	3	Error occurred while attempting to teminate authenticated SMTP Transport object	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+1005	3	A provider for the SMTP Host, %s, is not found	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+1006	3	Mail authentication for current user failed.   EMail Transport Service could not be created	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+1007	3	SMTP Mail Transport Service is already connected	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+1008	3	%s E-Mail was unbale to be sent.  \nInvalid Addresses which message was not sent: %s \nValid Addresses which message was sent: %s \nValid addresses to which the message was not sent: %s	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+1009	3	%s E-Mail was unable to be sent.  The SMTP connection is dead or not in the connected state or the message is not a MimeMessage	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+1010	3	%s The underlying implementation does not support modification of existing values for E-Mail Message	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+1011	3	%s Message could not be sent since it is obtained from a READ_ONLY folder	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+1012	3	%s E-Mail was unable to be sent.  General Error during initialization of email components	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+1013	3	User Login Object is invalid	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+1014	3	User Id is invalid.   Must be greater than zero if existing user and  equal to zero it new user	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+1015	3	User's logi id is invalid	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+1016	3	User's Password cannot be blank	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+1017	3	General Code Group object is invalid	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+1018	3	General Code Group is required to have a description	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+1019	3	General Code object is invalid	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+1020	3	General Code must have a Code Group	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	DBA
+1021	3	General Code must have a Short Description or a Long Description	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	dba
+426	3	Item Name must contain a value and cannot be null	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	dba
+427	3	Item Type is invalid	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	dba
+428	3	Mark Up for service items must be equal to 1	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	dba
+429	3	Quantity On Hand for service items must be equal to 1	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	dba
+430	3	Mark Up must be greater than zero	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	dba
+431	3	Quantity On Hand must be greater than zero	2004-10-02 13:36:17.000	2004-10-02 13:36:17.000	dba
+619	3	Transaction must be associated with a date	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+620	3	Transaction date is invalid	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+621	3	Transaction date cannot be greater than the current date	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+622	3	Transaction must be associated with a tender	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+623	3	Transaction tender must be associated with a tender number	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+624	3	Transaction amount must be greater than zero	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+625	3	Transaction Type Item Activity object is invalid	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+626	3	Transaction Item Name must have a value	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+627	3	Transaction Item Amount must be greater than zero	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+628	3	Transaction Item Description must have a value	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+629	3	Base transaction amount must equal the sum of all transaction item amounts	2004-10-02 13:36:17.090	2004-10-02 13:36:17.090	DBA
+432	3	Creditor Id must be greater than zero	10/2/2004 01:36:17	10/2/2004 01:36:17	dba
+433	3	Creditor Id does not exist	10/2/2004 01:36:17	10/2/2004 01:36:17	dba
+434	3	Creditor must be of type Vendor	10/2/2004 01:36:17	10/2/2004 01:36:17	dba
+435	3	Purchase Order Id must be greater than zero	10/2/2004 01:36:17	10/2/2004 01:36:17	dba
+436	3	Base Purchase Order for Purchase Order Item is invalid	10/2/2004 01:36:17	10/2/2004 01:36:17	dba
+437	3	Purchase Order Item must be assigned an Inventory Item	10/2/2004 01:36:17	10/2/2004 01:36:17	dba
+438	3	Inventory item selected for Purchase Order Item is invalid	10/2/2004 01:36:17	10/2/2004 01:36:17	dba
+439	3	Inventory item selected for Purchase Order Item must of merchandise type which is purchased for resale	10/2/2004 01:36:17	10/2/2004 01:36:17	dba
+440	3	Quantity Ordered for Purchase Order Item must greater than or equal to zero	10/2/2004 01:36:17	10/2/2004 01:36:17	dba
+441	3	Quantity Received for Purchase Order Item must lessr than or equal to Quantity Ordered	10/2/2004 01:36:17	10/2/2004 01:36:17	dba

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<DataSource Name="ProjPeriodView">
+  <Sql Select="id, 
+		max_reg_hrs, 
+		prd_type" From="proj_period" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="ProjPeriodTable" DBName="proj_period" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="ProjPeriodTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="PrdType" DBName="prd_type" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="ProjPeriodTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="MaxRegHrs" DBName="max_reg_hrs" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="ProjPeriodTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<DataSource Name="VwTimesheetEventListView">
+  <Sql Select="bill_rate, 
+		billable, 
+		client_id, 
+		effective_date, 
+		end_date, 
+		event_date, 
+		event_date_created, 
+		event_id, 
+		hours, 
+		ot_bill_rate, 
+		project_id, 
+		project_name, 
+		project_task_id, 
+		task_id, 
+		task_name, 
+		timesheet_id" From="vw_timesheet_event_list" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwTimesheetEventListTable" DBName="vw_timesheet_event_list" Updateable="true"/>
+  <ColAttr Name="EventId" DBName="event_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwTimesheetEventListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EventDate" DBName="event_date" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="VwTimesheetEventListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Hours" DBName="hours" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwTimesheetEventListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EventDateCreated" DBName="event_date_created" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="VwTimesheetEventListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ProjectTaskId" DBName="project_task_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwTimesheetEventListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TimesheetId" DBName="timesheet_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwTimesheetEventListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ProjectId" DBName="project_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwTimesheetEventListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TaskId" DBName="task_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwTimesheetEventListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ClientId" DBName="client_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwTimesheetEventListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ProjectName" DBName="project_name" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwTimesheetEventListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BillRate" DBName="bill_rate" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwTimesheetEventListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="OtBillRate" DBName="ot_bill_rate" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwTimesheetEventListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EffectiveDate" DBName="effective_date" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="VwTimesheetEventListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="EndDate" DBName="end_date" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="VwTimesheetEventListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TaskName" DBName="task_name" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwTimesheetEventListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Billable" DBName="billable" SqlType="bit" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwTimesheetEventListTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

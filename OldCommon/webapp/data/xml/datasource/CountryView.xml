@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<DataSource Name="CountryView">
+  <Sql Select="cntry_void_ind, 
+		id, 
+		name" From="country" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="CountryTable" DBName="country" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="CountryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Name" DBName="name" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="CountryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CntryVoidInd" DBName="cntry_void_ind" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="CountryTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

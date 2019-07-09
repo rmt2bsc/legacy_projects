@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<id>3</id>
+		<account_type_id>5</account_type_id>
+		<increment_multiplier>1</increment_multiplier>
+		<decrement_multiplier>-1</decrement_multiplier>
+	</row>
+	<row>
+		<id>4</id>
+		<account_type_id>4</account_type_id>
+		<increment_multiplier>-1</increment_multiplier>
+		<decrement_multiplier>1</decrement_multiplier>
+	</row>
+	<row>
+		<id>5</id>
+		<account_type_id>3</account_type_id>
+		<increment_multiplier>-1</increment_multiplier>
+		<decrement_multiplier>1</decrement_multiplier>
+	</row>
+	<row>
+		<id>1</id>
+		<account_type_id>2</account_type_id>
+		<increment_multiplier>-1</increment_multiplier>
+		<decrement_multiplier>1</decrement_multiplier>
+	</row>
+	<row>
+		<id>2</id>
+		<account_type_id>1</account_type_id>
+		<increment_multiplier>1</increment_multiplier>
+		<decrement_multiplier>-1</decrement_multiplier>
+	</row>
+</table>

@@ -1,0 +1,1491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<id>101</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>The database connection object is invalid</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>102</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>The supplied user id must be valid in order to obtain a database connection object</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>103</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>SQL statement is invalid</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>104</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>A database connection could not be established for the current connection object.  Possible causes: 1) database is down  2) Total allowable connections limit is exceeded</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>105</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Database Server is down</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>106</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Database driver class was not specified</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>107</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Database URL was not specified</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>108</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Database user id was not specified</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>109</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Database Password was not specified</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>110</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>The total number of database connections was not specified</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>111</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>The total number of database connections was not specified</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>112</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>DataSource is invalid</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>113</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Data source type for RMT2DataSourceApiImpl is invalid</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>114</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Expected XML Data source, found found null instead</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>115</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>SQL select statement does not exist for the current datasource</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>116</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>System data file, SystemParms.properties, does not exist</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>117</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Method cannot contain any null arguments</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>119</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>DataSource does not contain target column</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>120</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>DataSource does not contain the Select Statement attribute:</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>121</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Cannot add or associate a null value with an attribute for a DataSource object.  This operation triggered a java NullPointerException</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>122</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>The date value entered is invalid and could not be converted to java.util.Date or java.sql.Date</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>123</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Invalid Date Format</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>124</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Invalid Number Format</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>125</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>String value could not be converted to java.lang.Number</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>126</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>One of the Login Parameters is invalid...Login Hashtable is invalid</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>127</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>The User Id is invalid and cannot be null</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>128</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>The Password is invalid and cannot be null</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>129</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>The User Id entered does not not exist as a valid user of the system</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>130</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>The Password entered is incorrect</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>131</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>A valid Datasource Object could not be obtained from the Database Connection object</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>132</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>The following operation cannot be performed without selecting an item</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>133</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Request object is invalid</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>134</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>User is not logged into the system</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>135</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Unable to obtain column name metadata for login Id column</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>136</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>The maximum number of database conntections has been reached.   Consult Database Administrator to increase to total number of concurrent database connections</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>137</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Unable to obtain the connection pool</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>138</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Unable to obtain the connection bean for the current process</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>140</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>A row must be selected before performing a delete</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>141</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>The target Code Group cannot be deleted, because it is associated with one or more code details.   The associated code details must be removed from the system prior to deleting target code group</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>142</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>DataSource does not contain target table name</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>143</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>API Datasource object is not valid when attempting to find data.  Ensure that the base Datasource View name has been set</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>144</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>API Bean object is not valid when attempting to find data.  Ensure that the base Bean Class Name has been set</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>145</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Bean Name cannot be null or blank</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>146</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>A Genereal Code Group must selected in order to view and/or edit details</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>147</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>The description for group id, %s, could not obtained</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>148</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Row was not found</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>149</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>State ID, %s, could not obtained</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>150</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>A Country must be selected and cannot be blank</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>151</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Account Category ID, %s, could not obtained</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>152</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>An Account Type must be selected and cannot be blank</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>153</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Description must have a value</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>154</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Category Id, %s, was not found</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>155</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>A number format exception occurred when attempting to update login count</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>156</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Null Pointer Exception occurred</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>157</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Index Out Of Bounds Exception occurred</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>158</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Attempted to obtain a Hashtable value which the key is null</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>159</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Parm Key could not be coverted to a number</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>160</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Dynamic SQL Parameter element cannot be found</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>161</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Parameter value could not be converted to a number</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>162</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Dynamic SQL Object is not initialized</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>401</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Account Name must be entered</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>402</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Account Category Name is invalid</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>403</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Duplicate Account Category Name</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>404</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Duplicate GL Account Name</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>405</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Account Type does not exist</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>406</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Account Number cannot be created without a valid account type code</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>407</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Account Number cannot be created without a valid account category type code</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>408</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Account Number cannot be created without a valid account sequence number</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>409</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Account Category does not exist</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>410</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>General Ledger Account does not exist</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>411</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Function Name must be provided to obtain a count of Account associations</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>412</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Cannot create Creditor when GL Account data is not available</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>413</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Cannot create Creditor when base creditor data is not available</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>414</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Function Name must be provided to obtain a count of Account associations</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>415</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Merchandise items must be associated with a vendor</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>416</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Item Master must be associated with a base GL Account</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>417</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Item Master Vendor Id is invalid...requires a value greater than zero</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>418</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Merchandise items must have a Vendor Serial Number</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>419</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Item Master Unit Cost is invalid...requires a value greater than zero</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>420</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Customer's GL Account number must be of a value greater than zero</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>421</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Customer must have personal or business contact information</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>422</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>GL Account is not found by id, %s</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>423</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>GL Account Name is invalid</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>424</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>New and existing Merchandise Items must have the vendor's version of an item number or part number</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>425</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Creditor Type must have a value</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>dba</user_id>
+	</row>
+	<row>
+		<id>501</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Person First Name must be supplied</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>502</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Person Last Name must be supplied</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>503</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Social Security Number is invalid</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>504</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Date of Birth is invalid</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>505</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Business Long Name is invalid</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>506</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Tax Id Number is invalid</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>507</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Zip Code is invalid</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>508</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Person Id and Business Id cannot be null.   One or the other must exist</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>509</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Zip Code is required</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>510</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Person Id and Business Id cannot have values concurrently since they are mutually exclusive.   Person Id: %s, Business Id: %s</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>547</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>The item cannot be deleted, because it is associated with detail data in other areas of the database</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>548</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Person object is invalid</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>549</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Person Id is invalid</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>552</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Business object is invalid</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>553</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Business Id is invalid</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>554</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Address Id is invalid</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>555</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Address object is invalid</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>600</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction details were not found using custom criteria: %s</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>601</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction Type code must be greater than zero</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>602</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Target or one the Offset Transaction's GL Account ID must be a value greater than zero</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>603</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Target Entry is not initialized</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>604</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Offset Entry is not initialized</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>605</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Offset Entry is initialized but does not contain any entries offsetting the Target Entry</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>606</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>A GL Account Id cannot exist as a debit and credit within a transaction</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>607</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction is not balanced</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>608</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction and Target Entry Amounts cannot differ</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>609</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction %s was not found</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>610</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction details were not found using Transaction Id %s</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>611</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction details were not found using Transaction Date %s</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>612</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction details were not found using Transaction Type %s</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>613</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction details were not found using Transaction Accounting Period %s</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>614</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction details were not found using Transaction Accounting Period Type %s</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>615</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction category code could not be found using Category Id %s</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>616</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction Code Group could not be found using Group Id %s</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>617</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction Code could not be found using Code Id %s</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>618</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction Type could not be found using transaction type id %s</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>701</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Sales Order must be associated with a Cusomter Id that has a value greater than zero</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>702</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>In order to create a Sales Order,  there must be one or more items</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>703</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Sales Order Number is invalid</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>704</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>The current Sales Order status could not be found for Item Id [%s]</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>800</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Event Id must be a value grater than zero</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>801</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Event Id Could not be found using the following criteria: Employee Id=%s Year=%s Month=%s</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>802</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Employee object is invalid</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>803</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Employee Id is invalid</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>804</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Client object is invalid</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>805</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Client Id is invalid</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>806</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Project is invalid</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>807</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Project Id is invalid</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>808</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Event is invalid</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>809</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Event Id is invalid</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>810</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Event Details object is invalid</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>811</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Event Details id is invalid</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>1000</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>General Error -  %s</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>1001</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>E-Mail Messaging Failed: EMailBean is invalid</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>1002</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>E-Mail Messaging Failed: E-Mail From address was null</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>1003</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>E-Mail Messaging Failed: E-Mail To address was null.    Must have a least one valid "To Address"</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>1004</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Error occurred while attempting to teminate authenticated SMTP Transport object</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>1005</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>A provider for the SMTP Host, %s, is not found</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>1006</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Mail authentication for current user failed.   EMail Transport Service could not be created</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>1007</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>SMTP Mail Transport Service is already connected</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>1008</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>%s E-Mail was unbale to be sent.  \nInvalid Addresses which message was not sent: %s \nValid Addresses which message was sent: %s \nValid addresses to which the message was not sent: %s</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>1009</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>%s E-Mail was unable to be sent.  The SMTP connection is dead or not in the connected state or the message is not a MimeMessage</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>1010</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>%s The underlying implementation does not support modification of existing values for E-Mail Message</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>1011</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>%s Message could not be sent since it is obtained from a READ_ONLY folder</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>1012</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>%s E-Mail was unable to be sent.  General Error during initialization of email components</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>1013</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>User Login Object is invalid</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>1014</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>User Id is invalid.   Must be greater than zero if existing user and  equal to zero it new user</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>1015</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>User's logi id is invalid</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>1016</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>User's Password cannot be blank</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>1017</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>General Code Group object is invalid</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>1018</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>General Code Group is required to have a description</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>1019</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>General Code object is invalid</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>1020</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>General Code must have a Code Group</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>1021</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>General Code must have a Short Description or a Long Description</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>dba</user_id>
+	</row>
+	<row>
+		<id>426</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Item Name must contain a value and cannot be null</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>dba</user_id>
+	</row>
+	<row>
+		<id>427</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Item Type is invalid</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>dba</user_id>
+	</row>
+	<row>
+		<id>428</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Mark Up for service items must be equal to 1</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>dba</user_id>
+	</row>
+	<row>
+		<id>429</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Quantity On Hand for service items must be equal to 1</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>dba</user_id>
+	</row>
+	<row>
+		<id>430</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Mark Up must be greater than zero</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>dba</user_id>
+	</row>
+	<row>
+		<id>431</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Quantity On Hand must be greater than zero</description>
+		<date_created>2004-10-02 13:36:17.000</date_created>
+		<date_updated>2004-10-02 13:36:17.000</date_updated>
+		<user_id>dba</user_id>
+	</row>
+	<row>
+		<id>619</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction must be associated with a date</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>620</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction date is invalid</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>621</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction date cannot be greater than the current date</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>622</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction must be associated with a tender</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>623</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction tender must be associated with a tender number</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>624</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction amount must be greater than zero</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>625</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction Type Item Activity object is invalid</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>626</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction Item Name must have a value</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>627</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction Item Amount must be greater than zero</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>628</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Transaction Item Description must have a value</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>629</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Base transaction amount must equal the sum of all transaction item amounts</description>
+		<date_created>2004-10-02 13:36:17.090</date_created>
+		<date_updated>2004-10-02 13:36:17.090</date_updated>
+		<user_id>DBA</user_id>
+	</row>
+	<row>
+		<id>432</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Creditor Id must be greater than zero</description>
+		<date_created>10/2/2004 01:36:17</date_created>
+		<date_updated>10/2/2004 01:36:17</date_updated>
+		<user_id>dba</user_id>
+	</row>
+	<row>
+		<id>433</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Creditor Id does not exist</description>
+		<date_created>10/2/2004 01:36:17</date_created>
+		<date_updated>10/2/2004 01:36:17</date_updated>
+		<user_id>dba</user_id>
+	</row>
+	<row>
+		<id>434</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Creditor must be of type Vendor</description>
+		<date_created>10/2/2004 01:36:17</date_created>
+		<date_updated>10/2/2004 01:36:17</date_updated>
+		<user_id>dba</user_id>
+	</row>
+	<row>
+		<id>435</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Purchase Order Id must be greater than zero</description>
+		<date_created>10/2/2004 01:36:17</date_created>
+		<date_updated>10/2/2004 01:36:17</date_updated>
+		<user_id>dba</user_id>
+	</row>
+	<row>
+		<id>436</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Base Purchase Order for Purchase Order Item is invalid</description>
+		<date_created>10/2/2004 01:36:17</date_created>
+		<date_updated>10/2/2004 01:36:17</date_updated>
+		<user_id>dba</user_id>
+	</row>
+	<row>
+		<id>437</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Purchase Order Item must be assigned an Inventory Item</description>
+		<date_created>10/2/2004 01:36:17</date_created>
+		<date_updated>10/2/2004 01:36:17</date_updated>
+		<user_id>dba</user_id>
+	</row>
+	<row>
+		<id>438</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Inventory item selected for Purchase Order Item is invalid</description>
+		<date_created>10/2/2004 01:36:17</date_created>
+		<date_updated>10/2/2004 01:36:17</date_updated>
+		<user_id>dba</user_id>
+	</row>
+	<row>
+		<id>439</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Inventory item selected for Purchase Order Item must of merchandise type which is purchased for resale</description>
+		<date_created>10/2/2004 01:36:17</date_created>
+		<date_updated>10/2/2004 01:36:17</date_updated>
+		<user_id>dba</user_id>
+	</row>
+	<row>
+		<id>440</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Quantity Ordered for Purchase Order Item must greater than or equal to zero</description>
+		<date_created>10/2/2004 01:36:17</date_created>
+		<date_updated>10/2/2004 01:36:17</date_updated>
+		<user_id>dba</user_id>
+	</row>
+	<row>
+		<id>441</id>
+		<system_message_type_id>3</system_message_type_id>
+		<description>Quantity Received for Purchase Order Item must lessr than or equal to Quantity Ordered</description>
+		<date_created>10/2/2004 01:36:17</date_created>
+		<date_updated>10/2/2004 01:36:17</date_updated>
+		<user_id>dba</user_id>
+	</row>
+</table>

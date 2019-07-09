@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<id>5</id>
+		<description>Marital Status Codes</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>9/9/1999 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+		<modifiable>Y</modifiable>
+	</row>
+	<row>
+		<id>6</id>
+		<description>Gender Codes</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>9/9/1999 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+		<modifiable>Y</modifiable>
+	</row>
+	<row>
+		<id>7</id>
+		<description>Business Type Codes</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>9/9/1999 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+		<modifiable>Y</modifiable>
+	</row>
+	<row>
+		<id>8</id>
+		<description>Business Industry Codes</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>5/17/2003 10:45:40</date_updated>
+		<user_id>admin</user_id>
+		<modifiable>Y</modifiable>
+	</row>
+	<row>
+		<id>15</id>
+		<description>Race/Culture Codes</description>
+		<date_created>9/9/1999 00:00:00</date_created>
+		<date_updated>9/9/1999 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+		<modifiable>Y</modifiable>
+	</row>
+	<row>
+		<id>25</id>
+		<description>Family Relationship</description>
+		<date_created>9/9/2001 00:00:00</date_created>
+		<date_updated>9/9/2001 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+		<modifiable>Y</modifiable>
+	</row>
+	<row>
+		<id>26</id>
+		<description>Name Title</description>
+		<date_created>7/1/2004 00:00:00</date_created>
+		<date_updated>7/1/2004 00:00:00</date_updated>
+		<user_id>DBA</user_id>
+		<modifiable>Y</modifiable>
+	</row>
+</table>

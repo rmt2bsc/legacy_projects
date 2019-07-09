@@ -1,0 +1,11 @@
+$PBExportHeader$str_lvdata.srs
+global type str_lvdata from structure
+	string		reportcolumn[]
+	n_rmt_ds		ds
+	string		detaildataobject
+	integer		colsize[]
+	string		detailkeycol[]
+	string		picture
+	boolean		duplicates
+end type
+

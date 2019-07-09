@@ -1,0 +1,7 @@
+$PBExportHeader$str_lvdetaildata.srs
+global type str_lvdetaildata from structure
+	string		dataobject
+	any		args[20]
+	integer		level
+end type
+

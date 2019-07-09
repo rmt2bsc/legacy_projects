@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<DataSource Name="VwCustomerXactHistView">
+  <Sql Select="account_name, 
+		account_no, 
+		active, 
+		business_id, 
+		credit_limit, 
+		customer_activity_amount, 
+		customer_activity_id, 
+		customer_id, 
+		person_id, 
+		reason, 
+		xact_amount, 
+		xact_date, 
+		xact_id, 
+		xact_type_id, 
+		xact_type_name" From="vw_customer_xact_hist" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="VwCustomerXactHistTable" DBName="vw_customer_xact_hist" Updateable="true"/>
+  <ColAttr Name="XactId" DBName="xact_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CustomerId" DBName="customer_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="PersonId" DBName="person_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessId" DBName="business_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AccountName" DBName="account_name" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AccountNo" DBName="account_no" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CreditLimit" DBName="credit_limit" SqlType="decimal" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Active" DBName="active" SqlType="bit" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactAmount" DBName="xact_amount" SqlType="decimal" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactDate" DBName="xact_date" SqlType="datetime" IsNull="false" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeId" DBName="xact_type_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Reason" DBName="reason" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactTypeName" DBName="xact_type_name" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CustomerActivityId" DBName="customer_activity_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CustomerActivityAmount" DBName="customer_activity_amount" SqlType="decimal" IsNull="false" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="VwCustomerXactHistTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

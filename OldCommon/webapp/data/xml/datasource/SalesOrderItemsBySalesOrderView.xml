@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<DataSource Name="SalesOrderItemsBySalesOrderView">
+  <Sql Select="sales_order_items.id sales_order_item_id, 
+    sales_order_items.sales_order_id,
+    sales_order_items.item_master_id,
+    sales_order_items.order_qty,
+    sales_order_items.back_order_qty,
+    sales_order_items.init_unit_cost,
+		sales_order_items.init_markup, 
+		sales_order.customer_id,
+		sales_order.invoiced,
+		customer.person_id,
+		customer.business_id,
+		case
+		      when customer.person_id is null then business.longname
+		      when customer.business_id is null then person.lastname + ', ' + person.firstname
+		      when customer.person_id is not null and customer.business_id is not null then business.longname + ' - ' + person.lastname + ', ' + person.firstname
+          else 'Customer Name is unknown'
+    end  customer_name " 
+		From="sales_order_items, sales_order, customer, person, business"
+		Where="sales_order.id = sales_order_items.id and sales_order.customer_id = customer.id and customer.person_id = person.id and customer.business_id = business.id" 
+		GroupBy="" 
+		Having="" 
+		OrderBy="customer_name, sales_order_item_id"/>
+  <TableUsage Name="SalesOrderItemsTable" DBName="sales_order_items" Updateable="true"/>
+  <TableUsage Name="SalesOrderTable" DBName="sales_order" Updateable="true"/>
+  <TableUsage Name="CustomerTable" DBName="customer" Updateable="true"/>
+  <TableUsage Name="PersonTable" DBName="person" Updateable="true"/>
+  <TableUsage Name="BusinessTable" DBName="business" Updateable="true"/>
+  <ColAttr Name="Id" DBName="sales_order_item_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="SalesOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="SalesOrderId" DBName="sales_order_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="SalesOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="ItemMasterId" DBName="item_master_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="SalesOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="OrderQty" DBName="order_qty" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="SalesOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BackOrderQty" DBName="back_order_qty" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="SalesOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="InitUnitCost" DBName="init_unit_cost" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="SalesOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="InitMarkup" DBName="init_markup" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="SalesOrderItemsTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CustomerId" DBName="customer_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="SalesOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Invoiced" DBName="invoiced" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="SalesOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="PersonId" DBName="person_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="PersonTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="BusinessId" DBName="business_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="BusinessTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CustomerName" DBName="customer_name" SqlType="varchar" IsNull="true" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="" Updateable="false" DisplayHeader="" Computed="true" DataValue=""/>
+</DataSource>

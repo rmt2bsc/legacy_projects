@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<DataSource Name="SystemPrefView">
+  <Sql Select="descr, 
+		id" From="system_pref" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="SystemPrefTable" DBName="system_pref" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="true" TableName="SystemPrefTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Descr" DBName="descr" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="SystemPrefTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

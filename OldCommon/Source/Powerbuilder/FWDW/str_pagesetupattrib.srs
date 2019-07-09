@@ -1,0 +1,22 @@
+$PBExportHeader$str_pagesetupattrib.srs
+global type str_pagesetupattrib from structure
+	boolean		b_disablemargins
+	boolean		b_disableorientation
+	boolean		b_disablepaper
+	integer		i_minmarginleft
+	integer		i_minmarginright
+	integer		i_minmargintop
+	integer		i_minmarginbottom
+	integer		i_marginleft
+	integer		i_marginright
+	integer		i_margintop
+	integer		i_marginbottom
+	integer		i_papersize
+	integer		i_papersource
+	boolean		b_portraitorientation
+	str_paperattrib		str_papersize[]
+	str_paperattrib		str_papersource[]
+	integer		i_units
+	boolean		b_actiontaken
+end type
+

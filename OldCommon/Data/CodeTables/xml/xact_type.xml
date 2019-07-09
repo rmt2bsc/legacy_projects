@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<id>1</id>
+		<xact_category_id>2</xact_category_id>
+		<description>Cash Sales</description>
+		<xact_code>cashsale</xact_code>
+		<to_multiplier>1</to_multiplier>
+		<from_mulitplier>-1</from_mulitplier>
+		<to_account_type_id>1</to_account_type_id>
+		<to_account_category_id>101</to_account_category_id>
+		<from_account_type_id>4</from_account_type_id>
+		<from_account_category_id>401</from_account_category_id>
+		<has_subsidiary>1</has_subsidiary>
+	</row>
+	<row>
+		<id>2</id>
+		<xact_category_id>2</xact_category_id>
+		<description>Cash Receipts</description>
+		<xact_code>cashrcpt</xact_code>
+		<to_multiplier>1</to_multiplier>
+		<from_mulitplier>-1</from_mulitplier>
+		<to_account_type_id>1</to_account_type_id>
+		<to_account_category_id>1</to_account_category_id>
+		<from_account_type_id>0</from_account_type_id>
+	</row>
+	<row>
+		<id>10</id>
+		<xact_category_id>4</xact_category_id>
+		<description>Sales on Account</description>
+		<xact_code>acctsale</xact_code>
+		<to_multiplier>1</to_multiplier>
+		<from_mulitplier>-1</from_mulitplier>
+		<to_account_type_id>1</to_account_type_id>
+		<to_account_category_id>101</to_account_category_id>
+		<from_account_type_id>4</from_account_type_id>
+		<from_account_category_id>401</from_account_category_id>
+		<has_subsidiary>1</has_subsidiary>
+	</row>
+	<row>
+		<id>30</id>
+		<xact_category_id>8</xact_category_id>
+		<description>Purchase Asset on Account</description>
+		<xact_code>purchasset</xact_code>
+		<to_multiplier>1</to_multiplier>
+		<from_mulitplier>-1</from_mulitplier>
+		<to_account_type_id>1</to_account_type_id>
+		<to_account_category_id>2</to_account_category_id>
+		<from_account_type_id>1</from_account_type_id>
+	</row>
+	<row>
+		<id>40</id>
+		<xact_category_id>6</xact_category_id>
+		<description>Fee</description>
+		<xact_code>fee</xact_code>
+		<to_multiplier>-1</to_multiplier>
+		<from_mulitplier>1</from_mulitplier>
+		<to_account_type_id>4</to_account_type_id>
+		<to_account_category_id>1</to_account_category_id>
+		<from_account_type_id>0</from_account_type_id>
+	</row>
+	<row>
+		<id>50</id>
+		<xact_category_id>15</xact_category_id>
+		<description>Purchases Discount</description>
+		<xact_code>purchdisc</xact_code>
+		<to_multiplier>1</to_multiplier>
+		<from_mulitplier>-1</from_mulitplier>
+		<to_account_type_id>7</to_account_type_id>
+		<to_account_category_id>1</to_account_category_id>
+		<from_account_type_id>0</from_account_type_id>
+	</row>
+	<row>
+		<id>60</id>
+		<xact_category_id>3</xact_category_id>
+		<description>Cash Disbursement</description>
+		<xact_code>cashpayexp</xact_code>
+		<to_multiplier>1</to_multiplier>
+		<from_mulitplier>-1</from_mulitplier>
+		<to_account_type_id>5</to_account_type_id>
+		<to_account_category_id>1</to_account_category_id>
+		<from_account_type_id>1</from_account_type_id>
+	</row>
+	<row>
+		<id>80</id>
+		<xact_category_id>7</xact_category_id>
+		<description>Interest</description>
+		<xact_code>interest</xact_code>
+		<to_multiplier>-1</to_multiplier>
+		<from_mulitplier>1</from_mulitplier>
+		<to_account_type_id>4</to_account_type_id>
+		<to_account_category_id>1</to_account_category_id>
+		<from_account_type_id>0</from_account_type_id>
+	</row>
+	<row>
+		<id>90</id>
+		<xact_category_id>9</xact_category_id>
+		<description>Sales Returns and Allowances</description>
+		<xact_code>salertn</xact_code>
+		<to_multiplier>-1</to_multiplier>
+		<from_mulitplier>1</from_mulitplier>
+		<to_account_type_id>6</to_account_type_id>
+		<to_account_category_id>4</to_account_category_id>
+		<from_account_type_id>1</from_account_type_id>
+	</row>
+	<row>
+		<id>100</id>
+		<xact_category_id>12</xact_category_id>
+		<description>Write Offs</description>
+		<xact_code>writeoff</xact_code>
+		<to_multiplier>1</to_multiplier>
+		<from_mulitplier>-1</from_mulitplier>
+		<to_account_type_id>0</to_account_type_id>
+	</row>
+	<row>
+		<id>120</id>
+		<xact_category_id>1</xact_category_id>
+		<description>Bad Debt</description>
+		<xact_code>baddebt</xact_code>
+		<to_multiplier>1</to_multiplier>
+		<from_mulitplier>-1</from_mulitplier>
+		<to_account_type_id>5</to_account_type_id>
+		<to_account_category_id>1</to_account_category_id>
+		<from_account_type_id>0</from_account_type_id>
+	</row>
+	<row>
+		<id>130</id>
+		<xact_category_id>8</xact_category_id>
+		<description>Purchase Inventory on Account</description>
+		<xact_code>purchinv</xact_code>
+		<to_multiplier>1</to_multiplier>
+		<from_mulitplier>-1</from_mulitplier>
+		<to_account_type_id>1</to_account_type_id>
+		<to_account_category_id>2</to_account_category_id>
+		<from_account_type_id>1</from_account_type_id>
+	</row>
+	<row>
+		<id>140</id>
+		<xact_category_id>10</xact_category_id>
+		<description>Bank Deposit</description>
+		<xact_code>bankdep</xact_code>
+		<to_multiplier>1</to_multiplier>
+		<from_mulitplier>-1</from_mulitplier>
+		<to_account_type_id>1</to_account_type_id>
+		<to_account_category_id>1</to_account_category_id>
+		<from_account_type_id>0</from_account_type_id>
+	</row>
+	<row>
+		<id>150</id>
+		<xact_category_id>11</xact_category_id>
+		<description>Bank Withdrawal</description>
+		<xact_code>bankwith</xact_code>
+		<to_multiplier>1</to_multiplier>
+		<from_mulitplier>-1</from_mulitplier>
+		<to_account_type_id>1</to_account_type_id>
+		<to_account_category_id>1</to_account_category_id>
+		<from_account_type_id>0</from_account_type_id>
+	</row>
+	<row>
+		<id>160</id>
+		<xact_category_id>13</xact_category_id>
+		<description>Purchases Returns and Allowances</description>
+		<xact_code>purchrtn</xact_code>
+		<to_multiplier>-1</to_multiplier>
+		<from_mulitplier>1</from_mulitplier>
+		<to_account_type_id>1</to_account_type_id>
+		<to_account_category_id>7</to_account_category_id>
+		<from_account_type_id>1</from_account_type_id>
+	</row>
+	<row>
+		<id>170</id>
+		<xact_category_id>14</xact_category_id>
+		<description>Sales Discount</description>
+		<xact_code>salesdisc</xact_code>
+		<to_multiplier>-1</to_multiplier>
+		<from_mulitplier>1</from_mulitplier>
+		<to_account_type_id>6</to_account_type_id>
+		<to_account_category_id>4</to_account_category_id>
+		<from_account_type_id>0</from_account_type_id>
+	</row>
+	<row>
+		<id>180</id>
+		<xact_category_id>8</xact_category_id>
+		<description>Purchase Expense on Account</description>
+		<xact_code>purchexp</xact_code>
+		<to_multiplier>1</to_multiplier>
+		<from_mulitplier>-1</from_mulitplier>
+		<to_account_type_id>5</to_account_type_id>
+		<to_account_category_id>2</to_account_category_id>
+		<from_account_type_id>1</from_account_type_id>
+	</row>
+	<row>
+		<id>190</id>
+		<xact_category_id>16</xact_category_id>
+		<description>Cost of Goods Sold</description>
+		<xact_code>cgs</xact_code>
+		<to_multiplier>1</to_multiplier>
+		<from_mulitplier>-1</from_mulitplier>
+		<to_account_type_id>5</to_account_type_id>
+		<to_account_category_id>1</to_account_category_id>
+		<from_account_type_id>0</from_account_type_id>
+	</row>
+	<row>
+		<id>999</id>
+		<xact_category_id>17</xact_category_id>
+		<description>Reverse Transaction</description>
+		<xact_code>reverse</xact_code>
+		<to_multiplier>0</to_multiplier>
+	</row>
+	<row>
+		<id>888</id>
+		<xact_category_id>18</xact_category_id>
+		<description>Cancel Transaction</description>
+		<xact_code>cancel</xact_code>
+		<to_multiplier>0</to_multiplier>
+	</row>
+	<row>
+		<id>-100</id>
+		<xact_category_id>19</xact_category_id>
+		<description>Final Transaction</description>
+		<xact_code>final</xact_code>
+		<to_multiplier>0</to_multiplier>
+	</row>
+</table>

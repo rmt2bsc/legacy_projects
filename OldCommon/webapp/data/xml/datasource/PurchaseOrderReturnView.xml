@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DataSource Name="PurchaseOrderReturnView">
+  <Sql Select="id, 
+		purchase_order_id, 
+		reason, 
+		xact_id" From="purchase_order_return" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="PurchaseOrderReturnTable" DBName="purchase_order_return" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="PurchaseOrderReturnTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="PurchaseOrderId" DBName="purchase_order_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="PurchaseOrderReturnTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="XactId" DBName="xact_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="PurchaseOrderReturnTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Reason" DBName="reason" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="PurchaseOrderReturnTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<DataSource Name="SalesOrderView">
+  <Sql Select="customer_id, 
+		date_created, 
+		date_updated, 
+		id, 
+		invoiced, 
+		order_total, 
+		user_id" From="sales_order" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="SalesOrderTable" DBName="sales_order" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="SalesOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="CustomerId" DBName="customer_id" SqlType="int" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="SalesOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Invoiced" DBName="invoiced" SqlType="bit" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="SalesOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="OrderTotal" DBName="order_total" SqlType="numeric" IsNull="true" JavaType="java.sql.Types.DOUBLE" PrimaryKey="false" TableName="SalesOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="SalesOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="datetime" IsNull="true" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="SalesOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="SalesOrderTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

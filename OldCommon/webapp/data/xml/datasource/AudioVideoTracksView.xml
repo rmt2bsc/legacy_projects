@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<DataSource Name="AudioVideoTracksView">
+  <Sql Select="audio_video_id, 
+		comments, 
+		date_created, 
+		date_updated, 
+		id, 
+		loc_filename, 
+		loc_path, 
+		loc_root_path, 
+		loc_servername, 
+		loc_sharename, 
+		track_disc, 
+		track_composer, 
+		track_hours, 
+		track_lyricist, 
+		track_minutes, 
+		track_number, 
+		track_producer, 
+		track_seconds, 
+		track_title, 
+		user_id" From="audio_video_tracks" Where="" GroupBy="" Having="" OrderBy=""/>
+  <TableUsage Name="AudioVideoTracksTable" DBName="audio_video_tracks" Updateable="true"/>
+  <ColAttr Name="Id" DBName="id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="true" TableName="AudioVideoTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="AudioVideoId" DBName="audio_video_id" SqlType="int" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="AudioVideoTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TrackNumber" DBName="track_number" SqlType="smallint" IsNull="false" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="AudioVideoTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TrackTitle" DBName="track_title" SqlType="char" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AudioVideoTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TrackHours" DBName="track_hours" SqlType="smallint" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="AudioVideoTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TrackMinutes" DBName="track_minutes" SqlType="smallint" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="AudioVideoTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TrackSeconds" DBName="track_seconds" SqlType="smallint" IsNull="true" JavaType="java.sql.Types.INTEGER" PrimaryKey="false" TableName="AudioVideoTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TrackDisc" DBName="track_disc" SqlType="varchar" IsNull="true" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AudioVideoTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TrackProducer" DBName="track_producer" SqlType="char" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AudioVideoTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TrackComposer" DBName="track_composer" SqlType="char" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AudioVideoTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="TrackLyricist" DBName="track_lyricist" SqlType="char" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AudioVideoTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LocServername" DBName="loc_servername" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AudioVideoTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LocSharename" DBName="loc_sharename" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AudioVideoTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LocRootPath" DBName="loc_root_path" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AudioVideoTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LocPath" DBName="loc_path" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AudioVideoTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="LocFilename" DBName="loc_filename" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AudioVideoTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="Comments" DBName="comments" SqlType="varchar" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AudioVideoTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateCreated" DBName="date_created" SqlType="datetime" IsNull="false" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="AudioVideoTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="DateUpdated" DBName="date_updated" SqlType="datetime" IsNull="false" JavaType="java.sql.Types.DATE" PrimaryKey="false" TableName="AudioVideoTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+  <ColAttr Name="UserId" DBName="user_id" SqlType="char" IsNull="false" JavaType="java.sql.Types.VARCHAR" PrimaryKey="false" TableName="AudioVideoTracksTable" Updateable="true" DisplayHeader="" Computed="false" DataValue=""/>
+</DataSource>

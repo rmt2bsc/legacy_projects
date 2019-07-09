@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+	<row>
+		<id>1</id>
+		<main_key>ENCRYPT_CYCLE</main_key>
+		<sub_key>NULL</sub_key>
+		<value>10</value>
+	</row>
+	<row>
+		<id>2</id>
+		<main_key>MAIL_AUTHENTICATE</main_key>
+		<sub_key>NULL</sub_key>
+		<value>Y</value>
+	</row>
+	<row>
+		<id>3</id>
+		<main_key>MAIL_PASSWORD</main_key>
+		<sub_key>NULL</sub_key>
+		<value>drum7777</value>
+	</row>
+	<row>
+		<id>4</id>
+		<main_key>MAIL_USERNAME</main_key>
+		<sub_key>NULL</sub_key>
+		<value>royterrell</value>
+	</row>
+	<row>
+		<id>5</id>
+		<main_key>POP_SERVER</main_key>
+		<sub_key>NULL</sub_key>
+		<value>incoming.verizon.net</value>
+	</row>
+	<row>
+		<id>6</id>
+		<main_key>SMTP_SERVER</main_key>
+		<sub_key>NULL</sub_key>
+		<value>outgoing.verizon.net</value>
+	</row>
+</table>

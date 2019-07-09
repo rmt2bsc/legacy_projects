@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+ <script>
+    function handleAction(action) {
+      switch (action.value) {
+          case "User Maintenance":
+              form2.action = "UserMaintFrameset.jsp";
+              break;
+          case "General Codes Group Maintenance":
+              document.form2.action = "GeneralCodeGroupFrameset.jsp";
+              break;
+          case "Contacts":
+              document.form2.action = "contactservlet?action=start";
+//              document.form2.action = "ContactSearchCriteria.jsp";
+              break;
+       }
+
+      form2.submit();
+    }
+  </script>
+<body bgcolor="#FFFFFF" text="#000000">
+<div align="center">
+  <p><font size="6"><b>Home Office Information Manager Test Page</b></font> </p>
+  <div align="left">
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+  </div>
+  <form name="form1" method="post" action="">
+    <p>
+      <input type="submit" name="Test1" value="Form Test 1">
+    </p>
+    <p>
+      <input type="submit" name="Test2" value="Multi-Record Form Test 2">
+    </p>
+    <p>
+      <input type="submit" name="action" value="Single Record Form Test 3">
+    </p>
+    <p>
+      <input type="button" name="action" value="General Codes Group Maintenance"  onClick="handleAction(this)">
+    </p>
+    <p>
+      <input type="button" name="action" value="User Maintenance" onClick="handleAction(this)">
+    </p>
+    <p>
+      <input type="button" name="action" value="Contacts" onClick="handleAction(this)">
+    </p>
+    <p>
+      <input type="submit" name="action" value="Logout">
+    </p>
+  </form>
+  <p align="left">&nbsp; </p>
+</div>
+
+  <form name="form2" method="post" action="">
+  </form>
+
+</body>
+</html>
